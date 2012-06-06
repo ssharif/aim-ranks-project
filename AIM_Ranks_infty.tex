@@ -132,6 +132,45 @@ The special fibers on these charts are as follows:
 \]
 The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_r$ has multiplicity $r$. Let $P = C_1 \cap C_r$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap C_r$. Then $Q$ lies in $C'''$ but in no other chart. One checks that neither $P$ nor $Q$ is regular. Therefore we need to blow up at both points.
 
+\subsection{Blowing-up}
+\label{sec:blowing-up}
+
+\paragraph{Blow-up at $P$.}
+\label{sec:blow-up-P}
+
+We first blow up at $P$, which is given by $(u,z,T) = (0,0,0)$. Via the change of variables
+\[
+z = uv \qquad T = u\tau
+\]
+we obtain the arithmetic surface with equation
+\[
+\tau = u^{r-1}v^{r-1}(v + u\tau)(v + 1).
+\]
+This has special fiber given by $T = u\tau = 0$, with components
+\begin{align*}
+  \tilde{C_1}&: (v + 1 = b = 0) \\
+  \tilde{C_r}&: (v = \tau = 0) \\
+  E_P&: (u = \tau = 0).
+\end{align*}
+In the above, $\tilde{C_\cdot}$ is the strict transform of the corresponding component with the same multiplicities as before. The third component $E_P$ is the exceptional component, and has multiplicity $(r-1)$. The special fiber therefore looks like
+
+[picture]
+
+The intersection points are $P_1 = \tilde{C_1} \cap E_P$ given by $u=v+1=\tau=0$, and $P_2 = \tilde{C_r} \cap E_P$ given by $u=v=\tau=0$. Writing the equation for our surface as
+\[
+u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau = 0
+\]
+and taking the $\tau$ derivative on the left, we obtain
+\[
+u^rv^{r-1}(v + 1) - 1.
+\]
+We now observe that this expression equals $-1$ at both $P_1$ and $P_2$. Therefore both points are regular and we have resolved the singularity at $P$.
+
+\paragraph{Blow-up at $Q$.}
+\label{sec:blow-up-Q}
+
+
+
 \section{Component group}
 \label{sec:component-group}
 
