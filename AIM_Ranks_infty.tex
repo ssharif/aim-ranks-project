@@ -94,7 +94,7 @@
 \author{Jenn Park \and Shahed Sharif}
 \maketitle
 
-Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $C$ be the smooth projective curve with affine model 
+Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $r \geq 3$ be an integer. Let $C$ be the smooth projective curve with affine model 
 \[
 C: xy^r = (x+1)(x+t).
 \]
@@ -119,6 +119,18 @@ Now glue the 4 affine curves together via
   u = \frac{x}{y} = \frac{1}{vy} = \frac{1}{w} \qquad  z = \frac{1}{y}\\
   w = \frac{y}{x} = vy = \frac{1}{u} \qquad z = \frac{1}{y}
 \end{gather*}
+One checks that the resulting curve is generically smooth.
+
+The special fibers on these charts are as follows:
+\[
+\begin{array}{lll}
+  C & x + 1 = 0 & C_1 \\
+  C' & v(v + 1) = 0 & C_2, C_1 \\
+  C'' & z^r(z + u) = 0 & C_r, C_1 \\
+  C''' & z^rw(wz+1) = 0 & C_r, C_2, C_1.
+\end{array}
+\]
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_r$ has multiplicity $r$. Let $P = C_1 \cap C_r$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap C_r$. Then $Q$ lies in $C'''$ but in no other chart. One checks that neither $P$ nor $Q$ is regular. Therefore we need to blow up at both points.
 
 \section{Component group}
 \label{sec:component-group}
