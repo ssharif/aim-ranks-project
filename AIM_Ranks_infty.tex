@@ -103,7 +103,22 @@ The purpose of this note is to compute the minimal proper regular model of $C$ a
 \section{Desingularization}
 \label{sec:desingularization}
 
-
+Let $T = \frac{1}{t}$, so that our curve becomes
+\[
+C: Txy^r = (x+1)(Tx+1).
+\]
+To desingularize the generic fiber, consider the affine curves
+\begin{align*}
+  C'&: Tvy^r = (v+1)(v+T) \\
+  C''&: Tu = z^{r-1}(z+uT)(z+u) \\
+  C'''&: Tw = z^{r-1}(wz+T)(wz+1).
+\end{align*}
+Now glue the 4 affine curves together via
+\begin{gather*}
+  v = \frac{1}{x} = \frac{z}{u} = wz \qquad y = \frac{1}{z} \\
+  u = \frac{x}{y} = \frac{1}{vy} = \frac{1}{w} \qquad  z = \frac{1}{y}\\
+  w = \frac{y}{x} = vy = \frac{1}{u} \qquad z = \frac{1}{y}
+\end{gather*}
 
 \section{Component group}
 \label{sec:component-group}
