@@ -11,6 +11,9 @@
 \newcommand{\jenn}[1]{{\color{magenta} \sf $\clubsuit\clubsuit\clubsuit$ Jenn: [#1]}}
 \newcommand{\shahed}[1]{{\color{Purple} \sf $\clubsuit\clubsuit\clubsuit$ Shahed: [#1]}}
 
+\newcommand{\sce}{\mathscr{C}^{exc}}
+\newcommand{\sc}{\mathscr{C}}
+
 
 \theoremstyle{plain}
 \newtheorem*{reftheorem}{Theorem}
@@ -114,9 +117,9 @@ The purpose of this note is to compute the minimal proper regular model of $C$ a
 \section{Desingularization}
 \label{sec:desingularization}
 
-Let $T = \frac{1}{t}$, so that our curve becomes
+Let $T = \frac{1}{t}$, so that our curve has affine piece given by
 \[
-C: Txy^r = (x+1)(Tx+1).
+C_{aff}:Txy^r = (x+1)(Tx+1).
 \]
 To desingularize the generic fiber, consider the affine curves
 \begin{align*}
@@ -136,13 +139,13 @@ One checks that the resulting curve is generically smooth.
 The special fibers on these charts are as follows:
 \[
 \begin{array}{lll}
-C & x + 1 = 0 & C_1 \\
+C_{aff} & x + 1 = 0 & C_1 \\
 C' & v(v + 1) = 0 & C_2, C_1 \\
-C'' & z^r(z + u) = 0 & C_r, C_1 \\
-C''' & z^rw(wz+1) = 0 & C_r, C_2, C_1.
+C'' & z^r(z + u) = 0 & C_z, C_1 \\
+C''' & z^rw(wz+1) = 0 & C_z, C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_r$ has multiplicity $r$. Let $P = C_1 \cap C_r$. Note that $P$ lies in the chart $C''$, but in no others. \jenn{Doesn't $P$ also lie in $C'''$?} Let $Q = C_2 \cap C_r$. Then $Q$ lies in $C'''$ but in no other chart. One checks that neither $P$ nor $Q$ is regular. Therefore we need to blow up at both points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_z$ has multiplicity $r$. Let $P = C_1 \cap C_z$. Note that $P$ lies in the chart $C''$, but in no others. \jenn{Doesn't $P$ also lie in $C'''$?} Let $Q = C_2 \cap C_z$. Then $Q$ lies in $C'''$ but in no other chart. One checks that neither $P$ nor $Q$ is regular. Therefore we need to blow up at both points.
 
 \subsection{Blowing-up}
 \label{sec:blowing-up}
@@ -161,14 +164,14 @@ we obtain the arithmetic surface with equation
 This has special fiber given by $T = u\tau = 0$, with components
 \begin{align*}
   \tilde{C_1}&: (v + 1 = b = 0) \\
-  \tilde{C_r}&: (v = \tau = 0) \\
+  \tilde{C_z}&: (v = \tau = 0) \\
   E_P&: (u = \tau = 0).
 \end{align*}
 In the above, $\tilde{C_\cdot}$ is the strict transform of the corresponding component with the same multiplicities as before. The third component $E_P$ is the exceptional component, and has multiplicity $(r-1)$. The special fiber therefore looks like
 
 [picture]
 
-The intersection points are $P_1 = \tilde{C_1} \cap E_P$ given by $u=v+1=\tau=0$, and $P_2 = \tilde{C_r} \cap E_P$ given by $u=v=\tau=0$. Writing the equation for our surface as
+The intersection points are $P_1 = \tilde{C_1} \cap E_P$ given by $u=v+1=\tau=0$, and $P_2 = \tilde{C_z} \cap E_P$ given by $u=v=\tau=0$. Writing the equation for our surface as
 \[
 u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau = 0
 \]
@@ -181,7 +184,42 @@ We now observe that this expression equals $-1$ at both $P_1$ and $P_2$. Therefo
 \paragraph{Blow-up at $Q$.}
 \label{sec:blow-up-Q}
 
+Recall that $Q$ lies on the affine chart with equation
+\begin{equation}
+  C''':Tw = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
+\end{equation}
 
+and has coordinates $(w,z,T) = (0,0,0)$. To desingularize, we will need to do $r-1$ blow-ups. Fortunately, the blow-ups can be implemented inductively. We do the first blow-up and explain how the remaining $r-2$ blow-ups are done. Throughout, the third factor $wz + 1$ and its transforms correspond to $C_1$ and its transforms, and so we will omit them from our discussion. Also, to keep things clean we will use the same symbol to denote a component and its strict transform.
+
+The first blow-up is accomplished by gluing together two charts with $C'''-\{Q\}$. The first chart consists of the affine curve with equation
+\[
+\tau = b^{r-1} w^{r-2} (bw + \tau) (b w^2 + 1)
+\]
+where $z = bw$ and $T = \tau w$. The special fiber is given by $T = 0$, and consists of the components with equation $\tau = b = 0$ and $\tau = w = 0$. The first component has multiplicity $r$ and is the strict transform of ${C_z}$. The second component is the exceptional component, and has multiplicity $r-1$. We call this latter component $E_{r-1}$. Notice that the strict transform of $C_2$ does not lie in this chart. The intersection of the two components occurs when $\tau = b = w = 0$. One verifies that the $\tau$-deriviative of the equation above is $1$ at the latter intersection point; therefore this chart is regular.
+
+The second chart is given by the equation
+\[
+w_1 T_1 = z^{r-2}(w_1z + T_1)(w_1 z^2 + 1)
+\]
+where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of two components given by $T_1 = w_1 = 0$ and $T_1 = z = 0$ respectively. The first component has multiplicity 1, and is the strict transform of $C_2$. The second component has multiplicity $r-1$ and is the exceptional component $E_{r-1}$. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r - 2 \geq 1$, is \emph{not} regular.
+
+But now observe that if we omit the subscript $1$, we are exactly in the original situation of~\eqref{eq:C'''}. Iterating, at the $i$th stage we will have two charts, one regular and the other of the form
+\[
+w_i T_i = z^{r-i-1}(w_iz + T_i)(w_i z^{i+1} + 1).
+\]
+The special fiber here is a chain of rational curves ${C_z}$, $E_{r-1}$, $E_{r-2}$, \dots, $E_{r-i}$, ${C_2}$, where $E_j$ has multiplicity $j$, and each rational curve intersects the next one in the list at exactly one point. Every intersection point is regular except possibly for $E_{r-i} \cap C_2$ (or rather the strict transform of $C_2$). Computing partial derivatives at $(w_i, z, T_i) = (0,0,0)$, we see that this last node is regular if and only if $i = r - 1$. Thus we need to do $r - 1$ blow-ups to obtain a model regular at $Q$.
+
+Piecing together with the charts for $P$, we have obtained a regular model for our curve $C$. We call this model $\sce$.
+
+\paragraph{Blowing down}
+\label{sec:blowing-down}
+
+Next we must make sure our model is minimal via Castelnuovo's criterion, which states that
+\begin{theorem}[\shahed{citation}]
+  \shahed{Hypotheses, clean up.} Then minimal if and only if no components with $E \isom \Pro^1$, $E^2 = -1$.
+\end{theorem}
+
+\shahed{I believe that $C_2$ must be blown down.}
 
 \section{Component group}
 \label{sec:component-group}
