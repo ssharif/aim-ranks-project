@@ -4,6 +4,14 @@
 \usepackage[pagebackref,colorlinks]{hyperref}
 \usepackage{mathrsfs}
 
+% Color comments!
+\usepackage[usenames,dvipsnames]{color}
+% Color comments
+
+\newcommand{\jenn}[1]{{\color{magenta} \sf $\clubsuit\clubsuit\clubsuit$ Jenn: [#1]}}
+\newcommand{\shahed}[1]{{\color{Purple} \sf $\clubsuit\clubsuit\clubsuit$ Shahed: [#1]}}
+
+
 \theoremstyle{plain}
 \newtheorem*{reftheorem}{Theorem}
 \newtheorem{theorem}{Theorem}[section]
@@ -16,11 +24,11 @@
 \newtheorem*{question*}{Question}
 \newtheorem{claim}{Claim}
 
-\theoremstyle{definition} 
+\theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 
 \theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark} 
+\newtheorem{remark}[theorem]{Remark}
 \newtheorem{example}[theorem]{Example}
 
 % General
@@ -42,13 +50,13 @@
 \DeclareMathOperator{\car}{char}
 \DeclareMathOperator{\rk}{rk}
 \DeclareMathOperator{\coker}{coker}
-\DeclareMathOperator{\Hom}{Hom} 
+\DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\im}{im} 
-\DeclareMathOperator{\pgl}{PGL} 
-\DeclareMathOperator{\Gl}{GL} 
-\DeclareMathOperator{\Sl}{SL} 
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\pgl}{PGL}
+\DeclareMathOperator{\Gl}{GL}
+\DeclareMathOperator{\Sl}{SL}
 
 % Number theory
 \newcommand{\Qbar}{\ensuremath{\overline{\Q}}}
@@ -65,10 +73,10 @@
 \newcommand{\Q}{\ensuremath{\mathbb{Q}}}
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
 \newcommand{\ok}{\mathscr{O}_K}
-\DeclareMathOperator{\Gal}{Gal} 
-\DeclareMathOperator{\inv}{inv} 
-\DeclareMathOperator{\Nm}{Nm} 
-\DeclareMathOperator{\tr}{Tr} 
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\Nm}{Nm}
+\DeclareMathOperator{\tr}{Tr}
 
 % Algebraic geometry
 \newcommand{\sA}{\ensuremath{\mathscr{A}}}
@@ -85,7 +93,7 @@
 \DeclareMathOperator{\Div}{Div}
 \DeclareMathOperator{\dv}{div}
 \DeclareMathOperator{\Pic}{Pic}
-\DeclareMathOperator{\P0}{Pic^0} 
+\DeclareMathOperator{\P0}{Pic^0}
 \DeclareMathOperator{\Spec}{Spec}
 
 \begin{document}
@@ -94,7 +102,10 @@
 \author{Jenn Park \and Shahed Sharif}
 \maketitle
 
-Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $r \geq 3$ be an integer. Let $C$ be the smooth projective curve with affine model 
+\jenn{testing colour comments}
+\shahed{testing colour comments}
+
+Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $r \geq 3$ be an integer. Let $C$ be the smooth projective curve with affine model
 \[
 C: xy^r = (x+1)(x+t).
 \]
@@ -116,21 +127,22 @@ To desingularize the generic fiber, consider the affine curves
 Now glue the 4 affine curves together via
 \begin{gather*}
   v = \frac{1}{x} = \frac{z}{u} = wz \qquad y = \frac{1}{z} \\
-  u = \frac{x}{y} = \frac{1}{vy} = \frac{1}{w} \qquad  z = \frac{1}{y}\\
+  u = \frac{x}{y} = \frac{1}{vy} = \frac{1}{w} \qquad z = \frac{1}{y}\\
   w = \frac{y}{x} = vy = \frac{1}{u} \qquad z = \frac{1}{y}
 \end{gather*}
 One checks that the resulting curve is generically smooth.
+\jenn{Why do we have 4 affine patches? It seems to me that the last curve is unnecessary. The curve $C$ corresponds to the patch $Z \neq 0$, where $Z$ is the variable used to projectivize $C$. The curve $C'$ corresponds to the patch $x \neq 0$, and the curve $C''$ corresponds to $y \neq 0$. It seems that $C'''$ corresponds to $x,y \neq 0$, which is the intersection of the last two affine patches... Am I missing something?}
 
 The special fibers on these charts are as follows:
 \[
 \begin{array}{lll}
-  C & x + 1 = 0 & C_1 \\
-  C' & v(v + 1) = 0 & C_2, C_1 \\
-  C'' & z^r(z + u) = 0 & C_r, C_1 \\
-  C''' & z^rw(wz+1) = 0 & C_r, C_2, C_1.
+C & x + 1 = 0 & C_1 \\
+C' & v(v + 1) = 0 & C_2, C_1 \\
+C'' & z^r(z + u) = 0 & C_r, C_1 \\
+C''' & z^rw(wz+1) = 0 & C_r, C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_r$ has multiplicity $r$. Let $P = C_1 \cap C_r$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap C_r$. Then $Q$ lies in $C'''$ but in no other chart. One checks that neither $P$ nor $Q$ is regular. Therefore we need to blow up at both points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_r$ has multiplicity $r$. Let $P = C_1 \cap C_r$. Note that $P$ lies in the chart $C''$, but in no others. \jenn{Doesn't $P$ also lie in $C'''$?} Let $Q = C_2 \cap C_r$. Then $Q$ lies in $C'''$ but in no other chart. One checks that neither $P$ nor $Q$ is regular. Therefore we need to blow up at both points.
 
 \subsection{Blowing-up}
 \label{sec:blowing-up}
