@@ -11,8 +11,9 @@
 \newcommand{\jenn}[1]{{\color{magenta} \sf $\clubsuit\clubsuit\clubsuit$ Jenn: [#1]}}
 \newcommand{\shahed}[1]{{\color{Purple} \sf $\clubsuit\clubsuit\clubsuit$ Shahed: [#1]}}
 
-\newcommand{\sce}{\mathscr{C}^{\text{ex}}}
+\newcommand{\sce}{\mathscr{C}^{\textsf{ex}}}
 \newcommand{\scd}{\mathscr{C}}
+\newcommand{\caff}{C_{\textsf{aff}}}
 
 
 \theoremstyle{plain}
@@ -119,7 +120,7 @@ The purpose of this note is to compute the minimal proper regular model of $C$ a
 
 Let $T = \frac{1}{t}$, so that our curve has affine piece given by
 \[
-C_{aff}:Txy^r = (x+1)(Tx+1).
+\caff:Txy^r = (x+1)(Tx+1).
 \]
 To desingularize the generic fiber, consider the affine curves
 \begin{align*}
@@ -127,7 +128,7 @@ To desingularize the generic fiber, consider the affine curves
   C''&: Tu = z^{r-1}(z+uT)(z+u) \\
   C'''&: Tw = z^{r-1}(wz+T)(wz+1).
 \end{align*}
-Now glue the 4 affine curves together via
+Now glue the 4 equations together via
 \begin{gather*}
   v = \frac{1}{x} = \frac{z}{u} = wz \qquad y = \frac{1}{z} \\
   u = \frac{x}{y} = \frac{1}{vy} = \frac{1}{w} \qquad z = \frac{1}{y}\\
@@ -139,13 +140,13 @@ One checks that the resulting curve is generically smooth.
 The special fibers on these charts are as follows:
 \[
 \begin{array}{lll}
-C_{aff} & x + 1 = 0 & C_1 \\
+\caff & x + 1 = 0 & C_1 \\
 C' & v(v + 1) = 0 & C_2, C_1 \\
 C'' & z^r(z + u) = 0 & C_z, C_1 \\
 C''' & z^rw(wz+1) = 0 & C_z, C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_z$ has multiplicity $r$. Let $P = C_1 \cap C_z$. Note that $P$ lies in the chart $C''$, but in no others. \jenn{Doesn't $P$ also lie in $C'''$?} Let $Q = C_2 \cap C_z$. Then $Q$ lies in $C'''$ but in no other chart. One checks that neither $P$ nor $Q$ is regular. Therefore we need to blow up at both points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_z$ has multiplicity $r$. Let $P = C_1 \cap C_z$. Note that $P$ lies in the chart $C''$, but in no others. \jenn{Doesn't $P$ also lie in $C'''$?} Let $Q = C_2 \cap C_z$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
 
 \subsection{Blowing-up}
 \label{sec:blowing-up}
@@ -167,11 +168,17 @@ This has special fiber given by $T = u\tau = 0$, with components
   \tilde{C_z}&: (v = \tau = 0) \\
   E_P&: (u = \tau = 0).
 \end{align*}
-In the above, $\tilde{C_\cdot}$ is the strict transform of the corresponding component with the same multiplicities as before. The third component $E_P$ is the exceptional component, and has multiplicity $(r-1)$. The special fiber therefore looks like
+In the above, $\tilde{C_\cdot}$ is the strict transform of the corresponding component with the same multiplicities as before. To compute the multiplicity of the third component $E_P$, we consider the ring
+\[
+\frac{k[u,v,\tau]}{(u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau, T)}
+\]
+where $T = u\tau$. We wish to determine the multiplicity of the prime ideal $(u,\tau)$, so we may localize. Let $\alpha = v^{r}(v+1)$. Then the ideal in the above ring becomes
+\[
+(\alpha u^{r-1} - \tau, u\tau).
+\]
+The first expressions allows us to substitute $\tau = \alpha u^{r-1}$. The second expression then becomes $\alpha u^r$. Therefore the multiplicity of $E_p$ in the special fiber is $r$.
 
-[picture]
-
-The intersection points are $P_1 = \tilde{C_1} \cap E_P$ given by $u=v+1=\tau=0$, and $P_2 = \tilde{C_z} \cap E_P$ given by $u=v=\tau=0$. Writing the equation for our surface as
+The intersection points are $P_1 = \tilde{C_1} \cap E_P$ given by $u=v+1=\tau=0$, and $P_2 = \tilde{C_z} \cap E_P$ given by $u=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{C_z} = \emptyset$. Writing the equation for our surface as
 \[
 u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau = 0
 \]
@@ -181,6 +188,14 @@ u^rv^{r-1}(v + 1) - 1.
 \]
 We now observe that this expression equals $-1$ at both $P_1$ and $P_2$. Therefore both points are regular and we have resolved the singularity at $P$.
 
+\shahed{Problem: If we compute the self-intersection $E_P^2$, we get a nonsensical result. Namely, we use the fact that $E_P$ intersected with the total fiber is zero, and that $E_P$ only intersects $C_1$ and $C_z$. Therefore
+  \begin{align*}
+    0 &= E_P \cdot (C_1 + rE_p + rC_z) \\
+    &= 1 + rE_p^2 + r
+  \end{align*}
+  from which $E_P^2 = -1 - \frac{1}{r}$. I don't see where I went wrong.}
+
+
 \paragraph{Blow-up at $Q$.}
 \label{sec:blow-up-Q}
 
@@ -188,38 +203,75 @@ Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
   C''':Tw = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
 \end{equation}
-
 and has coordinates $(w,z,T) = (0,0,0)$. To desingularize, we will need to do $r-1$ blow-ups. Fortunately, the blow-ups can be implemented inductively. We do the first blow-up and explain how the remaining $r-2$ blow-ups are done. Throughout, the third factor $wz + 1$ and its transforms correspond to $C_1$ and its transforms, and so we will omit them from our discussion. Also, to keep things clean we will use the same symbol to denote a component and its strict transform.
 
 The first blow-up is accomplished by gluing together two charts with $C'''-\{Q\}$. The first chart consists of the affine curve with equation
 \[
 \tau = b^{r-1} w^{r-2} (bw + \tau) (b w^2 + 1)
 \]
-where $z = bw$ and $T = \tau w$. The special fiber is given by $T = 0$, and consists of the components with equation $\tau = b = 0$ and $\tau = w = 0$. The first component has multiplicity $r$ and is the strict transform of ${C_z}$. The second component is the exceptional component, and has multiplicity $r-1$. We call this latter component $E_{r-1}$. Notice that the strict transform of $C_2$ does not lie in this chart. The intersection of the two components occurs when $\tau = b = w = 0$. One verifies that the $\tau$-deriviative of the equation above is $1$ at the latter intersection point; therefore this chart is regular.
+where $z = bw$ and $T = \tau w$. The special fiber is given by $T = 0$, and consists of the components with equation $\tau = b = 0$ and $\tau = w = 0$. The first component is the strict transform of ${C_z}$ and has multiplicity $r$. The second component is the exceptional component, which we call $E_1$. Its multiplicity is computed in a similar manner as that of $E_P$; that is, the dimension of
+\[
+\frac{k[b,w,\tau]_{(\tau, w)}}{(b^{r-1}w^{r-2}(bw + \tau)(bw^2 + 1) - \tau, \tau w)}
+\]
+over the residue field $k(b)$. To do this computation, we let $\alpha = b^r(bw^2 + 1)$ and notice that since $r \geq 3$, the first expression in the ideal becomes $\alpha w^{r-1} - \tau$. Substituting for $\tau$ in the second expression, we obtain $\alpha w^r$. Therefore $E_1$ has multiplicity $r$.
+
+Notice that the strict transform of $C_2$ does not lie in this chart. The intersection of $C_z$ and $E_1$ occurs when $\tau = b = w = 0$. One verifies that the $\tau$-derivative of 
+\[
+b^{r-1}w^{r-2}(bw + \tau)(bw^2 + 1) - \tau
+\]
+is $-1$ at the latter intersection point, and in fact along $E_1$ in this affine patch; therefore this chart is regular.
 
 The second chart is given by the equation
 \[
 w_1 T_1 = z^{r-2}(w_1z + T_1)(w_1 z^2 + 1)
 \]
-where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of two components given by $T_1 = w_1 = 0$ and $T_1 = z = 0$ respectively. The first component has multiplicity 1, and is the strict transform of $C_2$. The second component has multiplicity $r-1$ and is the exceptional component $E_{r-1}$. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r - 2 \geq 1$, is \emph{not} regular.
+where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of two components given by $T_1 = w_1 = 0$ and $T_1 = z = 0$ respectively. The first component has multiplicity 1, and is the strict transform of $C_2$. The second component has multiplicity $r$ and is the exceptional component $E_{1}$. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r - 2 \geq 1$, is \emph{not} regular.
 
-But now observe that if we omit the subscript $1$, we are exactly in the original situation of~\eqref{eq:C'''}. Iterating, at the $i$th stage we will have two charts, one regular and the other of the form
+But now observe that if we omit the subscript $1$ from all the variables, we are almost exactly in the original situation of~\eqref{eq:C'''}; the only difference lies in the power of $z$ in the last factor. Iterating, at the $i$th stage we will have two charts, one regular and the other of the form
 \[
 w_i T_i = z^{r-i-1}(w_iz + T_i)(w_i z^{i+1} + 1).
 \]
-The special fiber here is a chain of rational curves ${C_z}$, $E_{r-1}$, $E_{r-2}$, \dots, $E_{r-i}$, ${C_2}$, where $E_j$ has multiplicity $j$, and each rational curve intersects the next one in the list at exactly one point. Every intersection point is regular except possibly for $E_{r-i} \cap C_2$ (or rather the strict transform of $C_2$). Computing partial derivatives at $(w_i, z, T_i) = (0,0,0)$, we see that this last node is regular if and only if $i = r - 1$. Thus we need to do $r - 1$ blow-ups to obtain a model regular at $Q$.
+The special fiber here is a chain of rational curves ${C_z}$, $E_{1}$, $E_{2}$, \dots, $E_{i}$, ${C_2}$, where $E_j$ has multiplicity $r$, and each rational curve intersects the next one in the list at exactly one point. Every intersection point is regular except possibly for $E_{i} \cap C_2$ (or rather the strict transform of $C_2$). Computing partial derivatives at $(w_i, z, T_i) = (0,0,0)$, we see that this last node is regular if and only if $i = r - 1$. Thus we need to do $r - 1$ blow-ups to obtain a model regular at $Q$.
 
-Piecing together with the charts for $P$, we have obtained a regular model for our curve $C$. We call this model $\sce$.
+Piecing together with the charts for $P$, we have obtained a regular model for our curve $C$. We call this model $\scd$. The special fiber consists of the rational curves $C_1, E_P, C_z, E_1, \dots, E_{r-1}, C_2$, where each component intersects only the next component in the list transversely, the first and last components have multiplicity 1, and the remaining components have multiplicity $r$.
 
-\paragraph{Blowing down}
-\label{sec:blowing-down}
+\shahed{We have the same self-intersection problem for $E_{r-1}$; that is
+  \begin{align*}
+    0 &= E_{r-1} \cdot (rE_{r-2} + rE_{r-1} + C_2) \\
+    &= r + r E_{r-1}^2 + 1.
+  \end{align*}
+  Not sure what's going on here.
+  }
+
+
+\paragraph{Minimality}
+\label{sec:minimality}
 
 Next we must make sure our model is minimal via Castelnuovo's criterion, which states that
-\begin{theorem}[\shahed{citation}]
+\begin{theorem}[\shahed{citation}]\label{thm:castelnuovo}
   \shahed{Hypotheses, clean up.} Then minimal if and only if no components with $E \isom \Pro^1$, $E^2 = -1$.
 \end{theorem}
 
-\shahed{I believe that $C_2$ must be blown down.}
+To compute these self-intersections we use the following theorem.
+\begin{theorem}[\shahed{citation to Prop 7.3 in Silverman's ATAEC}]\label{thm:fibral-intersect-total}
+  Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $D$ be a fibral divisor. Then $D \cdot C_k = 0$.
+\end{theorem}
+
+We need to check that $\scd$ is a minimal model via Theorem~\ref{thm:castelnuovo}. We have
+\begin{align*}
+  C_1 \cdot C_k &= C_1 \cdot (C_1 + rE_{P}) \\
+  &= C_1^2 + r
+\end{align*}
+so $C_1^2 = -r$. Since $r \geq 3$, $C_1$ cannot be blown down. Similarly, $C_2^2 = -r$.
+
+For $E_{i}$ with $1 \leq i \leq r-2$, we have
+\begin{align*}
+  E_{i} \cdot C_k &= E_{r-1} \cdot (rE_{i-1} + rE_{i} + rE_{i+1}) \\
+  &= r + rE_i^2 + r
+\end{align*}
+where we use the convention that $E_0 = C_z$. Therefore $E_i^2 = -2$. Similar reasoning shows that $C_z^2 = -2$.
+
+All that remain are $E_P$ and $E_{r-1}$, for which see the comments above.
 
 \section{Component group}
 \label{sec:component-group}
