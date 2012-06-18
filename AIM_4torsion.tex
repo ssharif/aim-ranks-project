@@ -1,0 +1,185 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[all]{xy}
+\usepackage[pagebackref,colorlinks]{hyperref}
+\usepackage{mathrsfs}
+
+% Color comments!
+\usepackage[usenames,dvipsnames]{color}
+% Color comments
+
+\newcommand{\jenn}[1]{{\color{magenta} \sf $\clubsuit\clubsuit\clubsuit$ Jenn: [#1]}}
+\newcommand{\shahed}[1]{{\color{Purple} \sf $\clubsuit\clubsuit\clubsuit$ Shahed: [#1]}}
+
+\newcommand{\sce}{\mathscr{C}^{\textsf{ex}}}
+\newcommand{\scd}{\mathscr{C}}
+\newcommand{\caff}{C_{\textsf{aff}}}
+
+
+\theoremstyle{plain}
+\newtheorem*{reftheorem}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}{Problem}
+\newtheorem{question}{Question}
+\newtheorem*{question*}{Question}
+\newtheorem{claim}{Claim}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+% General
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\hra}{\hookrightarrow}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\isom}{\cong}
+\newcommand{\too}{\longrightarrow}
+\newcommand{\isomto}{\overset{\sim}{\longrightarrow}}
+\newcommand{\nto}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\nsubset}{\not\subset}
+\renewcommand{\phi}{\varphi}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\ilim}{\displaystyle\lim_{\leftarrow}}
+\newcommand{\dirlim}{\displaystyle\lim_{\rightarrow}}
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+\DeclareMathOperator{\car}{char}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\pgl}{PGL}
+\DeclareMathOperator{\Gl}{GL}
+\DeclareMathOperator{\Sl}{SL}
+
+% Number theory
+\newcommand{\Qbar}{\ensuremath{\overline{\Q}}}
+\newcommand{\Kb}{\overline{K}}
+\newcommand{\Fb}{\overline{F}}
+\newcommand{\kb}{\overline{k}}
+\newcommand{\Xbar}{\overline{X}}
+\newcommand{\Cbar}{\overline{C}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\newcommand{\fp}{\ensuremath{\mathbb{F}_p}}
+\newcommand{\sm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\ok}{\mathscr{O}_K}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\Nm}{Nm}
+\DeclareMathOperator{\tr}{Tr}
+
+% Algebraic geometry
+\newcommand{\sA}{\ensuremath{\mathscr{A}}}
+\newcommand{\sO}{\ensuremath{\mathscr{O}}}
+\newcommand{\sL}{\ensuremath{\mathscr{L}}}
+\newcommand{\sK}{\ensuremath{\mathscr{K}}}
+\newcommand{\sF}{\ensuremath{\mathscr{F}}}
+\newcommand{\A}{\ensuremath{\mathbb{A}}}
+\newcommand{\Pro}{\ensuremath{\mathbb{P}}}
+\newcommand{\G}{\ensuremath{\mathbb{G}}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sX}{\mathscr{X}}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\dv}{div}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\P0}{Pic^0}
+\DeclareMathOperator{\Spec}{Spec}
+
+\begin{document}
+
+\title{Not the 4-torsion point you're looking for}
+\author{Shahed Sharif}
+\maketitle
+
+Let $k$ be a finite field of odd characteristic, $g \geq 3$ an odd integer, $a_i$ for $1 \leq i \leq g$ distinct elements of $k^\times$, and $K = k(t)$. Let $C$ be the hyperelliptic curve with affine piece
+\[
+y^2 = x \prod^g (x + a_i)(a_i x + t).
+\]
+Let $u$ be a fixed square root of $t$ in an algebraic closure of $K$. Let $P \in C(K(u))$ be the point $(u, u^{\frac{g+1}{2}} \prod (u + a_i))$.  The purpose of this note is to show that the divisor $2P - 2\infty$ is \emph{not} linearly equivalent to $(0,0) - \infty$. Note that the class of the latter divisor is 2-torsion. We will in fact prove a stronger claim:
+\begin{proposition}
+  There is no $T \in C(\Kb)$ for which $T - \infty$ is linearly equivalent to $(0,0) - \infty$.
+\end{proposition}
+
+
+\section{Quotient by $\phi$}
+\label{sec:quotient-phi}
+
+Let $\phi \in \Aut C$ be given by
+\[
+\phi(x,y) = \bigg(\frac{t}{x}, \frac{yt^{\frac{g+1}{2}}}{x^{g+1}}\bigg).
+\]
+One checks that $\phi^2$ is the identity. As in Ren\'e's notes, let $C_1$ be the quotient $C/\phi$. Then $C_1$ is given by\footnote{The below corrects a minor error in Ren\'e's definition of $j$.}
+\[
+w^2 = j(v)
+\]
+where $v = x + \dfrac{t}{x}$, $w = \dfrac{y}{x^{\frac{g+1}{2}}}$, and
+\[
+j(v) = \prod^g a_i\bigg(v + a_i + \frac{t}{a_i}\bigg).
+\]
+Observe that $C_1$ is hyperelliptic of genus $(g-1)/2$. Since $g$ is odd, there is a single point at infinity. Let $p_1$ be the quotient map
+\[
+p_1: C \to C_1.
+\]
+
+\begin{remark}
+  The automorphism $\phi$ is defined even when $g$ is even (over the field $K(u)$), so one should be able to construct some model of $C_1$ in this case as well.
+\end{remark}
+
+
+\section{The divisor $P - \infty$}
+\label{sec:divisor-p-infty}
+
+One sees that $p_1(0,0) = p_1(\infty) = \infty$. Therefore $p_{1*}((0,0) - \infty)$ is the trivial divisor on $C_1$. To show that $2P - 2\infty$ is not linearly equivalent to $(0,0) - \infty$, then, it suffices to show that $p_{1*}(P - \infty)$ does not represent a 2-torsion class on $C_1$. But as $C_1$ is hyperelliptic, this is the same as showing that $p_1(P)$ is not a Weierstrass point. We calculate
+\begin{align*}
+  p_1(P) &= p_1(u, u^{\frac{g+1}{2}} \prod (u + a_i)) \\
+  &= \bigg(u + \frac{t}{u}, \frac{t^{\frac{g+1}{2}}u^{\frac{g+1}{2}} \prod (u + a_i)}{u^{g+1}}\bigg) \\
+  &= \bigg(2u, u^{\frac{g+1}{2}} \prod (u + a_i)\bigg)
+\end{align*}
+The $w$-coordinate is nonzero, which concludes the proof.
+
+
+\section{No other possibilities}
+\label{sec:no-other-poss}
+
+We now prove the proposition.
+
+\begin{proof}
+Suppose there is $T \in C(\Kb)$ such that $2T - 2\infty$ is linearly equivalent to $(0,0) - \infty$. Then $p_{1*}(T-\infty)$ is a 2-torsion class over $C_1$, or equivalently $T$ is a Weierstrass point of $C_1$. These points are precisely those for which 
+\[
+p_1(T) = (a_i + t/a_i,0)
+\]
+for some $i$. One verifies that such $T$ are of the form $T = (a_i, 0)$ or $T = (t/a_i, 0)$. But such $T$ are Weierstrass points of $C$, so that $2T - 2\infty$ in fact lies in the trivial divisor class.
+\end{proof}
+
+
+\section{Miscellaneous}
+\label{sec:miscellaneous}
+
+  Let $C_2 = C/(-\phi)$ as in Ren\'e's notes, and $p_2: C \to C_2$ the quotient map. Then $p_2(P)$ is a Weierstrass point of $C_2$. When $g = 1$, $C_1 \isom \Pro^1$, so these results verify Ulmer's calculations in the case of the Legendre curve. Finally, $p_2$ is in fact an \'etale, Galois cover, so there is a diagram
+\[
+\xymatrix{
+  C \ar[r] \ar[d] & A \ar[d] \\
+  C_2 \ar[r] & J_2
+  }
+\]
+where $J_2$ is the Jacobian of $C_2$, the map $C_2 \to J$ is given by $T \mapsto [T - \infty]$, the map $A \to J_2$ is an isogeny, and $C$ is the fiber product $C_2 \times_{J_2} A$.
+
+
+
+\bibliographystyle{halpha}
+\end{document}
