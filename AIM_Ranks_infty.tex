@@ -106,9 +106,6 @@
 \author{Jenn Park \and Shahed Sharif}
 \maketitle
 
-\jenn{testing colour comments}
-\shahed{testing colour comments}
-
 Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $r \geq 3$ be an integer. Let $C$ be the smooth projective curve with affine model
 \[
 C: xy^r = (x+1)(x+t).
@@ -135,7 +132,14 @@ Now glue the 4 equations together via
   w = \frac{y}{x} = vy = \frac{1}{u} \qquad z = \frac{1}{y}
 \end{gather*}
 One checks that the resulting curve is generically smooth.
-\jenn{Why do we have 4 affine patches? It seems to me that the last curve is unnecessary. The curve $C$ corresponds to the patch $Z \neq 0$, where $Z$ is the variable used to projectivize $C$. The curve $C'$ corresponds to the patch $x \neq 0$, and the curve $C''$ corresponds to $y \neq 0$. It seems that $C'''$ corresponds to $x,y \neq 0$, which is the intersection of the last two affine patches... Am I missing something?}
+\begin{remark}
+  If one projectivizes $\caff$, one obtains the equation
+  \[
+  TXY^r = Z^{r-1}(X+Z)(TX+Z)
+  \]
+  in $\Pro^2_K$. The chart $C''$ corresponds to the affine patch with $Y = 1$. When setting $X = 1$, one finds that the curve is not generically smooth; it has a cusp at $[1:0:0]$. Normalizing, one obtains the equation for $C'''$. 
+\end{remark}
+
 
 The special fibers on these charts are as follows:
 \[
@@ -146,7 +150,7 @@ C'' & z^r(z + u) = 0 & C_z, C_1 \\
 C''' & z^rw(wz+1) = 0 & C_z, C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_z$ has multiplicity $r$. Let $P = C_1 \cap C_z$. Note that $P$ lies in the chart $C''$, but in no others. \jenn{Doesn't $P$ also lie in $C'''$?} Let $Q = C_2 \cap C_z$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_z$ has multiplicity $r$. Let $P = C_1 \cap C_z$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap C_z$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
 
 \subsection{Blowing-up}
 \label{sec:blowing-up}
@@ -172,9 +176,9 @@ In the above, $\tilde{C_1}$, $\tilde{C_z}$ are the strict transforms of $C_1$, $
 \[
 \frac{k[u,v,\tau]_{(u,\tau)}}{(u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau)}.
 \]
-This is the local ring for the subscheme $E_P$. Since $E_P$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{E_P}$ with valuation, say, $\nu$. Then the multiplicity of $E_P$ in the special fiber is $\nu(T) = \nu(u\tau)$. But this valuation equals the length of the Artinian ring
+This is the local ring for the subscheme $E_P$. Since $E_P$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{C,E_P}$ with valuation, say, $\nu$. Then the multiplicity of $E_P$ in the special fiber is $\nu(T) = \nu(u\tau)$. But this valuation equals the length of the Artinian ring
 \[
-\frac{\sO_{E_P}}{(u\tau)}.
+\frac{\sO_{C,E_P}}{(u\tau)}.
 \]
 Let $\alpha = v^{r}(v+1)$. Then the above ring equals
 \[
@@ -184,7 +188,7 @@ The first expressions allows us to substitute $\tau = \alpha u^{r-1}$. The secon
 \[
 \frac{k[u,v]_{(u)}}{(u^r)}.
 \]
-Therefore the multiplicity of $E_p$ in the special fiber is $r$.
+Therefore the multiplicity of $E_P$ in the special fiber is $r$.
 
 The intersection points are $P_1 = \tilde{C_1} \cap E_P$ given by $u=v+1=\tau=0$, and $P_2 = \tilde{C_z} \cap E_P$ given by $u=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{C_z} = \emptyset$.) Writing the equation for our surface as
 \[
@@ -201,7 +205,7 @@ We now observe that this expression equals $-1$ at both $P_1$ and $P_2$. Therefo
     0 &= E_P \cdot (C_1 + rE_p + rC_z) \\
     &= 1 + rE_p^2 + r
   \end{align*}
-  from which $E_P^2 = -1 - \frac{1}{r}$. I don't see where I went wrong.}
+  from which $E_P^2 = -1 - \frac{1}{r}$. What is the error?}
 
 
 \paragraph{Blow-up at $Q$.}
