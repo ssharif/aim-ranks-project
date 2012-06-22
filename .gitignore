@@ -1,4 +1,6 @@
 *.aux
+*.blg
+*.brf
 *.log
 *.pdf
 *.out
