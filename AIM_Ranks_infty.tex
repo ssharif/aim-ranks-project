@@ -158,11 +158,11 @@ The third column gives names for the components of the special fiber, given in o
 \paragraph{Blow-up at $P$.}
 \label{sec:blow-up-P}
 
-We first blow up at $P$, which is given by $(u,z,T) = (0,0,0)$. Via the change of variables
+We first blow up at $P$, which is given by $(u,z,T) = (0,0,0)$. The blow-up is given by two charts. The first chart is computed via the change of variables
 \[
-z = uv \qquad T = u\tau
+z = uv \qquad T = u\tau.
 \]
-we obtain the arithmetic surface with equation
+We obtain the arithmetic surface with equation
 \[
 \tau = u^{r-1}v^{r-1}(v + u\tau)(v + 1).
 \]
@@ -198,14 +198,24 @@ and taking the $\tau$ derivative on the left, we obtain
 \[
 u^rv^{r-1}(v + 1) - 1.
 \]
-We now observe that this expression equals $-1$ at both $P_1$ and $P_2$. Therefore both points are regular and we have resolved the singularity at $P$.
+We now observe that this expression equals $-1$ at both $P_1$ and $P_2$. Therefore both points are regular.
 
-\shahed{Problem: If we compute the self-intersection $E_P^2$, we get a nonsensical result. Namely, we use the fact that $E_P$ intersected with the total fiber is zero, and that $E_P$ only intersects $C_1$ and $C_z$. The equations for all three components are linear, so all intersections are transversal. Therefore
-  \begin{align*}
-    0 &= E_P \cdot (C_1 + rE_p + rC_z) \\
-    &= 1 + rE_p^2 + r
-  \end{align*}
-  from which $E_P^2 = -1 - \frac{1}{r}$. What is the error?}
+Now we compute the second chart. This chart is given by the change of variables
+\[
+u=zx \qquad T=z\pi
+\]
+whence we obtain the equation
+\[
+x\pi = z^{r-1}(1 + zx\pi)(1 + x).
+\]
+The special fiber is given by $T = z\pi = 0$, which gives us the components
+\begin{align*}
+  \tilde{C_1}&: (1 + x = \pi = 0) \\
+  \tilde{C_z}&: (x = z = 0) \\
+  E_P&: (z = \pi = 0).
+\end{align*}
+The intersection $\tilde{C_1} \cap E_P$ occurs when $1 + x = \pi = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $\tilde{C_z} \cap E_P$ occurs when $x = \pi = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
+
 
 
 \paragraph{Blow-up at $Q$.}
