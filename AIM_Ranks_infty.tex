@@ -216,23 +216,21 @@ The special fiber is given by $T = z\pi = 0$, which gives us the components
 \end{align*}
 Observe that $F_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap F_r$ occurs when $1 + x = \pi = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $F_r \cap F_1$ occurs when $x = \pi = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{C_z}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
 
-In order to resolve $P_3$, we will use an inductive argument via the following Lemma.
+In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + zx\pi)(1 + x)$, so that
+\begin{itemize}
+    \item the chart containing $P_3$ has equation $x\pi = \alpha z^{r-1}$,
+    \item $\alpha(P_3) \neq 0$, and
+    \item $T = z\pi$.
+\end{itemize}
 
-\begin{lemma}
-  Let $V$ be the affine surface given by $XY = \alpha Z^{r-1}$ for some $r \geq 2$ and some function $\alpha$ with $\alpha(0,0,0) \neq 0$. Let $T = YZ$ be a rational parameter. Consider the relative minimal regular model of $V$ over $k[[T]]$. Then in a neighborhood of $(X,Y,Z) = (0,0,0)$, the special fiber consists of a chain of rational curves $D_r, \cdots, D_1$ such that $D_i$ has multiplicity $i$ in the fiber, $(D_i \cdot D_{i+1}) = 1$ for $1 \leq i \leq r-1$, and $(D_i \cdot D_j) = 0$ for $i \neq j, j \pm 1$.
-\end{lemma}
+We now desingularize by replacing $P_3$ with 2 charts. The first chart is given by
+\[
+\pi_0 = \alpha x^{r-3} z_0^{r-1}
+\]
+where $\pi = x \pi_0$ and $z = x z_0$. Then $T = x^2 \pi_0 z_0$ the special fiber consists of 2 components, one given by $\pi_0 = z_0 = 0$ and of multiplicity $r$, the other given by $\pi_0 = X = 0$ having multiplicity $r-1$. One verifies that the first component is $F_r$; the second component, which we call $F_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $\pi_0$ derivative shows that this chart is regular.
 
-\begin{proof}
-  We prove this by induction on $r$. If $r = 2$, then the model is already regular, and one verifies that $D_1$ given by $X = Z = 0$ and $D_2$ by $Y = Z = 0$ satisfy the conditions above.
+  The second chart is given by $x_0 \pi = \alpha z^{r-2}$, where $X = x_0 z$ and $T = \pi z$. The special fiber then consists of the components $\pi = z = 0$ with multiplicity $r-1$ and $x_0 = z = 0$ with multiplicity $1$. One verifies that these are $F_{r-1}$ and $F_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $x$ has become $x_0$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $F_r, F_{r-1}, \dots, F_1$, each crossing transversely with adjacent curves in the list, and such that $F_i$ has multiplicity $i$ in the special fiber.
 
-  Now let $r \geq 3$. Write $D_r$ for the component of the special fiber given by $Y = Z = 0$, and $D_1$ for the component given by $X = Z = 0$. By abuse of notation, we will write $D_i$ for the strict transform of the $D_i$.
-
-  We now consider the model of $V$ obtained by gluing together 2 charts. The first chart is give by $Y_1 = \alpha X^{r-3}Z_1^{r-1}$, where $Y = XY_1$ and $Z = XZ_1$. Then $T = X^2 Y_1 Z_1$ and the special fiber consists of 2 components, one given by $Y_1 = Z_1 = 0$ and of multiplicity $r$, the other given by $Y_1 = X = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $Y_1$ derivative shows that this chart is regular.
-
-  The second chart is given by $X_1 Y = \alpha Z^{r-2}$, where $X = X_1 Z$ and $T = YZ$. The special fiber then consists of the components $Y = Z = 0$ with multiplicity $r-1$ and $X_1 = Z = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then apply induction on this chart.
-\end{proof}
-
-We now apply the Lemma with $X = x$, $Y = \pi$, $Z = z$, and $\alpha = (1 + zx\pi)(1 + x)$ to desingularize at $P_3$, resulting in a ``tail'' of rational curves $F_r, F_{r-1}, \dots, F_1$.
 
 \paragraph{Blow-up at $Q$.}
 \label{sec:blow-up-Q}
