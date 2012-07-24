@@ -170,15 +170,15 @@ This has special fiber given by $T = u\tau = 0$, with components
 \begin{align*}
   \tilde{C_1}&: (v + 1 = \tau = 0) \\
   \tilde{C_z}&: (v = \tau = 0) \\
-  F_1&: (u = \tau = 0).
+  F_r&: (u = \tau = 0).
 \end{align*}
-In the above, $\tilde{C_1}$, $\tilde{C_z}$ are the strict transforms of $C_1$, $C_z$ respectively with the same multiplicities as before. To compute the multiplicity of the third component $F_1$, we consider the ring
+In the above, $\tilde{C_1}$, $\tilde{C_z}$ are the strict transforms of $C_1$, $C_z$ respectively with the same multiplicities as before. To compute the multiplicity of the third component $F_r$, we consider the ring
 \[
 \frac{k[u,v,\tau]_{(u,\tau)}}{(u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau)}.
 \]
-This is the local ring for the subscheme $F_1$. Since $F_1$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{C,F_1}$ with valuation, say, $\nu$. Then the multiplicity of $F_1$ in the special fiber is $\nu(T) = \nu(u\tau)$. But this valuation equals the length of the Artinian ring
+This is the local ring for the subscheme $F_r$. Since $F_r$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{C,F_r}$ with valuation, say, $\nu$. Then the multiplicity of $F_r$ in the special fiber is $\nu(T) = \nu(u\tau)$. But this valuation equals the length of the Artinian ring
 \[
-\frac{\sO_{C,F_1}}{(u\tau)}.
+\frac{\sO_{C,F_r}}{(u\tau)}.
 \]
 Let $\alpha = v^{r}(v+1)$. Then the above ring equals
 \[
@@ -188,9 +188,9 @@ The first expressions allows us to substitute $\tau = \alpha u^{r-1}$. The secon
 \[
 \frac{k[u,v]_{(u)}}{(u^r)}.
 \]
-Therefore the multiplicity of $F_1$ in the special fiber is $r$.
+Therefore the multiplicity of $F_r$ in the special fiber is $r$.
 
-The intersection points are $P_1 = \tilde{C_1} \cap F_1$ given by $u=v+1=\tau=0$, and $P_z = \tilde{C_z} \cap F_1$ given by $u=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{C_z} = \emptyset$.) Writing the equation for our surface as
+The intersection points are $P_1 = \tilde{C_1} \cap F_r$ given by $u=v+1=\tau=0$, and $P_z = \tilde{C_z} \cap F_r$ given by $u=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{C_z} = \emptyset$.) Writing the equation for our surface as
 \[
 u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau = 0
 \]
@@ -211,12 +211,28 @@ x\pi = z^{r-1}(1 + zx\pi)(1 + x).
 The special fiber is given by $T = z\pi = 0$, which gives us the components
 \begin{align*}
   \tilde{C_1}&: (1 + x = \pi = 0) \\
-  F_1&: (z = \pi = 0) \\
-  F_2&: (z = x = 0).
+  F_r&: (z = \pi = 0) \\
+  F_1&: (z = x = 0).
 \end{align*}
-The intersection $\tilde{C_1} \cap F_1$ occurs when $1 + x = \pi = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $F_1 \cap F_2$ occurs when $x = \pi = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{C_z}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
+Observe that $F_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap F_r$ occurs when $1 + x = \pi = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $F_r \cap F_1$ occurs when $x = \pi = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{C_z}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
 
+In order to resolve $P_3$, we will use an inductive argument via the following Lemma.
 
+\begin{lemma}
+  Let $V$ be the affine surface given by $XY = \alpha Z^{r-1}$ for some $r \geq 2$ and some function $\alpha$ with $\alpha(0,0,0) \neq 0$. Let $T = YZ$ be a rational parameter. Consider the relative minimal regular model of $V$ over $k[[T]]$. Then in a neighborhood of $(X,Y,Z) = (0,0,0)$, the special fiber consists of a chain of rational curves $D_r, \cdots, D_1$ such that $D_i$ has multiplicity $i$ in the fiber, $(D_i \cdot D_{i+1}) = 1$ for $1 \leq i \leq r-1$, and $(D_i \cdot D_j) = 0$ for $i \neq j, j \pm 1$.
+\end{lemma}
+
+\begin{proof}
+  We prove this by induction on $r$. If $r = 2$, then the model is already regular, and one verifies that $D_1$ given by $X = Z = 0$ and $D_2$ by $Y = Z = 0$ satisfy the conditions above.
+
+  Now let $r \geq 3$. Write $D_r$ for the component of the special fiber given by $Y = Z = 0$, and $D_1$ for the component given by $X = Z = 0$. By abuse of notation, we will write $D_i$ for the strict transform of the $D_i$.
+
+  We now consider the model of $V$ obtained by gluing together 2 charts. The first chart is give by $Y_1 = \alpha X^{r-3}Z_1^{r-1}$, where $Y = XY_1$ and $Z = XZ_1$. Then $T = X^2 Y_1 Z_1$ and the special fiber consists of 2 components, one given by $Y_1 = Z_1 = 0$ and of multiplicity $r$, the other given by $Y_1 = X = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $Y_1$ derivative shows that this chart is regular.
+
+  The second chart is given by $X_1 Y = \alpha Z^{r-2}$, where $X = X_1 Z$ and $T = YZ$. The special fiber then consists of the components $Y = Z = 0$ with multiplicity $r-1$ and $X_1 = Z = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then apply induction on this chart.
+\end{proof}
+
+We now apply the Lemma with $X = x$, $Y = \pi$, $Z = z$, and $\alpha = (1 + zx\pi)(1 + x)$ to desingularize at $P_3$, resulting in a ``tail'' of rational curves $F_r, F_{r-1}, \dots, F_1$.
 
 \paragraph{Blow-up at $Q$.}
 \label{sec:blow-up-Q}
@@ -231,7 +247,7 @@ The first blow-up is accomplished by gluing together two charts with $C'''-\{Q\}
 \[
 \tau = b^{r-1} w^{r-2} (bw + \tau) (b w^2 + 1)
 \]
-where $z = bw$ and $T = \tau w$. The special fiber is given by $T = 0$, and consists of the components with equation $\tau = b = 0$ and $\tau = w = 0$. The first component is the strict transform of ${C_z}$ and has multiplicity $r$. The second component is the exceptional component, which we call $E_1$. Its multiplicity is computed in a similar manner as that of $F_1$; that is, as the length of the Artinian ring
+where $z = bw$ and $T = \tau w$. The special fiber is given by $T = 0$, and consists of the components with equation $\tau = b = 0$ and $\tau = w = 0$. The first component is the strict transform of ${C_z}$ and has multiplicity $r$. The second component is the exceptional component, which we call $E_1$. Its multiplicity is computed in a similar manner as that of $F_r$; that is, as the length of the Artinian ring
 \[
 \frac{k[b,w,\tau]_{(\tau, w)}}{(b^{r-1}w^{r-2}(bw + \tau)(bw^2 + 1) - \tau, \tau w)}.
 \]
