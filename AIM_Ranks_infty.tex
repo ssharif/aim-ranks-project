@@ -155,7 +155,7 @@ The third column gives names for the components of the special fiber, given in o
 \subsection{Blowing-up}
 \label{sec:blowing-up}
 
-\paragraph{Blow-up at $P$.}
+\subsubsection{Blow-up at $P$.}
 \label{sec:blow-up-P}
 
 We first blow up at $P$, which is given by $(u,z,T) = (0,0,0)$. The blow-up is given by two charts. The first chart is computed via the change of variables
@@ -232,52 +232,78 @@ where $\pi = x \pi_0$ and $z = x z_0$. Then $T = x^2 \pi_0 z_0$ the special fibe
   The second chart is given by $x_0 \pi = \alpha z^{r-2}$, where $X = x_0 z$. The special fiber then consists of the components $\pi = z = 0$ with multiplicity $r-1$ and $x_0 = z = 0$ with multiplicity $1$. One verifies that these are $F_{r-1}$ and $F_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $x$ has become $x_0$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $F_r, F_{r-1}, \dots, F_1$, each crossing transversely with adjacent curves in the list, and such that $F_i$ has multiplicity $i$ in the special fiber.
 
 
-\paragraph{Blow-up at $Q$.}
+\subsubsection{Blow-up at $Q$.}
 \label{sec:blow-up-Q}
 
 Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
   C''':Tw = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
 \end{equation}
-and has coordinates $(w,z,T) = (0,0,0)$. To desingularize, we will need to do $r-1$ blow-ups. Fortunately, the blow-ups can be implemented inductively. We do the first blow-up and explain how the remaining $r-2$ blow-ups are done. Throughout, the third factor $wz + 1$ and its transforms correspond to $C_1$ and its transforms, and so we will omit them from our discussion. Also, to keep things clean we will use the same symbol to denote a component and its strict transform.
-
-The first blow-up is accomplished by gluing together two charts with $C'''-\{Q\}$. The first chart consists of the affine curve with equation
+and has coordinates $(w,z,T) = (0,0,0)$. We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
 \[
-\tau = b^{r-1} w^{r-2} (bw + \tau) (b w^2 + 1)
+T_0 = b^{r-1}w^{r-2}(bw + T_0)(bw^2 + 1)
 \]
-where $z = bw$ and $T = \tau w$. The special fiber is given by $T = 0$, and consists of the components with equation $\tau = b = 0$ and $\tau = w = 0$. The first component is the strict transform of ${C_z}$ and has multiplicity $r$. The second component is the exceptional component, which we call $E_1$. Its multiplicity is computed in a similar manner as that of $F_r$; that is, as the length of the Artinian ring
-\[
-\frac{k[b,w,\tau]_{(\tau, w)}}{(b^{r-1}w^{r-2}(bw + \tau)(bw^2 + 1) - \tau, \tau w)}.
-\]
-To do this computation, we let $\alpha = b^r(bw^2 + 1)$ and notice that since $r \geq 3$, the first expression in the ideal becomes $\alpha w^{r-1} - \tau$. Substituting for $\tau$ in the second expression, we obtain $\alpha w^r$. Therefore $E_1$ has multiplicity $r$.
+where $z = bw$ and $T = T_0w$. The special fiber consists of 2 components, $T_0 = b = 0$ with multiplicity $r$ and $T_0 = w = 0$ also with multiplicity $r$. The first component is $C_z$, while the second component is exceptional; call it $E_r$. By considering the $T_0$ derivative, one sees that this chart is regular.
 
-Notice that the strict transform of $C_2$ does not lie in this chart. The intersection of $C_z$ and $E_1$ occurs when $\tau = b = w = 0$. One verifies that the $\tau$-derivative of 
-\[
-b^{r-1}w^{r-2}(bw + \tau)(bw^2 + 1) - \tau
-\]
-is $-1$ at the latter intersection point, and in fact along $E_1$ in this affine patch; therefore this chart is regular.
+Note that if $r = 2$, then there is an additional component given by $w = b - 1 = 0$ of multiplicity 1.
 
-The second chart is given by the equation
+Chart 2 is given by the equation
 \[
 w_1 T_1 = z^{r-2}(w_1z + T_1)(w_1 z^2 + 1)
 \]
-where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of two components given by $T_1 = w_1 = 0$ and $T_1 = z = 0$ respectively. The first component has multiplicity 1, and is the strict transform of $C_2$. The second component has multiplicity $r$ and is the exceptional component $E_{1}$. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r - 2 \geq 1$, is \emph{not} regular.
+where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by $T_1 = w_1 = 0$ with multiplicity $1$, $T_1 = z = 0$ with multiplicity $r$, and $z = w_1 = 0$ with multiplicity $1$. The first two components are $C_2$ and $C_z$, respectively. The third component, which is exceptional, we call $E_1$. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r \geq 3$, is \emph{not} regular. (Observe that if $r = 2$, then there is no component $E_1$ and the chart is regular.)
 
-But now observe that if we omit the subscript $1$ from all the variables, we are almost exactly in the original situation of~\eqref{eq:C'''}; the only difference lies in the power of $z$ in the last factor. Iterating, at the $i$th stage we will have two charts, one regular and the other of the form
+We therefore continue blowing-up chart 2 with the following 3 charts.
+
+\paragraph{Chart 2A:}
+\label{sec:chart-a}
+
+$w_1 = z w_2$, $T_1 = z T_2$, equation 
 \[
-w_i T_i = z^{r-i-1}(w_iz + T_i)(w_i z^{i+1} + 1).
+w_2T_2 = z^{r-3}(w_2 z + T_2) \cdot \alpha.
 \]
-The special fiber here is a chain of rational curves ${C_z}$, $E_{1}$, $E_{2}$, \dots, $E_{i}$, ${C_2}$, where $E_j$ has multiplicity $r$, and each rational curve intersects the next one in the list at exactly one point. Every intersection point is regular except possibly for $E_{i} \cap C_2$ (or rather the strict transform of $C_2$). Computing partial derivatives at $(w_i, z, T_i) = (0,0,0)$, we see that this last node is regular if and only if $i = r - 1$. Thus we need to do $r - 1$ blow-ups to obtain a model regular at $Q$.
+If $r = 3$, chart is regular with two components:
+\begin{itemize}
+    \item $C_2: T_2 = w_2 = 0$
+    \item $C_z: T_2 = z = 0$
+\end{itemize}
+If $r \geq 4$, there is an additional component
+\begin{itemize}
+    \item $E_2: z = w_2 = 0$ with mult 2.
+\end{itemize}
 
-Piecing together with the charts for $P$, we have obtained a regular model for our curve $C$. We call this model $\scd$. The special fiber consists of the rational curves $C_1, ???, C_z, E_1, \dots, E_{r-1}, C_2$, where each component intersects only the next component in the list transversely, the first and last components have multiplicity 1, and the remaining components have multiplicity $r$.
+\paragraph{Chart 2B:}
+\label{sec:chart-b}
 
-\shahed{We have the same self-intersection problem for $E_{r-1}$; that is
-  \begin{align*}
-    0 &= E_{r-1} \cdot (rE_{r-2} + rE_{r-1} + C_2) \\
-    &= r + r E_{r-1}^2 + 1.
-  \end{align*}
-  Not sure what's going on here.
-  }
+$z = w_1 z_2$, $T_1 = w_1 T_2'$, so $T = w_1^2 z_2 T_2'$; equation is
+\[
+T_2' = w_1^{r-3} z_2^{r-2} (w_1z_2 + T_2') \alpha.
+\]
+Chart is regular ($T_2'$ derivative). Two components:
+\begin{itemize}
+    \item $C_z: T_2' = z_2 = 0$
+    \item $E_r: T_2' = w_1 = 0$ with mult r.
+\end{itemize}
+
+\paragraph{Chart 2C:}
+\label{sec:chart-c}
+
+$w_1 = w_3 T_1$, $z = z_3 T_1$, so $T = T_1^2 z_3$ with equation
+\[
+w_3 = z_3^{r-2} T_1^{r-3} (w_3 z_3 T_1 + 1) \alpha.
+\]
+Regular. Two components:
+\begin{itemize}
+    \item $E_2: T_1 = w_3 = 0$ (use $w_3 = w_2/T_2$)
+    \item $E_1: z_3 = w_3 = 0$
+\end{itemize}
+
+\shahed{Continue ...}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 \paragraph{Minimality}
