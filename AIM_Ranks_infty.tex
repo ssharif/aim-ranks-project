@@ -239,7 +239,41 @@ Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
   C''':Tw = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
 \end{equation}
-and has coordinates $(w,z,T) = (0,0,0)$. We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
+and has coordinates $(w,z,T) = (0,0,0)$. We desingularize for various values of $r$.
+
+\paragraph{Case $r = 2$.}
+\label{sec:r=2}
+
+
+
+We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
+\[
+T_0 = b(bw + T_0)(bw^2 + 1)
+\]
+where $z = bw$ and $T = T_0w$. The special fiber consists of 3 components:
+\begin{itemize}
+    \item $C_z: T_0 = b = 0$ with multiplicity 2,
+    \item $E_2: T_0 = w = 0$ with multiplicity 2, and
+    \item $E_1: w = b-1 = 0$ with multiplicity 1.
+\end{itemize}
+Here, the $E_i$ are exceptional. The $T_0$-derivative is nonzero except along $E_1$. However, the $w$-derivative is nonzero along $E_1$. Therefore this chart is regular.
+
+Chart 2 is given by the equation
+\[
+w_1 T_1 = (w_1z + T_1)(w_1 z^2 + 1)
+\]
+where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by
+\begin{itemize}
+    \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
+    \item $C_z: T_1 = z = 0$ with multiplicity $2$, and
+    \item $E_1: z = w_1-1 = 0$ with multiplicity $1$.
+\end{itemize}
+One checks that this chart is regular.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
 \[
 T_0 = b^{r-1}w^{r-2}(bw + T_0)(bw^2 + 1)
 \]
