@@ -244,8 +244,6 @@ and has coordinates $(w,z,T) = (0,0,0)$. We desingularize for various values of 
 \paragraph{Case $r = 2$.}
 \label{sec:r=2}
 
-
-
 We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
 \[
 T_0 = b(bw + T_0)(bw^2 + 1)
@@ -265,29 +263,109 @@ w_1 T_1 = (w_1z + T_1)(w_1 z^2 + 1)
 where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by
 \begin{itemize}
     \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
-    \item $C_z: T_1 = z = 0$ with multiplicity $2$, and
+    \item $E_2: T_1 = z = 0$ with multiplicity $2$, and
     \item $E_1: z = w_1-1 = 0$ with multiplicity $1$.
 \end{itemize}
 One checks that this chart is regular.
 
+\shahed{Self-intersections all work out. Yay!}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\paragraph{Case $r=3$.}
+\label{sec:r=3}
+
+We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
+\[
+T_0 = b^2w(bw + T_0)(bw^2 + 1)
+\]
+where $z = bw$ and $T = T_0w$. The special fiber consists of 3 components:
+\begin{itemize}
+    \item $C_z: T_0 = b = 0$ with multiplicity 3,
+    \item $C_3: T_0 = w = 0$ with multiplicity 3, and
+\end{itemize}
+Here, $C_3$ is exceptional. The $T_0$-derivative shows that this chart is regular.
+
+Chart 2 is given by the equation
+\[
+w_1 T_1 = z(w_1z + T_1)(w_1 z^2 + 1)
+\]
+where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by
+\begin{itemize}
+    \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
+    \item $C_3: T_1 = z = 0$ with multiplicity $3$, and
+    \item $E_1: z = w_1 = 0$ with multiplicity $1$; the exceptional component.
+\end{itemize}
+One checks that this chart is singular at the 3-fold intersection point $Q_1$ given by $(w_1,z,T_1) = (0, 0, 0)$. We therefore continue by blowing up at $Q_1$.
+
+Chart 2A is given by $w_1 = z w_2$, $T_1 = z T_2$ with equation 
+\[
+w_2T_2 = (w_2 z + T_2) (w_2 z^3 + 1).
+\]
+The chart is regular with two components:
+\begin{itemize}
+    \item $C_2: T_2 = w_2 = 0$, and
+    \item $E_3: T_2 = z = 0$ with multiplicity 3; exceptional.
+\end{itemize}
+
+Chart 2B is given by $z = w_1 z_2$, $T_1 = w_1 T_2'$, so $T = w_1^2 z_2 T_2'$; the equation is
+\[
+T_2' = z_2 (w_1z_2 + T_2') (w_1^3 z_2^2 + 1).
+\]
+Three components:
+\begin{itemize}
+    \item $C_3: T_2' = z_2 = 0$ with multiplicity 3.
+    \item $E_3: T_2' = w_1 = 0$ with multiplicity 3.
+    \item $E_2: w_1 = z_2 - 1 = 0$ with multiplicity 2.
+\end{itemize}
+One verifies the chart is regular.
+
+Chart 2C is given by $w_1 = w_3 T_1$, $z = z_3 T_1$, so $T = T_1^2 z_3$ with equation
+\[
+w_3 = z_3 (w_3 z_3 T_1 + 1) \alpha.
+\]
+Two components:
+\begin{itemize}
+    \item $E_2: T_1 = w_3 - z_3 = 0$ with multiplicity 2, and
+    \item $E_1: z_3 = w_3 = 0$ with multiplicity 1.
+\end{itemize}
+
+\hrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+
+\shahed{Notes in the general $r$ case:}
 
 We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
 \[
 T_0 = b^{r-1}w^{r-2}(bw + T_0)(bw^2 + 1)
 \]
-where $z = bw$ and $T = T_0w$. The special fiber consists of 2 components, $T_0 = b = 0$ with multiplicity $r$ and $T_0 = w = 0$ also with multiplicity $r$. The first component is $C_z$, while the second component is exceptional; call it $E_r$. By considering the $T_0$ derivative, one sees that this chart is regular.
-
-Note that if $r = 2$, then there is an additional component given by $w = b - 1 = 0$ of multiplicity 1.
+where $z = bw$ and $T = T_0w$. The special fiber consists of 2 components:
+\begin{itemize}
+    \item $C_z: T_0 = b = 0$ with multiplicity $r$, and
+    \item $E_r: T_0 = w = 0$ also with multiplicity $r$.
+\end{itemize}
+ The second component is exceptional. By considering the $T_0$ derivative, one sees that this chart is regular.
 
 Chart 2 is given by the equation
 \[
 w_1 T_1 = z^{r-2}(w_1z + T_1)(w_1 z^2 + 1)
 \]
-where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by $T_1 = w_1 = 0$ with multiplicity $1$, $T_1 = z = 0$ with multiplicity $r$, and $z = w_1 = 0$ with multiplicity $1$. The first two components are $C_2$ and $C_z$, respectively. The third component, which is exceptional, we call $E_1$. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r \geq 3$, is \emph{not} regular. (Observe that if $r = 2$, then there is no component $E_1$ and the chart is regular.)
+where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components:
+\begin{itemize}
+    \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
+    \item $E_r: T_1 = z = 0$ with multiplicity $r$, and
+    \item $E_1: z = w_1 = 0$ with multiplicity $1$.
+\end{itemize}
+The third component is exceptional. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r \geq 3$, is \emph{not} regular.
 
 We therefore continue blowing-up chart 2 with the following 3 charts.
+
+$w_1 = z w_2$, $T_1 = z T_2$, equation 
+\[
+w_2T_2 = z^{r-3}(w_2 z + T_2) \cdot \alpha.
+\]
 
 \paragraph{Chart 2A:}
 \label{sec:chart-a}
@@ -296,10 +374,10 @@ $w_1 = z w_2$, $T_1 = z T_2$, equation
 \[
 w_2T_2 = z^{r-3}(w_2 z + T_2) \cdot \alpha.
 \]
-If $r = 3$, chart is regular with two components:
+If $r = 3$, the chart is regular with two components:
 \begin{itemize}
-    \item $C_2: T_2 = w_2 = 0$
-    \item $C_z: T_2 = z = 0$
+    \item $C_2: T_2 = w_2 = 0$, and
+    \item $C_z: T_2 = z = 0$.
 \end{itemize}
 If $r \geq 4$, there is an additional component
 \begin{itemize}
