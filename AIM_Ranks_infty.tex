@@ -146,11 +146,11 @@ The special fibers on these charts are as follows:
 \begin{array}{lll}
 \caff & x + 1 = 0 & C_1 \\
 C' & v(v + 1) = 0 & C_2, C_1 \\
-C'' & z^r(z + u) = 0 & C_z, C_1 \\
-C''' & z^rw(wz+1) = 0 & C_z, C_2, C_1.
+C'' & z^r(z + u) = 0 & R_1, C_1 \\
+C''' & z^rw(wz+1) = 0 & R_1, C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $C_z$ has multiplicity $r$. Let $P = C_1 \cap C_z$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap C_z$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $R_1$ has multiplicity $r$. Let $P = C_1 \cap R_1$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap R_1$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
 
 \subsection{Blowing-up}
 \label{sec:blowing-up}
@@ -169,16 +169,16 @@ We obtain the arithmetic surface with equation
 This has special fiber given by $T = u\tau = 0$, with components
 \begin{align*}
   \tilde{C_1}&: (v + 1 = \tau = 0) \\
-  \tilde{C_z}&: (v = \tau = 0) \\
-  F_r&: (u = \tau = 0).
+  \tilde{R_1}&: (v = \tau = 0) \\
+  D_r&: (u = \tau = 0).
 \end{align*}
-In the above, $\tilde{C_1}$, $\tilde{C_z}$ are the strict transforms of $C_1$, $C_z$ respectively with the same multiplicities as before. To compute the multiplicity of the third component $F_r$, we consider the ring
+In the above, $\tilde{C_1}$, $\tilde{R_1}$ are the strict transforms of $C_1$, $R_1$ respectively with the same multiplicities as before. To compute the multiplicity of the third component $D_r$, we consider the ring
 \[
 \frac{k[u,v,\tau]_{(u,\tau)}}{(u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau)}.
 \]
-This is the local ring for the subscheme $F_r$. Since $F_r$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{C,F_r}$ with valuation, say, $\nu$. Then the multiplicity of $F_r$ in the special fiber is $\nu(T) = \nu(u\tau)$. But this valuation equals the length of the Artinian ring
+This is the local ring for the subscheme $D_r$. Since $D_r$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{C,D_r}$ with valuation, say, $\nu$. Then the multiplicity of $D_r$ in the special fiber is $\nu(T) = \nu(u\tau)$. But this valuation equals the length of the Artinian ring
 \[
-\frac{\sO_{C,F_r}}{(u\tau)}.
+\frac{\sO_{C,D_r}}{(u\tau)}.
 \]
 Let $\alpha = v^{r}(v+1)$. Then the above ring equals
 \[
@@ -188,9 +188,9 @@ The first expressions allows us to substitute $\tau = \alpha u^{r-1}$. The secon
 \[
 \frac{k[u,v]_{(u)}}{(u^r)}.
 \]
-Therefore the multiplicity of $F_r$ in the special fiber is $r$.
+Therefore the multiplicity of $D_r$ in the special fiber is $r$.
 
-The intersection points are $P_1 = \tilde{C_1} \cap F_r$ given by $u=v+1=\tau=0$, and $P_z = \tilde{C_z} \cap F_r$ given by $u=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{C_z} = \emptyset$.) Writing the equation for our surface as
+The intersection points are $P_1 = \tilde{C_1} \cap D_r$ given by $u=v+1=\tau=0$, and $P_z = \tilde{R_1} \cap D_r$ given by $u=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{R_1} = \emptyset$.) Writing the equation for our surface as
 \[
 u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau = 0
 \]
@@ -211,10 +211,10 @@ x\pi = z^{r-1}(1 + zx\pi)(1 + x).
 The special fiber is given by $T = z\pi = 0$, which gives us the components
 \begin{align*}
   \tilde{C_1}&: (1 + x = \pi = 0) \\
-  F_r&: (z = \pi = 0) \\
-  F_1&: (z = x = 0).
+  D_r&: (z = \pi = 0) \\
+  D_1&: (z = x = 0).
 \end{align*}
-Observe that $F_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap F_r$ occurs when $1 + x = \pi = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $F_r \cap F_1$ occurs when $x = \pi = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{C_z}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
+Observe that $D_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap D_r$ occurs when $1 + x = \pi = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $D_r \cap D_1$ occurs when $x = \pi = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{R_1}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
 
 In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + zx\pi)(1 + x)$, so that
 \begin{itemize}
@@ -227,9 +227,9 @@ We now desingularize by replacing $P_3$ with 2 charts. The first chart is given 
 \[
 \pi_0 = \alpha x^{r-3} z_0^{r-1}
 \]
-where $\pi = x \pi_0$ and $z = x z_0$. Then $T = x^2 \pi_0 z_0$ the special fiber consists of 2 components, one given by $\pi_0 = z_0 = 0$ and of multiplicity $r$, the other given by $\pi_0 = X = 0$ having multiplicity $r-1$. One verifies that the first component is $F_r$; the second component, which we call $F_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $\pi_0$ derivative shows that this chart is regular.
+where $\pi = x \pi_0$ and $z = x z_0$. Then $T = x^2 \pi_0 z_0$ the special fiber consists of 2 components, one given by $\pi_0 = z_0 = 0$ and of multiplicity $r$, the other given by $\pi_0 = X = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $\pi_0$ derivative shows that this chart is regular.
 
-  The second chart is given by $x_0 \pi = \alpha z^{r-2}$, where $X = x_0 z$. The special fiber then consists of the components $\pi = z = 0$ with multiplicity $r-1$ and $x_0 = z = 0$ with multiplicity $1$. One verifies that these are $F_{r-1}$ and $F_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $x$ has become $x_0$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $F_r, F_{r-1}, \dots, F_1$, each crossing transversely with adjacent curves in the list, and such that $F_i$ has multiplicity $i$ in the special fiber.
+  The second chart is given by $x_0 \pi = \alpha z^{r-2}$, where $X = x_0 z$. The special fiber then consists of the components $\pi = z = 0$ with multiplicity $r-1$ and $x_0 = z = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $x$ has become $x_0$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $D_r, D_{r-1}, \dots, D_1$, each crossing transversely with adjacent curves in the list, and such that $D_i$ has multiplicity $i$ in the special fiber.
 
 
 \subsubsection{Blow-up at $Q$.}
@@ -237,114 +237,18 @@ where $\pi = x \pi_0$ and $z = x z_0$. Then $T = x^2 \pi_0 z_0$ the special fibe
 
 Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
-  C''':Tw = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
+  C''':wT = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
 \end{equation}
-and has coordinates $(w,z,T) = (0,0,0)$. We desingularize for various values of $r$.
+and has coordinates $(w,z,T) = (0,0,0)$. Just as in the case of $P$, we will bdesingularize at $Q$ recursively; however, the situation is rather more complicated. To start with, we will assume that $r \geq 4$.
 
-\paragraph{Case $r = 2$.}
-\label{sec:r=2}
-
-We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
-\[
-T_0 = b(bw + T_0)(bw^2 + 1)
-\]
-where $z = bw$ and $T = T_0w$. The special fiber consists of 3 components:
-\begin{itemize}
-    \item $C_z: T_0 = b = 0$ with multiplicity 2,
-    \item $E_2: T_0 = w = 0$ with multiplicity 2, and
-    \item $E_1: w = b-1 = 0$ with multiplicity 1.
-\end{itemize}
-Here, the $E_i$ are exceptional. The $T_0$-derivative is nonzero except along $E_1$. However, the $w$-derivative is nonzero along $E_1$. Therefore this chart is regular.
-
-Chart 2 is given by the equation
-\[
-w_1 T_1 = (w_1z + T_1)(w_1 z^2 + 1)
-\]
-where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by
-\begin{itemize}
-    \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
-    \item $E_2: T_1 = z = 0$ with multiplicity $2$, and
-    \item $E_1: z = w_1-1 = 0$ with multiplicity $1$.
-\end{itemize}
-One checks that this chart is regular.
-
-\shahed{Self-intersections all work out. Yay!}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\paragraph{Case $r=3$.}
-\label{sec:r=3}
-
-We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
-\[
-T_0 = b^2w(bw + T_0)(bw^2 + 1)
-\]
-where $z = bw$ and $T = T_0w$. The special fiber consists of 3 components:
-\begin{itemize}
-    \item $C_z: T_0 = b = 0$ with multiplicity 3,
-    \item $C_3: T_0 = w = 0$ with multiplicity 3, and
-\end{itemize}
-Here, $C_3$ is exceptional. The $T_0$-derivative shows that this chart is regular.
-
-Chart 2 is given by the equation
-\[
-w_1 T_1 = z(w_1z + T_1)(w_1 z^2 + 1)
-\]
-where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by
-\begin{itemize}
-    \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
-    \item $C_3: T_1 = z = 0$ with multiplicity $3$, and
-    \item $E_1: z = w_1 = 0$ with multiplicity $1$; the exceptional component.
-\end{itemize}
-One checks that this chart is singular at the 3-fold intersection point $Q_1$ given by $(w_1,z,T_1) = (0, 0, 0)$. We therefore continue by blowing up at $Q_1$.
-
-Chart 2A is given by $w_1 = z w_2$, $T_1 = z T_2$ with equation 
-\[
-w_2T_2 = (w_2 z + T_2) (w_2 z^3 + 1).
-\]
-The chart is regular with two components:
-\begin{itemize}
-    \item $C_2: T_2 = w_2 = 0$, and
-    \item $E_3: T_2 = z = 0$ with multiplicity 3; exceptional.
-\end{itemize}
-
-Chart 2B is given by $z = w_1 z_2$, $T_1 = w_1 T_2'$, so $T = w_1^2 z_2 T_2'$; the equation is
-\[
-T_2' = z_2 (w_1z_2 + T_2') (w_1^3 z_2^2 + 1).
-\]
-Three components:
-\begin{itemize}
-    \item $C_3: T_2' = z_2 = 0$ with multiplicity 3.
-    \item $E_3: T_2' = w_1 = 0$ with multiplicity 3.
-    \item $E_2: w_1 = z_2 - 1 = 0$ with multiplicity 2.
-\end{itemize}
-One verifies the chart is regular.
-
-Chart 2C is given by $w_1 = w_3 T_1$, $z = z_3 T_1$, so $T = T_1^2 z_3$ with equation
-\[
-w_3 = z_3 (w_3 z_3 T_1 + 1) \alpha.
-\]
-Two components:
-\begin{itemize}
-    \item $E_2: T_1 = w_3 - z_3 = 0$ with multiplicity 2, and
-    \item $E_1: z_3 = w_3 = 0$ with multiplicity 1.
-\end{itemize}
-
-\hrule
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bigskip
-
-\shahed{Notes in the general $r$ case:}
-
-We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
+We start by replacing $Q$ with two charts. Chart 1 is given by the equation
 \[
 T_0 = b^{r-1}w^{r-2}(bw + T_0)(bw^2 + 1)
 \]
 where $z = bw$ and $T = T_0w$. The special fiber consists of 2 components:
 \begin{itemize}
-    \item $C_z: T_0 = b = 0$ with multiplicity $r$, and
-    \item $E_r: T_0 = w = 0$ also with multiplicity $r$.
+    \item $R_1: T_0 = b = 0$ with multiplicity $r$, and
+    \item $R_2: T_0 = w = 0$ also with multiplicity $r$.
 \end{itemize}
  The second component is exceptional. By considering the $T_0$ derivative, one sees that this chart is regular.
 
@@ -355,13 +259,50 @@ w_1 T_1 = z^{r-2}(w_1z + T_1)(w_1 z^2 + 1)
 where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components:
 \begin{itemize}
     \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
-    \item $E_r: T_1 = z = 0$ with multiplicity $r$, and
+    \item $R_2: T_1 = z = 0$ with multiplicity $r$, and
     \item $E_1: z = w_1 = 0$ with multiplicity $1$.
 \end{itemize}
 The third component is exceptional. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r \geq 3$, is \emph{not} regular.
 
-We therefore continue blowing-up chart 2 with the following 3 charts.
+We therefore continue by blowing-up chart 2. We do this recursively as follows. For $1 \leq i \leq r-???$, let chart $(2,i)$ be the chart given by
+  \[
+  w_i T_i = z^{r-i-1} (w_i z + T_i) (w_i z^{i+1} + 1).
+  \]
+  Let $T = T_i z^i$. Then the special fiber ($T = 0$) consists of the components
+  \begin{itemize}
+      \item $C_2: T_i = w_i = 0$ with multiplicity 1,
+      \item $R_{i+1}: T_i = z = 0$ with multiplicity $r$, and
+      \item $E_i: z = w_i = 0$ with multiplicity $i$.
+  \end{itemize}
+  One verifies that this chart is nonregular only at $Q_i: (w_i, z, T_i) = (0, 0, 0)$. We blow up $Q_i$ via 3 charts.
 
+  The first chart is $(2,i+1)$, which we glue to $(2,i)$ away from $Q_i$ using $w_i = z w_{i+1}$ and $T_i = z T_{i+1}$. One verifies that this is consistent with the construction above.
+
+  The second chart is $(2,i)a$ given by $w_i = w_a T_i$ and $z = z_a T_i$. (This is an abuse of notation; one should say $w_{i,a}$ and $z_{i,a}$ or some such.) Then $T = z_a^i T_i^{i+1}$. Our chart is given by
+  \[
+  w_a = z_a^{r-i-1} T_i^{r-i-2} (w_a z_a T_i + 1) (w_a z_a^{i+1} T_i^{i+2} + 1).
+  \]
+  The special fiber consists of
+  \begin{itemize}
+      \item $E_i: z_a = w_a = 0$ with multiplicity $i$, and
+      \item $E_{i+1}: T_i = w_a = 0$ with multiplicity $i+1$.
+  \end{itemize}
+  By computing the $w_a$-derivative, one checks that this chart is regular.
+
+  The third chart is $(2,i)b$ given by $z = w_i z_b$ and $T_i = w_i T_b$. Then $T = w_i^{i+1} z_b^i T_b$ and the equation is
+  \[
+  T_b = w_i^{r-i-2} z_b^{r-i-1} (w_i z_b + T_b) (w_i^{i+2} z_b^{i+1} + 1).
+  \]
+  The chart is regular (take the $T_b$-derivative) and the special fiber has components
+  \begin{itemize}
+      \item $R_i: T_b = z_b = 0$ with multiplicity $r$, and
+      \item $R_{i+1}: T_b = w_i = 0$ with multiplicity $r$.
+  \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hrule
+\bigskip
 $w_1 = z w_2$, $T_1 = z T_2$, equation 
 \[
 w_2T_2 = z^{r-3}(w_2 z + T_2) \cdot \alpha.
@@ -377,7 +318,7 @@ w_2T_2 = z^{r-3}(w_2 z + T_2) \cdot \alpha.
 If $r = 3$, the chart is regular with two components:
 \begin{itemize}
     \item $C_2: T_2 = w_2 = 0$, and
-    \item $C_z: T_2 = z = 0$.
+    \item $R_1: T_2 = z = 0$.
 \end{itemize}
 If $r \geq 4$, there is an additional component
 \begin{itemize}
@@ -393,7 +334,7 @@ T_2' = w_1^{r-3} z_2^{r-2} (w_1z_2 + T_2') \alpha.
 \]
 Chart is regular ($T_2'$ derivative). Two components:
 \begin{itemize}
-    \item $C_z: T_2' = z_2 = 0$
+    \item $R_1: T_2' = z_2 = 0$
     \item $E_r: T_2' = w_1 = 0$ with mult r.
 \end{itemize}
 
@@ -432,20 +373,7 @@ To compute these self-intersections we use the following theorem.
 \end{theorem}
 
 We need to check that $\scd$ is a minimal model via Theorem~\ref{thm:castelnuovo}. We have
-\begin{align*}
-  C_1 \cdot C_k &= C_1 \cdot (C_1 + rE_{P}) \\
-  &= C_1^2 + r
-\end{align*}
-so $C_1^2 = -r$. Since $r \geq 3$, $C_1$ cannot be blown down. Similarly, $C_2^2 = -r$.
 
-For $E_{i}$ with $1 \leq i \leq r-2$, we have
-\begin{align*}
-  E_{i} \cdot C_k &= E_{r-1} \cdot (rE_{i-1} + rE_{i} + rE_{i+1}) \\
-  &= r + rE_i^2 + r
-\end{align*}
-where we use the convention that $E_0 = C_z$. Therefore $E_i^2 = -2$. Similar reasoning shows that $C_z^2 = -2$.
-
-All that remain are $E_P$ and $E_{r-1}$, for which see the comments above.
 
 \section{Component group}
 \label{sec:component-group}
