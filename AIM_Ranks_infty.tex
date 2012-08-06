@@ -299,6 +299,63 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $R_{i+2}: T_b = w_i = 0$ with multiplicity $r$.
   \end{itemize}
 
+\paragraph{Case $r=3$.}
+\label{sec:r=3}
+
+We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
+\[
+T_0 = b^2w(bw + T_0)(bw^2 + 1)
+\]
+where $z = bw$ and $T = T_0w$. The special fiber consists of 3 components:
+\begin{itemize}
+    \item $C_z: T_0 = b = 0$ with multiplicity 3,
+    \item $C_3: T_0 = w = 0$ with multiplicity 3, and
+\end{itemize}
+Here, $C_3$ is exceptional. The $T_0$-derivative shows that this chart is regular.
+
+Chart 2 is given by the equation
+\[
+w_1 T_1 = z(w_1z + T_1)(w_1 z^2 + 1)
+\]
+where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by
+\begin{itemize}
+    \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
+    \item $C_3: T_1 = z = 0$ with multiplicity $3$, and
+    \item $E_1: z = w_1 = 0$ with multiplicity $1$; the exceptional component.
+\end{itemize}
+One checks that this chart is singular at the 3-fold intersection point $Q_1$ given by $(w_1,z,T_1) = (0, 0, 0)$. We therefore continue by blowing up at $Q_1$.
+
+Chart 2A is given by $w_1 = z w_2$, $T_1 = z T_2$ with equation 
+\[
+w_2T_2 = (w_2 z + T_2) (w_2 z^3 + 1).
+\]
+The chart is regular with two components:
+\begin{itemize}
+    \item $C_2: T_2 = w_2 = 0$, and
+    \item $E_3: T_2 = z = 0$ with multiplicity 3; exceptional.
+\end{itemize}
+
+Chart 2B is given by $z = w_1 z_2$, $T_1 = w_1 T_2'$, so $T = w_1^2 z_2 T_2'$; the equation is
+\[
+T_2' = z_2 (w_1z_2 + T_2') (w_1^3 z_2^2 + 1).
+\]
+Three components:
+\begin{itemize}
+    \item $C_3: T_2' = z_2 = 0$ with multiplicity 3.
+    \item $E_3: T_2' = w_1 = 0$ with multiplicity 3.
+    \item $E_2: w_1 = z_2 - 1 = 0$ with multiplicity 2.
+\end{itemize}
+One verifies the chart is regular.
+
+Chart 2C is given by $w_1 = w_3 T_1$, $z = z_3 T_1$, so $T = T_1^2 z_3$ with equation
+\[
+w_3 = z_3 (w_3 z_3 T_1 + 1) \alpha.
+\]
+Two components:
+\begin{itemize}
+    \item $E_2: T_1 = w_3 - z_3 = 0$ with multiplicity 2, and
+    \item $E_1: z_3 = w_3 = 0$ with multiplicity 1.
+\end{itemize}
 
 
 
