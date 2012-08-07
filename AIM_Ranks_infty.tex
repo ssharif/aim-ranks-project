@@ -336,11 +336,22 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
   with special fiber consisting of the components
   \begin{itemize}
       \item $R_{r-1}: T_b = z_b = 0$ with multiplicity $r$,
-      \item $R_r: T_b = w_{r-2} = 0$ with multiplicity $r$, and
+      \item $E_r: T_b = w_{r-2} = 0$ with multiplicity $r$, and
       \item $E_{r-1}: w_{r-2} = z_b - 1 = 0$ with multiplicity $r-1$.
   \end{itemize}
+  This chart is regular because ???
 
+\subsubsection{Dual graph}
+\label{sec:dual-graph}
 
+Putting it all together, we obtain the dual graph for $C_k$ pictured in Figure~\ref{fig:superelliptic-dual-graph}.
+\begin{figure}\centering
+    \input{SuperDual}
+  \caption{Dual graph of $C_k$}
+\label{fig:superelliptic-dual-graph}
+\end{figure}
+
+All intersections are transversal. The components $C_1$ and $C_2$ have multiplicity $1$. The $R_i$ each have multiplicity $r$. The $D_i$ and $E_i$ have multiplicity $i$.
 
 
 
@@ -406,7 +417,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
 
 
 
-\paragraph{Minimality}
+\subsubsection{Minimality}
 \label{sec:minimality}
 
 Next we must make sure our model is minimal via Castelnuovo's criterion, which states that
