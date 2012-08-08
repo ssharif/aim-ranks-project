@@ -417,7 +417,7 @@ All intersections are transversal. The components $C_1$ and $C_2$ have multiplic
 
 
 
-\subsubsection{Minimality}
+\subsection{Minimality}
 \label{sec:minimality}
 
 Next we must make sure our model is minimal via Castelnuovo's criterion, which states that
@@ -425,12 +425,36 @@ Next we must make sure our model is minimal via Castelnuovo's criterion, which s
   Let $R$ be a discrete valuation ring with algebraically closed residue field. Let $\scd$ be a regular arithmetic surface proper over $R$ whose generic fiber is a nonsingular projective curve of genus $g \geq 1$. Then $\scd$ is minimal if and only if the special fiber of $\scd$ has no divisors $E$ for which $E \isom \Pro^1$ and $E^2 = -1$.
 \end{theorem}
 
-To compute these self-intersections we use the following theorem.
+We need to check that $\scd$ is a minimal model via Theorem~\ref{thm:castelnuovo}. Every irreducible component is isomorphic to $\Pro^1$, so it remains to check the self-intersections. To compute these self-intersections we use the following theorem.
 \begin{theorem}[Prop.~IV.7.3 in \cite{silvermanATAEC}]\label{thm:fibral-intersect-total}
   Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $D$ be a fibral divisor. Then $D \cdot C_k = 0$.
 \end{theorem}
 
-We need to check that $\scd$ is a minimal model via Theorem~\ref{thm:castelnuovo}. We have
+In our case, all of the geometric intersections are transversal, so we can simplify the above theorem.
+\begin{proposition}
+  Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $C_k^{red}$ be the associated reduced scheme. Suppose that every singular point of $C_k^{red}$ consists of a transverse crossing of two irreducible components. Let $D$ be an irreducible component of $C_k$. Label the remaining irreducible components $D_1, D_2, \dots$. Then
+  \[
+  D^2 = -\frac{1}{m} \sum m_i n_i
+  \]
+  where $m$ is the multiplicity of $D$, $m_i$ is the multiplicity of $D_i$, and $n_i$ is the number of intersection points of $D$ and $D_i$.
+\end{proposition}
+
+\begin{proof}
+  The total fiber is
+  \[
+  C_k = mD + \sum m_i D_i.
+  \]
+  By Theorem~\ref{thm:fibral-intersect-total}, we have
+  \begin{align*}
+    0 &= D \cdot C_k \\
+    &= mD^2 + \sum m_i (D \cdot D_i) \\
+    &= mD^2 + \sum m_i n_i
+  \end{align*}
+  from which the claim follows.
+\end{proof}
+
+
+
 
 
 \section{Component group}
