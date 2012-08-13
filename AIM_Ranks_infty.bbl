@@ -1,4 +1,10 @@
-\begin{thebibliography}{Sil94}
+\begin{thebibliography}{BLR90}
+
+\bibitem[BLR90]{blr}
+Siegfried Bosch, Werner L{\"u}tkebohmert, and Michel Raynaud.
+\newblock {\em N\'eron models}, volume~21 of {\em Ergebnisse der Mathematik und
+  ihrer Grenzgebiete (3) [Results in Mathematics and Related Areas (3)]}.
+\newblock Springer-Verlag, Berlin, 1990.
 
 \bibitem[Sil94]{silvermanATAEC}
 Joseph~H. Silverman.

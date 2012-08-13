@@ -400,7 +400,92 @@ From the proposition, one verifies that $C_1$ and $C_2$ have self-intersection $
 \section{Component group}
 \label{sec:component-group}
 
+To compute the component group of the Jacobian of a curve, one typically first base-extends to a strictly henselian ring. The following result of Bosch-Liu allows us to do this without complication:
 
+\shahed{Insert result here.}
+
+The background material in the remainder of this section can be found in~\cite[Ch. 9]{blr}. In the latter, the authors define the \emph{geometric multiplicity} of a component of the special fiber, and use the notation $e_i$. Our base field is algebraically closed, and it follows that all geometric multiplicities are $1$. (See \cite[Defn~9.1.3]{blr}.)
+
+In order to compute the component group at $\infty$ of $C$, we make use of the \emph{intersection matrix} of the special fiber. This is the matrix whose $(i,j)$ entry is the intersection number $(V_i \cdot V_j)$, where $V_i$ is some labeling of the irreducible components of the special fiber. We will order the components as follows: $D_1, D_2, \dots, D_r, R_1, \dots, R_{r-1}, E_r, \dots, E_1, C_1, C_2$. Then the intersection matrix is
+\[
+A = \left[\begin{array}{rrrrrrrrr|rr}
+  -2 & 1 & & & & & & & & & \\
+  1 & -2 & 1 & & & & & & & & \\
+  & 1 & -2 & 1 & & & & & & & \\
+  & & & & & & & & & & \\
+  & & & & & & & & & 1 & \\
+  & & & & & \ddots & & & & \vdots & \\
+  & & & & & & & & & & 1 \\
+  & & & & & & & & & & \\
+  & & & & & & & 1 & -2 & & \\ \hline
+  & & & & 1 & \dots & & & & -r & \\
+  & & & & & & 1 & & & & -r
+\end{array}\right].
+\]
+The $1$s in the right-hand rectangle in the matrix occur at rows $r$ and $2r$---that is, at the rows corresponding to $D_r$ and $E_r$. The $1$s in the bottom rectangle similarly occur at the $r$th and $2r$th columns respectively. The component group can then be computed via the following.
+\begin{theorem}[Corollary 9.6.3 of \cite{blr}]\label{thm:elementary-divisors-comp-group}
+  Suppose that $\scd$ is a flat, proper relative curve over a strictly henselian discrete valuation ring. Suppose also that $\scd$ is generically geometrically irreducible and that the residue field is algebraically closed. Let $n_1, \dots, n_{v-1}, 0$ be the elementary divisors of the intersection matrix $A$ for $C_k$. Let $J$ be the Jacobian of the generic fiber of $\scd$. Then the group of connected components of the N\'eron model of $J$ is isomorphic to
+  \[
+  \frac{\Z}{n_1\Z} \oplus \cdots \oplus \frac{\Z}{n_{v-1}\Z}.
+  \]
+\end{theorem}
+Implicit in the statement of the theorem is that the intersection matrix has rank $r-1$. In our case, one can at least see that the vector of multiplicities $(1,2,\dots,r,r,\dots,r,r-1,\dots,2,1,1,1)$ lies in the kernel of $A$; this in fact holds in general.
+
+We must therefore compute the elementary divisors of $A$. Recall that the elementary divisors are the diagonal entries in the Smith normal form of $A$. The Smith normal form is a diagonal matrix obtained from $A$ via any combination of elementary row and column operations. 
+
+\paragraph{Step 1:}
+\label{sec:step-1}
+
+For $i = 1, \dots, 3r-3$, we do the following column operations:
+\begin{itemize}
+    \item Add twice column $i$ to column $i+1$.
+    \item Subtract column $i$ from column $i+2$.
+\end{itemize}
+We then add twice column $3r-2$ to column $3r-1$. An easy induction shows that the resulting matrix is
+\[
+\left[\begin{array}{rrrrrrrr|rr}
+  -2 & -3 & & & \dots & & & -3r & & \\
+  1 & & & & & & & & & \\
+  & 1 & & & & & & & & \\
+  & & & & & & & & 1 & \\
+  & & \ddots & & & & & & & \\
+  & & & & & & & & & 1 \\
+  & & & & & & 1 & 0 & & \\ \hline
+  & & 1 & 2 & & \dots & & 2r & -r & \\
+  & & & & 1 & 2 & \dots & r & & -r
+\end{array}\right]
+\]
+Once again, the $1$s in the right-hand rectangle occur at rows $r$ and $2r$ respectively, and the $1$s in the bottom rectangle occur in columns $r$ and $2r$ respectively.
+
+\paragraph{Step 2:}
+\label{sec:step-2}
+
+We now subtract column $r$ from column $3r$ (the second column from the right), and subtract column $2r$ from column $3r+1$:
+\[
+\left[\begin{array}{rrrrrrrr|rr}
+  -2 & -3 & & & \dots & & & -3r & r+1 & 2r+1 \\
+  1 & & & & & & & & & \\
+  & 1 & & & & & & & & \\
+  & & \ddots & & & & & & & \\
+  & & & & & & 1 & 0 & & \\ \hline
+  & & 1 & 2 & & \dots & & 2r & -r-1 & -r \\
+  & & & & 1 & 2 & \dots & r & & -r-1
+\end{array}\right].
+\]
+
+\paragraph{Step 3:}
+\label{sec:step-3}
+
+By the obvious row operations, we can zero out the first $3r-2$ entries of the first row and the last two rows. We then rearrange rows to obtain
+\[
+\left[\begin{array}{c|rrr}
+  I & & & \\ \hline
+  & -3r & r+1 & 2r+1 \\
+  & 2r & -r-1 & -r \\
+  & r & -r-1 &
+\end{array}\right].
+\]
+In the above, $I$ denotes the $(3r-2) \times (3r-2)$ identity matrix. By Theorem~\ref{thm:elementary-divisors-comp-group}, we may consider only the $3\times 3$ block in the bottom right and omit everything else.
 
 \bibliographystyle{alpha}
 \bibliography{./aimbiblio}
