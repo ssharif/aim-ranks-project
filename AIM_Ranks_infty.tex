@@ -110,7 +110,7 @@ Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $r \geq 3$ be an integer.
 \[
 C: xy^r = (x+1)(x+t).
 \]
-The purpose of this note is to compute the minimal proper regular model of $C$ at $t = \infty$, as well as the component group.
+The purpose of this note is to compute the minimal proper regular model of $C$ at $t = \infty$, as well as the component group. In all of the following, we test regularity of various affine charts. These charts will be given by a single equation in $\mathbb{A}^3_k$ of the form $f(x_1,x_2,x_3) = g(x_1,x_2,x_3)$. We will make frequent use of the fact that a point $P_0$ on the surface is regular if and only if $\frac{\partial f}{\partial x_i}(P_0) \neq \frac{\partial g}{\partial x_i}(P_0)$ for some $i$.
 
 \section{Desingularization}
 \label{sec:desingularization}
@@ -239,7 +239,7 @@ Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
   C''':wT = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
 \end{equation}
-and has coordinates $(w,z,T) = (0,0,0)$. Just as in the case of $P$, we will desingularize at $Q$ recursively; however, the situation is rather more complicated. To start with, we will assume that $r \geq 4$. 
+and has coordinates $(w,z,T) = (0,0,0)$. Just as in the case of $P$, we will desingularize at $Q$ recursively; however, the situation is rather more complicated.  
 
 One should keep in mind the following: blowing-up is a local procedure; and $wz + 1 = T = 0$ is an equation for $C_1$, a component which does not pass through $Q$. Therefore, the factor $wz + 1$ and its transforms can be safely ignored when computing special fibers below.
 
@@ -289,13 +289,13 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $E_i: z_a = w_a = 0$ with multiplicity $i$, and
       \item $E_{i+1}: T_i = w_a = 0$ with multiplicity $i+1$.
   \end{itemize}
-  By computing the $w_a$-derivative, one checks that this chart is regular.
+  By computing the $w_a$ derivative, one checks that this chart is regular.
 
   The third chart is $(2,i)b$ given by $z = w_i z_b$ and $T_i = w_i T_b$. Then $T = w_i^{i+1} z_b^i T_b$ and the equation is
   \[
   T_b = w_i^{r-i-2} z_b^{r-i-1} (w_i z_b + T_b) (w_i^{i+2} z_b^{i+1} + 1).
   \]
-  The chart is regular (take the $T_b$-derivative) and the special fiber has components
+  The chart is regular (take the $T_b$ derivative) and the special fiber has components
   \begin{itemize}
       \item $R_{i+1}: T_b = z_b = 0$ with multiplicity $r$, and
       \item $R_{i+2}: T_b = w_i = 0$ with multiplicity $r$.
@@ -305,7 +305,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
   \[
   w_{r-2} T_{r-2} = z (w_{r-2} z + T_{r-2}) (w_{r-2} z^{r-1} + 1)
   \]
-  with $w_{r-2}, T_{r-2}$ given as above, and $T = T_{r-2} z^{r-2}$. We blow up as before; that is, construct the charts $(2, r-1)$, $(2, r-2)a$ and $(2, r-2)b$ as above. We now verify that there are two differences: every chart will be regular, and the special fiber for $(2, r-1)$ and $(2,r-1)b$ will be different.
+  with $w_{r-2}, T_{r-2}$ given as above, and $T = T_{r-2} z^{r-2}$. We blow up as before; that is, construct the charts $(2, r-1)$, $(2, r-2)a$ and $(2, r-2)b$ as above. We now verify that there are two differences: every chart is regular, and the special fibers for $(2, r-1)$ and $(2,r-1)b$ differ from the cases for smaller $i$.
 
   For chart $(2, r-1)$, the equation is
   \[
@@ -316,7 +316,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $C_2: T_{r-1} = w_{r-1} = 0$ with multiplicity 1, and
       \item $R_r: T_{r-1} = z = 0$ with multiplicity $r$.
   \end{itemize}
-  One checks that the $T_{r-1}$ partial derivative is zero if and only if $z = 0$ and $w_{r-1} = 1$. But plugging these values into the $z$-derivative yields $1$. Therefore this chart is regular.
+  One checks that the $T_{r-1}$ partial derivative gives equality if and only if $z = 0$ and $w_{r-1} = 1$. But plugging these values into the $z$-derivative yields an inequality. Therefore this chart is regular.
 
   For chart $(2, r-2)a$, the equation is
   \[
@@ -327,7 +327,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $E_{r-2}: z_a = w_a = 0$ with multiplicity $r-2$, and
       \item $E_{r-1}: T_{r-2} = w_a - z_a = 0$ with multiplicity $r-1$.
   \end{itemize}
-  The argument for regularity is unchanged.
+  The argument for regularity is the same as for the general charts $(2,i)a$.
 
   Finally, the chart $(2, r-2)b$ is given by
   \[
@@ -339,88 +339,27 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $E_r: T_b = w_{r-2} = 0$ with multiplicity $r$, and
       \item $E_{r-1}: w_{r-2} = z_b - 1 = 0$ with multiplicity $r-1$.
   \end{itemize}
-  This chart is regular because ???
+  Checking the $T_b$ deriviative, we see that we have equality only along $E_{r-1}$. But the $w_{r-2}$ derivative along $E_{r-1}$ always yields an inequality. Therefore this chart is regular.
+
+  Let $\scd$ be the resulting regular model for $C$, and write $C_k$ for its special fiber at $T = 0$.
 
 \subsubsection{Dual graph}
 \label{sec:dual-graph}
 
-Putting it all together, we obtain the dual graph for $C_k$ pictured in Figure~\ref{fig:superelliptic-dual-graph}.
+Recall that the dual graph of $C_k$ is defined to be the graph such that the set of irreducible components of $C_k$ is the set of vertices, and the set of intersection points between two such components is the set of edges between the corresponding vertices. Putting our calculations above together, we obtain the dual graph for $C_k$ pictured in Figure~\ref{fig:superelliptic-dual-graph}.
 \begin{figure}\centering
     \input{SuperDual}
   \caption{Dual graph of $C_k$}
 \label{fig:superelliptic-dual-graph}
 \end{figure}
 
-All intersections are transversal. The components $C_1$ and $C_2$ have multiplicity $1$. The $R_i$ each have multiplicity $r$. The $D_i$ and $E_i$ have multiplicity $i$.
-
-
-
-% \paragraph{Case $r=3$.}
-% \label{sec:r=3}
-
-% We desingularize by replacing $Q$ with two charts. Chart 1 is given by the equation
-% \[
-% T_0 = b^2w(bw + T_0)(bw^2 + 1)
-% \]
-% where $z = bw$ and $T = T_0w$. The special fiber consists of 3 components:
-% \begin{itemize}
-%     \item $C_z: T_0 = b = 0$ with multiplicity 3,
-%     \item $C_3: T_0 = w = 0$ with multiplicity 3, and
-% \end{itemize}
-% Here, $C_3$ is exceptional. The $T_0$-derivative shows that this chart is regular.
-
-% Chart 2 is given by the equation
-% \[
-% w_1 T_1 = z(w_1z + T_1)(w_1 z^2 + 1)
-% \]
-% where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components given by
-% \begin{itemize}
-%     \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
-%     \item $C_3: T_1 = z = 0$ with multiplicity $3$, and
-%     \item $E_1: z = w_1 = 0$ with multiplicity $1$; the exceptional component.
-% \end{itemize}
-% One checks that this chart is singular at the 3-fold intersection point $Q_1$ given by $(w_1,z,T_1) = (0, 0, 0)$. We therefore continue by blowing up at $Q_1$.
-
-% Chart 2A is given by $w_1 = z w_2$, $T_1 = z T_2$ with equation 
-% \[
-% w_2T_2 = (w_2 z + T_2) (w_2 z^3 + 1).
-% \]
-% The chart is regular with two components:
-% \begin{itemize}
-%     \item $C_2: T_2 = w_2 = 0$, and
-%     \item $E_3: T_2 = z = 0$ with multiplicity 3; exceptional.
-% \end{itemize}
-
-% Chart 2B is given by $z = w_1 z_2$, $T_1 = w_1 T_2'$, so $T = w_1^2 z_2 T_2'$; the equation is
-% \[
-% T_2' = z_2 (w_1z_2 + T_2') (w_1^3 z_2^2 + 1).
-% \]
-% Three components:
-% \begin{itemize}
-%     \item $C_3: T_2' = z_2 = 0$ with multiplicity 3.
-%     \item $E_3: T_2' = w_1 = 0$ with multiplicity 3.
-%     \item $E_2: w_1 = z_2 - 1 = 0$ with multiplicity 2.
-% \end{itemize}
-% One verifies the chart is regular.
-
-% Chart 2C is given by $w_1 = w_3 T_1$, $z = z_3 T_1$, so $T = T_1^2 z_3$ with equation
-% \[
-% w_3 = z_3 (w_3 z_3 T_1 + 1) \alpha.
-% \]
-% Two components:
-% \begin{itemize}
-%     \item $E_2: T_1 = w_3 - z_3 = 0$ with multiplicity 2, and
-%     \item $E_1: z_3 = w_3 = 0$ with multiplicity 1.
-% \end{itemize}
-
-
-
+All intersections are transverse. The components $C_1$ and $C_2$ have multiplicity $1$. The $R_i$ each have multiplicity $r$. The $D_i$ and $E_i$ have multiplicity $i$.
 
 
 \subsection{Minimality}
 \label{sec:minimality}
 
-Next we must make sure our model is minimal via Castelnuovo's criterion, which states that
+Next we must make sure our model is minimal via Castelnuovo's criterion, which we now state.
 \begin{theorem}[Prop.~IV.7.5 in \cite{silvermanATAEC}]\label{thm:castelnuovo}
   Let $R$ be a discrete valuation ring with algebraically closed residue field. Let $\scd$ be a regular arithmetic surface proper over $R$ whose generic fiber is a nonsingular projective curve of genus $g \geq 1$. Then $\scd$ is minimal if and only if the special fiber of $\scd$ has no divisors $E$ for which $E \isom \Pro^1$ and $E^2 = -1$.
 \end{theorem}
@@ -430,29 +369,30 @@ We need to check that $\scd$ is a minimal model via Theorem~\ref{thm:castelnuovo
   Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $D$ be a fibral divisor. Then $D \cdot C_k = 0$.
 \end{theorem}
 
-In our case, all of the geometric intersections are transversal, so we can simplify the above theorem.
+In our case, all of the geometric intersections are transverse, so we can simplify the above theorem.
 \begin{proposition}
-  Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $C_k^{red}$ be the associated reduced scheme. Suppose that every singular point of $C_k^{red}$ consists of a transverse crossing of two irreducible components. Let $D$ be an irreducible component of $C_k$. Label the remaining irreducible components $D_1, D_2, \dots$. Then
+  Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $C_k^{\sf red}$ be the associated reduced scheme. Suppose that every singular point of $C_k^{\sf red}$ consists of a transverse crossing of two irreducible components. Let $V$ be an irreducible component of $C_k$. Label the remaining irreducible components $V_1, V_2,$ etc. Then
   \[
-  D^2 = -\frac{1}{m} \sum m_i n_i
+  V^2 = -\frac{1}{m} \sum m_i n_i
   \]
-  where $m$ is the multiplicity of $D$, $m_i$ is the multiplicity of $D_i$, and $n_i$ is the number of intersection points of $D$ and $D_i$.
+  where $m$ is the multiplicity of $V$, $m_i$ is the multiplicity of $V_i$, and $n_i$ is the number of intersection points of $V$ and $V_i$.
 \end{proposition}
 
 \begin{proof}
   The total fiber is
   \[
-  C_k = mD + \sum m_i D_i.
+  C_k = mV + \sum m_i V_i.
   \]
   By Theorem~\ref{thm:fibral-intersect-total}, we have
   \begin{align*}
-    0 &= D \cdot C_k \\
-    &= mD^2 + \sum m_i (D \cdot D_i) \\
-    &= mD^2 + \sum m_i n_i
+    0 &= V \cdot C_k \\
+    &= mV^2 + \sum m_i (V \cdot V_i) \\
+    &= mV^2 + \sum m_i n_i
   \end{align*}
   from which the claim follows.
 \end{proof}
 
+From the proposition, one verifies that $C_1$ and $C_2$ have self-intersection $-r$, and the remaining components each have self-intersection $-2$. By Castelnuovo's criterion, $\scd$ is a minimal model. 
 
 
 
