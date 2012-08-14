@@ -14,6 +14,7 @@
 \newcommand{\sce}{\mathscr{C}^{\textsf{ex}}}
 \newcommand{\scd}{\mathscr{C}}
 \newcommand{\caff}{C_{\textsf{aff}}}
+\newcommand{\sj}{\mathscr{J}}
 
 
 \theoremstyle{plain}
@@ -339,7 +340,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $E_r: T_b = w_{r-2} = 0$ with multiplicity $r$, and
       \item $E_{r-1}: w_{r-2} = z_b - 1 = 0$ with multiplicity $r-1$.
   \end{itemize}
-  Checking the $T_b$ deriviative, we see that we have equality only along $E_{r-1}$. But the $w_{r-2}$ derivative along $E_{r-1}$ always yields an inequality. Therefore this chart is regular.
+  Checking the $T_b$ derivative, we see that we have equality only along $E_{r-1}$. But the $w_{r-2}$ derivative along $E_{r-1}$ always yields an inequality. Therefore this chart is regular.
 
   Let $\scd$ be the resulting regular model for $C$, and write $C_k$ for its special fiber at $T = 0$.
 
@@ -402,7 +403,9 @@ From the proposition, one verifies that $C_1$ and $C_2$ have self-intersection $
 
 To compute the component group of the Jacobian of a curve, one typically first base-extends to a strictly henselian ring. The following result of Bosch-Liu allows us to do this without complication:
 
-\shahed{Insert result here.}
+\begin{proposition}[Corollary~1.8 in \cite{bosch-liu1999}]\label{prop:bosch-liu-phi-constant}
+  Let $K$ be the fraction field of a discrete valuation ring $R$ with residue field $k$. Let $C/K$ be a smooth proper geometrically integral curve, and $\scd/R$ a minimal proper regular model for $C$. Let $J$ be the Jacobian of $C$, and $\sj/R$ its N\'eron model. The connected components of the special fiber of $\sj$ form a finite \'etale group scheme $\Phi$ over $k$. If every component of the special fiber of $\scd$ is geometrically irreducible, then $\Phi$ is a constant group scheme.
+\end{proposition}
 
 The background material in the remainder of this section can be found in~\cite[Ch. 9]{blr}. In the latter, the authors define the \emph{geometric multiplicity} of a component of the special fiber, and use the notation $e_i$. Our base field is algebraically closed, and it follows that all geometric multiplicities are $1$. (See \cite[Defn~9.1.3]{blr}.)
 
@@ -424,14 +427,14 @@ A = \left[\begin{array}{rrrrrrrrr|rr}
 \]
 The $1$s in the right-hand rectangle in the matrix occur at rows $r$ and $2r$---that is, at the rows corresponding to $D_r$ and $E_r$. The $1$s in the bottom rectangle similarly occur at the $r$th and $2r$th columns respectively. The component group can then be computed via the following.
 \begin{theorem}[Corollary 9.6.3 of \cite{blr}]\label{thm:elementary-divisors-comp-group}
-  Suppose that $\scd$ is a flat, proper relative curve over a strictly henselian discrete valuation ring. Suppose also that $\scd$ is generically geometrically irreducible and that the residue field is algebraically closed. Let $n_1, \dots, n_{v-1}, 0$ be the elementary divisors of the intersection matrix $A$ for $C_k$. Let $J$ be the Jacobian of the generic fiber of $\scd$. Then the group of connected components of the N\'eron model of $J$ is isomorphic to
+  Suppose that $\scd$ is a flat, proper relative curve over a strictly henselian discrete valuation ring. Suppose also that $\scd$ is generically geometrically irreducible and that the residue field is algebraically closed. Let $n_1, \dots, n_{v-1}, 0$ be the elementary divisors of the intersection matrix $A$ for the special fiber of $\scd$. Let $J$ be the Jacobian of the generic fiber of $\scd$. Then the group of connected components of the N\'eron model of $J$ is isomorphic to
   \[
   \frac{\Z}{n_1\Z} \oplus \cdots \oplus \frac{\Z}{n_{v-1}\Z}.
   \]
 \end{theorem}
 Implicit in the statement of the theorem is that the intersection matrix has rank $r-1$. In our case, one can at least see that the vector of multiplicities $(1,2,\dots,r,r,\dots,r,r-1,\dots,2,1,1,1)$ lies in the kernel of $A$; this in fact holds in general.
 
-We must therefore compute the elementary divisors of $A$. Recall that the elementary divisors are the diagonal entries in the Smith normal form of $A$. The Smith normal form is a diagonal matrix obtained from $A$ via any combination of elementary row and column operations. 
+We must therefore compute the elementary divisors of $A$. Recall that the elementary divisors are the diagonal entries in the Smith normal form of $A$. The Smith normal form is a diagonal matrix obtained from $A$ via a combination of elementary row and column operations. 
 
 \paragraph{Step 1:}
 \label{sec:step-1}
