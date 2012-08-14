@@ -436,7 +436,7 @@ We must therefore compute the elementary divisors of $A$. Recall that the elemen
 \paragraph{Step 1:}
 \label{sec:step-1}
 
-For $i = 1, \dots, 3r-3$, we do the following column operations:
+For $i = 1, \dots, 3r-3$ in turn, we do the following column operations:
 \begin{itemize}
     \item Add twice column $i$ to column $i+1$.
     \item Subtract column $i$ from column $i+2$.
@@ -448,7 +448,7 @@ We then add twice column $3r-2$ to column $3r-1$. An easy induction shows that t
   1 & & & & & & & & & \\
   & 1 & & & & & & & & \\
   & & & & & & & & 1 & \\
-  & & \ddots & & & & & & & \\
+  & & & & \ddots & & & & & \\
   & & & & & & & & & 1 \\
   & & & & & & 1 & 0 & & \\ \hline
   & & 1 & 2 & & \dots & & 2r & -r & \\
@@ -460,16 +460,16 @@ Once again, the $1$s in the right-hand rectangle occur at rows $r$ and $2r$ resp
 \paragraph{Step 2:}
 \label{sec:step-2}
 
-We now subtract column $r$ from column $3r$ (the second column from the right), and subtract column $2r$ from column $3r+1$:
+We now subtract column $r-1$ from column $3r$ (the second column from the right), and subtract column $2r-1$ from column $3r+1$:
 \[
 \left[\begin{array}{rrrrrrrr|rr}
-  -2 & -3 & & & \dots & & & -3r & r+1 & 2r+1 \\
+  -2 & -3 & & & \dots & & & -3r & r & 2r \\
   1 & & & & & & & & & \\
   & 1 & & & & & & & & \\
-  & & \ddots & & & & & & & \\
+  & & & & \ddots & & & & & \\
   & & & & & & 1 & 0 & & \\ \hline
-  & & 1 & 2 & & \dots & & 2r & -r-1 & -r \\
-  & & & & 1 & 2 & \dots & r & & -r-1
+  & & 1 & 2 & & \dots & & 2r & -r & -r \\
+  & & & & 1 & 2 & \dots & r & & -r
 \end{array}\right].
 \]
 
@@ -480,12 +480,27 @@ By the obvious row operations, we can zero out the first $3r-2$ entries of the f
 \[
 \left[\begin{array}{c|rrr}
   I & & & \\ \hline
-  & -3r & r+1 & 2r+1 \\
-  & 2r & -r-1 & -r \\
-  & r & -r-1 &
+  & -3r & r & 2r \\
+  & 2r & -r & -r \\
+  & r & & -r
 \end{array}\right].
 \]
-In the above, $I$ denotes the $(3r-2) \times (3r-2)$ identity matrix. By Theorem~\ref{thm:elementary-divisors-comp-group}, we may consider only the $3\times 3$ block in the bottom right and omit everything else.
+In the above, $I$ denotes the $(3r-2) \times (3r-2)$ identity matrix. By Theorem~\ref{thm:elementary-divisors-comp-group}, we may consider only the $3\times 3$ block in the bottom right and omit everything else. A short calculation shows that the Smith normal form for this latter block is
+\[
+\begin{bmatrix}
+  r & & \\
+  & r & \\
+  & & 0
+\end{bmatrix}.
+\]
+Now applying Theorem~\ref{thm:elementary-divisors-comp-group}, we obtain
+\begin{theorem}
+  Let $C$ be the complete nonsingular curve birational to the affine curve with equation $\caff:Txy^r = (x+1)(Tx+1)$ over $K$, with $r \geq 3$. Let $\scd$ be the minimal proper regular model for $C$ at $T = 0$. Let $J$ be the Jacobian for $C$. Then the component group for the N\'eron model of $J$ at $T = 0$ is isomorphic to
+  \[
+  \frac{\Z}{r\Z} \oplus \frac{\Z}{r\Z}.
+  \]
+\end{theorem}
+
 
 \bibliographystyle{alpha}
 \bibliography{./aimbiblio}
