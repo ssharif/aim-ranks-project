@@ -1,5 +1,9 @@
-\documentclass{article}
+\documentclass[pagesize,paper=letter]{scrartcl}
+%\documentclass{article}
 \usepackage{amsmath, amsthm, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
 \usepackage[all]{xy}
 \usepackage[pagebackref,colorlinks]{hyperref}
 \usepackage{mathrsfs}
@@ -144,7 +148,7 @@ One checks that the resulting curve is generically smooth.
 
 The special fibers on these charts are as follows:
 \[
-\begin{array}{lll}
+\begin{array}{l@{:\,\,}ll}
 \caff & x + 1 = 0 & C_1 \\
 C' & v(v + 1) = 0 & C_2, C_1 \\
 C'' & z^r(z + u) = 0 & R_1, C_1 \\
@@ -315,7 +319,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
   and $T = T_{r-1} z^{r-1}$. The special fiber consists of the components
   \begin{itemize}
       \item $C_2: T_{r-1} = w_{r-1} = 0$ with multiplicity 1, and
-      \item $R_r: T_{r-1} = z = 0$ with multiplicity $r$.
+      \item $E_r: T_{r-1} = z = 0$ with multiplicity $r$.
   \end{itemize}
   One checks that the $T_{r-1}$ partial derivative gives equality if and only if $z = 0$ and $w_{r-1} = 1$. But plugging these values into the $z$-derivative yields an inequality. Therefore this chart is regular.
 
@@ -365,13 +369,13 @@ Next we must make sure our model is minimal via Castelnuovo's criterion, which w
   Let $R$ be a discrete valuation ring with algebraically closed residue field. Let $\scd$ be a regular arithmetic surface proper over $R$ whose generic fiber is a nonsingular projective curve of genus $g \geq 1$. Then $\scd$ is minimal if and only if the special fiber of $\scd$ has no divisors $E$ for which $E \isom \Pro^1$ and $E^2 = -1$.
 \end{theorem}
 
-We need to check that $\scd$ is a minimal model via Theorem~\ref{thm:castelnuovo}. Every irreducible component is isomorphic to $\Pro^1$, so it remains to check the self-intersections. To compute these self-intersections we use the following theorem.
+We may base-extend to the strict henselization of $\F_q[T]$ at $T = 0$, as unramified base-change affects neither minimality of models nor intersection numbers. Thus we can use Theorem~\ref{thm:castelnuovo} to check that $\scd$ is a minimal model. Every irreducible component is isomorphic to $\Pro^1$, so it remains to check the self-intersections. To compute these self-intersections we use the following theorem.
 \begin{theorem}[Prop.~IV.7.3 in \cite{silvermanATAEC}]\label{thm:fibral-intersect-total}
   Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $D$ be a fibral divisor. Then $D \cdot C_k = 0$.
 \end{theorem}
 
 In our case, all of the geometric intersections are transverse, so we can simplify the above theorem.
-\begin{proposition}
+\begin{proposition}\label{prop:transverse-self-intersections}
   Let $\scd$ be a regular arithmetic surface proper over a discrete valuation ring, and let $C_k$ be the special fiber. Let $C_k^{\sf red}$ be the associated reduced scheme. Suppose that every singular point of $C_k^{\sf red}$ consists of a transverse crossing of two irreducible components. Let $V$ be an irreducible component of $C_k$. Label the remaining irreducible components $V_1, V_2,$ etc. Then
   \[
   V^2 = -\frac{1}{m} \sum m_i n_i
@@ -393,15 +397,24 @@ In our case, all of the geometric intersections are transverse, so we can simpli
   from which the claim follows.
 \end{proof}
 
-From the proposition, one verifies that $C_1$ and $C_2$ have self-intersection $-r$, and the remaining components each have self-intersection $-2$. By Castelnuovo's criterion, $\scd$ is a minimal model. 
+\begin{proposition}
+  Let $\scd$ be the model constructed in section \S~\ref{sec:blow-up-Q} with special fiber described in \S~\ref{sec:dual-graph}. Then
+  \begin{enumerate}
+      \item $C_1^2 = C_2^2 = -r$, and
+      \item $R_i^2 = D_i^2 = E_i^2 = -2$ for all $i$.
+  \end{enumerate}
+\end{proposition}
 
+\begin{proof}
+  This is a simple application of Prop.~\ref{prop:transverse-self-intersections}.
+\end{proof}
 
 
 
 \section{Component group}
 \label{sec:component-group}
 
-To compute the component group of the Jacobian of a curve, one typically first base-extends to a strictly henselian ring. The following result of Bosch-Liu allows us to do this without complication:
+To compute the component group of the Jacobian of a curve, one typically first base-extends to a strictly henselian ring. The following result of Bosch-Liu allows us to do so without complication.
 
 \begin{proposition}[Corollary~1.8 in \cite{bosch-liu1999}]\label{prop:bosch-liu-phi-constant}
   Let $K$ be the fraction field of a discrete valuation ring $R$ with residue field $k$. Let $C/K$ be a smooth proper geometrically integral curve, and $\scd/R$ a minimal proper regular model for $C$. Let $J$ be the Jacobian of $C$, and $\sj/R$ its N\'eron model. The connected components of the special fiber of $\sj$ form a finite \'etale group scheme $\Phi$ over $k$. If every component of the special fiber of $\scd$ is geometrically irreducible, then $\Phi$ is a constant group scheme.
@@ -425,16 +438,16 @@ A = \left[\begin{array}{rrrrrrrrr|rr}
   & & & & & & 1 & & & & -r
 \end{array}\right].
 \]
-The $1$s in the right-hand rectangle in the matrix occur at rows $r$ and $2r$---that is, at the rows corresponding to $D_r$ and $E_r$. The $1$s in the bottom rectangle similarly occur at the $r$th and $2r$th columns respectively. The component group can then be computed via the following.
+The $1$s in the upper right rectangle in the matrix occur at rows $r$ and $2r$---that is, at the rows corresponding to $D_r$ and $E_r$. The $1$s in the lower left rectangle similarly occur at the $r$th and $2r$th columns respectively. The component group can then be computed via the following.
 \begin{theorem}[Corollary 9.6.3 of \cite{blr}]\label{thm:elementary-divisors-comp-group}
   Suppose that $\scd$ is a flat, proper relative curve over a strictly henselian discrete valuation ring. Suppose also that $\scd$ is generically geometrically irreducible and that the residue field is algebraically closed. Let $n_1, \dots, n_{v-1}, 0$ be the elementary divisors of the intersection matrix $A$ for the special fiber of $\scd$. Let $J$ be the Jacobian of the generic fiber of $\scd$. Then the group of connected components of the N\'eron model of $J$ is isomorphic to
   \[
   \frac{\Z}{n_1\Z} \oplus \cdots \oplus \frac{\Z}{n_{v-1}\Z}.
   \]
 \end{theorem}
-Implicit in the statement of the theorem is that the intersection matrix has rank $r-1$. In our case, one can at least see that the vector of multiplicities $(1,2,\dots,r,r,\dots,r,r-1,\dots,2,1,1,1)$ lies in the kernel of $A$; this in fact holds in general.
+Implicit in the statement of the theorem is that the intersection matrix has rank $r-1$. In our case, one can at least see that the vector of multiplicities $(1,2,\dots,r,r,\dots,r,r-1,\dots,2,1,1,1)$ lies in the kernel of $A$; in fact, one can use Theorem~\ref{thm:fibral-intersect-total} to show that this holds in general.
 
-We must therefore compute the elementary divisors of $A$. Recall that the elementary divisors are the diagonal entries in the Smith normal form of $A$. The Smith normal form is a diagonal matrix obtained from $A$ via a combination of elementary row and column operations. 
+We must therefore compute the elementary divisors of $A$. Recall that the elementary divisors are the diagonal entries in the Smith normal form of $A$. The Smith normal form is a diagonal matrix obtained from $A$ via a combination of unipotent elementary row and column operations. (Unipotency is required for invertibility of the operations over $\Z$.)
 
 \paragraph{Step 1:}
 \label{sec:step-1}
@@ -456,9 +469,9 @@ We then add twice column $3r-2$ to column $3r-1$. An easy induction shows that t
   & & & & & & 1 & 0 & & \\ \hline
   & & 1 & 2 & & \dots & & 2r & -r & \\
   & & & & 1 & 2 & \dots & r & & -r
-\end{array}\right]
+\end{array}\right].
 \]
-Once again, the $1$s in the right-hand rectangle occur at rows $r$ and $2r$ respectively, and the $1$s in the bottom rectangle occur in columns $r$ and $2r$ respectively.
+Once again, the $1$s in the upper right rectangle occur at rows $r$ and $2r$ respectively, and the $1$s in the lower left rectangle occur in columns $r$ and $2r$ respectively.
 
 \paragraph{Step 2:}
 \label{sec:step-2}
@@ -488,7 +501,7 @@ By the obvious row operations, we can zero out the first $3r-2$ entries of the f
   & r & & -r
 \end{array}\right].
 \]
-In the above, $I$ denotes the $(3r-2) \times (3r-2)$ identity matrix. By Theorem~\ref{thm:elementary-divisors-comp-group}, we may consider only the $3\times 3$ block in the bottom right and omit everything else. A short calculation shows that the Smith normal form for this latter block is
+Here $I$ denotes the $(3r-2) \times (3r-2)$ identity matrix. By Theorem~\ref{thm:elementary-divisors-comp-group}, we may consider only the $3 \times 3$ block in the bottom right and omit everything else. A short calculation shows that the Smith normal form for this latter block is
 \[
 \begin{bmatrix}
   r & & \\
