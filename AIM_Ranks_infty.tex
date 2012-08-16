@@ -146,7 +146,7 @@ One checks that the resulting curve is generically smooth.
 \end{remark}
 
 
-The special fibers on these charts are as follows:
+The special fibers on these charts, given by $T = 0$, are as follows:
 \[
 \begin{array}{l@{:\,\,}ll}
 \caff & x + 1 = 0 & C_1 \\
@@ -155,7 +155,9 @@ C'' & z^r(z + u) = 0 & R_1, C_1 \\
 C''' & z^rw(wz+1) = 0 & R_1, C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$. The components $C_1$ and $C_2$ each have multiplicity 1, while $R_1$ has multiplicity $r$. Let $P = C_1 \cap R_1$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap R_1$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$ (and $T = 0$, which holds for every component). The components $C_1$ and $C_2$ each have multiplicity 1, while $R_1$ has multiplicity $r$. Let $P = C_1 \cap R_1$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap R_1$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
+
+One remark: the reason behind the notation $R_1$ will become apparent in \S~\ref{sec:blow-up-Q}.
 
 \subsection{Blowing-up}
 \label{sec:blowing-up}
@@ -207,34 +209,34 @@ We now observe that this expression equals $-1$ at both $P_1$ and $P_z$. Therefo
 
 Now we compute the second chart. This chart is given by the change of variables
 \[
-u=zx \qquad T=z\pi
+u=zx \qquad T=zT'
 \]
 whence we obtain the equation
 \[
-x\pi = z^{r-1}(1 + zx\pi)(1 + x).
+xT' = z^{r-1}(1 + zxT')(1 + x).
 \]
-The special fiber is given by $T = z\pi = 0$, which gives us the components
+The special fiber is given by $T = zT' = 0$, which gives us the components
 \begin{align*}
-  \tilde{C_1}&: (1 + x = \pi = 0) \\
-  D_r&: (z = \pi = 0) \\
+  \tilde{C_1}&: (1 + x = T' = 0) \\
+  D_r&: (z = T' = 0) \\
   D_1&: (z = x = 0).
 \end{align*}
-Observe that $D_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap D_r$ occurs when $1 + x = \pi = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $D_r \cap D_1$ occurs when $x = \pi = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{R_1}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
+Observe that $D_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap D_r$ occurs when $1 + x = T' = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $D_r \cap D_1$ occurs when $x = T' = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{R_1}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
 
-In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + zx\pi)(1 + x)$, so that
+In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + zxT')(1 + x)$, so that
 \begin{itemize}
-    \item the chart containing $P_3$ has equation $x\pi = \alpha z^{r-1}$,
+    \item the chart containing $P_3$ has equation $xT' = \alpha z^{r-1}$,
     \item $\alpha(P_3) \neq 0$, and
-    \item $T = z\pi$.
+    \item $T = zT'$.
 \end{itemize}
 
 We now desingularize by replacing $P_3$ with 2 charts. The first chart is given by
 \[
-\pi_0 = \alpha x^{r-3} z_0^{r-1}
+T'_0 = \alpha x^{r-3} z_0^{r-1}
 \]
-where $\pi = x \pi_0$ and $z = x z_0$. Then $T = x^2 \pi_0 z_0$ the special fiber consists of 2 components, one given by $\pi_0 = z_0 = 0$ and of multiplicity $r$, the other given by $\pi_0 = X = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $\pi_0$ derivative shows that this chart is regular.
+where $T' = x T'_0$ and $z = x z_0$, whence $T = x^2 T'_0 z_0$. The special fiber consists of 2 components, one given by $T'_0 = z_0 = 0$ and of multiplicity $r$, the other given by $T'_0 = x = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $T'_0$ derivative shows that this chart is regular.
 
-  The second chart is given by $x_0 \pi = \alpha z^{r-2}$, where $X = x_0 z$. The special fiber then consists of the components $\pi = z = 0$ with multiplicity $r-1$ and $x_0 = z = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $x$ has become $x_0$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $D_r, D_{r-1}, \dots, D_1$, each crossing transversely with adjacent curves in the list, and such that $D_i$ has multiplicity $i$ in the special fiber.
+  The second chart is given by $x_0 T' = \alpha z^{r-2}$, where $x = x_0 z$. The special fiber then consists of the components $T' = z = 0$ with multiplicity $r-1$ and $x_0 = z = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $x$ has become $x_0$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $D_r, D_{r-1}, \dots, D_1$, each crossing transversely with adjacent curves in the list, and such that $D_i$ has multiplicity $i$ in the special fiber.
 
 
 \subsubsection{Blow-up at $Q$.}
@@ -242,9 +244,9 @@ where $\pi = x \pi_0$ and $z = x z_0$. Then $T = x^2 \pi_0 z_0$ the special fibe
 
 Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
-  C''':wT = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''}
+  C''':wT = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''},
 \end{equation}
-and has coordinates $(w,z,T) = (0,0,0)$. Just as in the case of $P$, we will desingularize at $Q$ recursively; however, the situation is rather more complicated.  
+is the intersection point of the components $C_2$ and $R_1$, and has coordinates $(w,z,T) = (0,0,0)$. Just as in the case of $P$, we will desingularize at $Q$ recursively; however, the situation is rather more complicated.  
 
 One should keep in mind the following: blowing-up is a local procedure; and $wz + 1 = T = 0$ is an equation for $C_1$, a component which does not pass through $Q$. Therefore, the factor $wz + 1$ and its transforms can be safely ignored when computing special fibers below.
 
@@ -257,7 +259,7 @@ where $z = bw$ and $T = T_0w$. The special fiber consists of 2 components:
     \item $R_1: T_0 = b = 0$ with multiplicity $r$, and
     \item $R_2: T_0 = w = 0$ also with multiplicity $r$.
 \end{itemize}
- The second component is exceptional. By considering the $T_0$ derivative, one sees that this chart is regular.
+The first component is in fact identical to the $R_1$ appearing in \S~\ref{sec:blow-up-P} and earlier. The second component is exceptional. By considering the $T_0$ derivative, one sees that this chart is regular.
 
 Chart 2 is given by the equation
 \[
@@ -351,14 +353,15 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
 \subsubsection{Dual graph}
 \label{sec:dual-graph}
 
-Recall that the dual graph of $C_k$ is defined to be the graph such that the set of irreducible components of $C_k$ is the set of vertices, and the set of intersection points between two such components is the set of edges between the corresponding vertices. Putting our calculations above together, we obtain the dual graph for $C_k$ pictured in Figure~\ref{fig:superelliptic-dual-graph}.
-\begin{figure}\centering
+Recall that the dual graph of $C_k$ is defined to be the graph such that the set of irreducible components of $C_k$ is the set of vertices, and the set of intersection points between two such components is the set of edges between the corresponding vertices. Putting our calculations above together, we obtain
+\begin{proposition}\label{prop:dual-graph-plus-multiplicities}
+  The dual graph for $C_k$ is given by Figure~\ref{fig:superelliptic-dual-graph}. All intersections are transverse. The components $C_1$ and $C_2$ have multiplicity $1$, the $R_i$ each have multiplicity $r$, and the $D_i$ and $E_i$ have multiplicity $i$.
+\begin{figure}[h]\centering
     \input{SuperDual}
   \caption{Dual graph of $C_k$}
 \label{fig:superelliptic-dual-graph}
 \end{figure}
-
-All intersections are transverse. The components $C_1$ and $C_2$ have multiplicity $1$. The $R_i$ each have multiplicity $r$. The $D_i$ and $E_i$ have multiplicity $i$.
+\end{proposition}
 
 
 \subsection{Minimality}
@@ -397,8 +400,8 @@ In our case, all of the geometric intersections are transverse, so we can simpli
   from which the claim follows.
 \end{proof}
 
-\begin{proposition}
-  Let $\scd$ be the model constructed in section \S~\ref{sec:blow-up-Q} with special fiber described in \S~\ref{sec:dual-graph}. Then
+\begin{proposition}\label{prop:self-intersect-superelliptic}
+  Let $\scd$ be the model constructed in sections \S~\ref{sec:blowing-up} with special fiber described in Prop.~\ref{prop:dual-graph-plus-multiplicities}. Then
   \begin{enumerate}
       \item $C_1^2 = C_2^2 = -r$, and
       \item $R_i^2 = D_i^2 = E_i^2 = -2$ for all $i$.
@@ -406,7 +409,17 @@ In our case, all of the geometric intersections are transverse, so we can simpli
 \end{proposition}
 
 \begin{proof}
-  This is a simple application of Prop.~\ref{prop:transverse-self-intersections}.
+  We use the notation of Prop.~\ref{prop:transverse-self-intersections}. Inspection of Figure~\ref{fig:superelliptic-dual-graph} shows that for any choice of $V$, $V_i$, $n_i$ is either $0$ or $1$. For $V = C_1$ we have $m = 1$. This component only intersects $D_r$, which has multiplicity $r$. The claim for $C_1$ follows. Similar reasoning holds for $C_2$.
+
+  For $V = R_i$, we have $m = r$. Also, $R_i$ intersects exactly two other components, both with multiplicity $r$. We thus obtain $R_i^2 = -2$.
+
+  For $V = D_i$, $1 < i < r$, we have $m = i$. Also, $D_i$ intersects $D_{i-1}$ and $D_{i+1}$ which have multiplicities $i-1$ and $i+1$ respectively. Now Prop.~\ref{prop:transverse-self-intersections} gives us $D_i^2 = -2$.
+
+  For $V = D_1$, $m = 1$ and $D_1$ only intersects $D_2$, which latter has multiplicity $2$. Again we get $D_1^2 = -2$.
+
+  For $V = D_r$, $m = r$, and $D_r$ intersects $D_{r-1}, C_1$, and $R_1$ with multiplicities $r-1$, $1$, and $r$ respectively. We obtain $D_r^2 = -2$.
+
+  The argument for the $E_i$ is completely analogous.
 \end{proof}
 
 
@@ -422,7 +435,7 @@ To compute the component group of the Jacobian of a curve, one typically first b
 
 The background material in the remainder of this section can be found in~\cite[Ch. 9]{blr}. In the latter, the authors define the \emph{geometric multiplicity} of a component of the special fiber, and use the notation $e_i$. Our base field is algebraically closed, and it follows that all geometric multiplicities are $1$. (See \cite[Defn~9.1.3]{blr}.)
 
-In order to compute the component group at $\infty$ of $C$, we make use of the \emph{intersection matrix} of the special fiber. This is the matrix whose $(i,j)$ entry is the intersection number $(V_i \cdot V_j)$, where $V_i$ is some labeling of the irreducible components of the special fiber. We will order the components as follows: $D_1, D_2, \dots, D_r, R_1, \dots, R_{r-1}, E_r, \dots, E_1, C_1, C_2$. Then the intersection matrix is
+In order to compute the component group at $\infty$ of $C$, we make use of the \emph{intersection matrix} of the special fiber. This is the matrix whose $(i,j)$ entry is the intersection number $(V_i \cdot V_j)$, where $V_i$ is some labeling of the irreducible components of the special fiber. We will order the components as follows: $D_1, D_2, \dots, D_r, R_1, \dots, R_{r-1}, E_r, \dots, E_1, C_1, C_2$. As all intersections are transverse and distinct components in $C_k$ intersect at most once (see Figure~\ref{fig:superelliptic-dual-graph}), the off-diagonal entries of the intersection matrix are $1$ if the two corresponding components meet and $0$ otherwise. The self-intersections were computed in Prop.~\ref{prop:self-intersect-superelliptic}. Therefore the intersection matrix is
 \[
 A = \left[\begin{array}{rrrrrrrrr|rr}
   -2 & 1 & & & & & & & & & \\
