@@ -113,11 +113,38 @@ C: xy^r = (x+1)(x+t).
 \]
 The purpose of this note is to compute the minimal proper regular model of $C$ at $t = 1$, as well as the component group.
 
+\section{Desingularization}
+\label{sec:desingularization}
+
+\subsection{Generic fiber}
+\label{sec:generic-fiber}
+
 Our first step is to substitute $x_0 = x+1$ and $t_0 = t-1$, so that our equation becomes
 \[
 (x_0 - 1) y^r = x_0(x_0 + t_0).
 \]
-We now wish to compute the minimal proper regular model for the associated smooth projective curve when $t_0 = 0$. 
+This means we are concerned with the fiber $t_0 = 0$. Furthermore, there is a nonregular point at $(x_0, y, t_0) = (0, 0, 0)$. Before blowing-up, we must find a model which is generically smooth. We do this by gluing together the equations
+\begin{align*}
+  \caff&: (x_0 - 1) y^r = x_0(x_0 + t_0)\\
+  C^\dagger&: (1-z)z = u^r(1+t_0z) \\
+  C^\ddag&: v-u = vu^{r-1}(v + t_0 u)
+\end{align*}
+via
+\begin{gather*}
+  x_0 = \frac{1}{z} = \frac{v}{u} \qquad y = \frac{1}{u} \\
+  u = \frac{1}{y} \qquad z = \frac{1}{x_0} \\
+  v = \frac{x_0}{y} = \frac{1}{uz}.
+\end{gather*}
+One verifies that the resulting curve is generically smooth. (Note: the chart $C^\ddag$ is obtained by normalizing the projective closure of $\caff$ at a single cusp.) Furthermore, one can show that $C^\dag$ and $C^\ddag$ are regular.
+
+\subsection{Blow-ups}
+\label{sec:blow-ups}
+
+It remains to resolve the singularity at $(x_0, y, t_0) = (0, 0, 0)$. We do this inductively by considering, for $0 \leq i \leq \frac{r}{2}$ (equivalently, $0 \leq i$ and $0 \leq r - 2i$), the chart $(i)$ given by
+\[
+(x_iy^i - 1) y^{r-2i} = x_i(x_i + t_i)
+\]
+with central fiber given by $t_iy^i = 0$. Observe that if $i = 0$, this is exactly $\caff$. One verifies that if $i < \lfloor r/2 \rfloor$ (or equivalently $r - 2i \geq 2$), that chart $(i)$ is not regular at $(x_i, y, t_i) = 0$. 
 
 \bibliographystyle{alpha}
 \bibliography{./aimbiblio}
