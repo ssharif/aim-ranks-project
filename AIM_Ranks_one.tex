@@ -144,7 +144,31 @@ It remains to resolve the singularity at $(x_0, y, t_0) = (0, 0, 0)$. We do this
 \[
 (x_iy^i - 1) y^{r-2i} = x_i(x_i + t_i)
 \]
-with central fiber given by $t_iy^i = 0$. Observe that if $i = 0$, this is exactly $\caff$. One verifies that if $i < \lfloor r/2 \rfloor$ (or equivalently $r - 2i \geq 2$), that chart $(i)$ is not regular at $(x_i, y, t_i) = 0$. 
+with central fiber given by $t_iy^i = 0$. Observe that if $i = 0$, this is exactly $\caff$. One verifies that chart $(i)$ is not regular at $(x_i, y, t_i) = 0$ if and only if $i < \lfloor r/2 \rfloor$ (or equivalently $r - 2i \geq 2$). As we will see, for such $i$ we will obtain chart $(i+1)$ by blowing-up.
+
+\paragraph{Case $i = 0$:}
+\label{sec:case-i-=}
+
+If $i = 0$, we have $\caff$ with special fiber
+\[
+(x_0 - 1) y^r = x_0^2.
+\]
+The fiber is irreducible with multiplicity $1$, and we call it $F_0$.
+
+!!! do one blow-up
+
+\paragraph{Case $0 < i < \lfloor r/2 \rfloor$:}
+\label{sec:case-0-leq}
+
+The special fiber of chart $(i)$ has components
+\begin{itemize}
+    \item $F_0: t_i = (x_iy^i - 1) y^{r-2i} - x_i^2 = 0$ with multiplicity $1$;
+    \item $A_i: y_i = x_i = 0$ with multiplicity $$; and
+    \item $B_i: y_i = x_i + t_i = 0$ with multiplicity $$.
+\end{itemize}
+As observed earlier, the curve is not regular at $(x_i, y, t_i) = (0,0,0)$. We blow up at the latter point by replacing it with 3 charts, given as follows.
+
+The first chart is $(i+1)$ with gluing $x_i = yx_{i+1}$ and $t_i = yt_{i+1}$. The second chart, which we call $(i)a$, is given by
 
 \bibliographystyle{alpha}
 \bibliography{./aimbiblio}
