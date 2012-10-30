@@ -140,35 +140,54 @@ One verifies that the resulting curve is generically smooth. (Note: the chart $C
 \subsection{Blow-ups}
 \label{sec:blow-ups}
 
-It remains to resolve the singularity at $(x_0, y, t_0) = (0, 0, 0)$. We do this inductively by considering, for $0 \leq i \leq \frac{r}{2}$ (equivalently, $0 \leq i$ and $0 \leq r - 2i$), the chart $(i)$ given by
+It remains to resolve the singularity at $(x_0, y, t_0) = (0, 0, 0)$. To do this, we consider the family
 \[
-(x_iy^i - 1) y^{r-2i} = x_i(x_i + t_i)
+(x_iy^i - 1) y^k = x_i(x_i + t_i)
 \]
-with central fiber given by $t_iy^i = 0$. Observe that if $i = 0$, this is exactly $\caff$. One verifies that chart $(i)$ is not regular at $(x_i, y, t_i) = 0$ if and only if $i < \lfloor r/2 \rfloor$ (or equivalently $r - 2i \geq 2$). As we will see, for such $i$ we will obtain chart $(i+1)$ by blowing-up.
+with central fiber $t_iy^i = 0$; call this curve chart $(i,k)$. Observe that our $\caff$ is exactly the chart $(0,r)$. For most values of $i, k$, the chart will be nonregular at exactly one point: $(x_i, y, t_i) = (0, 0, 0)$. As we will see, a blow-up results in 3 charts, 2 of which are regular, and the third of which is chart $(i+1, k-2)$. The process terminates when chart $(i, k)$ is regular; that is, for sufficiently small $k$. This will turn out to occur when $k = 0$ or $1$. We first study properties of the charts $(i, k)$ in 4 cases:
+\begin{enumerate}
+    \item The initial chart $(0, k)$ with $k = r$; in particular, $k \geq 3$.
+    \item The terminal chart $(i, 0)$ with $i \geq 1$.
+    \item The terminal chart $(i, 1)$ with $i \geq 1$.
+    \item The generic chart $(i, k)$ with $i \geq 1$, $k \geq 2$.
+\end{enumerate}
+Once this is done, we demonstrate the recursive blow-up procedure.
 
-\paragraph{Case $i = 0$:}
-\label{sec:case-i-=}
+\paragraph{Case $(0, k)$ with $k \geq 3$:}
+\label{sec:case-i=0}
 
 If $i = 0$, we have $\caff$ with special fiber
 \[
-(x_0 - 1) y^r = x_0^2.
+(x_0 - 1) y^k = x_0^2.
 \]
-The fiber is irreducible with multiplicity $1$, and we call it $F_0$.
+The fiber is irreducible with multiplicity $1$, and we call it $F_0$. One checks that $F_0$ intersects itself at the $k + 1$ points given by $y = 0$ or $y^k = 4$. The latter $k$ points are transverse crossings, but under our hypothesis that $k \geq 3$, the point $(x_0, y) = (0, 0)$ is a singularity of higher order. As observed earlier, the only nongregular point on $\caff$ is given by $(x_0, y, t_0) = (0, 0, 0)$.
 
-!!! do one blow-up
+\paragraph{Case $(i, 0)$ with $i \geq 1$:}
+\label{sec:case-k=0}
 
-\paragraph{Case $0 < i < \lfloor r/2 \rfloor$:}
-\label{sec:case-0-leq}
 
-The special fiber of chart $(i)$ has components
-\begin{itemize}
-    \item $F_0: t_i = (x_iy^i - 1) y^{r-2i} - x_i^2 = 0$ with multiplicity $1$;
-    \item $A_i: y_i = x_i = 0$ with multiplicity $$; and
-    \item $B_i: y_i = x_i + t_i = 0$ with multiplicity $$.
-\end{itemize}
-As observed earlier, the curve is not regular at $(x_i, y, t_i) = (0,0,0)$. We blow up at the latter point by replacing it with 3 charts, given as follows.
 
-The first chart is $(i+1)$ with gluing $x_i = yx_{i+1}$ and $t_i = yt_{i+1}$. The second chart, which we call $(i)a$, is given by
+
+\paragraph{Case $(i, 1)$ with $i \geq 1$:}
+\label{sec:case-i-1}
+
+
+\paragraph{Generic case:}
+\label{sec:generic-case}
+
+
+% \paragraph{Case $0 < i < \lfloor r/2 \rfloor$:}
+% \label{sec:case-0-leq}
+
+% The special fiber of chart $(i)$ has components
+% \begin{itemize}
+%     \item $F_0: t_i = (x_iy^i - 1) y^{r-2i} - x_i^2 = 0$ with multiplicity $1$;
+%     \item $A_i: y_i = x_i = 0$ with multiplicity $$; and
+%     \item $B_i: y_i = x_i + t_i = 0$ with multiplicity $$.
+% \end{itemize}
+% As observed earlier, the curve is not regular at $(x_i, y, t_i) = (0,0,0)$. We blow up at the latter point by replacing it with 3 charts, given as follows.
+
+% The first chart is $(i+1)$ with gluing $x_i = yx_{i+1}$ and $t_i = yt_{i+1}$. The second chart, which we call $(i)a$, is given by
 
 \bibliographystyle{alpha}
 \bibliography{./aimbiblio}
