@@ -162,7 +162,7 @@ If $i = 0$, we have $\caff$ with special fiber
 \[
 (x_0 - 1) y^k = x_0^2.
 \]
-The fiber is irreducible with multiplicity $1$, and we call it $F_0$. One checks that $F_0$ intersects itself at point $(x_0, y) = (0, 0)$. As observed earlier, the only nongregular point on $\caff$ is given by $(x_0, y, t_0) = (0, 0, 0)$.
+The fiber is irreducible with multiplicity $1$, and we call it $F_0$. One checks that $F_0$ intersects itself at point $(x_0, y) = (0, 0)$. As observed earlier, the only nonregular point on $\caff$ is given by $(x_0, y, t_0) = (0, 0, 0)$.
 
 \paragraph{Chart $(i, 0)$ with $i \geq 1$:}
 \label{sec:case-k=0}
@@ -199,6 +199,38 @@ The special fiber consists of 3 components:
     \item $Y_{i,k}: y = x_i + t_i = 0$ with multiplicity $i$.
 \end{itemize}
 The component $T_{i,k}$ has a node at $(x_i,y,t_i) = (0,0,0)$, and the other two components also pass through this point. This intersection point is not regular, but the rest of the chart is regular.
+
+Since only this last chart is not regular, we next investigate the blow-up of this chart at $(x_i,y,t_i) = (0,0,0)$. The first chart of the blow-up is obtained via $x_{i+1} = x_i y$, $t_{i+1} = t_i y$; one verifies that the resulting chart is $(i+1, k-2)$. There are two more charts in the blow-up, however the specifics depend on whether $k=2$ or $k \geq 3$. In all cases, as we shall see, these charts are regular.
+
+Our next chart, which we call $(i,k)_b$, is obtained via $y = x_ib_i$, $t_i = x_i\tau_i$, whence the central fiber is given by $t_0 = x_i^{i+1}b_i^i\tau_i$. The resulting model is
+\[
+(x_i^{i+1}b_i^i - 1)x_i^{k-2} b_i^k = 1 + \tau_i.
+\]
+The special fiber has 3 components. When $k \geq 3$, these are
+\begin{itemize}
+    \item $T'_{i,k}: \tau_i = (x_i^{i+1}b_i^i - 1)x^{k-2} b_i^k - 1 = 0$ with multiplicity 1;
+    \item $B_{i,k}: b_i = 1+\tau_i = 0$ with multiplicity $i$; and
+    \item $X'_{i,k}: x_i = 1+\tau_i = 0$ with multiplicity $i+1$.
+\end{itemize}
+The components $B_{i,k}$ and $X'_{i,k}$ cross transversally at $(x_i, b_i, \tau_i) = (0, 0, -1)$. The component $T'_{i,k}$ does not intersect the others
+
+When $k = 2$, the components $T'_{i,2}$ and $B_{i,2}$ are the same as above, but $X'_{i,2}$ has equation $x_i = 1+\tau_i+b_i^2 = 0$ with multiplicity $i+1$. The intersection $B_{i,2} \cap X'_{i,2}$ is the same, but now $T'_{i,2}$ intersects $X'_{i,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$.
+
+Independent of the value of $k$, one verifies that this chart is regular by computing the $\tau_i$-derivative.
+
+The last chart, which we call $(i,k)_u$, is obtained via $x_i = u_it_i$, $y = v_it_i$. The central fiber is given by $t_0 = t_i^{i+1}v_i^i$. The special fiber when $k \geq 3$ is given by
+\begin{itemize}
+    \item $U_{i,k}: t_i = u_i = 0$ with multiplicity $i+1$;
+    \item $U'_{i,k}: t_i = u_i + 1 = 0$ with multiplicity $i+1$;
+    \item $V_{i,k}: v_i = u_i = 0$ with multiplicity $i$; and
+    \item $V'_{i,k}: v_i = u_i + 1 = 0$ with multiplicity $i$.
+\end{itemize}
+The components $U_{i,k}$ and $V_{i,k}$ intersect transversally once at $(u_i, v_i, t_i) = (0,0,0)$, and the components $U'_{i,k}$ and $V'_{i,k}$ intersect transversally at $(-1,0,0)$. There are no other intersections points.
+
+When $k = 2$, the components $V$ and $V'$ are unchanged. There is no component $U'$, and $U_{i,2}$ has equation $t_i = u_i^2 + u_i + v_i^2 = 0$ with the same multiplicity. It intersects each of $V_{i,2}, V'_{i,2}$ once transversally.
+
+When $k \geq 3$, the $u_i$-derivative shows that this chart is regular. When $k = 2$, the $u_i$-derivative is zero if and only if $u_i = -\frac12$. Substituting into the $v_i$-derivative shows that the chart is regular.
+
 
 
 \bibliographystyle{alpha}
