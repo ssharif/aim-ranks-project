@@ -170,7 +170,7 @@ The fiber is irreducible with multiplicity $1$, and we call it $F$. One checks t
 The special fiber consists of two components:
 \begin{itemize}
     \item $F_{i,0}: t_i = x_i^2 - x_iy^i + 1 = 0$ with multiplicity 1; and
-    \item $E_{i,0}: y = x_i^2 + x_it_i + 1 = 0$ with multiplicity $i$.
+    \item $D_{i,0}: y = x_i^2 + x_it_i + 1 = 0$ with multiplicity $i$.
 \end{itemize}
 These components intersect twice transversally, at $(x_i, y, t_i) = (\pm i, 0, 0)$. This chart is regular.
 
@@ -218,7 +218,13 @@ The special fiber has 3 components. When $k \geq 3$, one verifies that these are
 Note that if $i = 0$, $E_{i,k}$ has multiplicity $0$; this actually means that the component does not exist in this case. Otherwise,
 the components $E_{i,k}$ and $E_{i+1,k}$ cross transversally at $(x_i, b_i, \tau_i) = (0, 0, -1)$. The component $F'_{i,k}$ does not intersect the others regardless of the value of $i$.
 
-When $k = 2$, the components $F_{i,2}$ and $E_{i,2}$ are the same as above, but $E_{i+1,2}$ has equation $x_i = 1+\tau_i+b_i^2 = 0$ with multiplicity $i+1$. The intersection $E_{i,2} \cap E_{i+1,2}$ is the same, but now $F_{i,2}$ intersects $E_{i+1,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$.
+When $k = 2$, we get
+\begin{itemize}
+    \item $F_{i,2}: \tau_i = (x_i^{i+1}b_i^i - 1) b_i^2 - 1 = 0$ with multiplicity 1;
+    \item $E_{i,2}: b_i = 1+\tau_i = 0$ with multiplicity $i$; and
+    \item $?_{i+1,2}: x_i = 1+\tau_i+b_i^2 = 0$ with multiplicity $i+1$.
+\end{itemize}
+The intersection $E_{i,2} \cap ?_{i+1,2}$ is transversal at $(0,0,0)$, while $F_{i,2}$ intersects $?_{i+1,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$.
 
 Independent of the value of $k$, one verifies that this chart is regular by computing the $\tau_i$-derivative.
 
@@ -231,18 +237,27 @@ This last chart is obtained via $x_i = u_it_i$, $y = v_it_i$, giving the model
 \]
 The central fiber is given by $t_0 = t_i^{i+1}v_i^i$. One checks that the special fiber when $k \geq 3$ consists of the components
 \begin{itemize}
-    \item $D_{i+1,k}: t_i = u_i = 0$ with multiplicity $i+1$;
-    \item $E_{i+1,k}: t_i = u_i + 1 = 0$ with multiplicity $i+1$;
-    \item $D_{i,k}: v_i = u_i = 0$ with multiplicity $i$; and
-    \item $E_{i,k}: v_i = u_i + 1 = 0$ with multiplicity $i$.
+    \item $D_{i,k}: v_i = u_i = 0$ with multiplicity $i$;
+    \item $E_{i,k}: v_i = u_i + 1 = 0$ with multiplicity $i$;
+    \item $D_{i+1,k}: t_i = u_i = 0$ with multiplicity $i+1$; and
+    \item $E_{i+1,k}: t_i = u_i + 1 = 0$ with multiplicity $i+1$.
 \end{itemize}
 As with the chart $(i,k)_b$, multiplicity $0$ components mean that such components are absent when $i = 0$.
-The components $D_{i+1,k}$ and $D_{i,k}$ (when the latter exists) intersect transversally once at $(u_i, v_i, t_i) = (0,0,0)$, and the components $E_{i+1,k}$ and $E_{i,k}$ intersect transversally at $(-1,0,0)$. There are no other intersection points.
+The components $D_{i+1,k}$ and $D_{i,k}$ (when the latter exists) intersect transversally once at $(u_i, v_i, t_i) = (0,0,0)$, and the components $E_{i+1,k}$ and $E_{i,k}$ intersect transversally at $(-1,0,0)$. One checks that the latter intersection point is identical to the intersection point in chart $(i,k)_b$. There are no other intersections.
 
 When $k = 2$, the components $D_{i,2}$ and $E_{i,2}$ are unchanged. There is no component $E_{i+1,2}$, and $D_{i+1,2}$ has equation $t_i = u_i^2 + u_i + v_i^2 = 0$ with the same multiplicity. It intersects each of $D_{i,2}, E_{i,2}$ once transversally.
 
 When $k \geq 3$, the $u_i$-derivative shows that this chart is regular. When $k = 2$, the $u_i$-derivative is zero if and only if $u_i = -\frac12$. Substituting into the $v_i$-derivative shows that the chart is regular.
 
+
+\subsubsection{Putting the charts together}
+\label{sec:putt-charts-togeth}
+
+We start with the chart $(0, r)$ and blow up, inductively obtaining charts of the form $(i, r-2i)$, $(i, r-2i)b$ and $(i, r-2i)u$. The procedure terminates upon reaching a chart of the form $(s, 1)$ or $(s, 0)$; thus we treat the cases of $r$ even and odd separately. Since $r$ is fixed, the value of $k$ for each case is a function of $i$. Therefore we will frequently leave off reference to $k$ in all subscripts. Notice that all components of the form $F_{\cdot}$ are glued together, and so we may leave off the subscript entirely. Lastly, the components $D_i$ and $E_i$ each have multiplicity $i$.
+
+We first suppose that $r$ is odd. Let $s = \frac12(r-1)$. Then the resulting regular proper model consists of the 3-fold intersection of components $F$, $D_s$, and $E_s$ as in chart $(s, 1)$, plus two ``tails'': $D_s$ connected to $D_{s-1}$, which is then connected to $D_{s-2}, \dots$, terminating with $D_1$, and similarly $E_s$ connected to $E_{s-1}, \dots, E_1$.
+
+Now suppose $r$ is even. Let $s = \frac12 r$.
 
 \bibliographystyle{alpha}
 \bibliography{./aimbiblio}
