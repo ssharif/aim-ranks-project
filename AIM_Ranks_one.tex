@@ -169,8 +169,8 @@ The fiber is irreducible with multiplicity $1$, and we call it $F_0$. One checks
 
 The special fiber consists of two components:
 \begin{itemize}
-    \item $T_{i,0}: t_i = x_i^2 - x_iy^i + 1 = 0$ with multiplicity 1; and
-    \item $Y_{i,0}: y = x_i^2 + x_it_i + 1 = 0$ with multiplicity $i$.
+    \item $F_{i,0}: t_i = x_i^2 - x_iy^i + 1 = 0$ with multiplicity 1; and
+    \item $E_{i,0}: y = x_i^2 + x_it_i + 1 = 0$ with multiplicity $i$.
 \end{itemize}
 These components intersect twice transversally, at $(x_i, y, t_i) = (\pm i, 0, 0)$. This chart is regular.
 
@@ -181,9 +181,9 @@ These components intersect twice transversally, at $(x_i, y, t_i) = (\pm i, 0, 0
 
 The special fiber consists of 3 components:
 \begin{itemize}
-    \item $T_{i,1}: t_i = x_i^2 - x_iy^{i+1} + y = 0$ with multiplicity 1;
-    \item $X_{i,1}: y = x_i = 0$ with multiplicity $i$; and
-    \item $Y_{i,1}: y = x_i + t_i = 0$ with multiplicity $i$.
+    \item $F_{i,1}: t_i = x_i^2 - x_iy^{i+1} + y = 0$ with multiplicity 1;
+    \item $D_{i,1}: y = x_i = 0$ with multiplicity $i$; and
+    \item $E_{i,1}: y = x_i + t_i = 0$ with multiplicity $i$.
 \end{itemize}
 These components intersect each other transversally at $(x_i, y, t_i) = (0,0,0)$, and nowhere else. This chart is regular.
 
@@ -194,11 +194,11 @@ These components intersect each other transversally at $(x_i, y, t_i) = (0,0,0)$
 
 The special fiber consists of 3 components:
 \begin{itemize}
-    \item $T_{i,k}: t_i = x_i^2 - x_iy^{i+k} + y^k = 0$ with multiplicity 1;
-    \item $X_{i,k}: y = x_i = 0$ with multiplicity $i$; and
-    \item $Y_{i,k}: y = x_i + t_i = 0$ with multiplicity $i$.
+    \item $F_{i,k}: t_i = x_i^2 - x_iy^{i+k} + y^k = 0$ with multiplicity 1;
+    \item $D_{i,k}: y = x_i = 0$ with multiplicity $i$; and
+    \item $E_{i,k}: y = x_i + t_i = 0$ with multiplicity $i$.
 \end{itemize}
-The component $T_{i,k}$ has a node at $(x_i,y,t_i) = (0,0,0)$, and the other two components also pass through this point. This intersection point is not regular, but the rest of the chart is regular.
+The component $F_{i,k}$ has a node at $(x_i,y,t_i) = (0,0,0)$, and the other two components also pass through this point. This intersection point is not regular, but the rest of the chart is regular.
 
 Since only this last chart is not regular, we next investigate the blow-up of this chart at $(x_i,y,t_i) = (0,0,0)$. The first chart of the blow-up is obtained via $x_{i+1} = x_i y$, $t_{i+1} = t_i y$; one verifies that the resulting chart is $(i+1, k-2)$. There are two more charts in the blow-up, however the specifics depend on whether $k=2$ or $k \geq 3$. In all cases, as we shall see, these charts are regular.
 
@@ -208,14 +208,14 @@ Our next chart, which we call $(i,k)_b$, is obtained via $y = x_ib_i$, $t_i = x_
 \]
 The special fiber has 3 components. When $k \geq 3$, these are
 \begin{itemize}
-    \item $T'_{i,k}: \tau_i = (x_i^{i+1}b_i^i - 1)x^{k-2} b_i^k - 1 = 0$ with multiplicity 1;
-    \item $B_{i,k}: b_i = 1+\tau_i = 0$ with multiplicity $i$; and
-    \item $X'_{i,k}: x_i = 1+\tau_i = 0$ with multiplicity $i+1$.
+    \item $F_{i,k}: \tau_i = (x_i^{i+1}b_i^i - 1)x^{k-2} b_i^k - 1 = 0$ with multiplicity 1;
+    \item $E_{i,k}: b_i = 1+\tau_i = 0$ with multiplicity $i$; and
+    \item $E_{i+1,k}: x_i = 1+\tau_i = 0$ with multiplicity $i+1$.
 \end{itemize}
-Note that if $i = 0$, $B_{i,k}$ has multiplicity $0$; this actually means that the component does not exist in this case. Otherwise,
-the components $B_{i,k}$ and $X'_{i,k}$ cross transversally at $(x_i, b_i, \tau_i) = (0, 0, -1)$. The component $T'_{i,k}$ does not intersect the others regardless of the value of $i$.
+Note that if $i = 0$, $E_{i,k}$ has multiplicity $0$; this actually means that the component does not exist in this case. Otherwise,
+the components $E_{i,k}$ and $E_{i+1,k}$ cross transversally at $(x_i, b_i, \tau_i) = (0, 0, -1)$. The component $F'_{i,k}$ does not intersect the others regardless of the value of $i$.
 
-When $k = 2$, the components $T'_{i,2}$ and $B_{i,2}$ are the same as above, but $X'_{i,2}$ has equation $x_i = 1+\tau_i+b_i^2 = 0$ with multiplicity $i+1$. The intersection $B_{i,2} \cap X'_{i,2}$ is the same, but now $T'_{i,2}$ intersects $X'_{i,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$.
+When $k = 2$, the components $F_{i,2}$ and $E_{i,2}$ are the same as above, but $E_{i+1,2}$ has equation $x_i = 1+\tau_i+b_i^2 = 0$ with multiplicity $i+1$. The intersection $E_{i,2} \cap E_{i+1,2}$ is the same, but now $F_{i,2}$ intersects $E_{i+1,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$.
 
 Independent of the value of $k$, one verifies that this chart is regular by computing the $\tau_i$-derivative.
 
@@ -225,27 +225,17 @@ The last chart, which we call $(i,k)_u$, is obtained via $x_i = u_it_i$, $y = v_
 \]
 The central fiber is given by $t_0 = t_i^{i+1}v_i^i$. The special fiber when $k \geq 3$ is given by
 \begin{itemize}
-    \item $U_{i,k}: t_i = u_i = 0$ with multiplicity $i+1$;
-    \item $U'_{i,k}: t_i = u_i + 1 = 0$ with multiplicity $i+1$;
-    \item $V_{i,k}: v_i = u_i = 0$ with multiplicity $i$; and
-    \item $V'_{i,k}: v_i = u_i + 1 = 0$ with multiplicity $i$.
+    \item $D_{i+1,k}: t_i = u_i = 0$ with multiplicity $i+1$;
+    \item $E_{i+1,k}: t_i = u_i + 1 = 0$ with multiplicity $i+1$;
+    \item $D_{i,k}: v_i = u_i = 0$ with multiplicity $i$; and
+    \item $E_{i,k}: v_i = u_i + 1 = 0$ with multiplicity $i$.
 \end{itemize}
 As with the chart $(i,k)_b$, multiplicity $0$ components mean that such components are absent when $i = 0$.
-The components $U_{i,k}$ and $V_{i,k}$ (when the latter exists) intersect transversally once at $(u_i, v_i, t_i) = (0,0,0)$, and the components $U'_{i,k}$ and $V'_{i,k}$ intersect transversally at $(-1,0,0)$. There are no other intersection points.
+The components $D_{i+1,k}$ and $D_{i,k}$ (when the latter exists) intersect transversally once at $(u_i, v_i, t_i) = (0,0,0)$, and the components $E_{i+1,k}$ and $E_{i,k}$ intersect transversally at $(-1,0,0)$. There are no other intersection points.
 
-When $k = 2$, the components $V$ and $V'$ are unchanged. There is no component $U'$, and $U_{i,2}$ has equation $t_i = u_i^2 + u_i + v_i^2 = 0$ with the same multiplicity. It intersects each of $V_{i,2}, V'_{i,2}$ once transversally.
+When $k = 2$, the components $V$ and $E$ are unchanged. There is no component $U'$, and $D_{i+1,2}$ has equation $t_i = u_i^2 + u_i + v_i^2 = 0$ with the same multiplicity. It intersects each of $D_{i,2}, E_{i,2}$ once transversally.
 
 When $k \geq 3$, the $u_i$-derivative shows that this chart is regular. When $k = 2$, the $u_i$-derivative is zero if and only if $u_i = -\frac12$. Substituting into the $v_i$-derivative shows that the chart is regular.
-
-Rough gluing notes:
-
-If $k \geq 3$, then
-\begin{itemize}
-    \item All of the $T$ and $T'$ are the same component for every subscript.
-    \item $X_{i,k} = V_{i,k} = U_{i-1,k}$.
-    \item $X'_{i,k} = U'_{i,k}$.
-    \item $Y_{i,k} = B_{i,k} = V'_{i,k} = X'_{i-1,k} = U'_{i-1,k}$.
-\end{itemize}
 
 
 \bibliographystyle{alpha}
