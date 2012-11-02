@@ -194,7 +194,7 @@ These components intersect each other transversally at $(x_i, y, t_i) = (0,0,0)$
 
 The special fiber consists of 3 components:
 \begin{itemize}
-    \item $T_{i,k}: t_i = x_i^2 - x_iy^{i+k} - y^k = 0$ with multiplicity 1;
+    \item $T_{i,k}: t_i = x_i^2 - x_iy^{i+k} + y^k = 0$ with multiplicity 1;
     \item $X_{i,k}: y = x_i = 0$ with multiplicity $i$; and
     \item $Y_{i,k}: y = x_i + t_i = 0$ with multiplicity $i$.
 \end{itemize}
@@ -212,31 +212,39 @@ The special fiber has 3 components. When $k \geq 3$, these are
     \item $B_{i,k}: b_i = 1+\tau_i = 0$ with multiplicity $i$; and
     \item $X'_{i,k}: x_i = 1+\tau_i = 0$ with multiplicity $i+1$.
 \end{itemize}
-The components $B_{i,k}$ and $X'_{i,k}$ cross transversally at $(x_i, b_i, \tau_i) = (0, 0, -1)$. The component $T'_{i,k}$ does not intersect the others
+Note that if $i = 0$, $B_{i,k}$ has multiplicity $0$; this actually means that the component does not exist in this case. Otherwise,
+the components $B_{i,k}$ and $X'_{i,k}$ cross transversally at $(x_i, b_i, \tau_i) = (0, 0, -1)$. The component $T'_{i,k}$ does not intersect the others regardless of the value of $i$.
 
 When $k = 2$, the components $T'_{i,2}$ and $B_{i,2}$ are the same as above, but $X'_{i,2}$ has equation $x_i = 1+\tau_i+b_i^2 = 0$ with multiplicity $i+1$. The intersection $B_{i,2} \cap X'_{i,2}$ is the same, but now $T'_{i,2}$ intersects $X'_{i,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$.
 
 Independent of the value of $k$, one verifies that this chart is regular by computing the $\tau_i$-derivative.
 
-The last chart, which we call $(i,k)_u$, is obtained via $x_i = u_it_i$, $y = v_it_i$. The central fiber is given by $t_0 = t_i^{i+1}v_i^i$. The special fiber when $k \geq 3$ is given by
+The last chart, which we call $(i,k)_u$, is obtained via $x_i = u_it_i$, $y = v_it_i$, giving the model
+\[
+(u_iv_i^it_i^{i+1} - 1) v_i^k t_i^{k-2} = u_i(u_i + 1).
+\]
+The central fiber is given by $t_0 = t_i^{i+1}v_i^i$. The special fiber when $k \geq 3$ is given by
 \begin{itemize}
     \item $U_{i,k}: t_i = u_i = 0$ with multiplicity $i+1$;
     \item $U'_{i,k}: t_i = u_i + 1 = 0$ with multiplicity $i+1$;
     \item $V_{i,k}: v_i = u_i = 0$ with multiplicity $i$; and
     \item $V'_{i,k}: v_i = u_i + 1 = 0$ with multiplicity $i$.
 \end{itemize}
-The components $U_{i,k}$ and $V_{i,k}$ intersect transversally once at $(u_i, v_i, t_i) = (0,0,0)$, and the components $U'_{i,k}$ and $V'_{i,k}$ intersect transversally at $(-1,0,0)$. There are no other intersections points.
+As with the chart $(i,k)_b$, multiplicity $0$ components mean that such components are absent when $i = 0$.
+The components $U_{i,k}$ and $V_{i,k}$ (when the latter exists) intersect transversally once at $(u_i, v_i, t_i) = (0,0,0)$, and the components $U'_{i,k}$ and $V'_{i,k}$ intersect transversally at $(-1,0,0)$. There are no other intersection points.
 
 When $k = 2$, the components $V$ and $V'$ are unchanged. There is no component $U'$, and $U_{i,2}$ has equation $t_i = u_i^2 + u_i + v_i^2 = 0$ with the same multiplicity. It intersects each of $V_{i,2}, V'_{i,2}$ once transversally.
 
 When $k \geq 3$, the $u_i$-derivative shows that this chart is regular. When $k = 2$, the $u_i$-derivative is zero if and only if $u_i = -\frac12$. Substituting into the $v_i$-derivative shows that the chart is regular.
 
 Rough gluing notes:
+
+If $k \geq 3$, then
 \begin{itemize}
-    \item All of the $T$ and $T'$ are the same component.
-    \item $X_{i,k} = V_{i,k}$.
-    \item $Y_{i,k} = B_{i,k} = V'_{i,k}$.
+    \item All of the $T$ and $T'$ are the same component for every subscript.
+    \item $X_{i,k} = V_{i,k} = U_{i-1,k}$.
     \item $X'_{i,k} = U'_{i,k}$.
+    \item $Y_{i,k} = B_{i,k} = V'_{i,k} = X'_{i-1,k} = U'_{i-1,k}$.
 \end{itemize}
 
 
