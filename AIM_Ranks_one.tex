@@ -224,7 +224,7 @@ When $k = 2$, we get
     \item $E_{i,2}: b_i = 1+\tau_i = 0$ with multiplicity $i$; and
     \item $G_{i+1,2}: x_i = 1+\tau_i+b_i^2 = 0$ with multiplicity $i+1$.
 \end{itemize}
-The intersection $E_{i,2} \cap G_{i+1,2}$ is transversal at $(0,0,0)$, while $F_{i,2}$ intersects $G_{i+1,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$.
+The intersection $E_{i,2} \cap G_{i+1,2}$ is transversal at $(0,0,-1)$, while $F_{i,2}$ intersects $G_{i+1,2}$ transversally at two points: $(x_i, b_i, \tau_i) = (0, \pm i, 0)$. One checks that these latter intersections are identical to those in chart $(i+1,0)$.
 
 Independent of the value of $k$, one verifies that this chart is regular by computing the $\tau_i$-derivative.
 
@@ -251,7 +251,7 @@ When $k = 2$, we get
     \item $E_{i,2}: v_i = u_i + 1 = 0$ with multiplicity $i$; and
     \item $G_{i+2,2}: t_i = u_i^2 + u_i + v_i^2 = 0$ with multiplicity $i+1$.
 \end{itemize}
-The component $G_{i+1,2}$ intersects each of $D_{i,2}, E_{i,2}$ once transversally.
+The component $G_{i+1,2}$ intersects each of $D_{i,2}, E_{i,2}$ once transversally. The intersection with $E_{i,2}$ is the same as in chart $(i,2)_b$.
 
 When $k \geq 3$, the $u_i$-derivative shows that this chart is regular. When $k = 2$, the $u_i$-derivative is zero if and only if $u_i = -\frac12$. Substituting into the $v_i$-derivative shows that the chart is regular.
 
@@ -263,7 +263,20 @@ We start with the chart $(0, r)$ and blow up, inductively obtaining charts of th
 
 We first suppose that $r$ is odd. Let $s = \frac12(r-1)$. Then the resulting regular proper model consists of the 3-fold intersection of components $F$, $D_s$, and $E_s$ as in chart $(s, 1)$, plus two ``tails'': $D_s$ connected to $D_{s-1}$, which is then connected to $D_{s-2}, \dots$, terminating with $D_1$, and similarly $E_s$ connected to $E_{s-1}, \dots, E_1$.
 
-Now suppose $r$ is even. Let $s = \frac12 r$.
+Now suppose $r$ is even. Let $s = \frac12 r$. Then we end up with $F$ connected to $G_s$ by 2 intersection points, and $G_s$ has 2 ``tails'' attached to it at distinct places: $D_{s-1}, \dots, D_1$ and $E_{s-1}, \dots, E_1$ respectively. In this case, the model is semi-stable, so that we may construct the dual graph
+\begin{figure}[h]\centering
+    \input{SuperDualOne}
+  \caption{Dual graph of $C_k$, $t=1$, $r$ even}
+\label{fig:superelliptic-dual-graph}
+\end{figure}
+
+One checks that the self-intersection number of each component is $-2$, except for $F$, which has $F^2 = -r$. By Castelnuovo's criterion, the model is minimal. Our calculations above show that the model is regular. Therefore we have found the minimal proper regular model we were looking for.
+
+\section{Component group}
+\label{sec:component-group}
+
+We follow a similar procedure as when $t = \infty$ to compute the component group. 
+
 
 \bibliographystyle{alpha}
 \bibliography{./aimbiblio}
