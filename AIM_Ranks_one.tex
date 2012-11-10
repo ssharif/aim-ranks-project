@@ -260,7 +260,7 @@ When $k \geq 3$, the $u_i$-derivative shows that this chart is regular. When $k 
 
 We start with the chart $(0, r)$ and blow up, inductively obtaining charts of the form $(i, r-2i)$, $(i, r-2i)b$ and $(i, r-2i)u$. The procedure terminates upon reaching a chart of the form $(s, 1)$ or $(s, 0)$; thus we treat the cases of $r$ even and odd separately. Since $r$ is fixed, the value of $k$ for each case is a function of $i$. Therefore we will frequently leave off reference to $k$ in all subscripts. Notice that all components of the form $F_{\cdot}$ are glued together, and so we may leave off the subscript entirely. Lastly, the components $D_i$ and $E_i$ each have multiplicity $i$.
 
-We first suppose that $r$ is odd. Let $s = \frac12(r-1)$. Then the resulting regular proper model consists of the 3-fold intersection of components $F$, $D_s$, and $E_s$ as in chart $(s, 1)$, plus two ``tails'': $D_s$ connected to $D_{s-1}$, which is then connected to $D_{s-2}, \dots$, terminating with $D_1$, and similarly $E_s$ connected to $E_{s-1}, \dots, E_1$. The associated reduced curve is not semi-stable, but I decided to bend the rules slightly to come up with the ``dual graph-like object'' in Figure~\ref{fig:superelliptic-dual-graph-odd}. In that figure, the $\ast$ denotes the triple intersection point of $F$, $D_{s-1}$, and $E_{s-1}$.
+We first suppose that $r$ is odd. Let $s = \frac12(r-1)$. Then the resulting regular proper model consists of the 3-fold intersection of components $F$, $D_s$, and $E_s$ as in chart $(s, 1)$, plus two ``tails'': $D_s$ connected to $D_{s-1}$, which is then connected to $D_{s-2}, \dots$, terminating with $D_1$, and similarly $E_s$ connected to $E_{s-1}, \dots, E_1$. The associated reduced curve is not semi-stable, but I bent the rules slightly to come up with the ``dual graph-like object'' in Figure~\ref{fig:superelliptic-dual-graph-odd}. In that figure, the $\ast$ denotes the triple intersection point of $F$, $D_{s}$, and $E_{s}$.
 \begin{figure}[h]\centering
     \input{SuperDualOneOdd}
   \caption{Dual graph of $C_k$, $t=1$, $r$ odd}
@@ -274,7 +274,7 @@ Now suppose $r$ is even. Let $s = \frac12 r$. Then we end up with $F$ connected 
 \label{fig:superelliptic-dual-graph-even}
 \end{figure}
 
-One checks that the self-intersection number of each component is $-2$, except for $F$, which has $F^2 = -r$. By Castelnuovo's criterion, the model is minimal. Our calculations above show that the model is regular. Therefore we have found the minimal proper regular model we were looking for.
+In both cases, one checks that the self-intersection number of each component is $-2$, except for $F$, which has $F^2 = -2s$. By Castelnuovo's criterion, the model is minimal. Our calculations above show that the model is regular. Therefore we have found the minimal proper regular model we were looking for.
 
 \section{Component group}
 \label{sec:component-group}
