@@ -1,0 +1,118 @@
+\documentclass[pagesize,paper=letter]{scrartcl}
+%\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[all]{xy}
+\usepackage[pagebackref,colorlinks]{hyperref}
+\usepackage{mathrsfs}
+
+\newcommand{\sce}{\mathscr{C}^{\textsf{ex}}}
+\newcommand{\scd}{\mathscr{C}}
+\newcommand{\caff}{C_{\textsf{aff}}}
+\newcommand{\sj}{\mathscr{J}}
+
+
+\theoremstyle{plain}
+\newtheorem*{reftheorem}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}{Problem}
+\newtheorem{question}{Question}
+\newtheorem*{question*}{Question}
+\newtheorem{claim}{Claim}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+% General
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\hra}{\hookrightarrow}
+\newcommand{\righthookarrow}{\hookrightarrow}
+\newcommand{\isom}{\cong}
+\newcommand{\too}{\longrightarrow}
+\newcommand{\isomto}{\overset{\sim}{\longrightarrow}}
+\newcommand{\nto}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\nsubset}{\not\subset}
+\renewcommand{\phi}{\varphi}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\ilim}{\displaystyle\lim_{\leftarrow}}
+\newcommand{\dirlim}{\displaystyle\lim_{\rightarrow}}
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+\DeclareMathOperator{\car}{char}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\pgl}{PGL}
+\DeclareMathOperator{\Gl}{GL}
+\DeclareMathOperator{\Sl}{SL}
+
+% Number theory
+\newcommand{\Qbar}{\ensuremath{\overline{\Q}}}
+\newcommand{\Kb}{\overline{K}}
+\newcommand{\Fb}{\overline{F}}
+\newcommand{\kb}{\overline{k}}
+\newcommand{\Xbar}{\overline{X}}
+\newcommand{\Cbar}{\overline{C}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\newcommand{\fp}{\ensuremath{\mathbb{F}_p}}
+\newcommand{\sm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\ok}{\mathscr{O}_K}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\Nm}{Nm}
+\DeclareMathOperator{\tr}{Tr}
+
+% Algebraic geometry
+\newcommand{\sA}{\ensuremath{\mathscr{A}}}
+\newcommand{\sO}{\ensuremath{\mathscr{O}}}
+\newcommand{\sL}{\ensuremath{\mathscr{L}}}
+\newcommand{\sK}{\ensuremath{\mathscr{K}}}
+\newcommand{\sF}{\ensuremath{\mathscr{F}}}
+\newcommand{\A}{\ensuremath{\mathbb{A}}}
+\newcommand{\Pro}{\ensuremath{\mathbb{P}}}
+\newcommand{\G}{\ensuremath{\mathbb{G}}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sX}{\mathscr{X}}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\dv}{div}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\P0}{Pic^0}
+\DeclareMathOperator{\Spec}{Spec}
+
+\begin{document}
+
+\title{Using Bouw-Wewers}
+\author{Shahed Sharif}
+\maketitle
+
+The purpose of these notes is to compute the $L$-function and conductor of the superelliptic nonsingular curve with affine piece
+\[
+C: xy^r = (x+1)(x+t)
+\]
+over $t = 1$ and $t = \infty$.
+
+\section{When $t = \infty$}
+\label{sec:when-t-=}
+
+Let $K = \F(t)$, where $\F$ is our finite field of characteristic relatively prime to $r$. Let $L$ be the splitting field of $X^r - t$ over $K$. Write $\tau$ for a fixed $r$th root of $t$. Let $E$ be the maximal subextension of $L/K$ which is unramified at $1/t$; observe that $E = K(\mu_r)$, where $\mu_r$ is the set of $r$th roots of unity. We first compute a semistable model for $C_L$ over $\tau = \infty$; this calculation is precisely that stated by Hall in the proof Lemma 6 of his $\ell$-torsion notes, with some notational changes.
+
+\end{document}
