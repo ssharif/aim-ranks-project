@@ -1586,9 +1586,9 @@ Let $T = \frac{1}{t}$, so that our curve has affine piece given by
 \]
 To desingularize the generic fiber, consider the affine curves
 \begin{align*}
-  C'&: Tvy^r = (v+1)(v+T) \\
-  C''&: Tu = z^{r-1}(z+uT)(z+u) \\
-  C'''&: Tw = z^{r-1}(wz+T)(wz+1).
+  \XX_3&: Tvy^r = (v+1)(v+T) \\
+  \XX_2&: Tu = z^{r-1}(z+uT)(z+u) \\
+  \XX_1&: Tw = z^{r-1}(wz+T)(wz+1).
 \end{align*}
 Now glue the 4 equations together via
 \begin{gather*}
@@ -1602,7 +1602,7 @@ One checks that the resulting curve is generically smooth.
   \[
   TXY^r = Z^{r-1}(X+Z)(TX+Z)
   \]
-  in $\Pro^2_K$. The chart $C''$ corresponds to the affine patch with $Y = 1$. When setting $X = 1$, one finds that the curve is not generically smooth; it has a cusp at $[1:0:0]$. Normalizing, one obtains the equation for $C'''$. 
+  in $\Pro^2_K$. The chart $\XX_2$ corresponds to the affine patch with $Y = 1$. When setting $X = 1$, one finds that the curve is not generically smooth; it has a cusp at $[1:0:0]$. Normalizing, one obtains the equation for $\XX_1$. 
 \end{remark}
 
 
@@ -1610,12 +1610,12 @@ The special fibers on these charts, given by $T = 0$, are as follows:
 \[
 \begin{array}{l@{:\,\,}ll}
 \caff & x + 1 = 0 & C_1 \\
-C' & v(v + 1) = 0 & C_2, C_1 \\
-C'' & z^r(z + u) = 0 & R_1, C_1 \\
-C''' & z^rw(wz+1) = 0 & R_1, C_2, C_1.
+\XX_3 & v(v + 1) = 0 & C_2, C_1 \\
+\XX_2 & z^r(z + u) = 0 & R_1, C_1 \\
+\XX_1 & z^rw(wz+1) = 0 & R_1, C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $C'''$, $C_2$ is given by the equation $w = 0$ (and $T = 0$, which holds for every component). The components $C_1$ and $C_2$ each have multiplicity 1, while $R_1$ has multiplicity $r$. Let $P = C_1 \cap R_1$. Note that $P$ lies in the chart $C''$, but in no others. Let $Q = C_2 \cap R_1$. Then $Q$ lies in $C'''$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $\XX_1$, $C_2$ is given by the equation $w = 0$ (and $T = 0$, which holds for every component). The components $C_1$ and $C_2$ each have multiplicity 1, while $R_1$ has multiplicity $r$. Let $P = C_1 \cap R_1$. Note that $P$ lies in the chart $\XX_2$, but in no others. Let $Q = C_2 \cap R_1$. Then $Q$ lies in $\XX_1$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
 
 One remark: the reason behind the notation $R_1$ will become apparent in \S~\ref{sec:blow-up-Q}.
 
@@ -1704,7 +1704,7 @@ where $T' = x T'_0$ and $z = x z_0$, whence $T = x^2 T'_0 z_0$. The special fibe
 
 Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
-  C''':wT = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''},
+  \XX_1:wT = z^{r-1}(wz + T)(wz + 1)\label{eq:\XX_1},
 \end{equation}
 is the intersection point of the components $C_2$ and $R_1$, and has coordinates $(w,z,T) = (0,0,0)$. Just as in the case of $P$, we will desingularize at $Q$ recursively; however, the situation is rather more complicated.  
 
