@@ -1580,42 +1580,27 @@ The purpose of this note is to compute the minimal proper regular model of $C$ a
 \subsection{Desingularization}
 \label{sec:desingularization}
 
-Let $T = \frac{1}{t}$, so that our curve has affine piece given by
-\[
-\caff:Txy^r = (x+1)(Tx+1).
-\]
-To desingularize the generic fiber, consider the affine curves
+Let $T = \frac{1}{t}$. Then the integral model from \S~\ref{s:model} can be written
 \begin{align*}
-  \XX_3&: Tvy^r = (v+1)(v+T) \\
-  \XX_2&: Tu = z^{r-1}(z+uT)(z+u) \\
-  \XX_1&: Tw = z^{r-1}(wz+T)(wz+1).
+  \XX_1&: Ty = x^{r-1}(yx+T)(yx+1) \\
+  \XX_2&: Tz = w^{r-1}(w+zT)(w+z) \\
+  \XX_3&: Tvu^r = (v+1)(v+T).
 \end{align*}
-Now glue the 4 equations together via
-\begin{gather*}
-  v = \frac{1}{x} = \frac{z}{u} = wz \qquad y = \frac{1}{z} \\
-  u = \frac{x}{y} = \frac{1}{vy} = \frac{1}{w} \qquad z = \frac{1}{y}\\
-  w = \frac{y}{x} = vy = \frac{1}{u} \qquad z = \frac{1}{y}
-\end{gather*}
-One checks that the resulting curve is generically smooth.
-\begin{remark}
-  If one projectivizes $\caff$, one obtains the equation
-  \[
-  TXY^r = Z^{r-1}(X+Z)(TX+Z)
-  \]
-  in $\Pro^2_K$. The chart $\XX_2$ corresponds to the affine patch with $Y = 1$. When setting $X = 1$, one finds that the curve is not generically smooth; it has a cusp at $[1:0:0]$. Normalizing, one obtains the equation for $\XX_1$. 
-\end{remark}
+Recall that the gluing is given by
+\[
+(x,y)=(w,1/z)\qquad(w,z)=(1/u,v/u)\qquad(u,v)=(1/x,1/(xy)).
+\]
 
 
 The special fibers on these charts, given by $T = 0$, are as follows:
 \[
 \begin{array}{l@{:\,\,}ll}
-\caff & x + 1 = 0 & C_1 \\
-\XX_3 & v(v + 1) = 0 & C_2, C_1 \\
-\XX_2 & z^r(z + u) = 0 & R_1, C_1 \\
-\XX_1 & z^rw(wz+1) = 0 & R_1, C_2, C_1.
+\XX_1 & x^ry(yx+1) = 0 & R_1, C_2, C_1 \\
+\XX_2 & w^r(w + z) = 0 & R_1, C_1 \\
+\XX_3 & v(v + 1) = 0 & C_2, C_1.
 \end{array}
 \]
-The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $\XX_1$, $C_2$ is given by the equation $w = 0$ (and $T = 0$, which holds for every component). The components $C_1$ and $C_2$ each have multiplicity 1, while $R_1$ has multiplicity $r$. Let $P = C_1 \cap R_1$. Note that $P$ lies in the chart $\XX_2$, but in no others. Let $Q = C_2 \cap R_1$. Then $Q$ lies in $\XX_1$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
+The third column gives names for the components of the special fiber, given in order of the factors in the equation. For example, in $\XX_1$, $C_2$ is given by the equation $y = 0$ (and $T = 0$, which holds for every component). The components $C_1$ and $C_2$ each have multiplicity 1, while $R_1$ has multiplicity $r$. Let $P = C_1 \cap R_1$. Note that $P$ lies in the chart $\XX_2$, but in no others. Let $Q = C_2 \cap R_1$. Then $Q$ lies in $\XX_1$ but in no other chart. One checks that every point but $P$ and $Q$ is regular. Therefore we need to blow up at these two points.
 
 One remark: the reason behind the notation $R_1$ will become apparent in \S~\ref{sec:blow-up-Q}.
 
