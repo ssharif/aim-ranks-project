@@ -1571,20 +1571,16 @@ We have $J_X(K)[p]=J_X(K^{sep})[p]=0$.
 %{Jenn Park \and Shahed Sharif}
 
 
-Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $r \geq 3$ be an integer. Let $C$ be the smooth projective curve with affine model
-\[
-C: xy^r = (x+1)(x+t).
-\]
-The purpose of this note is to compute the minimal proper regular model of $C$ at $t = \infty$, as well as the component group. In all of the following, we test regularity of various affine charts. These charts will be given by a single equation in $\mathbb{A}^3_k$ of the form $f(x_1,x_2,x_3) = g(x_1,x_2,x_3)$. We will make frequent use of the fact that a point $P_0$ on the surface is regular if and only if $\frac{\partial f}{\partial x_i}(P_0) \neq \frac{\partial g}{\partial x_i}(P_0)$ for some $i$.
+In this section, we will assume that $r \geq 3$. We will now compute the minimal proper regular model of $C$ at $t = \infty$, as well as the component group. In all of the following, we test regularity of various affine charts. These charts will be given by a single equation in $\mathbb{A}^3_k$ of the form $f(x_1,x_2,x_3) = g(x_1,x_2,x_3)$. We will make frequent use of the fact that a point $P_0$ on the surface so given is regular if and only if $\frac{\partial f}{\partial x_i}(P_0) \neq \frac{\partial g}{\partial x_i}(P_0)$ for some $i$.
 
 \subsection{Desingularization}
 \label{sec:desingularization}
 
-Let $T = \frac{1}{t}$. Then the integral model from \S~\ref{s:model} can be written
+Let $T = \frac{1}{t}$. Then the integral model of $C$ from \S~\ref{s:model} can be written
 \begin{align*}
-  \XX_1&: Ty = x^{r-1}(yx+T)(yx+1) \\
+  \XX_1&: Ty = x^{r-1}(xy+T)(xy+1) \\
   \XX_2&: Tz = w^{r-1}(w+zT)(w+z) \\
-  \XX_3&: Tvu^r = (v+1)(v+T).
+  \XX_3&: Tu^rv = (v+1)(v+T).
 \end{align*}
 Recall that the gluing is given by
 \[
@@ -1595,7 +1591,7 @@ Recall that the gluing is given by
 The special fibers on these charts, given by $T = 0$, are as follows:
 \[
 \begin{array}{l@{:\,\,}ll}
-\XX_1 & x^ry(yx+1) = 0 & R_1, C_2, C_1 \\
+\XX_1 & x^ry(xy+1) = 0 & R_1, C_2, C_1 \\
 \XX_2 & w^r(w + z) = 0 & R_1, C_1 \\
 \XX_3 & v(v + 1) = 0 & C_2, C_1.
 \end{array}
