@@ -1686,109 +1686,109 @@ where $\tau' = \zz \tau''$ and $w = \zz w'$, whence $T = \zz^2 \tau'' w'$. The s
 
 Recall that $Q$ lies on the affine chart with equation
 \begin{equation}
-  \XX_1:wT = z^{r-1}(wz + T)(wz + 1)\label{eq:C'''},
+  \XX_1:yT = x^{r-1}(yx + T)(yx + 1)\label{eq:C'''},
 \end{equation}
-is the intersection point of the components $C_2$ and $R_1$, and has coordinates $(w,z,T) = (0,0,0)$. Just as in the case of $P$, we will desingularize at $Q$ recursively; however, the situation is rather more complicated.  
+is the intersection point of the components $C_2$ and $R_1$, and has coordinates $(y,x,T) = (0,0,0)$. Just as in the case of $P$, we will desingularize at $Q$ recursively; however, the situation is rather more complicated.  
 
-One should keep in mind the following: blowing-up is a local procedure; and $wz + 1 = T = 0$ is an equation for $C_1$, a component which does not pass through $Q$. Therefore, the factor $wz + 1$ and its transforms can be safely ignored when computing special fibers below.
+One should keep in mind the following: blowing-up is a local procedure; and $yx + 1 = T = 0$ is an equation for $C_1$, a component which does not pass through $Q$. Therefore, the factor $yx + 1$ and its transforms can be safely ignored when computing special fibers below.
 
 We start by replacing $Q$ with two charts. Chart 1 is given by the equation
 \[
-T_0 = b^{r-1}w^{r-2}(bw + T_0)(bw^2 + 1)
+T' = b^{r-1}y^{r-2}(by + T')(by^2 + 1)
 \]
-where $z = bw$ and $T = T_0w$. The special fiber consists of 2 components:
+where $x = by$ and $T = T'y$. The special fiber consists of 2 components:
 \begin{itemize}
-    \item $R_1: T_0 = b = 0$ with multiplicity $r$, and
-    \item $R_2: T_0 = w = 0$ also with multiplicity $r$.
+    \item $R_1: T' = b = 0$ with multiplicity $r$, and
+    \item $R_2: T' = y = 0$ also with multiplicity $r$.
 \end{itemize}
-The first component is in fact identical to the $R_1$ appearing in \S~\ref{sec:blow-up-P} and earlier. The second component is exceptional. By considering the $T_0$ derivative, one sees that this chart is regular.
+The first component is in fact identical to the $R_1$ appearing in \S~\ref{sec:blow-up-P} and earlier. The second component is exceptional. By considering the $T'$ derivative, one sees that this chart is regular.
 
 Chart 2 is given by the equation
 \[
-w_1 T_1 = z^{r-2}(w_1z + T_1)(w_1 z^2 + 1)
+y_1 T_1 = x^{r-2}(y_1x + T_1)(y_1 x^2 + 1)
 \]
-where $w = w_1 z$ and $T = T_1 z$. The special fiber consists of three components:
+where $y = y_1 x$ and $T = T_1 x$. The special fiber consists of three components:
 \begin{itemize}
-    \item $C_2: T_1 = w_1 = 0$ with multiplicity $1$,
-    \item $R_2: T_1 = z = 0$ with multiplicity $r$, and
-    \item $E_1: z = w_1 = 0$ with multiplicity $1$.
+    \item $C_2: T_1 = y_1 = 0$ with multiplicity $1$,
+    \item $R_2: T_1 = x = 0$ with multiplicity $r$, and
+    \item $E_1: x = y_1 = 0$ with multiplicity $1$.
 \end{itemize}
-The third component is exceptional. The intersection point $Q_1$ has coordinates $(w_1, z, T_1) = (0,0,0)$ and, if $r \geq 3$, is \emph{not} regular.
+The third component is exceptional. The intersection point $Q_1$ has coordinates $(y_1, x, T_1) = (0,0,0)$ and, if $r \geq 3$, is \emph{not} regular.
 
-We therefore continue by blowing-up chart 2. We do this recursively as follows. For $1 \leq i \leq r-3$, let chart $(2,i)$ be the chart given by
+We therefore continue by blowing-up chart 2. We do this recursively as follows. For $1 \leq i \leq r-3$, let chart $\XX_1(i)$ be the chart given by
   \[
-  w_i T_i = z^{r-i-1} (w_i z + T_i) (w_i z^{i+1} + 1).
+  y_i T_i = x^{r-i-1} (y_i x + T_i) (y_i x^{i+1} + 1).
   \]
-  Let $T = T_i z^i$. Then the special fiber ($T = 0$) consists of the components
+  Let $T = T_i x^i$. Then the special fiber ($T = 0$) consists of the components
   \begin{itemize}
-      \item $C_2: T_i = w_i = 0$ with multiplicity 1,
-      \item $R_{i+1}: T_i = z = 0$ with multiplicity $r$, and
-      \item $E_i: z = w_i = 0$ with multiplicity $i$.
+      \item $C_2: T_i = y_i = 0$ with multiplicity 1,
+      \item $R_{i+1}: T_i = x = 0$ with multiplicity $r$, and
+      \item $E_i: x = y_i = 0$ with multiplicity $i$.
   \end{itemize}
-  Note that chart 2 is the same as chart $(2,1)$. One verifies that this chart is nonregular only at $Q_i: (w_i, z, T_i) = (0, 0, 0)$. We blow up $Q_i$ via 3 charts.
+  Note that chart 2 is the same as chart $\XX_1(1)$. One verifies that this chart is nonregular only at $Q_i: (y_i, x, T_i) = (0, 0, 0)$. We blow up $Q_i$ via 3 charts.
 
-  The first chart is $(2,i+1)$, which we glue to $(2,i)$ away from $Q_i$ using $w_i = z w_{i+1}$ and $T_i = z T_{i+1}$. One verifies that this is consistent with the construction above.
+  The first chart is $\XX_1(i+1)$, which we glue to $\XX_1(i)$ away from $Q_i$ using $y_i = x y_{i+1}$ and $T_i = x T_{i+1}$. One verifies that this is consistent with the construction above.
 
-  The second chart is $(2,i)a$ given by $w_i = w_a T_i$ and $z = z_a T_i$. (This is an abuse of notation; one should say $w_{i,a}$ and $z_{i,a}$ or some such.) Then $T = z_a^i T_i^{i+1}$. Our chart is given by
+  The second chart is $\XX_1(i)'$ given by $y_i = y_i' T_i$ and $x = x_i' T_i$. (This is an abuse of notation; one should say $y_{i,a}$ and $x_{i,a}$ or some such.) Then $T = x_i'^i T_i^{i+1}$. Our chart is given by
   \[
-  w_a = z_a^{r-i-1} T_i^{r-i-2} (w_a z_a T_i + 1) (w_a z_a^{i+1} T_i^{i+2} + 1).
+  y_i' = x_i'^{r-i-1} T_i^{r-i-2} (y_i' x_i' T_i + 1) (y_i' x_i'^{i+1} T_i^{i+2} + 1).
   \]
   The special fiber consists of
   \begin{itemize}
-      \item $E_i: z_a = w_a = 0$ with multiplicity $i$, and
-      \item $E_{i+1}: T_i = w_a = 0$ with multiplicity $i+1$.
+      \item $E_i: x_i' = y_i' = 0$ with multiplicity $i$, and
+      \item $E_{i+1}: T_i = y_i' = 0$ with multiplicity $i+1$.
   \end{itemize}
-  By computing the $w_a$ derivative, one checks that this chart is regular.
+  By computing the $y_i'$ derivative, one checks that this chart is regular.
 
-  The third chart is $(2,i)b$ given by $z = w_i z_b$ and $T_i = w_i T_b$. Then $T = w_i^{i+1} z_b^i T_b$ and the equation is
+  The third chart is $\XX_1(i)''$ given by $x = y_i x_i''$ and $T_i = y_i T_i'$. Then $T = y_i^{i+1} x_i''^i T_i'$ and the equation is
   \[
-  T_b = w_i^{r-i-2} z_b^{r-i-1} (w_i z_b + T_b) (w_i^{i+2} z_b^{i+1} + 1).
+  T_i' = y_i^{r-i-2} x_i''^{r-i-1} (y_i x_i'' + T_i') (y_i^{i+2} x_i''^{i+1} + 1).
   \]
-  The chart is regular (take the $T_b$ derivative) and the special fiber has components
+  The chart is regular (take the $T_i'$ derivative) and the special fiber has components
   \begin{itemize}
-      \item $R_{i+1}: T_b = z_b = 0$ with multiplicity $r$, and
-      \item $R_{i+2}: T_b = w_i = 0$ with multiplicity $r$.
+      \item $R_{i+1}: T_i' = x_i'' = 0$ with multiplicity $r$, and
+      \item $R_{i+2}: T_i' = y_i = 0$ with multiplicity $r$.
   \end{itemize}
 
-  The remaining and, as it will turn out, final case occurs when $i = r - 2$. (Note that this is the only case we need consider when $r = 3$.) In this case, we have chart $(2, r-2)$ given by
+  The remaining and, as it will turn out, final case occurs when $i = r - 2$. (Note that this is the only case we need consider when $r = 3$.) In this case, we have chart $\XX_1(r-2)$ given by
   \[
-  w_{r-2} T_{r-2} = z (w_{r-2} z + T_{r-2}) (w_{r-2} z^{r-1} + 1)
+  y_{r-2} T_{r-2} = x (y_{r-2} x + T_{r-2}) (y_{r-2} x^{r-1} + 1)
   \]
-  with $w_{r-2}, T_{r-2}$ given as above, and $T = T_{r-2} z^{r-2}$. We blow up as before; that is, construct the charts $(2, r-1)$, $(2, r-2)a$ and $(2, r-2)b$ as above. We now verify that there are two differences: every chart is regular, and the special fibers for $(2, r-1)$ and $(2,r-1)b$ differ from the cases for smaller $i$.
+  with $y_{r-2}, T_{r-2}$ given as above, and $T = T_{r-2} x^{r-2}$. We blow up as before; that is, construct the charts $\XX_1(r-1)$, $\XX_1(r-2)'$ and $\XX_1(r-2)''$ as above. We now verify that there are two differences: every chart is regular, and the special fibers for $\XX_1(r-1)$ and $\XX_1(r-1)''$ differ from the cases for smaller $i$.
 
-  For chart $(2, r-1)$, the equation is
+  For chart $\XX_1(r-1)$, the equation is
   \[
-  w_{r-1} T_{r-1} = (w_{r-1} z + T_{r-1}) (w_{r-1} z^{r} + 1)
+  y_{r-1} T_{r-1} = (y_{r-1} x + T_{r-1}) (y_{r-1} x^{r} + 1)
   \]
-  and $T = T_{r-1} z^{r-1}$. The special fiber consists of the components
+  and $T = T_{r-1} x^{r-1}$. The special fiber consists of the components
   \begin{itemize}
-      \item $C_2: T_{r-1} = w_{r-1} = 0$ with multiplicity 1, and
-      \item $E_r: T_{r-1} = z = 0$ with multiplicity $r$.
+      \item $C_2: T_{r-1} = y_{r-1} = 0$ with multiplicity 1, and
+      \item $E_r: T_{r-1} = x = 0$ with multiplicity $r$.
   \end{itemize}
-  One checks that the $T_{r-1}$ partial derivative gives equality if and only if $z = 0$ and $w_{r-1} = 1$. But plugging these values into the $z$-derivative yields an inequality. Therefore this chart is regular.
+  One checks that the $T_{r-1}$ partial derivative gives equality if and only if $x = 0$ and $y_{r-1} = 1$. But plugging these values into the $x$-derivative yields an inequality. Therefore this chart is regular.
 
-  For chart $(2, r-2)a$, the equation is
+  For chart $\XX_1(r-2)'$, the equation is
   \[
-  w_a = z_a (w_a z_a T_{r-2} + 1) ( w_a z_a^{r-1} T_i^{r} + 1)
+  y_i' = x_i' (y_i' x_i' T_{r-2} + 1) ( y_i' x_i'^{r-1} T_i^{r} + 1)
   \]
   with special fiber consisting of the components
   \begin{itemize}
-      \item $E_{r-2}: z_a = w_a = 0$ with multiplicity $r-2$, and
-      \item $E_{r-1}: T_{r-2} = w_a - z_a = 0$ with multiplicity $r-1$.
+      \item $E_{r-2}: x_i' = y_i' = 0$ with multiplicity $r-2$, and
+      \item $E_{r-1}: T_{r-2} = y_i' - x_i' = 0$ with multiplicity $r-1$.
   \end{itemize}
-  The argument for regularity is the same as for the general charts $(2,i)a$.
+  The argument for regularity is the same as for the general charts $\XX_1(i)'$.
 
-  Finally, the chart $(2, r-2)b$ is given by
+  Finally, the chart $\XX_1(r-2)''$ is given by
   \[
-  T_b = z_b (w_{r-2} z_b + T_b) (w_{r-2}^{r} z_b^{r-1} + 1)
+  T_i' = x_i'' (y_{r-2} x_i'' + T_i') (y_{r-2}^{r} x_i''^{r-1} + 1)
   \]
   with special fiber consisting of the components
   \begin{itemize}
-      \item $R_{r-1}: T_b = z_b = 0$ with multiplicity $r$,
-      \item $E_r: T_b = w_{r-2} = 0$ with multiplicity $r$, and
-      \item $E_{r-1}: w_{r-2} = z_b - 1 = 0$ with multiplicity $r-1$.
+      \item $R_{r-1}: T_i' = x_i'' = 0$ with multiplicity $r$,
+      \item $E_r: T_i' = y_{r-2} = 0$ with multiplicity $r$, and
+      \item $E_{r-1}: y_{r-2} = x_i'' - 1 = 0$ with multiplicity $r-1$.
   \end{itemize}
-  Checking the $T_b$ derivative, we see that we have equality only along $E_{r-1}$. But the $w_{r-2}$ derivative along $E_{r-1}$ always yields an inequality. Therefore this chart is regular.
+  Checking the $T_i'$ derivative, we see that we have equality only along $E_{r-1}$. But the $y_{r-2}$ derivative along $E_{r-1}$ always yields an inequality. Therefore this chart is regular.
 
   Let $\scd$ be the resulting regular model for $C$, and write $C_k$ for its special fiber at $T = 0$.
 
