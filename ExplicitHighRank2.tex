@@ -122,6 +122,7 @@
 \def\YY{\mathcal{Y}}
 \def\O{\mathcal{O}}
 \def\OO{\mathcal{O}}
+\newcommand{\zz}{\mathfrak{z}}
 
 
 
@@ -1631,7 +1632,7 @@ w = zv \qquad T = z\tau.
 \]
 We obtain the arithmetic surface with equation
 \[
-\tau = z^{r-1}v^{r-1}(v + u\tau)(v + 1).
+\tau = z^{r-1}v^{r-1}(v + z\tau)(v + 1).
 \]
 This has special fiber given by $T = z\tau = 0$, with components
 \begin{align*}
@@ -1669,34 +1670,34 @@ We now observe that this expression equals $-1$ at both $P_1$ and $P_z$. Therefo
 
 Now we compute the second chart. This chart is given by the change of variables
 \[
-z=w\sz \qquad T=w\tau'
+z=w\zz \qquad T=w\tau'
 \]
 whence we obtain the equation
 \[
-\sz\tau' = w^{r-1}(1 + w\sz\tau')(1 + \sz).
+\zz\tau' = w^{r-1}(1 + w\zz\tau')(1 + \zz).
 \]
 The special fiber is given by $T = w\tau' = 0$, which gives us the components
 \begin{align*}
-  \tilde{C_1}&: (1 + \sz = \tau' = 0) \\
+  \tilde{C_1}&: (1 + \zz = \tau' = 0) \\
   D_r&: (w = \tau' = 0) \\
-  D_1&: (w = \sz = 0).
+  D_1&: (w = \zz = 0).
 \end{align*}
-Observe that $D_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap D_r$ occurs when $1 + \sz = \tau' = w = 0$. One checks that this intersection point is in fact $P_1$. The intersection $D_r \cap D_1$ occurs when $\sz = \tau' = w = 0$. But now note that $\sz = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{R_1}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
+Observe that $D_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap D_r$ occurs when $1 + \zz = \tau' = w = 0$. One checks that this intersection point is in fact $P_1$. The intersection $D_r \cap D_1$ occurs when $\zz = \tau' = w = 0$. But now note that $\zz = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{R_1}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
 
-In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + w\sz\tau')(1 + \sz)$, so that
+In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + w\zz\tau')(1 + \zz)$, so that
 \begin{itemize}
-    \item the chart containing $P_3$ has equation $\sz\tau' = \alpha w^{r-1}$,
+    \item the chart containing $P_3$ has equation $\zz\tau' = \alpha w^{r-1}$,
     \item $\alpha(P_3) \neq 0$, and
     \item $T = w\tau'$.
 \end{itemize}
 
 We now desingularize by replacing $P_3$ with 2 charts. The first chart is given by
 \[
-\tau'' = \alpha \sz^{r-3} w'^{r-1}
+\tau'' = \alpha \zz^{r-3} w'^{r-1}
 \]
-where $\tau' = \sz \tau''$ and $w = \sz w'$, whence $T = \sz^2 \tau'' w'$. The special fiber consists of 2 components, one given by $\tau'' = w' = 0$ and of multiplicity $r$, the other given by $\tau'' = \sz = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $\tau''$ derivative shows that this chart is regular.
+where $\tau' = \zz \tau''$ and $w = \zz w'$, whence $T = \zz^2 \tau'' w'$. The special fiber consists of 2 components, one given by $\tau'' = w' = 0$ and of multiplicity $r$, the other given by $\tau'' = \zz = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $\tau''$ derivative shows that this chart is regular.
 
-  The second chart is given by $\sz' \tau' = \alpha w^{r-2}$, where $\sz = \sz' w$. The special fiber then consists of the components $\tau' = w = 0$ with multiplicity $r-1$ and $\sz' = w = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $\sz$ has become $\sz'$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $D_r, D_{r-1}, \dots, D_1$, each crossing transversely with adjacent curves in the list, and such that $D_i$ has multiplicity $i$ in the special fiber.
+  The second chart is given by $\zz' \tau' = \alpha w^{r-2}$, where $\zz = \zz' w$. The special fiber then consists of the components $\tau' = w = 0$ with multiplicity $r-1$ and $\zz' = w = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $\zz$ has become $\zz'$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $D_r, D_{r-1}, \dots, D_1$, each crossing transversely with adjacent curves in the list, and such that $D_i$ has multiplicity $i$ in the special fiber.
 
 
 \subsubsection{Blow-up at $Q$.}
