@@ -1733,7 +1733,7 @@ where $y = y_1 x$ and $T = T_1 x$. The special fiber consists of three component
 \end{itemize}
 The third component is exceptional. The intersection point $Q_1$ has coordinates $(y_1, x, T_1) = (0,0,0)$ and, if $r \geq 3$, is \emph{not} regular.
 
-We therefore continue by blowing-up chart 2. We do this recursively as follows. For $1 \leq i \leq r-3$, let chart $(2,i)$ be the chart given by
+We therefore continue by blowing-up chart 2. We do this recursively as follows. For $1 \leq i \leq r-3$, let chart $\XX_1(i)$ be the chart given by
   \[
   y_i T_i = x^{r-i-1} (y_i x + T_i) (y_i x^{i+1} + 1).
   \]
@@ -1743,11 +1743,11 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $R_{i+1}: T_i = x = 0$ with multiplicity $r$, and
       \item $E_i: x = y_i = 0$ with multiplicity $i$.
   \end{itemize}
-  Note that chart 2 is the same as chart $(2,1)$. One verifies that this chart is nonregular only at $Q_i: (y_i, x, T_i) = (0, 0, 0)$. We blow up $Q_i$ via 3 charts.
+  Note that chart 2 is the same as chart $\XX_1(1)$. One verifies that this chart is nonregular only at $Q_i: (y_i, x, T_i) = (0, 0, 0)$. We blow up $Q_i$ via 3 charts.
 
-  The first chart is $(2,i+1)$, which we glue to $(2,i)$ away from $Q_i$ using $y_i = x y_{i+1}$ and $T_i = x T_{i+1}$. One verifies that this is consistent with the construction above.
+  The first chart is $\XX_1(i+1)$, which we glue to $\XX_1(i)$ away from $Q_i$ using $y_i = x y_{i+1}$ and $T_i = x T_{i+1}$. One verifies that this is consistent with the construction above.
 
-  The second chart is $(2,i)a$ given by $y_i = y_i' T_i$ and $x = x_i' T_i$. (This is an abuse of notation; one should say $y_{i,a}$ and $x_{i,a}$ or some such.) Then $T = x_i'^i T_i^{i+1}$. Our chart is given by
+  The second chart is $\XX_1(i)'$ given by $y_i = y_i' T_i$ and $x = x_i' T_i$. (This is an abuse of notation; one should say $y_{i,a}$ and $x_{i,a}$ or some such.) Then $T = x_i'^i T_i^{i+1}$. Our chart is given by
   \[
   y_i' = x_i'^{r-i-1} T_i^{r-i-2} (y_i' x_i' T_i + 1) (y_i' x_i'^{i+1} T_i^{i+2} + 1).
   \]
@@ -1758,7 +1758,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
   \end{itemize}
   By computing the $y_i'$ derivative, one checks that this chart is regular.
 
-  The third chart is $(2,i)b$ given by $x = y_i x_i''$ and $T_i = y_i T_i'$. Then $T = y_i^{i+1} x_i''^i T_i'$ and the equation is
+  The third chart is $\XX_1(i)''$ given by $x = y_i x_i''$ and $T_i = y_i T_i'$. Then $T = y_i^{i+1} x_i''^i T_i'$ and the equation is
   \[
   T_i' = y_i^{r-i-2} x_i''^{r-i-1} (y_i x_i'' + T_i') (y_i^{i+2} x_i''^{i+1} + 1).
   \]
@@ -1768,13 +1768,13 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $R_{i+2}: T_i' = y_i = 0$ with multiplicity $r$.
   \end{itemize}
 
-  The remaining and, as it will turn out, final case occurs when $i = r - 2$. (Note that this is the only case we need consider when $r = 3$.) In this case, we have chart $(2, r-2)$ given by
+  The remaining and, as it will turn out, final case occurs when $i = r - 2$. (Note that this is the only case we need consider when $r = 3$.) In this case, we have chart $\XX_1(r-2)$ given by
   \[
   y_{r-2} T_{r-2} = x (y_{r-2} x + T_{r-2}) (y_{r-2} x^{r-1} + 1)
   \]
-  with $y_{r-2}, T_{r-2}$ given as above, and $T = T_{r-2} x^{r-2}$. We blow up as before; that is, construct the charts $(2, r-1)$, $(2, r-2)a$ and $(2, r-2)b$ as above. We now verify that there are two differences: every chart is regular, and the special fibers for $(2, r-1)$ and $(2,r-1)b$ differ from the cases for smaller $i$.
+  with $y_{r-2}, T_{r-2}$ given as above, and $T = T_{r-2} x^{r-2}$. We blow up as before; that is, construct the charts $\XX_1(r-1)$, $\XX_1(r-2)'$ and $\XX_1(r-2)''$ as above. We now verify that there are two differences: every chart is regular, and the special fibers for $\XX_1(r-1)$ and $\XX_1(r-1)''$ differ from the cases for smaller $i$.
 
-  For chart $(2, r-1)$, the equation is
+  For chart $\XX_1(r-1)$, the equation is
   \[
   y_{r-1} T_{r-1} = (y_{r-1} x + T_{r-1}) (y_{r-1} x^{r} + 1)
   \]
@@ -1785,7 +1785,7 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
   \end{itemize}
   One checks that the $T_{r-1}$ partial derivative gives equality if and only if $x = 0$ and $y_{r-1} = 1$. But plugging these values into the $x$-derivative yields an inequality. Therefore this chart is regular.
 
-  For chart $(2, r-2)a$, the equation is
+  For chart $\XX_1(r-2)'$, the equation is
   \[
   y_i' = x_i' (y_i' x_i' T_{r-2} + 1) ( y_i' x_i'^{r-1} T_i^{r} + 1)
   \]
@@ -1794,9 +1794,9 @@ We therefore continue by blowing-up chart 2. We do this recursively as follows. 
       \item $E_{r-2}: x_i' = y_i' = 0$ with multiplicity $r-2$, and
       \item $E_{r-1}: T_{r-2} = y_i' - x_i' = 0$ with multiplicity $r-1$.
   \end{itemize}
-  The argument for regularity is the same as for the general charts $(2,i)a$.
+  The argument for regularity is the same as for the general charts $\XX_1(i)'$.
 
-  Finally, the chart $(2, r-2)b$ is given by
+  Finally, the chart $\XX_1(r-2)''$ is given by
   \[
   T_i' = x_i'' (y_{r-2} x_i'' + T_i') (y_{r-2}^{r} x_i''^{r-1} + 1)
   \]
