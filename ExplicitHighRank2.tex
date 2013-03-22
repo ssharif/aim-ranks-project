@@ -122,6 +122,7 @@
 \def\YY{\mathcal{Y}}
 \def\O{\mathcal{O}}
 \def\OO{\mathcal{O}}
+\newcommand{\zz}{\mathfrak{z}}
 
 
 
@@ -1606,78 +1607,78 @@ One remark: the reason behind the notation $R_1$ will become apparent in \S~\ref
 \subsubsection{Blow-up at $P$.}
 \label{sec:blow-up-P}
 
-We first blow up at $P$, which is given by $(u,z,T) = (0,0,0)$. The blow-up is given by two charts. The first chart is computed via the change of variables
+We first blow up at $P$, which is given by $(z,w,T) = (0,0,0)$. The blow-up is given by two charts. The first chart is computed via the change of variables
 \[
-z = uv \qquad T = u\tau.
+w = zv \qquad T = z\tau.
 \]
 We obtain the arithmetic surface with equation
 \[
-\tau = u^{r-1}v^{r-1}(v + u\tau)(v + 1).
+\tau = z^{r-1}v^{r-1}(v + z\tau)(v + 1).
 \]
-This has special fiber given by $T = u\tau = 0$, with components
+This has special fiber given by $T = z\tau = 0$, with components
 \begin{align*}
   \tilde{C_1}&: (v + 1 = \tau = 0) \\
   \tilde{R_1}&: (v = \tau = 0) \\
-  D_r&: (u = \tau = 0).
+  D_r&: (z = \tau = 0).
 \end{align*}
 In the above, $\tilde{C_1}$, $\tilde{R_1}$ are the strict transforms of $C_1$, $R_1$ respectively with the same multiplicities as before. To compute the multiplicity of the third component $D_r$, we consider the ring
 \[
-{k[u,v,\tau]_{(u,\tau)}}/{(u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau)}.
+{k[z,v,\tau]_{(z,\tau)}}/{(z^{r-1}v^{r-1}(v + z\tau)(v + 1) - \tau)}.
 \]
-This is the local ring for the subscheme $D_r$. Since $D_r$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{C,D_r}$ with valuation, say, $\nu$. Then the multiplicity of $D_r$ in the special fiber is $\nu(T) = \nu(u\tau)$. But this valuation equals the length of the Artinian ring
+This is the local ring for the subscheme $D_r$. Since $D_r$ is a prime divisor, the local ring is a discrete valuation ring $\sO_{C,D_r}$ with valuation, say, $\nu$. Then the multiplicity of $D_r$ in the special fiber is $\nu(T) = \nu(z\tau)$. But this valuation equals the length of the Artinian ring
 \[
-{\sO_{C,D_r}}/{(u\tau)}.
+{\sO_{C,D_r}}/{(z\tau)}.
 \]
 Let $\alpha = v^{r}(v+1)$. Then the above ring equals
 \[
-{k[u,v,\tau]_{(u,\tau)}}/{(\alpha u^{r-1} - \tau, u\tau)}.
+{k[z,v,\tau]_{(z,\tau)}}/{(\alpha z^{r-1} - \tau, z\tau)}.
 \]
-The first expressions allows us to substitute $\tau = \alpha u^{r-1}$. The second expression then becomes $\alpha u^r$. Since $\nu(\alpha) = 0$, our Artinian ring is isomorphic to
+The first expressions allows us to substitute $\tau = \alpha z^{r-1}$. The second expression then becomes $\alpha z^r$. Since $\nu(\alpha) = 0$, our Artinian ring is isomorphic to
 \[
-{k[u,v]_{(u)}}/{(u^r)}.
+{k[z,v]_{(z)}}/{(z^r)}.
 \]
 Therefore the multiplicity of $D_r$ in the special fiber is $r$.
 
-The intersection points are $P_1 = \tilde{C_1} \cap D_r$ given by $u=v+1=\tau=0$, and $P_z = \tilde{R_1} \cap D_r$ given by $u=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{R_1} = \emptyset$.) Writing the equation for our surface as
+The intersection points are $P_1 = \tilde{C_1} \cap D_r$ given by $z=v+1=\tau=0$, and $P_z = \tilde{R_1} \cap D_r$ given by $z=v=\tau=0$. (Observe that $\tilde{C_1} \cap \tilde{R_1} = \emptyset$.) Writing the equation for our surface as
 \[
-u^{r-1}v^{r-1}(v + u\tau)(v + 1) - \tau = 0
+z^{r-1}v^{r-1}(v + z\tau)(v + 1) - \tau = 0
 \]
 and taking the $\tau$ derivative on the left, we obtain
 \[
-u^rv^{r-1}(v + 1) - 1.
+z^rv^{r-1}(v + 1) - 1.
 \]
 We now observe that this expression equals $-1$ at both $P_1$ and $P_z$. Therefore both points are regular.
 
 Now we compute the second chart. This chart is given by the change of variables
 \[
-u=zx \qquad T=zT'
+z=w\zz \qquad T=w\tau'
 \]
 whence we obtain the equation
 \[
-xT' = z^{r-1}(1 + zxT')(1 + x).
+\zz\tau' = w^{r-1}(1 + w\zz\tau')(1 + \zz).
 \]
-The special fiber is given by $T = zT' = 0$, which gives us the components
+The special fiber is given by $T = w\tau' = 0$, which gives us the components
 \begin{align*}
-  \tilde{C_1}&: (1 + x = T' = 0) \\
-  D_r&: (z = T' = 0) \\
-  D_1&: (z = x = 0).
+  \tilde{C_1}&: (1 + \zz = \tau' = 0) \\
+  D_r&: (w = \tau' = 0) \\
+  D_1&: (w = \zz = 0).
 \end{align*}
-Observe that $D_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap D_r$ occurs when $1 + x = T' = z = 0$. One checks that this intersection point is in fact $P_1$. The intersection $D_r \cap D_1$ occurs when $x = T' = z = 0$. But now note that $x = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{R_1}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
+Observe that $D_1$ has multiplicity $1$. The intersection $\tilde{C_1} \cap D_r$ occurs when $1 + \zz = \tau' = w = 0$. One checks that this intersection point is in fact $P_1$. The intersection $D_r \cap D_1$ occurs when $\zz = \tau' = w = 0$. But now note that $\zz = \frac{1}{v}$. Therefore this intersection point is distinct from $P_2$. (Or easier: $\tilde{R_1}$ does not appear in this chart for the same reason.) We call this new point $P_3$. One checks that $P_3$ is \emph{not} regular.
 
-In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + zxT')(1 + x)$, so that
+In order to resolve $P_3$, we will desingularize inductively. To ease notation, write $\alpha$ for $(1 + w\zz\tau')(1 + \zz)$, so that
 \begin{itemize}
-    \item the chart containing $P_3$ has equation $xT' = \alpha z^{r-1}$,
+    \item the chart containing $P_3$ has equation $\zz\tau' = \alpha w^{r-1}$,
     \item $\alpha(P_3) \neq 0$, and
-    \item $T = zT'$.
+    \item $T = w\tau'$.
 \end{itemize}
 
 We now desingularize by replacing $P_3$ with 2 charts. The first chart is given by
 \[
-T'_0 = \alpha x^{r-3} z_0^{r-1}
+\tau'' = \alpha \zz^{r-3} w'^{r-1}
 \]
-where $T' = x T'_0$ and $z = x z_0$, whence $T = x^2 T'_0 z_0$. The special fiber consists of 2 components, one given by $T'_0 = z_0 = 0$ and of multiplicity $r$, the other given by $T'_0 = x = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $T'_0$ derivative shows that this chart is regular.
+where $\tau' = \zz \tau''$ and $w = \zz w'$, whence $T = \zz^2 \tau'' w'$. The special fiber consists of 2 components, one given by $\tau'' = w' = 0$ and of multiplicity $r$, the other given by $\tau'' = \zz = 0$ having multiplicity $r-1$. One verifies that the first component is $D_r$; the second component, which we call $D_{r-1}$, is exceptional; and the intersection is transverse. Furthermore, taking the $\tau''$ derivative shows that this chart is regular.
 
-  The second chart is given by $x_0 T' = \alpha z^{r-2}$, where $x = x_0 z$. The special fiber then consists of the components $T' = z = 0$ with multiplicity $r-1$ and $x_0 = z = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $x$ has become $x_0$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $D_r, D_{r-1}, \dots, D_1$, each crossing transversely with adjacent curves in the list, and such that $D_i$ has multiplicity $i$ in the special fiber.
+  The second chart is given by $\zz' \tau' = \alpha w^{r-2}$, where $\zz = \zz' w$. The special fiber then consists of the components $\tau' = w = 0$ with multiplicity $r-1$ and $\zz' = w = 0$ with multiplicity $1$. One verifies that these are $D_{r-1}$ and $D_1$ respectively. The intersection point is regular if and only if $r = 3$, in which case the claim is proved. If $r > 3$, then we are in essentially the same situation as with $P_3$ except that $\zz$ has become $\zz'$ and $r$ has been replaced with $r-1$. We can therefore iterate, thus obtaining a ``tail'' of rational curves $D_r, D_{r-1}, \dots, D_1$, each crossing transversely with adjacent curves in the list, and such that $D_i$ has multiplicity $i$ in the special fiber.
 
 
 \subsubsection{Blow-up at $Q$.}
