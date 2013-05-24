@@ -85,6 +85,7 @@
 \DeclareMathOperator{\tr}{Tr}
 
 % Algebraic geometry
+\newcommand{\sy}{\bar{y}}
 \newcommand{\sA}{\ensuremath{\mathscr{A}}}
 \newcommand{\sO}{\ensuremath{\mathscr{O}}}
 \newcommand{\sL}{\ensuremath{\mathscr{L}}}
@@ -108,44 +109,20 @@
 \author{Shahed Sharif}
 \maketitle
 
-Let $k$ be the finite field $\F_q$ and $K = k(t)$. Let $r \geq 3$ be an integer. Let $C$ be the smooth projective curve with affine model
+In this section, we compute the minimal proper regular model of $C$ at $t = 1$, as well as the component group. We will be working with the affine model
 \[
-C: xy^r = (x+1)(x+t).
+\caff: (x_0 - 1) \sy^r = x_0(x_0 + t_0).
 \]
-The purpose of this note is to compute the minimal proper regular model of $C$ at $t = 1$, as well as the component group.
+This model is birational to the original model, $y^r = x^{r-1}(x+1)(x+t)$, via $\sy = y/x$, $x_0 = x + 1$, and $t_0 = t - 1$. The model is generically smooth away from infinity, and has a cusp at infinity which can be desingularized by normalization. 
 
 \section{Desingularization}
 \label{sec:desingularization}
 
-\subsection{Generic fiber}
-\label{sec:generic-fiber}
-
-Our first step is to substitute $x_0 = x+1$ and $t_0 = t-1$, so that our equation becomes
+We are concerned with the fiber $t_0 = 0$. Furthermore, there is a nonregular point at $(x_0, \sy, t_0) = (0, 0, 0)$. To resolve the singularity at $(x_0, \sy, t_0) = (0, 0, 0)$, we consider the family of charts
 \[
-(x_0 - 1) y^r = x_0(x_0 + t_0).
+(x_i\sy^i - 1) \sy^k = x_i(x_i + t_i)
 \]
-This means we are concerned with the fiber $t_0 = 0$. Furthermore, there is a nonregular point at $(x_0, y, t_0) = (0, 0, 0)$. Before blowing-up, we must find a model which is generically smooth. We do this by gluing together the equations
-\begin{align*}
-  \caff&: (x_0 - 1) y^r = x_0(x_0 + t_0)\\
-  C^\dagger&: (1-z)z = u^r(1+t_0z) \\
-  C^\ddag&: v-u = vu^{r-1}(v + t_0 u)
-\end{align*}
-via
-\begin{gather*}
-  x_0 = \frac{1}{z} = \frac{v}{u} \qquad y = \frac{1}{u} \\
-  u = \frac{1}{y} \qquad z = \frac{1}{x_0} \\
-  v = \frac{x_0}{y} = \frac{1}{uz}.
-\end{gather*}
-One verifies that the resulting curve is generically smooth. (Note: the chart $C^\ddag$ is obtained by normalizing the projective closure of $\caff$ at a single cusp.) Furthermore, one can show that $C^\dag$ and $C^\ddag$ are regular.
-
-\subsection{Blow-ups}
-\label{sec:blow-ups}
-
-It remains to resolve the singularity at $(x_0, y, t_0) = (0, 0, 0)$. To do this, we consider the family
-\[
-(x_iy^i - 1) y^k = x_i(x_i + t_i)
-\]
-with central fiber $t_iy^i = 0$; call this curve chart $(i,k)$. Observe that our $\caff$ is exactly the chart $(0,r)$. For most values of $i, k$, the chart will be nonregular at exactly one point: $(x_i, y, t_i) = (0, 0, 0)$. As we will see, a blow-up results in 3 charts, 2 of which are regular, and the third of which is chart $(i+1, k-2)$. The process terminates when chart $(i, k)$ is regular; that is, for sufficiently small $k$. This will turn out to occur when $k = 0$ or $1$. We first study properties of the charts $(i, k)$ in 4 cases:
+with central fiber $t_i\sy^i = 0$; call this chart $(i,k)$. Observe that our $\caff$ is exactly the chart $(0,r)$. For most values of $i, k$, the chart will be nonregular at exactly one point: $(x_i, \sy, t_i) = (0, 0, 0)$. As we will see, a blow-up results in 3 charts, 2 of which are regular, and the third of which is chart $(i+1, k-2)$. The process terminates when chart $(i, k)$ is regular; that is, for sufficiently small $k$. This will turn out to occur when $k = 0$ or $1$. We first study properties of the charts $(i, k)$ in 4 cases:
 \begin{enumerate}
     \item The initial chart $(0, k)$ with $k = r$; in particular, $k \geq 3$.
     \item The terminal chart $(i, 0)$ with $i \geq 1$.
@@ -159,19 +136,19 @@ Once this is done, we demonstrate the recursive blow-up procedure.
 
 If $i = 0$, we have $\caff$ with special fiber
 \[
-(x_0 - 1) y^k = x_0^2.
+(x_0 - 1) \sy^k = x_0^2.
 \]
-The fiber is irreducible with multiplicity $1$, and we call it $F$. One checks that $F$ intersects itself at point $(x_0, y) = (0, 0)$. As observed earlier, the only nonregular point on $\caff$ is given by $(x_0, y, t_0) = (0, 0, 0)$.
+The fiber is irreducible with multiplicity $1$, and we call it $F$. One checks that $F$ intersects itself at point $(x_0, \sy) = (0, 0)$. As observed earlier, the only nonregular point on $\caff$ is given by $(x_0, \sy, t_0) = (0, 0, 0)$.
 
 \paragraph{Chart $(i, 0)$ with $i \geq 1$:}
 \label{sec:case-k=0}
 
 The special fiber consists of two components:
 \begin{itemize}
-    \item $F_{i,0}: t_i = x_i^2 - x_iy^i + 1 = 0$ with multiplicity 1; and
-    \item $G_{i,0}: y = x_i^2 + x_it_i + 1 = 0$ with multiplicity $i$.
+    \item $F_{i,0}: t_i = x_i^2 - x_i\sy^i + 1 = 0$ with multiplicity 1; and
+    \item $G_{i,0}: \sy = x_i^2 + x_it_i + 1 = 0$ with multiplicity $i$.
 \end{itemize}
-These components intersect twice transversally, at $(x_i, y, t_i) = (\pm i, 0, 0)$. This chart is regular.
+These components intersect twice transversally, at $(x_i, \sy, t_i) = (\pm i, 0, 0)$. This chart is regular.
 
 
 
@@ -180,11 +157,11 @@ These components intersect twice transversally, at $(x_i, y, t_i) = (\pm i, 0, 0
 
 The special fiber consists of 3 components:
 \begin{itemize}
-    \item $F_{i,1}: t_i = x_i^2 - x_iy^{i+1} + y = 0$ with multiplicity 1;
-    \item $D_{i,1}: y = x_i = 0$ with multiplicity $i$; and
-    \item $E_{i,1}: y = x_i + t_i = 0$ with multiplicity $i$.
+    \item $F_{i,1}: t_i = x_i^2 - x_i\sy^{i+1} + \sy = 0$ with multiplicity 1;
+    \item $D_{i,1}: \sy = x_i = 0$ with multiplicity $i$; and
+    \item $E_{i,1}: \sy = x_i + t_i = 0$ with multiplicity $i$.
 \end{itemize}
-These components intersect each other transversally at $(x_i, y, t_i) = (0,0,0)$, and nowhere else. This chart is regular.
+These components intersect each other transversally at $(x_i, \sy, t_i) = (0,0,0)$, and nowhere else. This chart is regular.
 
 
 
@@ -193,18 +170,18 @@ These components intersect each other transversally at $(x_i, y, t_i) = (0,0,0)$
 
 The special fiber consists of 3 components:
 \begin{itemize}
-    \item $F_{i,k}: t_i = x_i^2 - x_iy^{i+k} + y^k = 0$ with multiplicity 1;
-    \item $D_{i,k}: y = x_i = 0$ with multiplicity $i$; and
-    \item $E_{i,k}: y = x_i + t_i = 0$ with multiplicity $i$.
+    \item $F_{i,k}: t_i = x_i^2 - x_i\sy^{i+k} + \sy^k = 0$ with multiplicity 1;
+    \item $D_{i,k}: \sy = x_i = 0$ with multiplicity $i$; and
+    \item $E_{i,k}: \sy = x_i + t_i = 0$ with multiplicity $i$.
 \end{itemize}
-The component $F_{i,k}$ has a node at $(x_i,y,t_i) = (0,0,0)$, and the other two components also pass through this point. This intersection point is not regular, but the rest of the chart is regular.
+The component $F_{i,k}$ has a node at $(x_i,\sy,t_i) = (0,0,0)$, and the other two components also pass through this point. This intersection point is not regular, but the rest of the chart is regular.
 
-The only nonregular charts are $(0,k)$ and the last chart above. Thus we now investigate the blow-up of these charts at $(x_i,y,t_i) = (0,0,0)$. The first chart of the blow-up is obtained via $x_{i} = x_{i+1} y$, $t_{i} = t_{i+1} y$; one verifies that the resulting chart is $(i+1, k-2)$, where the strict transform of $F_{i,k}$ is $F_{i+1, k-2}$, and the other 2 components of chart $(i + 1, k-2)$ are exceptional. There are two more charts in the blow-up, however the specifics depend on whether $k=2$ or $k \geq 3$. In all cases, as we shall see, these charts are regular.
+The only nonregular charts are $(0,k)$ and the last chart above. Thus we now investigate the blow-up of these charts at $(x_i,\sy,t_i) = (0,0,0)$. The first chart of the blow-up is obtained via $x_{i} = x_{i+1} \sy$, $t_{i} = t_{i+1} \sy$; one verifies that the resulting chart is $(i+1, k-2)$, where the strict transform of $F_{i,k}$ is $F_{i+1, k-2}$, and the other 2 components of chart $(i + 1, k-2)$ are exceptional. There are two more charts in the blow-up, however the specifics depend on whether $k=2$ or $k \geq 3$. In all cases, as we shall see, these charts are regular.
 
 \paragraph{Chart $(i,k)_b$:}
 \label{sec:chart-i-k_b}
 
-Our next chart, which we call $(i,k)_b$, is obtained via $y = x_ib_i$, $t_i = x_i\tau_i$, whence the central fiber is given by $t_0 = x_i^{i+1}b_i^i\tau_i$. The resulting model is
+Our next chart, which we call $(i,k)_b$, is obtained via $\sy = x_ib_i$, $t_i = x_i\tau_i$, whence the central fiber is given by $t_0 = x_i^{i+1}b_i^i\tau_i$. The resulting model is
 \[
 (x_i^{i+1}b_i^i - 1)x_i^{k-2} b_i^k = 1 + \tau_i.
 \]
@@ -230,7 +207,7 @@ Independent of the value of $k$, one verifies that this chart is regular by comp
 \paragraph{Chart $(i,k)_u$:}
 \label{sec:chart-i-k_u}
 
-This last chart is obtained via $x_i = u_it_i$, $y = v_it_i$, giving the model
+This last chart is obtained via $x_i = u_it_i$, $\sy = v_it_i$, giving the model
 \[
 (u_iv_i^it_i^{i+1} - 1) v_i^k t_i^{k-2} = u_i(u_i + 1).
 \]
@@ -276,12 +253,12 @@ Now suppose $r$ is even. Let $s = \frac12 r$. Then we end up with $F$ connected 
 
 In both cases, one checks that the self-intersection number of each component is $-2$, except for $F$, which has $F^2 = -2s$. By Castelnuovo's criterion, the model is minimal. Our calculations above show that the model is regular. Therefore we have found the minimal proper regular model we were looking for.
 
-\section{Component group}
+\subsection{Component group}
 \label{sec:component-group}
 
 We follow a similar procedure as when $t = \infty$ to compute the component group. 
 
-\subsection{Case 1: $r$ odd}
+\subsubsection{Case 1: $r$ odd}
 \label{sec:case-1:-r-odd}
 
 Recall that $r = 2s + 1$. Put the components of $C_k$ in the order $D_1, D_2, \dots, D_{s}, E_{s}, \dots, E_1, F$. With respect to this ordering, the intersection matrix is the $r \times r$ matrix
@@ -352,7 +329,7 @@ Eliminate the 1s in the last column and swap rows and columns to obtain
 \]
 where $I$ is the $(r-2) \times (r-2)$ identity matrix. From this we conclude that the component group is $\Phi \isom \dfrac{\Z}{r\Z}$.
 
-\subsection{Case 2: $r$ even}
+\subsubsection{Case 2: $r$ even}
 \label{sec:case-2:-r-even}
 
 Recall that $r = 2s$. Put the components of $C_k$ in the order $D_1, D_2, \dots, D_{s-1}, G_s, E_{s-1}, \dots, E_1, F$. With respect to this ordering, the intersection matrix is the $r \times r$ matrix
@@ -421,7 +398,7 @@ where $I$ is the $(r-2) \times (r-2)$ identity matrix. Thus in this case the com
 
 Therefore we have
 \begin{theorem}
-  Let $C$ be the complete nonsingular curve birational to the affine curve with equation $\caff:xy^r = (x+1)(x+t)$ over $K$, with $r \geq 3$. Let $\scd$ be the minimal proper regular model for $C$ at $t = 1$. Let $J$ be the Jacobian for $C$. Then the component group for the N\'eron model of $J$ at $t = 1$ is isomorphic to
+  Let $C$ be the complete nonsingular curve birational to the affine curve with equation $\caff:x\sy^r = (x+1)(x+t)$ over $K$, with $r \geq 3$. Let $\scd$ be the minimal proper regular model for $C$ at $t = 1$. Let $J$ be the Jacobian for $C$. Then the component group for the N\'eron model of $J$ at $t = 1$ is isomorphic to
   $
   \frac{\Z}{r\Z}.
   $
