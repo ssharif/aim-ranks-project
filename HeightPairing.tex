@@ -1,0 +1,245 @@
+%\documentclass[reqno]{amsart}
+\documentclass[pagesize,paper=letter]{scrartcl}
+%\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[all,cmtip]{xy}
+\usepackage{amssymb,amsmath,mathrsfs,amsthm,amscd,hyperref,amsfonts,graphicx}
+\bibliographystyle{plain}
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\textheight 214mm \textwidth 160mm
+\headsep 10mm
+\raggedbottom
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{defn}[thm]{Definition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{nota}[thm]{Notation}
+%\newtheorem{rem}[thm]{Remark}
+
+\theoremstyle{definition}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{defn}[thm]{Definition}
+\renewcommand{\thedefn}{}
+
+\theoremstyle{remark}
+\newtheorem{ex}{Example}
+\newtheorem{notation}{Notation}
+\newtheorem{exs}{Examples}
+\renewcommand{\theex}{}
+\renewcommand{\thenotation}{}
+\renewcommand{\theexs}{}
+
+
+
+%\theoremstyle{plain}
+%\newtheorem{thm}[equation]{Theorem}
+%\newtheorem{prop}[equation]{Proposition}
+%\newtheorem{cor}[equation]{Corollary}
+%\newtheorem{lemma}[equation]{Lemma}
+%\newtheorem{conj}[equation]{Conjecture}
+
+%\theoremstyle{definition}
+%\newtheorem{defn}[equation]{Definition}
+%\newtheorem{defns}[equation]{Definitions}
+%
+%\theoremstyle{remark}
+%\newtheorem{rem}[equation]{Remark}
+%\newtheorem{rems}[equation]{Remarks}
+%\newtheorem{exer}[equation]{Exercise}
+%\newtheorem{exers}[equation]{Exercises}
+%\newtheorem{rem-exer}[equation]{Remark/Exercise}
+%\newtheorem{rem-exers}[equation]{Remark/Exercises}
+%\newtheorem{ex}[equation]{Example}
+%\newtheorem{exs}[equation]{Examples}
+
+\DeclareMathOperator{\dvsr}{div}
+\newcommand{\one}{{\bf 1}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\divi}{\operatorname{div}}
+\newcommand{\sep}{\operatorname{sep}}
+\newcommand{\XminusT}{(x-T)}
+\newcommand{\xminusT}{(x-T)'}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\iso}{\stackrel{\sim}{\rightarrow}}
+\newcommand{\val}{\operatorname{val}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\rk}{\operatorname{rank}}
+\newcommand{\sy}{\bar{y}}
+\newcommand{\vd}{\mathbf{d}}
+\newcommand{\ve}{\mathbf{e}}
+
+
+\def\bmu{{\boldsymbol\mu}}
+
+\def \PP {{\mathbb P}^1}
+\def \ZZ {{\mathbb Z}}
+\def  \FF {{\mathbb F}}
+\def \car {\mathop {\rm Car}}
+
+\def\genus{\textrm{genus}}
+\def\cond{\textrm{cond}}
+\def\R{\mathbb{R}}
+\def\Gal{\textrm{\upshape Gal}}
+\def\ord{\textrm{\upshape ord}}
+\def\p{\mathbb{P}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+%\def\A{\mathbf{A}}
+\def\QQ{\overline{\mathbb{Q}}}
+\def\Z{\mathbb{Z}}
+\def\m{\mathfrak{m}}
+\def\Oo{\mathcal{O}}
+\def\F{\mathbb{F}}
+\def\Hom{\mathrm{Hom}}
+\def\tor{\mathrm{tor}}
+\def \End{\mathrm{End}}
+\def\hh{\textrm{H}}
+\def\s{\textrm{\upshape Spec}\,}
+\def\Br{\textnormal{Br}}
+\def\pr{\textnormal{pr}}
+\def\Nm{\textnormal{Nm}}
+\def\can{\textnormal{can}}
+\def\rank{\textnormal{rank}}
+\def\Pic{\textnormal{Pic}}
+\def\h{\textnormal{H}}
+%\def\PGL{\textnormal{PGL}}
+\def\torsion{\textnormal{tors}}
+\def\tors{\textnormal{tors}}
+
+
+% provide the letter sha:
+\usepackage[OT2,T1]{fontenc}
+\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+\DeclareMathSymbol{\sha}{\mathalpha}{cyrletters}{"58}
+
+\def\JJ{\mathcal{J}}
+\def\XX{\mathcal{X}}
+\def\YY{\mathcal{Y}}
+\def\O{\mathcal{O}}
+\def\OO{\mathcal{O}}
+
+
+
+% abbreviations/alternate names
+\def\<{\langle}
+\def\>{\rangle}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+\def\isoto{\tilde{\to}}
+\def\tensor{\otimes}
+\def\compose{\circ}
+\def\sdp{{\rtimes}}
+\def\nodiv{\not|}
+\def\PGL{\mathrm{PGL}}
+\def\PSL{\mathrm{PSL}}
+\def\SL{\mathrm{SL}}
+\def\GL{\mathrm{GL}}
+\def\Sp{\mathrm{Sp}}
+\def\P{\mathbb{P}}
+
+\def\ker{\text{ker}}
+\def\im{\text{im}}
+
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\spec}{Spec}
+
+\def\sce{\mathscr{C}^{\textsf{ex}}}
+\def\scd{\mathscr{C}}
+\def\caff{C_{\textsf{aff}}}
+\def\sj{\mathscr{J}}
+%\def\sA{\ensuremath{\mathscr{A}}}
+\def\sO{\mathcal{O}}
+%\def\sO{\ensuremath{\mathscr{O}}}
+%\def\sL{\ensuremath{\mathscr{L}}}
+%\def\sK{\ensuremath{\mathscr{K}}}
+%\def\sF{\ensuremath{\mathscr{F}}}
+\def\Pro{\ensuremath{\mathbb{P}}}
+%\def\sG{\mathscr{G}}
+%\def\sX{\mathscr{X}}
+%\DeclareMathOperator{\Supp}{Supp}
+%\DeclareMathOperator{\Div}{Div}
+%\DeclareMathOperator{\dv}{div}
+%\DeclareMathOperator{\Pic}{Pic}
+%\DeclareMathOperator{\P0}{Pic^0}
+%\DeclareMathOperator{\Spec}{Spec}
+\def\isom{\cong}
+
+\begin{document}
+\title{Height pairing on our curve}
+\author{Shahed Sharif}
+
+\section{Height pairing}
+\label{sec:height-pairing}
+
+The purpose of this write-up is to compute the height pairing on various sections of our curve.
+
+\subsection{Basic theory}
+\label{sec:basic-theory}
+
+Given $P,P',Q \in C(\bar{K})$, we would like to compute the height pairing $\langle P, Q \rangle$. To do this we define a divisor $D_P$ as \dots and then compute \dots. There are two parts to the computation: compute $D_P \cdot P'$ and $P \cdot P'$ for every choice of $P$ and $P'$, including the cases where the sections are not distinct. Since $D_P$ is a fibral divisor, the calculation of $D_P \cdot P'$ will be done at each fiber. One sees that we can restrict ourselves to the bad fibers of our arithmetic surface.
+
+\subsection{Auxiliary results}
+\label{sec:auxiliary-results}
+
+The following results will help us compute $D_P \cdot P'$. Let us suppose we restrict ourselves to a special fiber with components $C_0, C_1, \dots, C_n$.
+
+\begin{proposition}
+  Suppose $Q$ intersects $C_0$, $P$ intersects $C_i$, and $P'$ intersects $C_j$, with $i,j \neq 0$. Let $A$ be the intersection matrix for the fiber, and let $B$ be the matrix obtained by deleting the first row and column from $A$. Let $\beta_{ij}$ be the $ij$ cofactor for $B$. Let $r$ be the multiplicity of $C_0$ in the special fiber. Finally, let $\phi$ be the order of the component group of the Jacobian of $C$. Then
+  \[
+  D_P \cdot P' = (-1)^{n+1} \frac{\beta_{ij}}{r^2 \phi}.
+  \]
+\end{proposition}
+
+\begin{proof}
+  Recall that we choose $D_P = \sum d_h C_h$ so that $d_0 = 0$ and $D_P \cdot C_h = (Q - P) \cdot C_h$ for every $h > 1$. If we let $\vd = (d_1, \dots, d_n)$, then this is equivalent to saying
+  \[
+  B\vd = -\ve_i
+  \]
+  where $\ve_i$ is the $i$th standard basis vector. The intersection form $A$ has the property that every $n \times n$ submatrix is nonsingular, so we have
+  \[
+  \vd = -B^{-1}\ve_i.
+  \]
+  The intersection number $P' \cdot D_P$ is simply the coefficient $d_j$, and
+  \[
+  D_P \cdot P' = d_j = \ve_j^T \vd = -\ve_j^TB^{-1}\ve_i.
+  \]
+  By symmetry of $A$, and hence of $B$, and the cofactor formula for the inverse of a matrix, we have
+  \[
+  D_P \cdot P' = - \frac{\beta_{ij}}{\det B}.
+  \]
+  But according to Corollary~1.3 in~cite Lorenzini,
+  \[
+  \det (-B) = r^2 \phi.
+  \]
+  The claim now follows.
+\end{proof}
+
+\begin{proposition}
+  Let $A_m$ be the $m \times m$ matrix whose entries are given by
+  \[
+  a_{ij} = \begin{cases}
+    -2 & \text{if } i = j \\
+    1 & \text{if } |i - j| = 1\\
+    0 & \text{otherwise}
+  \end{cases}.
+  \]
+  Then $\det A_m = (-1)^m (m+1)$.
+\end{proposition}
+
+\begin{proof}
+  Consider an elliptic curve over a discrete valuation ring with type $I_{m+1}$ reduction. Let $A$ be the intersection matrix for the special fiber, where the components are ordered in the usual manner. One observes that $A_m$ is the $m \times m$ submatrix obtained from $A$ by deleting the first row and column. By Lorenzini Corollary~1.3, $\det A_m = (-1)^m \phi$, where $\phi$ is the order of the component group of our elliptic curve. But as our curve has type $I_{m+1}$ reduction, the component group is $\Z/(m+1)\Z$.
+\end{proof}
+
+\end{document}
