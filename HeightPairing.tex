@@ -242,4 +242,16 @@ The following results will help us compute $D_P \cdot P'$. Let us suppose we res
   Consider an elliptic curve over a discrete valuation ring with type $I_{m+1}$ reduction. Let $A$ be the intersection matrix for the special fiber, where the components are ordered in the usual manner. One observes that $A_m$ is the $m \times m$ submatrix obtained from $A$ by deleting the first row and column. By Lorenzini Corollary~1.3, $\det A_m = (-1)^m \phi$, where $\phi$ is the order of the component group of our elliptic curve. But as our curve has type $I_{m+1}$ reduction, the component group is $\Z/(m+1)\Z$.
 \end{proof}
 
+\begin{proposition}
+  Let $R$ be a discrete valuation ring with maximal ideal $(u)$. Suppose $C$ is given locally by $fg = u^d$, where $d \geq 3$. Let $P$ be a point on $C$ such that $f(P), g(P) \in (u)$. Let $C_1$ and $C_2$ be the components of the special fiber of $C$ given by $f = u = 0$ and $g = u = 0$ respectively. Let the minimal proper regular model of $C$ have special fiber given by the chain of rational curves $C_1, E_1, \dots, E_{d-1}, C_2$. If
+  \[
+  \frac{g(P)}{u}, \frac{g(P)}{f(P)}, f(P) \in (u)
+  \]
+  then $P$ lies on $E_{d-1}$. If furthermore $\frac{f(P)}{u}$ is a unit in $R$, then $P$ has smooth reduction.
+\end{proposition}
+
+\begin{proof}
+  After doing a single blow-up, one has the chain of rational curves $C_1, E_1, E_{d-1}, C_2$. The result follows from checking each chart.
+\end{proof}
+
 \end{document}
