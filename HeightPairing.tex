@@ -183,12 +183,16 @@
 \section{Height pairing}
 \label{sec:height-pairing}
 
-The purpose of this write-up is to compute the height pairing on various sections of our curve.
+The purpose of this write-up is to compute the height pairing on various sections of our curve. Specifically, we will compute $\langle P_{i,j} - Q_\infty, P_{i', j'} - Q_\infty \rangle$. By bilinearity, it suffices to compute $\langle P_{i,j} - Q_\infty, P_{0,0} - Q_\infty \rangle$ for all $i,j$.
 
 \subsection{Basic theory}
 \label{sec:basic-theory}
 
-Given $P,P',Q \in C(\bar{K})$, we would like to compute the height pairing $\langle P, Q \rangle$. To do this we define a divisor $D_P$ as \dots and then compute \dots. There are two parts to the computation: compute $D_P \cdot P'$ and $P \cdot P'$ for every choice of $P$ and $P'$, including the cases where the sections are not distinct. Since $D_P$ is a fibral divisor, the calculation of $D_P \cdot P'$ will be done at each fiber. One sees that we can restrict ourselves to the bad fibers of our arithmetic surface.
+Let $P, P', Q$ be three points on our curve; we will later set $P = P_{i,j}$, $P' = P_{0,0}$, and $Q = Q_\infty$. Then the we have
+\[
+\langle P - Q, P' - Q\rangle = -P \cdot P' + P \cdot Q + P' \cdot Q - Q^2 + D_P \cdot P',
+\]
+ where $D_P$ is a divisor computed as follows ... Since $D_P$ is a fibral divisor, the calculation of $D_P \cdot P'$ will be done at each fiber. One sees that we can restrict ourselves to the bad fibers of our arithmetic surface.
 
 \subsection{Auxiliary results}
 \label{sec:auxiliary-results}
@@ -253,5 +257,10 @@ The following results will help us compute $D_P \cdot P'$. Let us suppose we res
 \begin{proof}
   After doing a single blow-up, one has the chain of rational curves $C_1, E_1, E_{d-1}, C_2$. The result follows from checking each chart.
 \end{proof}
+
+\subsection{Pairing at $u = 0$}
+\label{sec:pairing-at-u}
+
+We compute the pairing at $u = 0$. 
 
 \end{document}
