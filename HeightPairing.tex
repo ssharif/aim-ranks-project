@@ -230,7 +230,7 @@ The following results will help us compute $D_P \cdot P'$. Let us suppose we res
   The claim now follows.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop:am-defn-det}
   Let $A_m$ be the $m \times m$ matrix whose entries are given by
   \[
   a_{ij} = \begin{cases}
@@ -313,4 +313,16 @@ Note that $C_{(j+1)(d-1)}$ is the right-most vertex on the $j$th horizontal path
   Forthcoming.
 \end{proof}
 
+Recall that the matrix $B$ constructed in \S~\ref{sec:auxiliary-results} is obtained by deleting the first row and column from the intersection matrix for the special fiber. Using the ordering given above for the components, we get
+\[
+B =
+\left[\begin{array}{ccccc}
+  A_{d-1} & & & & e_{d-1} \\
+  & A_{d-1} & & & e_{d-1} \\
+  & & \ddots & & \vdots \\
+  & & & A_{d-1} & e_{d-1} \\
+  e_{d-1}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
+\end{array}\right]
+\]
+The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\ref{prop:am-defn-det}, and $e_{d-1} \in \R^{d-1}$ is the $(d-1)$st standard basis vector, written as a column (so $e_{d-1}^T$ is a row vector). There are $r$ copies of $A_{d-1}$ in the matrix, so that $B$ has size $r(d-1) + 1$.
 \end{document}
