@@ -183,7 +183,7 @@
 \section{Height pairing}
 \label{sec:height-pairing}
 
-The purpose of this write-up is to compute the height pairing on various sections of our curve. Specifically, we will compute $\langle P_{i,j} - Q_\infty, P_{i', j'} - Q_\infty \rangle$. By bilinearity, it suffices to compute $\langle P_{i,j} - Q_\infty, P_{0,0} - Q_\infty \rangle$ for all $i,j$.
+The purpose of this write-up is to compute the height pairing on various sections of our curve. Specifically, we will compute $\langle P_{i,j} - Q_\infty, P_{i', j'} - Q_\infty \rangle$. By bilinearity, it suffices to compute $\langle P_{i,j} - Q_\infty, P_{0,0} - Q_\infty \rangle$ for all $i,j$. In all of the following, we base-extend to the field $K(u)$ where $u^d = t$.
 
 \subsection{Basic theory}
 \label{sec:basic-theory}
@@ -199,7 +199,7 @@ Let $P, P', Q$ be three points on our curve; we will later set $P = P_{i,j}$, $P
 
 The following results will help us compute $D_P \cdot P'$. Let us suppose we restrict ourselves to a special fiber with components $C_0, C_1, \dots, C_n$.
 
-\begin{proposition}
+\begin{proposition}\label{prop:dp-dot-p-cofactor}
   Suppose $Q$ intersects $C_0$, $P$ intersects $C_i$, and $P'$ intersects $C_j$, with $i,j \neq 0$. Let $A$ be the intersection matrix for the fiber, and let $B$ be the matrix obtained by deleting the first row and column from $A$. Let $\beta_{ij}$ be the $ij$ cofactor for $B$. Let $r$ be the multiplicity of $C_0$ in the special fiber. Finally, let $\phi$ be the order of the component group of the Jacobian of $C$. Then
   \[
   D_P \cdot P' = (-1)^{n+1} \frac{\beta_{ij}}{r^2 \phi}.
@@ -261,6 +261,56 @@ The following results will help us compute $D_P \cdot P'$. Let us suppose we res
 \subsection{Pairing at $u = 0$}
 \label{sec:pairing-at-u}
 
-We compute the pairing at $u = 0$. 
+We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}, we must determine which components each of the $P_{i,j}$ and $Q_\infty$ lie on. We first recall that the special fiber consists of rational curves connected by $r$ chains of $\Pro^1$'s, each of length $d-1$. Equivalently, the dual graph is given by
+\begin{figure}[h]\centering
+  \[
+\xygraph{
+  !{<0cm,0cm>;<1.5cm,0cm>:<0cm,1.25cm>::}
+  !{(0, 2) }*{\bullet}="c0"
+  !{(5, 2) }*{\bullet}="clast"
+  !{(1, 4) }*{\bullet}="c11"
+  !{(2, 4) }*{\bullet}="c12"
+  !{(3, 4) }*{\dots}="c1dots"
+  !{(4, 4) }*{\bullet}="c1last"
+  !{(1, 3) }*{\bullet}="c21"
+  !{(2, 3) }*{\bullet}="c22"
+  !{(3, 3) }*{\dots}="c2dots"
+  !{(4, 3) }*{\bullet}="c2last"
+  !{(2.5, 2) }*{\vdots}
+  !{(1, 1) }*{\bullet}="cr1"
+  !{(2, 1) }*{\bullet}="cr2"
+  !{(3, 1) }*{\dots}="crdots"
+  !{(4, 1) }*{\bullet}="crlast"
+  "c0"-"c11"
+  "c11"-"c12"
+  "c12"-"c1dots"
+  "c1dots"-"c1last"
+  "c1last"-"clast"
+  "c0"-"c21"
+  "c21"-"c22"
+  "c22"-"c2dots"
+  "c2dots"-"c2last"
+  "c2last"-"clast"
+  "c0"-"cr1"
+  "cr1"-"cr2"
+  "cr2"-"crdots"
+  "crdots"-"crlast"
+  "crlast"-"clast"
+}
+\]
+  \caption{Dual graph of $C_k$, $u=0$}
+\label{fig:u-equals-zero}
+\end{figure}
+There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We lable the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x(y^r - x - 1) = u^d$. The component $x = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $y^r - x - 1 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x = 0$, $y = \omega^j$ where $\omega$ is some fixed primitive $r$th root of unity. Label each of the horizontal components as $C_{j(d-1) + i}$, where $1 \leq i \leq d-1$ and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x = 0, y = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
+
+\begin{proposition}
+  The section $Q_\infty$ lies on $C_0$. The section $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
+\end{proposition}
+
+Note that $C_{(j+1)(d-1)}$ is the right-most vertex on the $j$th horizontal path.
+
+\begin{proof}
+  Forthcoming.
+\end{proof}
 
 \end{document}
