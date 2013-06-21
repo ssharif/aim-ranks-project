@@ -301,10 +301,10 @@ We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}
   \caption{Dual graph of $C_k$, $u=0$}
 \label{fig:u-equals-zero}
 \end{figure}
-There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We lable the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x(y^r - x - 1) = u^d$. The component $x = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $y^r - x - 1 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x = 0$, $y = \omega^j$ where $\omega$ is some fixed primitive $r$th root of unity. Label each of the horizontal components as $C_{j(d-1) + i}$, where $1 \leq i \leq d-1$ and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x = 0, y = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
+There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x(y^r - x - 1) = u^d$. The component $x = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $y^r - x - 1 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x = 0$, $y = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the horizontal components as $C_{j(d-1) + i}$, where $1 \leq i \leq d-1$ and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x = 0, y = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
 
 \begin{proposition}
-  The section $Q_\infty$ lies on $C_0$. The section $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
+  The section $Q_\infty$ lies on $C_0$. Then the section $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
 \end{proposition}
 
 Note that $C_{(j+1)(d-1)}$ is the right-most vertex on the $j$th horizontal path.
@@ -325,4 +325,12 @@ B =
 \end{array}\right]
 \]
 The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\ref{prop:am-defn-det}, and $e_{d-1} \in \R^{d-1}$ is the $(d-1)$st standard basis vector, written as a column (so $e_{d-1}^T$ is a row vector). There are $r$ copies of $A_{d-1}$ in the matrix, so that $B$ has size $r(d-1) + 1$.
+
+\subsection{Pairing at $u=\infty$}
+\label{sec:pairing-at-u=infty}
+
+Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore the special fibers and intersection matrices are identical. We must now determine which component our sections lie on.
+\begin{proposition}
+  On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$, 
+\end{proposition}
 \end{document}
