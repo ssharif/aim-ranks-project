@@ -374,4 +374,34 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
   \]
   One now verifies the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} to conclude that $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where in the subscript $i+j$ is taken modulo $r$.
 \end{proof}
+
+\subsection{Pairing at $u = \zeta^i$}
+\label{sec:pairing-at-u-1}
+
+Since the extension $K(u)$ is unramified over $u = 1$, the special fiber is identical to that when $t = 1$. Recall that the initial chart is $\caff$, with equation 
+\[
+(x_0 - 1) \bar{y}^r = x_0(x_0 + (u - 1))
+\]
+where $\caff$ glues to $\sX_1$ via $x_0 = x + 1$ and $\bar{y} = y/x$. The special fiber has a single component, $F$, with multiplicity 1 and a single node at $(x_0, \bar{y}, u) = (0,0,1)$.
+\begin{proposition}
+  At $u=1$, $Q_\infty$ lies on $F$. If $\zeta^i \neq -1$, then $P_{ij}$ lies on $F$. If $\zeta^i = -1$, then $P_{ij}$ lies on $E_1$.
+\end{proposition}
+
+\begin{proof}
+  We immediately see that $Q_\infty$ does not reduce to the node of $F$, so $Q_\infty$ lies on the smooth locus of (the proper curve with affine piece) $F$. For $P_{ij}$, we observe that
+  \[
+  (x_0, \bar{y})(P_{ij}) = (\zeta^i u + 1, \omega^j (\zeta^i u + 1)^{d/r}).
+  \]
+  The reduction of this point has coordinates
+  \[
+  (\zeta^i + 1, \omega^j(\zeta^i + 1)^{d/r})
+  \]
+  which lies on the node if and only if $\zeta^i = -1$.
+
+  Now suppose that $\zeta^i = -1$. We consider the chart $(0,r)_b$ from section \S~???. We observe that
+  \[
+  (x_0, b_0, \tau_0(P)) = (1-u, \omega^j(1-u)^{\frac{d}{r} - 1}, -1 - u - \cdots - u^{d-1}).
+  \]
+  If $d = r$, on the special fiber we obtain the point $(0, \omega^j, -1)$ (using the fact that $d \equiv -1 \pmod{p}$), which lies on the smooth locus of the fiber $E_1$. If $d > r$, we obtain $(0, 0, -1)$, which again lies on the smooth locus of $E_1$.
+\end{proof}
 \end{document}
