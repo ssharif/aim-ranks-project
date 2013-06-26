@@ -168,6 +168,7 @@
 \def\Pro{\ensuremath{\mathbb{P}}}
 %\def\sG{\mathscr{G}}
 \def\sX{\mathcal{X}}
+\newcommand{\sxi}{\mathcal{X}_\infty}
 %\DeclareMathOperator{\Supp}{Supp}
 %\DeclareMathOperator{\Div}{Div}
 %\DeclareMathOperator{\dv}{div}
@@ -347,4 +348,15 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
 \begin{proposition}
   On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$, 
 \end{proposition}
+
+\begin{proof}
+  Let $\sxi$ be the affine curve
+  \[
+  x_\infty y_\infty^r = (x_\infty + 1)(x_\infty + {U^d})
+  \]
+  where $U = \frac{1}{u}$. This glues to $\sX_1$ via 
+  \[
+  (x, y) = (u^d x_\infty, u^{d/r} y_\infty).
+  \]
+\end{proof}
 \end{document}
