@@ -311,13 +311,13 @@ There are $r$ paths from the left hand vertex to the right hand vertex, and on e
 Note that $C_{(j+1)(d-1)}$ is the right-most vertex on the $j$th horizontal path.
 
 \begin{proof}
-  Let $\sX_0$ be the affine curve given by $x_0 y_0^r = (x+1)(x+u^d)$; it is an affine model for $C$. The special fiber, as noted above, consists of two rational curves meeting at $r$ points. One sees that $Q_\infty$ does not lie above any of these nodes. Therefore the specialization of $Q_\infty$ to the fiber over $u = 0$ lies on the smooth locus of one of the components $C_0$ or $C_{r(d-1)+1}$. We observe that $\sX_0$ glues to $\sX_2$ via
+  Let $\sX_0$ be the affine curve given by $x_0 y_0^r = (x_0+1)(x_0+u^d)$; it is an affine model for $C$. The special fiber, as noted above, consists of two rational curves meeting at $r$ points. One sees that $Q_\infty$ does not lie above any of these nodes. Therefore the specialization of $Q_\infty$ to the fiber over $u = 0$ lies on the smooth locus of one of the components $C_0$ or $C_{r(d-1)+1}$. We observe that $\sX_0$ glues to $\sX_2$ via
   \[
   (x_0, y_0) = (w, w/z).
   \]
   Since $Q_\infty$ is given by $(w, z) = (0, 0)$, one sees that $x_0(Q_\infty) = 0$. Therefore $Q_\infty$ lies on $C_0$.
 
-  Now consider $P_{ij}$. The chart $\sX_0$ glues to $\sX_1$ via $(x_0, y_0) = (x, y/x)$. Therefore
+  Now consider $P_{ij}$. The chart $\sX_0$ glues to $C$ via $(x_0, y_0) = (x, y/x)$. Therefore
   \[
   (x_0(P_{ij}), y_0(P_{ij})) = (\zeta^i u, \omega^j(\zeta^iu + 1)^{d/r}).
   \]
@@ -354,9 +354,24 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
   \[
   x_\infty y_\infty^r = (x_\infty + 1)(x_\infty + {U^d})
   \]
-  where $U = \frac{1}{u}$. This glues to $\sX_1$ via 
+  where $U = \frac{1}{u}$. The chart $\sxi$ glues to $\sX_0$ and $\sX_2$ via 
   \[
-  (x, y) = (u^d x_\infty, u^{d/r} y_\infty).
+  (x_\infty, y_\infty) = (U^d x_0, U^{d/r} y_0) = \bigg(U^d w, U^{d/r} \frac{w}{z}\bigg).
   \]
+  We are concerned with the fiber when $U = 0$. Let $C_0$ be the component given by $x_\infty = U = 0$, and $C_{r(d-1)+1}$ the component given by $y_\infty^r - x_\infty - 1 = U = 0$. One sees immediately that on the special fiber, $Q_\infty$ lies on the component $C_0$.
+
+  Next, observe that $\sxi$ glues to $C$ via
+  \[
+  (x_\infty, y_\infty) = (U^d x, U^{d/r} y/x).
+  \]
+  Thus
+  \[
+  (x_\infty(P_{ij}), y_\infty(P_{ij})) = (\zeta^i U^{d-1}, \omega^j (\zeta^i + U)^{d/r}).
+  \]
+  Modulo $U$, this gives $(0,\omega^{i+j})$; that is, $P_{ij}$ lies on the corresponding node of the special fiber. Let $f = y_\infty^r - x_\infty - 1$ and $g = x_\infty$. We see that 
+  \[
+  f(P_{ij}) = \zeta^{i(d-1)} U + U^d \quad g(P_{ij}) = \zeta^i U^{d-1}.
+  \]
+  One now verifies the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} to conclude that $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where in the subscript $i+j$ is taken modulo $r$.
 \end{proof}
 \end{document}
