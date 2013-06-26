@@ -167,7 +167,7 @@
 %\def\sF{\ensuremath{\mathscr{F}}}
 \def\Pro{\ensuremath{\mathbb{P}}}
 %\def\sG{\mathscr{G}}
-%\def\sX{\mathscr{X}}
+\def\sX{\mathcal{X}}
 %\DeclareMathOperator{\Supp}{Supp}
 %\DeclareMathOperator{\Div}{Div}
 %\DeclareMathOperator{\dv}{div}
@@ -246,7 +246,7 @@ The following results will help us compute $D_P \cdot P'$. Let us suppose we res
   Consider an elliptic curve over a discrete valuation ring with type $I_{m+1}$ reduction. Let $A$ be the intersection matrix for the special fiber, where the components are ordered in the usual manner. One observes that $A_m$ is the $m \times m$ submatrix obtained from $A$ by deleting the first row and column. By Lorenzini Corollary~1.3, $\det A_m = (-1)^m \phi$, where $\phi$ is the order of the component group of our elliptic curve. But as our curve has type $I_{m+1}$ reduction, the component group is $\Z/(m+1)\Z$.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{prop:fg-equals-u-blow-up}
   Let $R$ be a discrete valuation ring with maximal ideal $(u)$. Suppose $C$ is given locally by $fg = u^d$, where $d \geq 3$. Let $P$ be a point on $C$ such that $f(P), g(P) \in (u)$. Let $C_1$ and $C_2$ be the components of the special fiber of $C$ given by $f = u = 0$ and $g = u = 0$ respectively. Let the minimal proper regular model of $C$ have special fiber given by the chain of rational curves $C_1, E_1, \dots, E_{d-1}, C_2$. If
   \[
   \frac{g(P)}{u}, \frac{g(P)}{f(P)}, f(P) \in (u)
@@ -304,13 +304,27 @@ We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}
 There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x(y^r - x - 1) = u^d$. The component $x = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $y^r - x - 1 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x = 0$, $y = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the horizontal components as $C_{j(d-1) + i}$, where $1 \leq i \leq d-1$ and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x = 0, y = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
 
 \begin{proposition}
-  The section $Q_\infty$ lies on $C_0$. Then the section $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
+  The section $Q_\infty$ lies on $C_0$. The section $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
 \end{proposition}
 
 Note that $C_{(j+1)(d-1)}$ is the right-most vertex on the $j$th horizontal path.
 
 \begin{proof}
-  Forthcoming.
+  Let $\sX_0$ be the affine curve given by $x_0 y_0^r = (x+1)(x+u^d)$; it is an affine model for $C$. The special fiber, as noted above, consists of two rational curves meeting at $r$ points. One sees that $Q_\infty$ does not lie above any of these nodes. Therefore the specialization of $Q_\infty$ to the fiber over $u = 0$ lies on the smooth locus of one of the components $C_0$ or $C_{r(d-1)+1}$. We observe that $\sX_0$ glues to $\sX_2$ via
+  \[
+  (x_0, y_0) = (w, w/z).
+  \]
+  Since $Q_\infty$ is given by $(w, z) = (0, 0)$, one sees that $x_0(Q_\infty) = 0$. Therefore $Q_\infty$ lies on $C_0$.
+
+  Now consider $P_{ij}$. The chart $\sX_0$ glues to $\sX_1$ via $(x_0, y_0) = (x, y/x)$. Therefore
+  \[
+  (x_0(P_{ij}), y_0(P_{ij})) = (\zeta^i u, \omega^j(\zeta^iu + 1)^{d/r}).
+  \]
+  The specialization of $P_{ij}$ lies on the node with coordinates $(x_0, y_0, u) = (0, \omega^j, 0)$. Thus we need to blow up $\sX_0$ to determine which component $P_{ij}$ lies on. We at least know that $P_{ij}$ must lie on $C_0$, $C_{r(d-1)+1}$ or $C_{j(d-1) + k}$ for some $k$. Let $f = x$ and $g = y^r - x - 1$. We have
+  \[
+  f(P_{ij}) = \zeta^i u \quad g(P_{ij}) = u^d + \zeta^{i(d-1)} u^{d-1}.
+  \]
+  One checks that the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} hold, whence $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
 \end{proof}
 
 Recall that the matrix $B$ constructed in \S~\ref{sec:auxiliary-results} is obtained by deleting the first row and column from the intersection matrix for the special fiber. Using the ordering given above for the components, we get
