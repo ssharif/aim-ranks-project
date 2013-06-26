@@ -302,13 +302,13 @@ We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}
   \caption{Dual graph of $C_k$, $u=0$}
 \label{fig:u-equals-zero}
 \end{figure}
-There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x(y^r - x - 1) = u^d$. The component $x = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $y^r - x - 1 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x = 0$, $y = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the horizontal components as $C_{j(d-1) + i}$, where $1 \leq i \leq d-1$ and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x = 0, y = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
+There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x(y^r - x - 1) = u^d$. The component $x = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $y^r - x - 1 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x = 0$, $y = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the horizontal components as $C_{j(d-1) + i}$, where $0 \leq j \leq r-1$, $1 \leq i \leq d-1$, $j$ increases from top to bottom, and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x = 0, y = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
 
 \begin{proposition}
   The section $Q_\infty$ lies on $C_0$. The section $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
 \end{proposition}
 
-Note that $C_{(j+1)(d-1)}$ is the right-most vertex on the $j$th horizontal path.
+Note that $C_{(j+1)(d-1)} = C_{j(d-1) + d-1}$ is the right-most vertex on the $j$th horizontal path.
 
 \begin{proof}
   Let $\sX_0$ be the affine curve given by $x_0 y_0^r = (x_0+1)(x_0+u^d)$; it is an affine model for $C$. The special fiber, as noted above, consists of two rational curves meeting at $r$ points. One sees that $Q_\infty$ does not lie above any of these nodes. Therefore the specialization of $Q_\infty$ to the fiber over $u = 0$ lies on the smooth locus of one of the components $C_0$ or $C_{r(d-1)+1}$. We observe that $\sX_0$ glues to $\sX_2$ via
