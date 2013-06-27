@@ -248,11 +248,16 @@ The following results will help us compute $D_P \cdot P'$. Let us suppose we res
 \end{proof}
 
 \begin{proposition}\label{prop:fg-equals-u-blow-up}
-  Let $R$ be a discrete valuation ring with maximal ideal $(u)$. Suppose $C$ is given locally by $fg = u^d$, where $d \geq 3$. Let $P$ be a point on $C$ such that $f(P), g(P) \in (u)$. Let $C_1$ and $C_2$ be the components of the special fiber of $C$ given by $f = u = 0$ and $g = u = 0$ respectively, and suppose these components cross transversally. Let the minimal proper regular model of $C$ have special fiber given by the chain of rational curves $C_1, E_1, \dots, E_{d-1}, C_2$. If
+  Let $R$ be a discrete valuation ring with maximal ideal $(u)$. Suppose $C$ is given locally by $fg = u^d$, where $d \geq 3$. Let $P$ be a point on $C$ such that $f(P), g(P) \in (u)$. Let $C_1$ and $C_2$ be the components of the special fiber of $C$ given by $f = u = 0$ and $g = u = 0$ respectively, and suppose these components cross transversally. Let the minimal proper regular model of $C$ have special fiber given by the chain of rational curves $C_1, E_1, \dots, E_{d-1}, C_2$.
+  \begin{enumerate}
+      \item  If
   \[
   \frac{g(P)}{u}, \frac{g(P)}{f(P)}, f(P) \in (u)
   \]
-  then $P$ lies on $E_{d-1}$. If furthermore $\frac{f(P)}{u}$ is a unit in $R$, then $P$ has smooth reduction.
+  then $P$ lies on $E_{d-1}$.
+    \item If $P$ lies on $E_{d-1}$ and $\frac{f(P)}{u}$ is a unit in $R$, then $P$ has smooth reduction.
+    \item $\frac{f}{u}$ is a local parameter for $E_{d-1}$.
+  \end{enumerate}
 \end{proposition}
 
 \begin{proof}
@@ -326,6 +331,18 @@ Note that $C_{(j+1)(d-1)} = C_{j(d-1) + d-1}$ is the right-most vertex on the $j
   f(P_{ij}) = \zeta^i u \quad g(P_{ij}) = u^d + \zeta^{i(d-1)} u^{d-1}.
   \]
   One checks that the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} hold, whence $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
+\end{proof}
+
+\begin{proposition}\label{prop:local-intersections-u-0}
+  The intersection numbers $P_{00} \cdot P_{ij}$ for $ij \neq 00$ and $Q_{\infty} \cdot P_{ij}$ at $u = 0$ are all zero.
+\end{proposition}
+
+\begin{proof}
+  In the pairing $Q_\infty \cdot P_{ij}$, and in $P_{00} \cdot P_{ij}$ when $j \neq 0$, the points do not even lie on the same component of the special fiber. Suppose in the latter pairing that $j = 0$, so that both points reduce to $C_{d-1}$. By Proposition~\ref{prop:fg-equals-u-blow-up}, $\frac{x_0}{u}$ is a local parameter for $C_{d-1}$. But
+  \[
+  \frac{x_0(P_{00})}{u} = 1 = \zeta^i = \frac{x_0(P_{i0})}{u}
+  \]
+  if and only if $i = 0$.
 \end{proof}
 
 Recall that the matrix $B$ constructed in \S~\ref{sec:auxiliary-results} is obtained by deleting the first row and column from the intersection matrix for the special fiber. Using the ordering given above for the components, we get
