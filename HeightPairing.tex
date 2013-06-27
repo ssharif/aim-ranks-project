@@ -375,16 +375,20 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
   One now verifies the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} to conclude that $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where in the subscript $i+j$ is taken modulo $r$.
 \end{proof}
 
-\subsection{Pairing at $u = \zeta^i$}
+\subsection{Pairing at $u = \zeta^k$}
 \label{sec:pairing-at-u-1}
 
-Since the extension $K(u)$ is unramified over $u = 1$, the special fiber is identical to that when $t = 1$. Recall that the initial chart is $\caff$, with equation 
+Fix $0 \leq k \leq d-1$. Since the extension $K(u)$ is unramified over $t = 1$, the special fibers at $u = \zeta^k$ are each identical to that of $C/K$ when $t = 1$. Recall that the initial chart is $\caff$, with equation 
 \[
-(x_0 - 1) \bar{y}^r = x_0(x_0 + (u - 1))
+(x_0 - 1) \bar{y}^r = x_0(x_0 + (u^d - 1))
 \]
-where $\caff$ glues to $\sX_1$ via $x_0 = x + 1$ and $\bar{y} = y/x$. The special fiber has a single component, $F$, with multiplicity 1 and a single node at $(x_0, \bar{y}, u) = (0,0,1)$.
+where $\caff$ glues to $\sX_1$ via $x_0 = x + 1$ and $\bar{y} = y/x$. Let $u_k = u - \zeta^k$ and $\alpha_k = \frac{u^d - 1}{u_k}$. Then we can rewrite this model in a neighborhood of $u_k = 0$ as
+\[
+(x_0 - 1) \bar{y}^r = x_0(x_0 + \alpha_ku_k).
+\]
+This special fiber has a single component, $F$, with multiplicity 1 and a single node at $(x_0, \bar{y}, u_k) = (0,0,0)$.
 \begin{proposition}
-  At $u=1$, $Q_\infty$ lies on $F$. If $\zeta^i \neq -1$, then $P_{ij}$ lies on $F$. If $\zeta^i = -1$, then $P_{ij}$ lies on $E_1$.
+  At $u=\zeta^k$, $Q_\infty$ lies on $F$. If $i+k \not\equiv \frac{d}{2} \pmod{d}$, then $P_{ij}$ lies on $F$. If $i + k \equiv \frac{d}{2} \pmod{d}$, then $P_{ij}$ lies on $E_1$.
 \end{proposition}
 
 \begin{proof}
@@ -394,14 +398,22 @@ where $\caff$ glues to $\sX_1$ via $x_0 = x + 1$ and $\bar{y} = y/x$. The specia
   \]
   The reduction of this point has coordinates
   \[
-  (\zeta^i + 1, \omega^j(\zeta^i + 1)^{d/r})
+  (\zeta^{i+k} + 1, \omega^j(\zeta^{i+k} + 1)^{d/r})
   \]
-  which lies on the node if and only if $\zeta^i = -1$.
+  which lies on the node if and only if $\zeta^{i+k} = -1$. This occurs precisely when $i + k \equiv \frac{d}{2} \pmod{d}$.
 
-  Now suppose that $\zeta^i = -1$. We consider the chart $(0,r)_b$ from section \S~???. We observe that
+  Now suppose that $\zeta^{i+k} = -1$. We consider the chart $(0,r)_b$ from section \S~???. This latter chart was given by coordinates $x_0, b_0, \tau_0$, where $\tau_0$ was written in terms of $t_0$. Our original chart essentially substitutes $u_k$ for $t_0$, so we will define $\mu_k$ as the analogue of $\tau_0$; namely,
   \[
-  (x_0, b_0, \tau_0(P)) = (1-u, \omega^j(1-u)^{\frac{d}{r} - 1}, -1 - u - \cdots - u^{d-1}).
+  \mu_k = \frac{u_k}{x_0}.
   \]
-  If $d = r$, on the special fiber we obtain the point $(0, \omega^j, -1)$ (using the fact that $d \equiv -1 \pmod{p}$), which lies on the smooth locus of the fiber $E_1$. If $d > r$, we obtain $(0, 0, -1)$, which again lies on the smooth locus of $E_1$.
+  Then
+  \[
+  (x_0, b_0, \mu_k(P)) = (\zeta^iu + 1, \omega^j(\zeta^i u + 1)^{\frac{d}{r} - 1}, -\zeta^k).
+  \]
+  If $d = r$, on the special fiber we obtain the point $(0, \omega^j, -\zeta^k)$. If $d > r$, we obtain $(0, 0, -\zeta^k)$, which again lies on the smooth locus of $E_1$.
 \end{proof}
 \end{document}
+
+
+
+
