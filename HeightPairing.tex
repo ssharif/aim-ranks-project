@@ -358,6 +358,56 @@ B =
 \]
 The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\ref{prop:am-defn-det}, and $e_{d-1} \in \R^{d-1}$ is the $(d-1)$st standard basis vector, written as a column (so $e_{d-1}^T$ is a row vector). There are $r$ copies of $A_{d-1}$ in the matrix, so that $B$ has size $r(d-1) + 1$.
 
+Let
+\[
+M_{\ell} =
+\left[\begin{array}{ccccc}
+  1 & 2 & 3 & \cdots & \ell \\
+  2 & 4 & 6 & \cdots & 2\ell \\
+  \vdots &\vdots & \vdots & & \vdots \\
+  \ell & 2\ell & 3\ell & \cdots & \ell^2 
+\end{array}\right]
+\]
+
+and let $N_{s,t}$ be the $t \times t$ symmetric matrix given by
+\[
+N_{ij} = \begin{cases}
+    i(t+(t-j+1)(s-1)) & \text{if } i \geq j \\
+    N_{ji} & \text{if } i < j
+  \end{cases},
+\]
+for $1 \leq i,j \leq t$.
+
+
+\begin{proposition}
+Let $v_{\ell} = (1,2,\ldots, \ell)^T$. Then the matrix
+\[
+X = \frac{d^{r-2}}{\det(-B)} \cdot
+\left[\begin{array}{cccccc}
+  N_{r,d-1} & M_{d-1} & M_{d-1} & \cdots & M_{d-1} & dv_{d-1} \\
+  M_{d-1} & N_{r,d-1} & M_{d-1} & \cdots & M_{d-1} & dv_{d-1} \\
+  \vdots &\vdots & \vdots & & & \vdots \\
+  M_{d-1} & M_{d-1} & M_{d-1} & \cdots &N_{r,d-1} & dv_{d-1}\\
+  dv_{d-1}^T & dv_{d-1}^T & dv_{d-1}^T & \cdots & dv_{d-1}^T &d^2 \\
+   
+\end{array}\right]
+\]
+is the inverse of the matrix $B$ defined above.
+\end{proposition}
+\begin{proof}
+This is just algebra that can be checked by hand.
+\end{proof}
+
+\begin{proposition}
+The $(d-1, (j+1)(d-1))$th entry of $B^{-1}$ is given by the equation
+\[
+(B^{-1})_{d-1,(j+1)(d-1)} = \frac{d^{r-2}}{\det(-B)} \cdot \begin{cases}
+    d^2r-2dr-d+r+1 & \text{if } j=0 \\
+    (d-1)^2 & \text{otherwise }
+  \end{cases}.
+\]
+\end{proposition}
+
 \subsection{Pairing at $u=\infty$}
 \label{sec:pairing-at-u=infty}
 
