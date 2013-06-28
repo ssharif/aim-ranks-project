@@ -341,42 +341,6 @@ B =
 \]
 The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\ref{prop:am-defn-det}, and $e_{d-1} \in \R^{d-1}$ is the $(d-1)$st standard basis vector, written as a column (so $e_{d-1}^T$ is a row vector). There are $r$ copies of $A_{d-1}$ in the matrix, so that $B$ has size $r(d-1) + 1$.
 
-\subsection{Pairing at $u=\infty$}
-\label{sec:pairing-at-u=infty}
-
-Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore the special fibers and intersection matrices are identical. We must now determine which component our sections lie on.
-\begin{proposition}
-  On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$, 
-\end{proposition}
-
-\begin{proof}
-  Let $\sxi$ be the affine curve
-  \[
-  x_\infty y_\infty^r = (x_\infty + 1)(x_\infty + {U^d})
-  \]
-  where $U = \frac{1}{u}$. The chart $\sxi$ glues to $\sX_0$ and $\sX_2$ via 
-  \[
-  (x_\infty, y_\infty) = (U^d x_0, U^{d/r} y_0) = \bigg(U^d w, U^{d/r} \frac{w}{z}\bigg).
-  \]
-  We are concerned with the fiber when $U = 0$. Let $C_0$ be the component given by $x_\infty = U = 0$, and $C_{r(d-1)+1}$ the component given by $y_\infty^r - x_\infty - 1 = U = 0$. One sees immediately that on the special fiber, $Q_\infty$ lies on the component $C_0$.
-
-  Next, observe that $\sxi$ glues to $C$ via
-  \[
-  (x_\infty, y_\infty) = (U^d x, U^{d/r} y/x).
-  \]
-  Thus
-  \[
-  (x_\infty(P_{ij}), y_\infty(P_{ij})) = (\zeta^i U^{d-1}, \omega^j (\zeta^i + U)^{d/r}).
-  \]
-  Modulo $U$, this gives $(0,\omega^{i+j})$; that is, $P_{ij}$ lies on the corresponding node of the special fiber. Let $f = y_\infty^r - x_\infty - 1$ and $g = x_\infty$. We see that 
-  \[
-  f(P_{ij}) = \zeta^{i(d-1)} U + U^d \quad g(P_{ij}) = \zeta^i U^{d-1}.
-  \]
-  One now verifies the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} to conclude that $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where in the subscript $i+j$ is taken modulo $r$.
-\end{proof}
-
-NOTE: this should really go into section 1.2, but I'll leave everything that I want to add at the end.
-
 Let
 \[
 M_{\ell} =
@@ -426,5 +390,41 @@ The $(d-1, (j+1)(d-1))$th entry of $B^{-1}$ is given by the equation
   \end{cases}.
 \]
 \end{proposition}
+
+\subsection{Pairing at $u=\infty$}
+\label{sec:pairing-at-u=infty}
+
+Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore the special fibers and intersection matrices are identical. We must now determine which component our sections lie on.
+\begin{proposition}
+  On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$, 
+\end{proposition}
+
+\begin{proof}
+  Let $\sxi$ be the affine curve
+  \[
+  x_\infty y_\infty^r = (x_\infty + 1)(x_\infty + {U^d})
+  \]
+  where $U = \frac{1}{u}$. The chart $\sxi$ glues to $\sX_0$ and $\sX_2$ via 
+  \[
+  (x_\infty, y_\infty) = (U^d x_0, U^{d/r} y_0) = \bigg(U^d w, U^{d/r} \frac{w}{z}\bigg).
+  \]
+  We are concerned with the fiber when $U = 0$. Let $C_0$ be the component given by $x_\infty = U = 0$, and $C_{r(d-1)+1}$ the component given by $y_\infty^r - x_\infty - 1 = U = 0$. One sees immediately that on the special fiber, $Q_\infty$ lies on the component $C_0$.
+
+  Next, observe that $\sxi$ glues to $C$ via
+  \[
+  (x_\infty, y_\infty) = (U^d x, U^{d/r} y/x).
+  \]
+  Thus
+  \[
+  (x_\infty(P_{ij}), y_\infty(P_{ij})) = (\zeta^i U^{d-1}, \omega^j (\zeta^i + U)^{d/r}).
+  \]
+  Modulo $U$, this gives $(0,\omega^{i+j})$; that is, $P_{ij}$ lies on the corresponding node of the special fiber. Let $f = y_\infty^r - x_\infty - 1$ and $g = x_\infty$. We see that 
+  \[
+  f(P_{ij}) = \zeta^{i(d-1)} U + U^d \quad g(P_{ij}) = \zeta^i U^{d-1}.
+  \]
+  One now verifies the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} to conclude that $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where in the subscript $i+j$ is taken modulo $r$.
+\end{proof}
+
+NOTE: this should really go into section 1.2, but I'll leave everything that I want to add at the end.
 
 \end{document}
