@@ -256,7 +256,7 @@ The following results will help us compute $D_P \cdot P'$. Let us suppose we res
   \]
   then $P$ lies on $E_{d-1}$.
     \item If $P$ lies on $E_{d-1}$ and $\frac{f(P)}{u}$ is a unit in $R$, then $P$ has smooth reduction.
-    \item $\frac{f}{u}$ is a local parameter for $E_{d-1}$.
+    \item $\frac{f}{u}$ is a degree 1 parameter for $E_{d-1}$.
   \end{enumerate}
 \end{proposition}
 
@@ -338,7 +338,7 @@ Note that $C_{(j+1)(d-1)} = C_{j(d-1) + d-1}$ is the right-most vertex on the $j
 \end{proposition}
 
 \begin{proof}
-  In the pairing $Q_\infty \cdot P_{ij}$, and in $P_{00} \cdot P_{ij}$ when $j \neq 0$, the points do not even lie on the same component of the special fiber. Suppose in the latter pairing that $j = 0$, so that both points reduce to $C_{d-1}$. By Proposition~\ref{prop:fg-equals-u-blow-up}, $\frac{x_0}{u}$ is a local parameter for $C_{d-1}$. But
+  In the pairing $Q_\infty \cdot P_{ij}$, and in $P_{00} \cdot P_{ij}$ when $j \neq 0$, the points do not even lie on the same component of the special fiber. Suppose in the latter pairing that $j = 0$, so that both points reduce to $C_{d-1}$. By Proposition~\ref{prop:fg-equals-u-blow-up}, $\frac{x_0}{u}$ is a coordinate function for $C_{d-1}$. But
   \[
   \frac{x_0(P_{00})}{u} = 1 = \zeta^i = \frac{x_0(P_{i0})}{u}
   \]
@@ -390,6 +390,14 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
   f(P_{ij}) = \zeta^{i(d-1)} U + U^d \quad g(P_{ij}) = \zeta^i U^{d-1}.
   \]
   One now verifies the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} to conclude that $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where in the subscript $i+j$ is taken modulo $r$.
+\end{proof}
+
+\begin{proposition}\label{prop:local-intersections-u-infty}
+  The intersection numbers $P_{00} \cdot P_{ij}$ for $ij \neq 00$ and $Q_{\infty} \cdot P_{ij}$ at $u = \infty$ are all zero.
+\end{proposition}
+
+\begin{proof}
+  The reasoning is similar to that of Proposition~\ref{prop:local-intersections-u-0}. The only nontrivial case occurs when $i+j \equiv 0 \pmod{r}$, in which case both $P_{00}$ and $P_{ij}$ lie on $C_1$. By Proposition~\ref{prop:fg-equals-u-blow-up}, $\dfrac{y_\infty^r - x_\infty - 1}{U}$ is a coordinate function for $C_1$. Evaluating this function at $P_{00}$ and $P_{ij}$ gives the values $1$ and $\zeta^{i(d-1)}$ respectively. These are equal if and only if $i = 0$, from which $j = 0$ as well.
 \end{proof}
 
 \subsection{Pairing at $u = \zeta^k$}
