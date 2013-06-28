@@ -412,7 +412,7 @@ where $\caff$ glues to $\sX_1$ via $x_0 = x + 1$ and $\bar{y} = y/x$. Let $u_k =
 (x_0 - 1) \bar{y}^r = x_0(x_0 + \alpha_ku_k).
 \]
 This special fiber has a single component, $F$, with multiplicity 1 and a single node at $(x_0, \bar{y}, u_k) = (0,0,0)$.
-\begin{proposition}
+\begin{proposition}\label{prop:points-on-components-u-zeta-k}
   At $u=\zeta^k$, $Q_\infty$ lies on $F$. If $i+k \not\equiv \frac{d}{2} \pmod{d}$, then $P_{ij}$ lies on $F$. If $i + k \equiv \frac{d}{2} \pmod{d}$, then $P_{ij}$ lies on $E_1$.
 \end{proposition}
 
@@ -422,10 +422,10 @@ This special fiber has a single component, $F$, with multiplicity 1 and a single
   (x_0, \bar{y})(P_{ij}) = (\zeta^i u + 1, \omega^j (\zeta^i u + 1)^{d/r}).
   \]
   The reduction of this point has coordinates
-  \[
-  (\zeta^{i+k} + 1, \omega^j(\zeta^{i+k} + 1)^{d/r})
-  \]
-  which lies on the node if and only if $\zeta^{i+k} = -1$. This occurs precisely when $i + k \equiv \frac{d}{2} \pmod{d}$.
+  \begin{equation}
+    (\zeta^{i+k} + 1, \omega^j(\zeta^{i+k} + 1)^{d/r})\label{eq:pij-on-u-equals-zeta-k}
+  \end{equation}
+    which lies on the node if and only if $\zeta^{i+k} = -1$. This occurs precisely when $i + k \equiv \frac{d}{2} \pmod{d}$.
 
   Now suppose that $\zeta^{i+k} = -1$. We consider the chart $(0,r)_b$ from section \S~???. This latter chart was given by coordinates $x_0, b_0, \tau_0$, where $\tau_0$ was written in terms of $t_0$. Our version of $\caff$ essentially substitutes $u_k$ for $t_0$, so we will define $\mu_k$ as the analogue of $\tau_0$; namely,
   \[
@@ -436,6 +436,22 @@ This special fiber has a single component, $F$, with multiplicity 1 and a single
   (x_0, b_0, \mu_k(P)) = (\zeta^iu + 1, \omega^j(\zeta^i u + 1)^{\frac{d}{r} - 1}, -\zeta^k).
   \]
   If $d = r$, on the special fiber we obtain the point $(0, \omega^j, -\zeta^k)$. If $d > r$, we obtain $(0, 0, -\zeta^k)$. In both cases, $P_{ij}$ lies on the smooth locus of $E_1$.
+\end{proof}
+
+\begin{proposition}\label{prop:local-intersections-u-zeta-k}
+  If $k \neq \frac{d}{2}$, then the intersection numbers $P_{00} \cdot P_{ij}$ for $ij \neq 00$ and $Q_{\infty} \cdot P_{ij}$ at $u = \zeta^k$ are all zero.
+\end{proposition} 
+
+\begin{proof}
+  The only unclear case occurs for $P_{00} \cdot P_{ij}$ when $i + k \not\equiv \frac{d}{2} \pmod{d}$. In this case, \eqref{eq:pij-on-u-equals-zeta-k} gives the coordinates for both points on the special fiber, and one sees that the intersection number is zero.
+\end{proof}
+
+\begin{proposition}\label{prop:local-intersections-u-minus-1}
+  The intersection numbers $P_{00} \cdot P_{ij}$ for $i \neq 0$ and $Q_{\infty} \cdot P_{ij}$ at $u = -1$ are all zero. The intersection numbers $P_{00} \cdot P_{0j}$ are ...
+\end{proposition}
+
+\begin{proof}
+  The case with $Q_\infty$ is clear. The hypothesis $u = -1$ is identical to $k = \frac{d}{2}$, so that by Proposition~\ref{prop:points-on-components-u-zeta-k}, $P_{ij}$ lies on the component $F$ if and only if $i = 0$. The case $i \neq 0$ follows. We now suppose that $i = 0$. 
 \end{proof}
 \end{document}
 
