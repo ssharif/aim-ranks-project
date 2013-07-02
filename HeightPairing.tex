@@ -461,7 +461,7 @@ where $\caff$ glues to $\sX_1$ via $x_0 = x + 1$ and $\bar{y} = y/x$. Let $u_k =
 \[
 (x_0 - 1) \bar{y}^r = x_0(x_0 + \alpha_ku_k).
 \]
-This special fiber has a single component, $F$, with multiplicity 1 and a single node at $(x_0, \bar{y}, u_k) = (0,0,0)$.
+The special fiber of $\caff$ has a single component, $F$, with multiplicity 1 and a single node at $(x_0, \bar{y}, u_k) = (0,0,0)$.
 \begin{proposition}\label{prop:points-on-components-u-zeta-k}
   At $u=\zeta^k$, $Q_\infty$ lies on $F$. If $i+k \not\equiv \frac{d}{2} \pmod{d}$, then $P_{ij}$ lies on $F$. If $i + k \equiv \frac{d}{2} \pmod{d}$, then $P_{ij}$ lies on $E_1$.
 \end{proposition}
@@ -477,13 +477,13 @@ This special fiber has a single component, $F$, with multiplicity 1 and a single
   \end{equation}
     which lies on the node if and only if $\zeta^{i+k} = -1$. This occurs precisely when $i + k \equiv \frac{d}{2} \pmod{d}$.
 
-  Now suppose that $\zeta^{i+k} = -1$. We consider the chart $(0,r)_b$ from section \S~???. This latter chart was given by coordinates $x_0, b_0, \tau_0$, where $\tau_0$ was written in terms of $t_0$. Our version of $\caff$ essentially substitutes $u_k$ for $t_0$, so we will define $\mu_k$ as the analogue of $\tau_0$; namely,
+  Now suppose that $\zeta^{i+k} = -1$. We consider the chart $(0,r)_b$ from section \S~???. This latter chart was given by coordinates $x_0, b_0, \tau_0$, where $t_0 = x_0 \tau_0$. In our case, $x_0$ and $b_0$ are the same, but our third coordinate, which we call $\mu_k$, is given by $u_k = x_0 \mu_k$, yielding the chart
   \[
-  \mu_k = \frac{u_k}{x_0}.
+  (x_0 - 1)x_0^{r-2}b_0^r = 1 + \alpha_k \mu_k.
   \]
-  Then
+  The special fiber has components $F$ given by $\mu_k = (x_0 - 1)x_0^{r-2}b_0^r - 1 = 0$ and $E_1$ given by $x_0 = 1 + \alpha_k \mu_k = 0$. Furthermore, this piece of the special fiber is smooth. We have
   \[
-  (x_0, b_0, \mu_k(P)) = (\zeta^iu + 1, \omega^j(\zeta^i u + 1)^{\frac{d}{r} - 1}, -\zeta^k).
+  (x_0, b_0, \mu_k)(P) = (\zeta^iu + 1, \omega^j(\zeta^i u + 1)^{\frac{d}{r} - 1}, -\zeta^k).
   \]
   If $d = r$, on the special fiber we obtain the point $(0, \omega^j, -\zeta^k)$. If $d > r$, we obtain $(0, 0, -\zeta^k)$. In both cases, $P_{ij}$ lies on the smooth locus of $E_1$.
 \end{proof}
@@ -497,11 +497,27 @@ This special fiber has a single component, $F$, with multiplicity 1 and a single
 \end{proof}
 
 \begin{proposition}\label{prop:local-intersections-u-minus-1}
-  The intersection numbers $P_{00} \cdot P_{ij}$ for $i \neq 0$ and $Q_{\infty} \cdot P_{ij}$ at $u = -1$ are all zero. The intersection numbers $P_{00} \cdot P_{0j}$ are ...
+  If $k = \frac{d}{2}$, the intersection numbers $P_{00} \cdot P_{ij}$ for $i \neq 0$ and $Q_{\infty} \cdot P_{ij}$ at $u = -1$ are all zero. The intersection numbers $P_{00} \cdot P_{0j}$ for $j > 0$ are $\frac{d}{r} - 1$.
 \end{proposition}
 
 \begin{proof}
-  The case with $Q_\infty$ is clear. The hypothesis $u = -1$ is identical to $k = \frac{d}{2}$, so that by Proposition~\ref{prop:points-on-components-u-zeta-k}, $P_{ij}$ lies on the component $F$ if and only if $i = 0$. The case $i \neq 0$ follows. We now suppose that $i = 0$. 
+  The case with $Q_\infty$ is clear. The hypothesis $u = -1$ is identical to $k = \frac{d}{2}$, so that by Proposition~\ref{prop:points-on-components-u-zeta-k}, $P_{ij}$ lies on the component $F$ if and only if $i = 0$. The case $i \neq 0$ follows. We now suppose that $i = 0$ and $j > 0$. Let $R$ be the localization of
+  \[
+  \frac{K[x_0,b_0,\mu]}{(x_0 - 1)x_0^{r-2}b_0^r - 1 - \alpha \mu}
+  \]
+  at the ideal $(x_0, b_0, \mu - 1)$. Note that this is the adjusted chart $(0,r)_b$ mentioned in the proof of Proposition~\ref{prop:points-on-components-u-zeta-k}. Here, $k = \frac{d}{2}$, $\alpha = \alpha_k$, and $\mu = \mu_k = \frac{u+1}{x_0}$. A local function for $P_{0j}$ in a neighborhood of the closed point of $R$ is given by
+  \[
+  f_j = b_0 - \omega^j x_0^{\frac{d}{r} - 1}.
+  \]
+  Then the intersection multiplicity $P_{00} \cdot P_{0j}$ is the length of 
+  \[
+  \frac{R}{(f_0, f_j)}.
+  \]
+  One checks that the latter ring is isomorphic to
+  \[
+  \frac{R}{\bigg(x_0^{\frac{d}{r} - 1}, b_0, \mu - 1\bigg)}
+  \]
+  from which the claim follows.
 \end{proof}
 \end{document}
 
