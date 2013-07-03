@@ -189,16 +189,19 @@ The purpose of this write-up is to compute the height pairing on various section
 \subsection{Basic theory}
 \label{sec:basic-theory}
 
-Let $P, P', Q$ be three points on our curve; we will later set $P = P_{i,j}$, $P' = P_{0,0}$, and $Q = Q_\infty$. Then
+Let $P, P', Q$ be three distinct points on our curve; we will later set $P = P_{i,j}$, $P' = P_{0,0}$, and $Q = Q_\infty$. Then
 \[
 \langle P - Q, P' - Q\rangle = -P \cdot P' + P \cdot Q + P' \cdot Q - Q^2 + D_P \cdot P',
 \]
- where $D_P$ is a fibral divisor for which $D_P \cdot Q = 0$, for every fibral divisor $D$, $D_P \cdot D = (Q - P) \cdot D$. Since $D_P$ is fibral, the calculation of $D_P \cdot P'$ will be done at each fiber. On each fiber with only a single component (notably smooth fibers), we see that $D_P$ has empty support; thus we can restrict ourselves to the bad fibers of our arithmetic surface.
+ where $D_P$ is a fibral divisor for which $D_P \cdot Q = 0$, for every fibral divisor $D$, $D_P \cdot D = (Q - P) \cdot D$. Since $D_P$ is fibral, the calculation of $D_P \cdot P'$ will be done at each fiber. On each fiber with only a single component (notably smooth fibers), we see that $D_P$ has empty support; thus we can restrict ourselves to the bad fibers of our arithmetic surface to calculate $D_P \cdot P'$. 
+
+We must also compute $P \cdot P'$, $P \cdot Q$, $P' \cdot Q$, and $Q^2$. The former three can be computed on each bad fiber separately. It will turn out that these intersection numbers are 0 on every fiber except $u = -1$. We will compute $Q^2$ in \S~??? by computing the degree of a certain invertible sheaf.
+
 
 \subsection{Auxiliary results}
 \label{sec:auxiliary-results}
 
-The following results will help us compute $D_P \cdot P'$. Let us suppose we restrict ourselves to a special fiber with components $C_0, C_1, \dots, C_n$.
+The following results will help us compute the various intersection numbers. Let us suppose we restrict ourselves to a special fiber with components $C_0, C_1, \dots, C_n$.
 
 \begin{proposition}\label{prop:dp-dot-p-cofactor}
   Suppose $Q$ intersects $C_0$, $P$ intersects $C_i$, and $P'$ intersects $C_j$, with $i,j \neq 0$. Let $A$ be the intersection matrix for the fiber, and let $B$ be the matrix obtained by deleting the first row and column from $A$. Let $\beta_{ij}$ be the $ij$ cofactor for $B$. Let $\delta$ be the multiplicity of $C_0$ in the special fiber. Finally, let $\phi$ be the order of the component group of the Jacobian of $C$. Then
