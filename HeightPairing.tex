@@ -189,11 +189,11 @@ The purpose of this write-up is to compute the height pairing on various section
 \subsection{Basic theory}
 \label{sec:basic-theory}
 
-Let $P, P', Q$ be three points on our curve; we will later set $P = P_{i,j}$, $P' = P_{0,0}$, and $Q = Q_\infty$. Then the we have
+Let $P, P', Q$ be three points on our curve; we will later set $P = P_{i,j}$, $P' = P_{0,0}$, and $Q = Q_\infty$. Then
 \[
 \langle P - Q, P' - Q\rangle = -P \cdot P' + P \cdot Q + P' \cdot Q - Q^2 + D_P \cdot P',
 \]
- where $D_P$ is a divisor computed as follows ... Since $D_P$ is a fibral divisor, the calculation of $D_P \cdot P'$ will be done at each fiber. One sees that we can restrict ourselves to the bad fibers of our arithmetic surface.
+ where $D_P$ is a fibral divisor for which $D_P \cdot Q = 0$, for every fibral divisor $D$, $D_P \cdot D = (Q - P) \cdot D$. Since $D_P$ is fibral, the calculation of $D_P \cdot P'$ will be done at each fiber. On each fiber with only a single component (notably smooth fibers), we see that $D_P$ has empty support; thus we can restrict ourselves to the bad fibers of our arithmetic surface.
 
 \subsection{Auxiliary results}
 \label{sec:auxiliary-results}
@@ -505,7 +505,7 @@ The special fiber of $\caff$ has a single component, $F$, with multiplicity 1 an
   \[
   \frac{K[x_0,b_0,\mu]}{(x_0 - 1)x_0^{r-2}b_0^r - 1 - \alpha \mu}
   \]
-  at the ideal $(x_0, b_0, \mu - 1)$. Note that this is the adjusted chart $(0,r)_b$ mentioned in the proof of Proposition~\ref{prop:points-on-components-u-zeta-k}. Here, $k = \frac{d}{2}$, $\alpha = \alpha_k$, and $\mu = \mu_k = \frac{u+1}{x_0}$. A local function for $P_{0j}$ in a neighborhood of the closed point of $R$ is given by
+  at the ideal $(x_0, b_0, \mu - 1)$. Note that this is the adjusted chart $(0,r)_b$ mentioned in the proof of Proposition~\ref{prop:points-on-components-u-zeta-k} via $k = \frac{d}{2}$, $\alpha = \alpha_k$, and $\mu = \mu_k = \frac{u+1}{x_0}$. A local function for $P_{0j}$ in a neighborhood of the closed point of $R$ is given by
   \[
   f_j = b_0 - \omega^j x_0^{\frac{d}{r} - 1}.
   \]
