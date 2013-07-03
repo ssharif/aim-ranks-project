@@ -2442,9 +2442,9 @@ Let $P, P', Q$ be three distinct points on our curve; we will later set $P = P_{
 \[
 \langle P - Q, P' - Q\rangle = -P \cdot P' + P \cdot Q + P' \cdot Q - Q^2 + D_P \cdot P',
 \]
- where $D_P$ is a fibral divisor for which $D_P \cdot Q = 0$, for every fibral divisor $D$, $D_P \cdot D = (Q - P) \cdot D$. Since $D_P$ is fibral, the calculation of $D_P \cdot P'$ will be done at each fiber. On each fiber with only a single component (notably smooth fibers), we see that $D_P$ has empty support; thus we can restrict ourselves to the bad fibers of our arithmetic surface to calculate $D_P \cdot P'$. 
+ where $D_P$ is a fibral divisor such that $D_P \cdot Q = 0$ and, for every fibral divisor $D$, $D_P \cdot D = (Q - P) \cdot D$. Since $D_P$ is fibral, the calculation of $D_P \cdot P'$ will be done at each fiber. On each fiber with only a single component (notably smooth fibers), we see that $D_P$ has empty support; thus we can restrict ourselves to the bad fibers of our arithmetic surface to calculate $D_P \cdot P'$. 
 
-We must also compute $P \cdot P'$, $P \cdot Q$, $P' \cdot Q$, and $Q^2$. The former three can be computed on each bad fiber separately. It will turn out that these intersection numbers are 0 on every fiber except $u = -1$. We will compute $Q^2$ in \S~??? by computing the degree of a certain invertible sheaf.
+We must also compute $P \cdot P'$, $P \cdot Q$, $P' \cdot Q$, and $Q^2$. The former three can be computed on each bad fiber separately. It will turn out that these intersection numbers are 0 on every fiber except $u = -1$. We will compute $Q^2$ in \S~tbd by computing the degree of a certain invertible sheaf.
 
 
 \subsection{Auxiliary results}
@@ -2519,7 +2519,7 @@ The following results will help us compute the various intersection numbers. Let
 \subsection{Pairing at $u = 0$}
 \label{sec:pairing-at-u}
 
-We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}, we must determine which components each of the $P_{i,j}$ and $Q_\infty$ lie on. We first recall that the special fiber consists of rational curves connected by $r$ chains of $\Pro^1$'s, each of length $d-1$. Equivalently, the dual graph is given by
+We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}, we must determine which components each of the $P_{i,j}$ and $Q_\infty$ lie on. We first recall that the special fiber consists of rational curves connected by $r$ chains of $\Pro^1$'s, each of length $d-1$. Equivalently, the dual graph is given in Figure~\ref{fig:u-equals-zero}.
 \begin{figure}[h]\centering
   \[
 \xygraph{
@@ -2740,7 +2740,15 @@ The special fiber of $\caff$ has a single component, $F$, with multiplicity 1 an
   If $d = r$, on the special fiber we obtain the point $(0, \omega^j, -\zeta^k)$. If $d > r$, we obtain $(0, 0, -\zeta^k)$. In both cases, $P_{ij}$ lies on the smooth locus of $E_1$.
 \end{proof}
 
-The intersection forms $A$ in these cases are given in \S~?? and \S~??. In all cases, the component $F$ corresponds to the last row and last column of $A$. As the matrix $B$ of Proposition~\ref{prop:dp-dot-p-cofactor} is obtained by removing this row and column, one observes that $B = A_{r-1}$, where $A_{r-1}$ is defined in Proposition~\ref{prop:am-defn-det}.
+The intersection form $A$ when $u = \zeta^k$ is given in either \S~\ref{sec:case-1:-r-odd} or \S~\ref{sec:case-2:-r-even}. In both cases, the component $F$ corresponds to the last row and last column of $A$. As the matrix $B$ of Proposition~\ref{prop:dp-dot-p-cofactor} is obtained by removing this row and column, one observes that $B = A_{r-1}$, where $A_{r-1}$ is defined in Proposition~\ref{prop:am-defn-det}.
+
+\begin{proposition}\label{prop:dp-u-zeta-k}
+  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. If $k \neq \frac{d}{2}$ or $i \neq 0$, then $D_P \cdot P' = 0$. If $k = \frac{d}{2}$ and $i = 0$, then $D_P \cdot P' = \frac{r-1}{r}$.
+\end{proposition}
+
+\begin{proof}
+  If $k \neq \frac{d}{2}$, then we may take $D_P = 0$, as $P$ and $Q_\infty$ both lie on the same component, namely $F$. Now suppose that $k = \frac{d}{2}$. Recall that $D_P$ was chosen so that $F$ does not lie in its support. Thus $D_P \cdot P' = 0$ if $P'$ lies in $F$; this occurs whenever $i > 0$. We now consider the case when $k = \frac{d}{2}$ and $i = 0$. We will apply Proposition~\ref{prop:dp-dot-p-cofactor}. The component $C_0$ in that Proposition is $F$, which has multiplicity $\delta = 1$. The component group was shown in \S~\ref{sec:component-group-t-equals-one} to have order $\phi = r$. It remains to compute the appropriate cofactor. One checks that it suffices to compute the $(1,1)$ cofactor of the matrix $B$ described above. But this cofactor is precisely the determinant of $A_{r-2}$, which by Proposition~\ref{prop:am-defn-det}, equals $\pm(r-1)$. The claim follows from Proposition~\ref{prop:dp-dot-p-cofactor}.
+\end{proof}
 
 \begin{proposition}\label{prop:local-intersections-u-zeta-k}
   If $k \neq \frac{d}{2}$, then the intersection numbers $P_{00} \cdot P_{ij}$ for $ij \neq 00$ and $Q_{\infty} \cdot P_{ij}$ at $u = \zeta^k$ are all zero.
