@@ -2578,9 +2578,9 @@ Note that $C_{(j+1)(d-1)} = C_{j(d-1) + d-1}$ is the right-most vertex on the $j
   \[
   (x_0(P_{ij}), y_0(P_{ij})) = (\zeta^i u, \omega^j(\zeta^iu + 1)^{d/r}).
   \]
-  The specialization of $P_{ij}$ lies on the node with coordinates $(x_0, y_0, u) = (0, \omega^j, 0)$. Thus we need to blow up $\XX_0$ to determine which component $P_{ij}$ lies on. We at least know that $P_{ij}$ must lie on $C_0$, $C_{r(d-1)+1}$ or $C_{j(d-1) + k}$ for some $k$. Let $f = x$ and $g = y^r - x - 1$. We have
+  The specialization of $P_{ij}$ lies on the node with coordinates $(x_0, y_0, u) = (0, \omega^j, 0)$. Thus we need to blow up $\XX_0$ to determine which component $P_{ij}$ lies on. We at least know that $P_{ij}$ must lie on $C_0$, $C_{r(d-1)+1}$ or $C_{j(d-1) + k}$ for some $k$. Let $f = \frac{x_0}{1+x_0}$ and $g = y_0^r - x_0 - 1$. We have
   \[
-  f(P_{ij}) = \zeta^i u \quad g(P_{ij}) = u^d + \zeta^{i(d-1)} u^{d-1}.
+  f(P_{ij}) = \frac{\zeta^i u}{1 + \zeta^i u} \quad g(P_{ij}) = u^d + \zeta^{i(d-1)} u^{d-1}.
   \]
   One checks that the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} hold, whence $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
 \end{proof}
