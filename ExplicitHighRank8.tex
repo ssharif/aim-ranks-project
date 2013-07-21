@@ -2518,7 +2518,7 @@ The following results will help us compute the various intersection numbers. Let
 \subsection{Pairing at $u = 0$}
 \label{sec:pairing-at-u}
 
-We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}, we must determine which components each of the $P_{i,j}$ and $Q_\infty$ lie on. We first recall that the special fiber consists of rational curves connected by $r$ chains of $\Pro^1$'s, each of length $d-1$. Equivalently, the dual graph is given in Figure~\ref{fig:u-equals-zero}.
+We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}, we must determine which components each of the $P_{i,j}$ and $Q_\infty$ lie on. Let $\XX_0$ be the affine chart given by $x_0 y_0^r = (x_0+1)(x_0+u^d)$, where $\XX_0$ glues to $\XX_2$ via $(x_0, y_0) = (\frac{w}{z}, \frac{1}{w})$. We first recall that the special fiber consists of rational curves connected by $r$ chains of $\Pro^1$'s, each of length $d-1$. Equivalently, the dual graph is given in Figure~\ref{fig:u-equals-zero}.
 \begin{figure}[h]\centering
   \[
 \xygraph{
@@ -2558,30 +2558,30 @@ We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}
   \caption{Dual graph of $C_k$, $u=0$}
 \label{fig:u-equals-zero}
 \end{figure}
-There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x(y^r - x - 1) = u^d$. The component $x = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $y^r - x - 1 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x = 0$, $y = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the horizontal components as $C_{j(d-1) + i}$, where $0 \leq j \leq r-1$, $1 \leq i \leq d-1$, $j$ increases from top to bottom, and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x = 0, y = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
+There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x_0(y_0^r - x_0 - 1) = u^d$. The component $y_0^r - x_0 - 1 = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $x_0 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x_0 = 0$, $y_0 = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the horizontal components as $C_{j(d-1) + i}$, where $0 \leq j \leq r-1$, $1 \leq i \leq d-1$, $j$ increases from top to bottom, and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x_0 = 0, y_0 = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
 
 \begin{proposition}
-  The section $Q_\infty$ lies on $C_0$. The section $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
+  The section $Q_\infty$ lies on $C_0$. The section $P_{ij}$ lies on $C_{j(d-1)+1}$.
 \end{proposition}
 
-Note that $C_{(j+1)(d-1)} = C_{j(d-1) + d-1}$ is the right-most vertex on the $j$th horizontal path.
+Note that $C_{j(d-1)+1}$ is the left-most vertex on the $j$th horizontal path.
 
 \begin{proof}
-  Let $\XX_0$ be the affine curve given by $x_0 y_0^r = (x_0+1)(x_0+u^d)$; it is an affine model for $C$. The special fiber, as noted above, consists of two rational curves meeting at $r$ points. One sees that $Q_\infty$ does not lie above any of these nodes. Therefore the specialization of $Q_\infty$ to the fiber over $u = 0$ lies on the smooth locus of one of the components $C_0$ or $C_{r(d-1)+1}$. We observe that $\XX_0$ glues to $\XX_2$ via
+   The special fiber, as noted above, consists of two rational curves meeting at $r$ points. One sees that $Q_\infty$ does not lie above any of these nodes. Therefore the specialization of $Q_\infty$ to the fiber over $u = 0$ lies on the smooth locus of one of the components $C_0$ or $C_{r(d-1)+1}$. Recall that $\XX_0$ glues to $\XX_2$ via
   \[
-  (x_0, y_0) = (w, w/z). % Wrong
+  (x_0, y_0) = (w/z, 1/w)
   \]
-  Since $Q_\infty$ is given by $(w, z) = (0, 0)$, one sees that $x_0(Q_\infty) = 0$. Therefore $Q_\infty$ lies on $C_0$.
+  and that $Q_\infty$ is given by $(w, z) = (0, 0)$. By the change of variable, one checks that the component $y_0^r - x_0 - 1 = u = 0$ glues to $z - w^{r+1} - w^rz = u = 0$, where the latter is the equation for the (irreducible) special fiber of $\XX_2$. Therefore $Q_\infty$ lies on $C_0$.
 
   Now consider $P_{ij}$. The chart $\XX_0$ glues to $C$ via $(x_0, y_0) = (x, y/x)$. Therefore
   \[
   (x_0(P_{ij}), y_0(P_{ij})) = (\zeta^i u, \omega^j(\zeta^iu + 1)^{d/r}).
   \]
-  The specialization of $P_{ij}$ lies on the node with coordinates $(x_0, y_0, u) = (0, \omega^j, 0)$. Thus we need to blow up $\XX_0$ to determine which component $P_{ij}$ lies on. We at least know that $P_{ij}$ must lie on $C_0$, $C_{r(d-1)+1}$ or $C_{j(d-1) + k}$ for some $k$. Let $f = \frac{x_0}{1+x_0}$ and $g = y_0^r - x_0 - 1$. We have
+  The specialization of $P_{ij}$ lies on the node with coordinates $(x_0, y_0, u) = (0, \omega^j, 0)$. Thus we need to blow up $\XX_0$ to determine which component $P_{ij}$ lies on. We at least know that $P_{ij}$ must lie on $C_0$, $C_{r(d-1)+1}$ or $C_{j(d-1) + k}$ for some $k$. Let $f = y_0^r - x_0 - 1$ and $g = \frac{x_0}{1+x_0}$. We have
   \[
-  f(P_{ij}) = \frac{\zeta^i u}{1 + \zeta^i u} \quad g(P_{ij}) = u^d + \zeta^{i(d-1)} u^{d-1}.
+  f(P_{ij}) = u^d + \zeta^{i(d-1)} u^{d-1} \quad g(P_{ij}) = \frac{\zeta^i u}{1 + \zeta^i u}.
   \]
-  One checks that the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} hold, whence $P_{ij}$ lies on $C_{(j+1)(d-1)}$.
+  One checks that the hypotheses of Proposition~\ref{prop:fg-equals-u-blow-up} hold, whence $P_{ij}$ lies on $C_{j(d-1)+1}$.
 \end{proof}
 
 \begin{proposition}\label{prop:local-intersections-u-0}
