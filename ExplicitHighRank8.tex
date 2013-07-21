@@ -2610,13 +2610,50 @@ B =
 The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\ref{prop:am-defn-det}, and $e_{d-1} \in \R^{d-1}$ is the $(d-1)$st standard basis vector, written as a column (so $e_{d-1}^T$ is a row vector). There are $r$ copies of $A_{d-1}$ in the matrix, so that $B$ has size $r(d-1) + 1$.
 
 \begin{proposition}\label{prop:dp-u-zero}
-  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. If $j = 0$, then $D_P \cdot P' = ???$. If $j \neq 0$, then $D_P \cdot P' = -\frac{1}{dr}$.
+  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. If $j = 0$, then $D_P \cdot P' = ???$. If $j \neq 0$, then $D_P \cdot P' = -\frac{1}{dr}$. 
 \end{proposition}
 
 \begin{proof}
-  Do the $j \neq 0$ case first. Use that the resulting minor can be computed by using an intersection form for a known fiber type.
+  First suppose that $j = 0$. We use Proposition~\ref{prop:dp-dot-p-cofactor}. Let $B'$ be the matrix obtained by deleting the first row and column from $B$. We wish to compute the $\det B'$; this will be done by comparison with the component group of a different curve. To do this, consider the graph $\Gamma$ consisting of 2 vertices connected by $r$ chains, one of length $d - 2$, and the remaining ones of length $d-1$. Thus, this graph looks like Figure~\ref{fig:u-equals-zero}, except the top chain is one vertex shorter. Consider a curve $C'$ whose reduction has dual graph given by $\Gamma$. Then the intersection form for the special fiber of $C'$ is
+  \[
+  \left[\begin{array}{cccccc}
+      -r & e_1^T & e_1^T & \cdots & &  0 \\
+      e_1 & A_{d-2} & & & & e_{d-2} \\
+      e_1 & &A_{d-1} & & & e_{d-1} \\
+      \vdots & & & \ddots & & \vdots \\
+      e_1 & & & & A_{d-1} & e_{d-1} \\
+      0 & e_{d-2}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
+\end{array}\right]
+  \]
+  Notice that the submatrix obtained by deleting the first row and column from the above matrix is precisely $B'$. Therefore $\det (-B')$ is equal to the order of the component group of $C'$. But by \cite[p.~283???]{blr}, this latter is
+  \[
+  (d-1)d^{r-1}\left(\frac{1}{d-1} + \frac{r-1}{d}\right) = d^{r-1} + (d-1)(r-1)d^{r-2}.
+  \]
+  Now we apply Proposition~\ref{prop:dp-dot-p-cofactor}. We see that $\delta = 1$ since all components are reduced in the special fiber, and again by \cite[p.~283]{blr}, we have
+  \[
+  \phi = d^{r}\cdot \frac{r}{d} = rd^{r-1}.
+  \]
+  Combining, we get
+  \[
+  D_P \cdot P' = -\frac{1}{r} - \frac{(d-1)d(r-1)}{r}.
+  \]
 
-  For the $j = 0$ case, use the funny lemma.
+  For the $j \neq 0$ case, define $C_{m}$ to be the $m \times (m-1)$ matrix obtained by deleting the first column from $A_m$, and $R_m$ the $(m-1) \times m$ matrix obtained by deleting the first row. We consider the family of matrices $B_m$ given by
+  \[
+  B_m =   \left[\begin{array}{cccccc}
+C_{m} & & & & & e_{m} \\
+& R_m & & & & e_{m-1} \\
+& & A_{d-1} & & & e_{d-1} \\
+& & & \ddots & & \vdots \\
+& & & & A_{d-1} & e_{d-1} \\
+e_{m-1}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
+\end{array}\right].
+  \]
+  In the above, there are $r$ block matrices along the diagonal.
+
+  \begin{lemma}
+    $\det B_m = \det B_{m-1}$ for all $m \geq 1$.
+  \end{lemma}
 \end{proof}
 
 % Let
