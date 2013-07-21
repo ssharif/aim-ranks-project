@@ -2558,7 +2558,7 @@ We compute the pairing at $u = 0$. From Proposition~\ref{prop:dp-dot-p-cofactor}
   \caption{Dual graph of $C_k$, $u=0$}
 \label{fig:u-equals-zero}
 \end{figure}
-There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x_0(y_0^r - x_0 - 1) = u^d$. The component $y_0^r - x_0 - 1 = u = 0$ corresponds to the left-most vertex, and we call it $C_0$. The component $x_0 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x_0 = 0$, $y_0 = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the horizontal components as $C_{j(d-1) + i}$, where $0 \leq j \leq r-1$, $1 \leq i \leq d-1$, $j$ increases from top to bottom, and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x_0 = 0, y_0 = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
+There are $r$ paths from the left hand vertex to the right hand vertex, and on each path, there are $d-1$ intermediate vertices, for a total of $r(d-1) + 2$ vertices in the graph. We label the corresponding components of the fiber as follows. Before desingularizing, the special fiber is given by $x_0(y_0^r - x_0 - 1) = u^d$. Let the component $y_0^r - x_0 - 1 = u = 0$ correspond to the left-most vertex, and we call it $C_0$. Then the component $x_0 = u = 0$ corresponds to the the right-most vertex, which we label $C_{r(d-1)+1}$. Each horizontal path corresponds to a $\lfloor \frac{d}{2}\rfloor$-fold blow-up of one of the nodes; these nodes are given by $x_0 = 0$, $y_0 = \omega^j$ where $\omega$ is the primitive $r$th root of unity given by $\omega = \zeta^{d/r}$. Label each of the components on the horizontal chains as $C_{j(d-1) + i}$, where $0 \leq j \leq r-1$, $1 \leq i \leq d-1$, $j$ increases from top to bottom, and $i$ increases from left to right. Thus if the top horizontal path corresponds to the blow-up of the node $x_0 = 0, y_0 = 1$, then the top left component would be $C_1$, and $C_2$ would be immediately to the right of it.
 
 \begin{proposition}
   The section $Q_\infty$ lies on $C_0$. The section $P_{ij}$ lies on $C_{j(d-1)+1}$.
@@ -2609,55 +2609,65 @@ B =
 \]
 The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\ref{prop:am-defn-det}, and $e_{d-1} \in \R^{d-1}$ is the $(d-1)$st standard basis vector, written as a column (so $e_{d-1}^T$ is a row vector). There are $r$ copies of $A_{d-1}$ in the matrix, so that $B$ has size $r(d-1) + 1$.
 
-Let
-\[
-M_{\ell} =
-\left[\begin{array}{ccccc}
-  1 & 2 & 3 & \cdots & \ell \\
-  2 & 4 & 6 & \cdots & 2\ell \\
-  \vdots &\vdots & \vdots & & \vdots \\
-  \ell & 2\ell & 3\ell & \cdots & \ell^2 
-\end{array}\right]
-\]
-
-and let $N_{s,t}$ be the $t \times t$ symmetric matrix given by
-\[
-N_{ij} = \begin{cases}
-    i(t+(t-j+1)(s-1)) & \text{if } i \geq j \\
-    N_{ji} & \text{if } i < j
-  \end{cases},
-\]
-for $1 \leq i,j \leq t$.
-
-
-\begin{proposition}
-Let $v_{\ell} = (1,2,\ldots, \ell)^T$. Then the matrix
-\[
-X = \frac{d^{r-2}}{\det(-B)} \cdot
-\left[\begin{array}{cccccc}
-  N_{r,d-1} & M_{d-1} & M_{d-1} & \cdots & M_{d-1} & dv_{d-1} \\
-  M_{d-1} & N_{r,d-1} & M_{d-1} & \cdots & M_{d-1} & dv_{d-1} \\
-  \vdots &\vdots & \vdots & & & \vdots \\
-  M_{d-1} & M_{d-1} & M_{d-1} & \cdots &N_{r,d-1} & dv_{d-1}\\
-  dv_{d-1}^T & dv_{d-1}^T & dv_{d-1}^T & \cdots & dv_{d-1}^T &d^2 \\
-   
-\end{array}\right]
-\]
-is the inverse of the matrix $B$ defined above.
+\begin{proposition}\label{prop:dp-u-zero}
+  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. If $j = 0$, then $D_P \cdot P' = ???$. If $j \neq 0$, then $D_P \cdot P' = -\frac{1}{dr}$.
 \end{proposition}
+
 \begin{proof}
-This is just algebra that can be checked by hand.
+  Do the $j \neq 0$ case first. Use that the resulting minor can be computed by using an intersection form for a known fiber type.
+
+  For the $j = 0$ case, use the funny lemma.
 \end{proof}
 
-\begin{proposition}
-The $(d-1, (j+1)(d-1))$th entry of $B^{-1}$ is given by the equation
-\[
-(B^{-1})_{d-1,(j+1)(d-1)} = \frac{d^{r-2}}{\det(-B)} \cdot \begin{cases}
-    d^2r-2dr-d+r+1 & \text{if } j=0 \\
-    (d-1)^2 & \text{otherwise }
-  \end{cases}.
-\]
-\end{proposition}
+% Let
+% \[
+% M_{\ell} =
+% \left[\begin{array}{ccccc}
+%   1 & 2 & 3 & \cdots & \ell \\
+%   2 & 4 & 6 & \cdots & 2\ell \\
+%   \vdots &\vdots & \vdots & & \vdots \\
+%   \ell & 2\ell & 3\ell & \cdots & \ell^2 
+% \end{array}\right]
+% \]
+
+% and let $N_{s,t}$ be the $t \times t$ symmetric matrix given by
+% \[
+% N_{ij} = \begin{cases}
+%     i(t+(t-j+1)(s-1)) & \text{if } i \geq j \\
+%     N_{ji} & \text{if } i < j
+%   \end{cases},
+% \]
+% for $1 \leq i,j \leq t$.
+
+
+% \begin{proposition}
+% Let $v_{\ell} = (1,2,\ldots, \ell)^T$. Then the matrix
+% \[
+% X = \frac{d^{r-2}}{\det(-B)} \cdot
+% \left[\begin{array}{cccccc}
+%   N_{r,d-1} & M_{d-1} & M_{d-1} & \cdots & M_{d-1} & dv_{d-1} \\
+%   M_{d-1} & N_{r,d-1} & M_{d-1} & \cdots & M_{d-1} & dv_{d-1} \\
+%   \vdots &\vdots & \vdots & & & \vdots \\
+%   M_{d-1} & M_{d-1} & M_{d-1} & \cdots &N_{r,d-1} & dv_{d-1}\\
+%   dv_{d-1}^T & dv_{d-1}^T & dv_{d-1}^T & \cdots & dv_{d-1}^T &d^2 \\
+   
+% \end{array}\right]
+% \]
+% is the inverse of the matrix $B$ defined above.
+% \end{proposition}
+% \begin{proof}
+% This is just algebra that can be checked by hand.
+% \end{proof}
+
+% \begin{proposition}
+% The $(d-1, (j+1)(d-1))$th entry of $B^{-1}$ is given by the equation
+% \[
+% (B^{-1})_{d-1,(j+1)(d-1)} = \frac{d^{r-2}}{\det(-B)} \cdot \begin{cases}
+%     d^2r-2dr-d+r+1 & \text{if } j=0 \\
+%     (d-1)^2 & \text{otherwise }
+%   \end{cases}.
+% \]
+% \end{proposition}
 
 \subsection{Pairing at $u=\infty$}
 \label{sec:pairing-at-u=infty}
