@@ -2449,7 +2449,11 @@ We now consider the base extension of our curve to the field $k(u_0)$ where $u_0
 \section{Height pairing}
 \label{sec:height-pairing}
 
-In this section, we compute the height pairing on various sections of our curve. Specifically, we will compute $\langle P_{ij} - Q_\infty, P_{i' j'} - Q_\infty \rangle$. By bilinearity, it suffices to compute $\langle P_{ij} - Q_\infty, P_{00} - Q_\infty \rangle$ for all $i,j$. In all of the following, we base-extend to the field $K(u)$ where $u^d = t$.
+In this section, we compute the height pairing on various sections of our curve. Specifically, we will compute $\langle P_{ij} - Q_\infty, P_{i' j'} - Q_\infty \rangle$. By bilinearity, it suffices to compute $\langle P_{ij} - Q_\infty, P_{00} - Q_\infty \rangle$ for all $i,j$. In all of the following, we base-extend to the field $K(u)$ where $u^d = t$. Our goal is to prove the following theorem:
+
+\begin{theorem}\label{thm:height-pairing}
+  The height pairing $\langle P_{ij}, P_{00}\rangle$ is equal to ???
+\end{theorem}
 
 \subsection{Basic theory}
 \label{sec:basic-theory}
@@ -2626,11 +2630,18 @@ B =
 The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\ref{prop:am-defn-det}, and $e_{d-1} \in \R^{d-1}$ is the $(d-1)$st standard basis vector, written as a column (so $e_{d-1}^T$ is a row vector). There are $r$ copies of $A_{d-1}$ in the matrix, so that $B$ has size $r(d-1) + 1$.
 
 \begin{proposition}\label{prop:dp-u-zero}
-  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. If $j = 0$, then $D_P \cdot P' = ???$. If $j \neq 0$, then $D_P \cdot P' = -\frac{1}{dr}$. 
+  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. Then at $t = 0$,
+\[
+D_P \cdot P' =
+\begin{cases}
+  (-1)^{r(d-1)+1}\bigg(\frac{d-1}{d} + \frac{1}{rd}\bigg) & \text{if } j = 0 \\
+  -\frac{1}{rd} & \text{if } j \neq 0.
+\end{cases}
+\]
 \end{proposition}
 
 \begin{proof}
-  First suppose that $j = 0$. We use Proposition~\ref{prop:dp-dot-p-cofactor}. Let $B'$ be the matrix obtained by deleting the first row and column from $B$. We wish to compute the $\det B'$; this will be done by comparison with the component group of a different curve. To do this, consider the graph $\Gamma$ consisting of 2 vertices connected by $r$ chains, one of length $d - 2$, and the remaining ones of length $d-1$. Thus, this graph looks like Figure~\ref{fig:u-equals-zero}, except the top chain is one vertex shorter. Consider a curve $C'$ whose reduction has dual graph given by $\Gamma$. Then the intersection form for the special fiber of $C'$ is
+  First suppose that $j = 0$. We use Proposition~\ref{prop:dp-dot-p-cofactor}. Let $B'$ be the matrix obtained by deleting the first row and column from $B$. We wish to compute $\det B'$; this will be done by comparison with the component group of a different curve. To do this, consider the graph $\Gamma$ consisting of 2 vertices connected by $r$ chains, one of length $d - 2$, and the remaining ones of length $d-1$. Thus, this graph looks like Figure~\ref{fig:u-equals-zero}, except the top chain is one vertex shorter. Consider a curve $C'$ whose reduction has dual graph given by $\Gamma$. Then the intersection form for the special fiber of $C'$ is
   \[
   \left[\begin{array}{cccccc}
       -r & e_1^T & e_1^T & \cdots & &  0 \\
@@ -2763,7 +2774,7 @@ e_{m-1}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
 
 Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore the special fibers and intersection matrices are identical. We must now determine which component our sections lie on.
 \begin{proposition}
-  On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$ and $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where $i+j$ is taken modulo $r$.
+  On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$ and $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where $i+j$ is taken modulo $r$. 
 \end{proposition}
 
 \begin{proof}
@@ -2798,6 +2809,21 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
 
 \begin{proof}
   The reasoning is similar to that of Proposition~\ref{prop:local-intersections-u-0}. The only nontrivial case occurs when $i+j \equiv 0 \pmod{r}$, in which case both $P_{00}$ and $P_{ij}$ lie on $C_1$. By Proposition~\ref{prop:fg-equals-u-blow-up}, $\dfrac{y_\infty^r - x_\infty - 1}{U}$ is a coordinate function for $C_1$. Evaluating this function at $P_{00}$ and $P_{ij}$ gives the values $1$ and $\zeta^{i(d-1)}$ respectively. These are equal if and only if $i = 0$, from which $j = 0$ as well.
+\end{proof}
+
+\begin{proposition}\label{prop:dp-u-infty}
+  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. Then at $u = \infty$,
+\[
+D_P \cdot P' =
+\begin{cases}
+  (-1)^{r(d-1)+1}\bigg(\frac{d-1}{d} + \frac{1}{rd}\bigg) & \text{if } i+j \equiv 0 \pmod{r} \\
+  -\frac{1}{rd} & \text{if } i+j \not\equiv 0 \pmod{r}.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+  The proof is completely analogous to that of Proposition~\ref{prop:dp-u-zero}.
 \end{proof}
 
 \subsection{Pairing at $u = \zeta^k$}
