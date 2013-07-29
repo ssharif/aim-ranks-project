@@ -2452,7 +2452,17 @@ We now consider the base extension of our curve to the field $k(u_0)$ where $u_0
 In this section, we compute the height pairing on various sections of our curve. Specifically, we will compute $\langle P_{ij} - Q_\infty, P_{i' j'} - Q_\infty \rangle$. By bilinearity, it suffices to compute $\langle P_{ij} - Q_\infty, P_{00} - Q_\infty \rangle$ for all $i,j$. In all of the following, we base-extend to the field $K(u)$ where $u^d = t$. Our goal is to prove the following theorem:
 
 \begin{theorem}\label{thm:height-pairing}
-  The height pairing $\langle P_{ij}, P_{00}\rangle$ is equal to ???
+  The height pairing $\langle P_{ij}, P_{00}\rangle$ is given by
+  \[
+  \langle P_{ij}, P_{00}\rangle = -\frac{d-1}{rd} \cdot
+  \begin{cases}
+    -(r-1)(d-2) & \text{if } (i,j) = (0,0) \\
+    r-2 & \text{if } i\not\equiv 0 \pmod{r}, j = 0 \\
+    2r-2 & \text{if } i\neq 0, i \equiv 0 \pmod{r}, j = 0 \\
+    d - 2 & \text{if } i = 0, j \neq 0 \\
+    r - 2 & \text{if } i \neq 0, j \neq 0, i+j \equiv 0 \pmod{r} \\
+    -2 & \textif{if } i \neq 0, j \neq 0, i+j \not\equiv 0 \pmod{r}
+  \end{cases}.
 \end{theorem}
 
 \subsection{Basic theory}
@@ -2657,11 +2667,11 @@ D_P \cdot P' =
       0 & e_{d-2}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
 \end{array}\right]
   \]
-  Notice that the submatrix obtained by deleting the first row and column from the above matrix is precisely $B'$. Therefore $\det (-B')$ is equal to the order of the component group of $C'$. But by \cite[p.~283???]{blr}, this latter is
+  Notice that the submatrix obtained by deleting the first row and column from the above matrix is precisely $B'$. Therefore $\det (-B')$ is equal to the order of the component group of $C'$. But by \cite[Prop.~9.6.10]{blr}, this latter is
   \[
   (d-1)d^{r-1}\left(\frac{1}{d-1} + \frac{r-1}{d}\right) = d^{r-2}(rd-r+1).
   \]
-  Now we apply Proposition~\ref{prop:dp-dot-p-cofactor}. We see that $\delta = 1$ since all components are reduced in the special fiber, and again by \cite[p.~283]{blr}, we have
+  Now we apply Proposition~\ref{prop:dp-dot-p-cofactor}. We see that $\delta = 1$ since all components are reduced in the special fiber, and again by \cite[Prop.~9.6.10]{blr}, we have
   \[
   \phi = d^{r}\cdot \frac{r}{d} = rd^{r-1}.
   \]
