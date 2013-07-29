@@ -2464,7 +2464,12 @@ Let $P, P', Q$ be three distinct points on our curve; we will later set $P = P_{
 \]
  where $D_P$ is a fibral divisor such that $D_P \cdot Q = 0$ and, for every fibral divisor $D$, $D_P \cdot D = (Q - P) \cdot D$. Since $D_P$ is fibral, the calculation of $D_P \cdot P'$ will be done at each fiber. On each fiber with only a single component (notably smooth fibers), we see that $D_P$ has empty support; thus we can restrict ourselves to the bad fibers of our arithmetic surface to calculate $D_P \cdot P'$. 
 
-We must also compute $P \cdot P'$, $P \cdot Q$, $P' \cdot Q$, and $Q^2$. The former three can be computed on each bad fiber separately. It will turn out that these intersection numbers are 0 on every fiber except $u = -1$. We will compute $Q^2$ in \S~tbd by computing the degree of a certain invertible sheaf.
+We must also compute $P \cdot P'$, $P \cdot Q$, $P' \cdot Q$, and $Q^2$. The former three can be computed on each bad fiber separately, except for the case $P \cdot P'$ when $P = P'$. It will turn out that the former intersection numbers are 0 on every fiber except $u = -1$. 
+
+\subsection{$P_{00}^2$ and $Q_\infty^2$}
+\label{sec:p_002-q_infty2}
+
+The self-intersections $P^2$ and $Q^2$ are computed as the degree of a certain invertible sheaf.
 
 
 \subsection{Auxiliary results}
@@ -2634,7 +2639,7 @@ The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\re
 \[
 D_P \cdot P' =
 \begin{cases}
-  -\frac{d-1}{d} - \frac{1}{rd}\bigg) & \text{if } j = 0 \\
+  -\frac{d-1}{d} - \frac{1}{rd} & \text{if } j = 0 \\
   -\frac{1}{rd} & \text{if } j \neq 0.
 \end{cases}
 \]
@@ -2816,7 +2821,7 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
 \[
 D_P \cdot P' =
 \begin{cases}
-  -\frac{d-1}{d} - \frac{1}{rd}\bigg) & \text{if } i+j \equiv 0 \pmod{r} \\
+  -\frac{d-1}{d} - \frac{1}{rd} & \text{if } i+j \equiv 0 \pmod{r} \\
   -\frac{1}{rd} & \text{if } i+j \not\equiv 0 \pmod{r}.
 \end{cases}
 \]
