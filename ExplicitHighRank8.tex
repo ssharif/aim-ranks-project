@@ -2634,7 +2634,7 @@ The above gives $B$ in block form. The $A_{d-1}$ are as given in Proposition~\re
 \[
 D_P \cdot P' =
 \begin{cases}
-  (-1)^{r(d-1)+1}\bigg(\frac{d-1}{d} + \frac{1}{rd}\bigg) & \text{if } j = 0 \\
+  -\frac{d-1}{d} - \frac{1}{rd}\bigg) & \text{if } j = 0 \\
   -\frac{1}{rd} & \text{if } j \neq 0.
 \end{cases}
 \]
@@ -2662,7 +2662,7 @@ D_P \cdot P' =
   \]
   Combining, we get
   \[
-  D_P \cdot P' = (-1)^{r(d-1)+1}\left(\frac{d-1}{d} + \frac{1}{rd}\right).
+  D_P \cdot P' = -\frac{d-1}{d} - \frac{1}{rd}\right).
   \]
 
   For the $j \neq 0$ case, define $C_{m}$ to be the $m \times (m-1)$ matrix obtained by deleting the first column from $A_m$, and $R_m$ the $(m-1) \times m$ matrix obtained by deleting the first row. We consider the family of matrices $B_m$ given by
@@ -2816,7 +2816,7 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
 \[
 D_P \cdot P' =
 \begin{cases}
-  (-1)^{r(d-1)+1}\bigg(\frac{d-1}{d} + \frac{1}{rd}\bigg) & \text{if } i+j \equiv 0 \pmod{r} \\
+  -\frac{d-1}{d} - \frac{1}{rd}\bigg) & \text{if } i+j \equiv 0 \pmod{r} \\
   -\frac{1}{rd} & \text{if } i+j \not\equiv 0 \pmod{r}.
 \end{cases}
 \]
@@ -2853,7 +2853,7 @@ The special fiber of $\caff$ has a single component, $F$, with multiplicity 1 an
   \end{equation}
     which lies on the node if and only if $\zeta^{i+k} = -1$. This occurs precisely when $i + k \equiv \frac{d}{2} \pmod{d}$.
 
-  Now suppose that $\zeta^{i+k} = -1$. We consider the chart $(0,r)_b$ from section \S~???. This latter chart was given by coordinates $x_0, b_0, \tau_0$, where $t_0 = x_0 \tau_0$. In our case, $x_0$ and $b_0$ are the same, but our third coordinate, which we call $\mu_k$, is given by $u_k = x_0 \mu_k$, yielding the chart
+  Now suppose that $\zeta^{i+k} = -1$. We consider the chart $(0,r)_b$ from section \S~\ref{sec:desingularization-t-equals-one}. This latter chart was given by coordinates $x_0, b_0, \tau_0$, where $t_0 = x_0 \tau_0$. In our case, $x_0$ and $b_0$ are the same, but our third coordinate, which we call $\mu_k$, is given by $u_k = x_0 \mu_k$, yielding the chart
   \[
   (x_0 - 1)x_0^{r-2}b_0^r = 1 + \alpha_k \mu_k.
   \]
