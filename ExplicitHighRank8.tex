@@ -2461,8 +2461,9 @@ In this section, we compute the height pairing on various sections of our curve.
     2r-2 & \text{if } i\neq 0, i \equiv 0 \pmod{r}, j = 0 \\
     d - 2 & \text{if } i = 0, j \neq 0 \\
     r - 2 & \text{if } i \neq 0, j \neq 0, i+j \equiv 0 \pmod{r} \\
-    -2 & \textif{if } i \neq 0, j \neq 0, i+j \not\equiv 0 \pmod{r}
+    -2 & \text{if } i \neq 0, j \neq 0, i+j \not\equiv 0 \pmod{r}
   \end{cases}.
+  \]
 \end{theorem}
 
 \subsection{Basic theory}
@@ -2481,7 +2482,10 @@ We must also compute $P \cdot P'$, $P \cdot Q$, $P' \cdot Q$, and $Q^2$. The for
 
 The self-intersections $P_{00}^2$ and $Q_\infty^2$ are computed as the degrees of certain invertible sheaves.
 \begin{proposition}\label{prop:Q-infty-self-intersection}
-  The self-intersection $Q_\infty^2$ is ???. 
+  The self-intersections of $P_{00}$ and $Q_\infty$ are
+  \[
+  P_{00}^2 = -d + \frac{d}{r} \quad \text{and} \quad Q_\infty^2 = -\frac{d}{r}.
+  \]
 \end{proposition}
 
 
@@ -2680,7 +2684,7 @@ D_P \cdot P' =
   \]
   Combining, we get
   \[
-  D_P \cdot P' = -\frac{d-1}{d} - \frac{1}{rd}\right).
+  D_P \cdot P' = -\frac{d-1}{d} - \frac{1}{rd}.
   \]
 
   For the $j \neq 0$ case, define $C_{m}$ to be the $m \times (m-1)$ matrix obtained by deleting the first column from $A_m$, and $R_m$ the $(m-1) \times m$ matrix obtained by deleting the first row. We consider the family of matrices $B_m$ given by
@@ -2929,11 +2933,52 @@ The intersection form $A$ when $u = \zeta^k$ is given in either \S~\ref{sec:case
 
 We now put all our calculations together. Recall that for a given $(i,j)$, we have
 \[
-\langle P_{00} - Q_\infty, P_{ij} - Q_\infty\rangle = -P_{00} \cdot P_{ij} + P_{00} \cdot Q_\infty + P_{ij} \cdot Q_\infty - Q_\infty^2 + D_P_{00} \cdot P_{ij}.
+\langle P_{00} - Q_\infty, P_{ij} - Q_\infty\rangle = -P_{00} \cdot P_{ij} + P_{00} \cdot Q_\infty + P_{ij} \cdot Q_\infty - Q_\infty^2 + D_{P_{00}} \cdot P_{ij}.
 \]
-According to
+According to Proposition~\ref{prop:Q-infty-self-intersection}, $Q_\infty^2 = ???$. By Propositions~\ref{prop:local-intersections-u-0}, \ref{prop:local-intersections-u-infty}, and \ref{prop:local-intersections-u-zeta-k}, $P_{00} \cdot Q_\infty = P_{ij} \cdot Q_\infty = 0$. Finally, $P_{00} \cdot P_{ij}$ is locally zero except possibly at $u = -1$, and then only if $i = 0$ by Proposition~\ref{prop:local-intersections-u-minus-1}. The only remaining term is $D_{P_{00}} \cdot P_{ij}$, which can be deduced by combining Propositions~\ref{prop:dp-u-zero}, \ref{prop:dp-u-infty}, and \ref{prop:dp-u-zeta-k}. We deal with each case separately.
 
-We deal with each case separately.
+\subsubsection{$(i, j) = (0, 0)$.}
+\label{sec:i-j-=0-0}
+
+In this case, we have
+\begin{align*}
+  D_{P_{00}} \cdot P_{00} &= \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + \bigg(\frac{r-1}{r}\bigg) \\
+  &= ???.
+\end{align*}
+Also, $P_{00}^2 = ???$. Therefore
+\begin{align*}
+  \langle P_{00}, P_{00}\rangle &= -P_{00}^2 - Q_\infty^2 + D_{P_{00}} \cdot P_{00} \\
+  &= ???.
+\end{align*}
+
+\subsubsection{$i \not\equiv 0 \pmod{r}$, $j = 0$.}
+\label{sec:i-not-equiv-0-j-equal-0}
+
+We have
+\begin{align*}
+  D_{P_{00}} \cdot P_{i0} &= \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + \bigg(- \frac{1}{rd}\bigg) + 0 \\
+  &= ???.
+\end{align*}
+Therefore
+\begin{align*}
+  \langle P_{00}, P_{i0}\rangle &= -Q_\infty^2 + D_{P_{00}} \cdot P_{i0} \\
+  &= ???.
+\end{align*}
+
+\subsubsection{$i \neq 0$, $i\equiv 0 \pmod{r}$, $j = 0$.}
+\label{sec:i-neq-0-i-equiv-0-j-eq-0}
+
+We have
+\begin{align*}
+  D_{P_{00}} \cdot P_{i0} &= \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + 0 \\
+  &= ???.
+\end{align*}
+
+\subsubsection{$i=0$, $j \neq 0$}
+\label{sec:i=0-j-neq}
+
+
+
 
 
 \section*{The below 3 sections are a draft from Doug, with notes from him at the top}
