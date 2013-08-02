@@ -2794,13 +2794,7 @@ e_{m-1}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
 \subsection{Pairing at $u=\infty$}
 \label{sec:pairing-at-u=infty}
 
-Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore the special fibers and intersection matrices are identical. We must now determine which component our sections lie on.
-\begin{proposition}
-  On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$ and $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where $i+j$ is taken modulo $r$. 
-\end{proposition}
-
-\begin{proof}
-  Let $\sxi$ be the affine curve
+Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore the special fibers and intersection matrices are identical. We make this explicit as follows. Let $\sxi$ be the affine curve
   \[
   x_\infty y_\infty^r = (x_\infty + 1)(x_\infty + {U^d})
   \]
@@ -2808,13 +2802,23 @@ Recall that the fiber at $u=\infty$ is birational to that at $u=0$. Therefore th
   \[
   (x_\infty, y_\infty) = (U^d x_0, U^{d/r} y_0) = \bigg(U^d \frac{w}{z}, U^{d/r} \frac{1}{w}\bigg).
   \]
-  We are concerned with the fiber when $U = 0$. Let $C_0$ be the component given by $x_\infty = U = 0$, and $C_{r(d-1)+1}$ the component given by $y_\infty^r - x_\infty - 1 = U = 0$; label the remaining components of the special fiber of the minimal proper regular model similarly as in \S~\ref{sec:pairing-at-u}. One sees immediately that on the special fiber, $Q_\infty$ lies on the component $C_0$.
+  We are concerned with the fiber when $U = 0$. Let $C_0$ be the component given by $y_\infty^r - x_\infty - 1 = U = 0$, and $C_{r(d-1)+1}$ the component given by $x_\infty = U = 0$; label the remaining components of the special fiber of the minimal proper regular model similarly as in \S~\ref{sec:pairing-at-u}. We now determine which component our sections lie on.
+\begin{proposition}
+  On the fiber at $u=\infty$, $Q_\infty$ lies on $C_0$ and $P_{ij}$ lies on $C_{(i+j)(d-1) +1}$, where $i+j$ is taken modulo $r$. 
+\end{proposition}
 
-  Next, observe that $\sxi$ glues to $C$ via
+\begin{proof}
+To show that on the special fiber, $Q_\infty$ lies on the component $C_0$, we construct an intermediate chart
+  \[
+  z' = w'^{r-1}(w'+z'U^d)(w'+z')
+  \]
+  which glues to $\XX_2$ via $z = U^{d/r} z'$ and $w = U^{d/r} w'$. The point $Q_\infty$ has coordinates $(w', z') = (0,0)$. One checks that the special fiber, which is irreducible in this chart, is indeed $C_0$.
+
+  Now observe that $\sxi$ glues to $C$ via
   \[
   (x_\infty, y_\infty) = (U^d x, U^{d/r} y/x).
   \]
-  Thus
+  Therefore
   \[
   (x_\infty(P_{ij}), y_\infty(P_{ij})) = (\zeta^i U^{d-1}, \omega^j (\zeta^i + U)^{d/r}).
   \]
