@@ -2869,7 +2869,41 @@ Combining Propositions~\ref{prop:am-defn-det} and \ref{prop:block-Am-determinant
 \end{align*}
 Dividing by $\phi$, we obtain the desired result.
 
-Now suppose $i+j \not\equiv 0 \pmod{r}$.
+Now suppose $i+j \not\equiv 0 \pmod{r}$. Without loss of generality, $i + j \equiv 1$. Let $B'$ be the matrix obtained by deleting the $(d-1)$st row and $2(d-1)$st column from $B$. It suffices to show that $\det (-B') = (d-1)^2d^{r-2}$. We see that $B'$ is the matrix
+\[
+\left[\begin{array}{ccccccc}
+  A_{d-2} & e_{d-2} & & & & e_{d-2} \\
+  & & A_{d-2} & & & & \\
+  & & e_{d-2}^T & & & 1 \\
+  & & & A_{d-1} & & e_{d-1} \\
+  & & & & \ddots & \vdots \\
+  & 1 & e_{d-2}^T & e_{d-1}^T & \cdots & -r
+\end{array}\right].
+\]
+To compute the determinant, we expand out along the $(d-1)$st column. There are two cofactors; the first one, corresponding the the last entry of $e_{d-1}$, has the matrix $R_{d-2}$ in the upper left corner. One sees that the corresponding determinant is zero. The other term comes from the 1 in the bottom, yielding
+\[
+\det \left[
+  \begin{array}{cccccc}
+  A_{d-2} & & & & & \\
+  & A_{d-2} & & & & \\
+  & e_{d-2}^T & & & 1 \\
+  & & A_{d-1} & & e_{d-1} \\
+  & & & \ddots & \vdots \\
+  & e_{d-2}^T & \cdots & A_{d-1} & e_{d-1}
+  \end{array}\right].
+\]
+We expand out along the $(2d-3)$rd row, and by similar reasoning, we get
+\[
+\det \left[
+  \begin{array}{cccccc}
+  A_{d-2} & & & & & \\
+  & A_{d-2} & & & & \\
+  & & A_{d-1} & & \\
+  & & & \ddots &  \\
+  & & & & A_{d-1}
+  \end{array}\right].
+\]
+The claim now follows by Prop.~\ref{prop:am-defn-det}.
 \end{proof}
 
 \subsection{Pairing at $u = \zeta^k$}
