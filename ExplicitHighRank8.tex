@@ -1,7 +1,7 @@
 \documentclass[reqno]{amsart}
 %\usepackage[english]{babel}
 \usepackage[all,cmtip]{xy}
-\usepackage{amssymb,amsmath,mathrsfs,amsthm,amscd,hyperref,amsfonts,graphicx}
+\usepackage{amssymb,amsmath,mathrsfs,amsthm,amscd,booktabs,hyperref,amsfonts,graphicx}
 \usepackage[all]{xy}
 \bibliographystyle{plain}
 \oddsidemargin 0mm
@@ -2667,7 +2667,7 @@ Note that $C_{j(d-1)+1}$ is the left-most vertex on the $j$th horizontal path.
 Recall that the matrix $B$ constructed in \S~\ref{sec:auxiliary-results} is obtained by deleting the first row and column from the intersection matrix for the special fiber. Using the ordering given above for the components, we get $B = B(d, d, \dots, d)$ as in Prop.~\ref{prop:block-Am-determinant}. There are $r$ copies of $A_{d-1}$ in $B$, so that $B$ has size $r(d-1) + 1$.
 
 \begin{proposition}\label{prop:dp-u-zero}
-  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. Then at $t = 0$,
+  Let $P = P_{00}$ and $P' = P_{ij}$. Then at $u = 0$,
 \[
 D_P \cdot P' =
 \begin{cases}
@@ -2842,7 +2842,7 @@ To show that on the special fiber, $Q_\infty$ lies on the component $C_0$, we co
 \end{proof}
 
 \begin{proposition}\label{prop:dp-u-infty}
-  Let $P = P_{00}$ and $P' = P_{ij}$ with $P \neq P'$. Then at $u = \infty$,
+  Let $P = P_{00}$ and $P' = P_{ij}$. Then at $u = \infty$,
 \[
 D_P \cdot P' =
 \begin{cases}
@@ -2994,71 +2994,28 @@ We now put all our calculations together. Recall that for a given $(i,j)$, we ha
 \[
 \langle P_{00} - Q_\infty, P_{ij} - Q_\infty\rangle = -P_{00} \cdot P_{ij} + P_{00} \cdot Q_\infty + P_{ij} \cdot Q_\infty - Q_\infty^2 + D_{P_{00}} \cdot P_{ij}.
 \]
-According to Proposition~\ref{prop:Q-infty-self-intersection}, $Q_\infty^2 = ???$. By Propositions~\ref{prop:local-intersections-u-0}, \ref{prop:local-intersections-u-infty}, and \ref{prop:local-intersections-u-zeta-k}, $P_{00} \cdot Q_\infty = P_{ij} \cdot Q_\infty = 0$. Finally, $P_{00} \cdot P_{ij}$ is locally zero except possibly at $u = -1$, and then only if $i = 0$ by Proposition~\ref{prop:local-intersections-u-minus-1}. The only remaining term is $D_{P_{00}} \cdot P_{ij}$, which can be deduced by combining Propositions~\ref{prop:dp-u-zero}, \ref{prop:dp-u-infty}, and \ref{prop:dp-u-zeta-k}. We deal with each case separately.
+According to Proposition~\ref{prop:Q-infty-self-intersection}, $Q_\infty^2 = ???$. By Propositions~\ref{prop:local-intersections-u-0}, \ref{prop:local-intersections-u-infty}, and \ref{prop:local-intersections-u-zeta-k}, $P_{00} \cdot Q_\infty = P_{ij} \cdot Q_\infty = 0$. Finally, $P_{00} \cdot P_{ij}$ is locally zero except possibly at $u = -1$, and then only if $i = 0$ by Proposition~\ref{prop:local-intersections-u-minus-1}. The only remaining term is $D_{P_{00}} \cdot P_{ij}$, which can be deduced by combining Propositions~\ref{prop:dp-u-zero}, \ref{prop:dp-u-infty}, and \ref{prop:dp-u-zeta-k}. The results of these propositions are summarized in Table ???. In that table, all congruences are mod $r$.
 
-\subsubsection{$(i, j) = (0, 0)$.}
-\label{sec:i-j-=0-0}
+\renewcommand\arraystretch{2}
+\begin{table}[htb]
+  \centering
+  \[
+  \begin{array}[c]{lccc}
+    (i,j) & u = 0 & u = \infty & u = -1 \\ \toprule
+    (0,0) & -\dfrac{rd-r+1}{rd} & -\dfrac{(d-1)(r+d-1)}{rd} & \dfrac{r-1}{r} \\
+    i \not\equiv 0, j = 0 & -\dfrac{rd - r + 1}{rd} & -\dfrac{1}{rd} & 0 \\
+    i \neq 0, i \equiv 0, j = 0 & -\dfrac{rd - r + 1}{rd} & -\dfrac{(d-1)(r+d-1)}{rd} & 0 \\
+    i = 0, j \neq 0 & -\dfrac{1}{rd} & -\dfrac{1}{rd} & \dfrac{r-1}{r} \\
+    i \neq 0, j \neq 0, i + j \equiv 0 & -\dfrac{1}{rd} & -\dfrac{(d-1)(r+d-1)}{rd} & 0 \\
+    i \neq 0, j \neq 0, i + j \not\equiv 0 & -\dfrac{1}{rd} & -\dfrac{1}{rd} & 0 \\
+    \bottomrule
+  \end{array}
+  \]
+  \caption{Local contributions to $D_{P_{00}} \cdot P_{ij}$}
+  \label{tab:local-contrib-dp-dot-p}
+\end{table}
+\renewcommand\arraystretch{1}
 
-In this case, we have
-\begin{align*}
-  D_{P_{00}} \cdot P_{00} &= \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + \bigg(-\frac{d-1}{d} \cdot \frac{r+d-1}{r}\bigg) + \bigg(\frac{r-1}{r}\bigg) \\
-  &= ???.
-\end{align*}
-Therefore
-\begin{align*}
-  \langle P_{00}, P_{00}\rangle &= -P_{00}^2 - Q_\infty^2 + D_{P_{00}} \cdot P_{00} \\
-  &= d - \frac{d}{r} + \frac{d}{r} + ??? \\
-  &=
-\end{align*}
-
-\subsubsection{$i \not\equiv 0 \pmod{r}$, $j = 0$.}
-\label{sec:i-not-equiv-0-j-equal-0}
-
-We have
-\begin{align*}
-  D_{P_{00}} \cdot P_{i0} &= \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + \bigg(- \frac{1}{rd}\bigg) + 0 \\
-  &= ???.
-\end{align*}
-Therefore
-\begin{align*}
-  \langle P_{00}, P_{i0}\rangle &= -Q_\infty^2 + D_{P_{00}} \cdot P_{i0} \\
-  &= ???.
-\end{align*}
-
-\subsubsection{$i \neq 0$, $i\equiv 0 \pmod{r}$, $j = 0$.}
-\label{sec:i-neq-0-i-equiv-0-j-eq-0}
-
-We have
-\begin{align*}
-  D_{P_{00}} \cdot P_{i0} &= \bigg(-\frac{d-1}{d} - \frac{1}{rd}\bigg) + \bigg(-\frac{d-1}{d} \cdot \frac{r+d-1}{r}\bigg) + 0 \\
-  &= ???.
-\end{align*}
-
-\subsubsection{$i=0$, $j \neq 0$}
-\label{sec:i=0-j-neq}
-
-Here
-\begin{align*}
-  D_{P_{00}} \cdot P_{0j} &= -\frac{1}{rd} - \frac{1}{rd} + \frac{r-1}{r} \\
-  &= ???.
-\end{align*}
-
-\subsubsection{$i\neq 0$, $j \neq 0$, $i + j \equiv 0 \pmod{r}$}
-\label{sec:i-neq-0-j-neq-0-equiv}
-
-In this case, we get
-\begin{align*}
-  D_{P_{00}} \cdot P_{ij} &= -\frac{1}{rd} + \bigg(-\frac{d-1}{d} \cdot \frac{r+d-1}{r}\bigg) \\
-  &= ???.
-\end{align*}
-
-\subsubsection{$i \neq 0$, $j \neq 0$, $i+j \not\equiv 0 \pmod{r}$}
-\label{sec:i-neq-0-j-neq-0-not-equiv}
-
-In the last case, we have
-\begin{align*}
-  D_{P_{00}} \cdot P_{ij} &= -\frac{1}{rd} - \frac{1}{rd}.
-\end{align*}
 
 
 
