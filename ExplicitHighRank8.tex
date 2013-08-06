@@ -2469,7 +2469,7 @@ In this section, we compute the height pairing on various sections of our curve.
 \subsection{Basic theory}
 \label{sec:basic-theory}
 
-Let $P, P', Q$ be three distinct points on our curve; we will later set $P = P_{ij}$, $P' = P_{00}$, and $Q = Q_\infty$. Then
+Let $P, P', Q$ be three distinct points on our curve; we will later set $P = P_{00}$, $P' = P_{ij}$, and $Q = Q_\infty$. Then
 \[
 \langle P - Q, P' - Q\rangle = -P \cdot P' + P \cdot Q + P' \cdot Q - Q^2 + D_P \cdot P',
 \]
@@ -2994,7 +2994,7 @@ We now put all our calculations together. Recall that for a given $(i,j)$, we ha
 \[
 \langle P_{00} - Q_\infty, P_{ij} - Q_\infty\rangle = -P_{00} \cdot P_{ij} + P_{00} \cdot Q_\infty + P_{ij} \cdot Q_\infty - Q_\infty^2 + D_{P_{00}} \cdot P_{ij}.
 \]
-According to Proposition~\ref{prop:Q-infty-self-intersection}, $Q_\infty^2 = ???$. By Propositions~\ref{prop:local-intersections-u-0}, \ref{prop:local-intersections-u-infty}, and \ref{prop:local-intersections-u-zeta-k}, $P_{00} \cdot Q_\infty = P_{ij} \cdot Q_\infty = 0$. Finally, $P_{00} \cdot P_{ij}$ is locally zero except possibly at $u = -1$, and then only if $i = 0$ by Proposition~\ref{prop:local-intersections-u-minus-1}. The only remaining term is $D_{P_{00}} \cdot P_{ij}$, which can be deduced by combining Propositions~\ref{prop:dp-u-zero}, \ref{prop:dp-u-infty}, and \ref{prop:dp-u-zeta-k}. The results of these propositions are summarized in Table ???. In that table, all congruences are mod $r$.
+According to Proposition~\ref{prop:Q-infty-self-intersection}, $Q_\infty^2 = ???$. By Propositions~\ref{prop:local-intersections-u-0}, \ref{prop:local-intersections-u-infty}, and \ref{prop:local-intersections-u-zeta-k}, $P_{00} \cdot Q_\infty = P_{ij} \cdot Q_\infty = 0$. Finally, $P_{00} \cdot P_{ij}$ is locally zero except possibly at $u = -1$, and then only if $i = 0$ by Proposition~\ref{prop:local-intersections-u-minus-1}. The only remaining term is $D_{P_{00}} \cdot P_{ij}$, which can be deduced by combining Propositions~\ref{prop:dp-u-zero}, \ref{prop:dp-u-infty}, and \ref{prop:dp-u-zeta-k}. The results of these propositions are summarized in Table~\ref{tab:local-contrib-dp-dot-p}. In that table, all congruences are mod $r$.
 
 \renewcommand\arraystretch{2}
 \begin{table}[htb]
@@ -3015,6 +3015,12 @@ According to Proposition~\ref{prop:Q-infty-self-intersection}, $Q_\infty^2 = ???
   \label{tab:local-contrib-dp-dot-p}
 \end{table}
 \renewcommand\arraystretch{1}
+
+Recall that the local intersection numbers $D_{P_{00}} \cdot P_{ij}$ are zero where $C$ has good reduction, and for $u = \zeta^k \neq -1$. Therefore in each case $D_{P_{00}} \cdot P_{ij}$ is computed as the sum of the local contributions in the table. Finally, recall that
+\[
+\langle {P_{00}} - Q_\infty, P_{ij} - Q_\infty\rangle = -{P_{00}} \cdot P_{ij} + {P_{00}} \cdot Q_\infty + P_{ij} \cdot Q_\infty - Q_\infty^2 + D_{P_{00}} \cdot P_{ij}.
+\]
+When $(i,j) \neq (0,0)$, by Propositions~\ref{prop:local-intersections-u-0}, \ref{prop:local-intersections-u-infty}, \ref{prop:local-intersections-u-zeta-k}, and \ref{prop:local-intersections-u-minus-1}, the intersection $P_{00} \cdot P_{ij}$ are zero locally everywhere except at $u = -1$. Finally, the self-intersections are given in Proposition~\ref{prop:Q-infty-self-intersection}. Combining these results, we obtain Theorem~\ref{thm:height-pairing}.
 
 
 
