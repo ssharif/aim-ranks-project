@@ -2512,9 +2512,9 @@ The following results will help us compute the various intersection numbers. Let
   \]
   The intersection number $P' \cdot D_P$ is simply the coefficient $d_j$, and
   \[
-  D_P \cdot P' = d_j = \ve_j^T \vd = -\ve_j^TB^{-1}\ve_i.
+  D_P \cdot P' = d_j = \ve_j^T \vd = \ve_j^T(-B)^{-1}\ve_i.
   \]
-  By symmetry of $A$, and hence of $B$, and the cofactor formula for the inverse of a matrix, we have
+  By symmetry of $A$, and hence of $-B$, and the cofactor formula for the inverse of $-B$, we have
   \[
   D_P \cdot P' = (-1)^{i+j} \frac{\det(-B')}{\det(-B)}.
   \]
@@ -2723,10 +2723,12 @@ e_{m-1}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
     \]
     Now we expand along the $m$th column, and similarly obtain $\det B_m = (-1)^{2m-1}\det B_{m-1} = - \det B_{m-1}$.
   \end{proof}
-  We now complete the proof of the $j \neq 0$ case. Observe that the special fiber is symmetric under permuations of the horizontal chains, as in Figure~\ref{fig:u-equals-zero}. Thus it suffices to consider the case where $j = 1$. We wish to compute the cofactor $\beta_{d1}$. But this is precisely the determinant of $B_{d-1}$. By the lemma, 
+  Note that the lemma is equivalent to $\det (-B_m) = - \det (-B_{m-1})$.
+
+  We now complete the proof of the $j \neq 0$ case. Observe that the special fiber is symmetric under permuations of the horizontal chains, as in Figure~\ref{fig:u-equals-zero}. Thus it suffices to consider the case where $j = 1$. Let $B'$ be the matrix obtained by deleting the first column and $d$th row from $B$. We wish to compute $\det (-B')$. But we see that $B' = B_{d-1}$. By the lemma, 
   \begin{align*}
-    \det B_{d-1} &= (-1)^{d-2} \det B_1 \\
-    &= (-1)^{d-2} \det \left[
+    \det (-B_{d-1}) &= (-1)^{d-2} \det (-B_1) \\
+    &= (-1)^{d-2} \det -\left[
       \begin{array}{cccccc}
         0 & & & & 1 \\
          & A_{d-1} & & & e_{d-1} \\
@@ -2735,13 +2737,13 @@ e_{m-1}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
          1 & e_{d-1}^T & \cdots & e_{d-1}^T & -r
       \end{array}\right].
   \end{align*}
-  By expanding out along the first row and then the first column, one checks that $\det B_1 = -d^{r-2}$. Therefore
+  By expanding out along the first row and then the first column, one checks that $\det (-B_1) = -d^{r-2}$. Therefore
   \[
-  \beta_{d1} = \det B_{d-1} = (-1)^{d-1} d^{r-2}.
+  \det (-B_{d-1}) = (-1)^{d} d^{r-2}.
   \]
   Since $\phi = rd^{r-1}$, we see that 
   \[
-  D_P \cdot P' = (-1)^{(r+1)(d-1)} \frac{1}{rd}. % FIX!!!???
+  D_P \cdot P' = -\frac{1}{rd}.
   \]
 \end{proof}
 
