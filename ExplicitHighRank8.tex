@@ -2671,8 +2671,8 @@ Recall that the matrix $B$ constructed in \S~\ref{sec:auxiliary-results} is obta
 \[
 D_P \cdot P' =
 \begin{cases}
-  -\frac{d-1}{d} - \frac{1}{rd} & \text{if } j = 0 \\
-  -\frac{1}{rd} & \text{if } j \neq 0.
+  \frac{d-1}{d} + \frac{1}{rd} & \text{if } j = 0 \\
+  \frac{1}{rd} & \text{if } j \neq 0.
 \end{cases}
 \]
 \end{proposition}
@@ -2688,7 +2688,7 @@ D_P \cdot P' =
   \]
   Combining, we get
   \[
-  D_P \cdot P' = -\frac{d-1}{d} - \frac{1}{rd}.
+  D_P \cdot P' = \frac{d-1}{d} + \frac{1}{rd}.
   \]
 
   For the $j \neq 0$ case, define $C_{m}$ to be the $m \times (m-1)$ matrix obtained by deleting the first column from $A_m$, and $R_m$ the $(m-1) \times m$ matrix obtained by deleting the first row. We consider the family of matrices $B_m$ given by
@@ -2743,7 +2743,7 @@ e_{m-1}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
   \]
   Since $\phi = rd^{r-1}$, we see that 
   \[
-  D_P \cdot P' = -\frac{1}{rd}.
+  D_P \cdot P' = \frac{1}{rd}.
   \]
 \end{proof}
 
