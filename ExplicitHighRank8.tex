@@ -2953,8 +2953,7 @@ The intersection form $A$ when $u = \zeta^k$ is given in either \S~\ref{sec:case
 \end{proposition}
 
 \begin{proof}
-  If $k \neq \frac{d}{2}$, then we may take $D_P = 0$, as $P$ and $Q_\infty$ both lie on the same component, namely $F$. Now suppose that $k = \frac{d}{2}$. Recall that $D_P$ was chosen so that $F$ does not lie in its support. Thus $D_P \cdot P' = 0$ if $P'$ lies in $F$; this occurs whenever $i > 0$. We now consider the case when $k = \frac{d}{2}$ and $i = 0$. We will apply Proposition~\ref{prop:dp-dot-p-cofactor}. The component $C_0$ in that Proposition is $F$, which has multiplicity $\delta = 1$. The component group was shown in \S~\ref{sec:component-group-t-equals-one} to have order $\phi = r$. It remains to compute the appropriate cofactor. One checks that it suffices to compute the $(1,1)$ cofactor of the matrix $B$ described above. But this cofactor is precisely the determinant of $A_{r-2}$, which by Proposition~\ref{prop:am-defn-det}, equals $\pm(r-1)$. %FIX!!!???
- The claim follows from Proposition~\ref{prop:dp-dot-p-cofactor}.
+  If $k \neq \frac{d}{2}$, then we may take $D_P = 0$, as $P$ and $Q_\infty$ both lie on the same component, namely $F$. Now suppose that $k = \frac{d}{2}$. Recall that $D_P$ was chosen so that $F$ does not lie in its support. Thus $D_P \cdot P' = 0$ if $P'$ lies in $F$; this occurs whenever $i > 0$. We now consider the case when $k = \frac{d}{2}$ and $i = 0$. We will apply Proposition~\ref{prop:dp-dot-p-cofactor}. The component $C_0$ in that Proposition is $F$, which has multiplicity $\delta = 1$. The component group was shown in \S~\ref{sec:component-group-t-equals-one} to have order $\phi = r$. It remains to compute the appropriate cofactor. Let $B'$ be the matrix obtained by deleting the first row and column from $B$. One sees that $B' = A_{r-2}$. The claim now follows from Propositions~\ref{prop:am-defn-det} and \ref{prop:dp-dot-p-cofactor}.
 \end{proof}
 
 \begin{proposition}\label{prop:local-intersections-u-zeta-k}
@@ -2992,11 +2991,7 @@ The intersection form $A$ when $u = \zeta^k$ is given in either \S~\ref{sec:case
 \subsection{Proof of Theorem~\ref{thm:height-pairing}}
 \label{sec:proof-theor-refthm:h}
 
-We now put all our calculations together. Recall that for a given $(i,j)$, we have
-\[
-\langle P_{00} - Q_\infty, P_{ij} - Q_\infty\rangle = -P_{00} \cdot P_{ij} + P_{00} \cdot Q_\infty + P_{ij} \cdot Q_\infty - Q_\infty^2 + D_{P_{00}} \cdot P_{ij}.
-\]
-According to Proposition~\ref{prop:Q-infty-self-intersection}, $Q_\infty^2 = ???$. By Propositions~\ref{prop:local-intersections-u-0}, \ref{prop:local-intersections-u-infty}, and \ref{prop:local-intersections-u-zeta-k}, $P_{00} \cdot Q_\infty = P_{ij} \cdot Q_\infty = 0$. Finally, $P_{00} \cdot P_{ij}$ is locally zero except possibly at $u = -1$, and then only if $i = 0$ by Proposition~\ref{prop:local-intersections-u-minus-1}. The only remaining term is $D_{P_{00}} \cdot P_{ij}$, which can be deduced by combining Propositions~\ref{prop:dp-u-zero}, \ref{prop:dp-u-infty}, and \ref{prop:dp-u-zeta-k}. The results of these propositions are summarized in Table~\ref{tab:local-contrib-dp-dot-p}. In that table, all congruences are mod $r$.
+We now put all our calculations together. The local contributions to $D_{P_{00}} \cdot P_{ij}$ were computed in Propositions~\ref{prop:dp-u-zero}, \ref{prop:dp-u-infty}, and \ref{prop:dp-u-zeta-k}; the results of these propositions are summarized in Table~\ref{tab:local-contrib-dp-dot-p}. In that table, all congruences are mod $r$.
 
 \renewcommand\arraystretch{2}
 \begin{table}[htb]
