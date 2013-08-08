@@ -2848,8 +2848,8 @@ To show that on the special fiber, $Q_\infty$ lies on the component $C_0$, we co
 \[
 D_P \cdot P' =
 \begin{cases}
-  -\frac{(d-1)(r+d-1)}{rd} & \text{if } i+j \equiv 0 \pmod{r} \\
-  -\frac{(d-1)^2}{rd} & \text{if } i+j \not\equiv 0 \pmod{r}.
+  \frac{(d-1)(r+d-1)}{rd} & \text{if } i+j \equiv 0 \pmod{r} \\
+  \frac{(d-1)^2}{rd} & \text{if } i+j \not\equiv 0 \pmod{r}.
 \end{cases}
 \]
 \end{proposition}
@@ -2871,7 +2871,7 @@ Combining Propositions~\ref{prop:am-defn-det} and \ref{prop:block-Am-determinant
 \end{align*}
 Dividing by $\phi = r d^{r-1}$, we obtain the desired result.
 
-Now suppose $i+j \not\equiv 0 \pmod{r}$. Without loss of generality, $i + j \equiv 1$. Let $B'$ be the matrix obtained by deleting the $(d-1)$st row and $2(d-1)$st column from $B$. It suffices to show that $\det (-B') = (d-1)^2d^{r-2}$. We see that $B'$ is the matrix
+Now suppose $i+j \not\equiv 0 \pmod{r}$. Without loss of generality, $i + j \equiv 1$. Let $B'$ be the matrix obtained by deleting the $(d-1)$st row and $2(d-1)$st column from $B$. It suffices to show that $\det (-B') = (-1)^{d-1}(d-1)^2d^{r-2}$. We see that $B'$ is the matrix
 \[
 \left[\begin{array}{ccccccc}
   A_{d-2} & e_{d-2} & & & & e_{d-2} \\
@@ -2884,7 +2884,7 @@ Now suppose $i+j \not\equiv 0 \pmod{r}$. Without loss of generality, $i + j \equ
 \]
 To compute the determinant, we expand out along the $(d-1)$st column. There are two cofactors; the first one, corresponding the the last entry of $e_{d-2}$, has the matrix $R_{d-2}$ in the upper left corner. One sees that the corresponding determinant is zero. The other term comes from the 1 in the bottom, yielding
 \[
-\det B' = (-1)^{(r-2)(d-1)}\det \left[
+\det (-B') = (-1)^{(r-1)(d-1)}\det \left(-\left[
   \begin{array}{cccccc}
   A_{d-2} & & & & & \\
   & A_{d-2} & & & & \\
@@ -2892,18 +2892,18 @@ To compute the determinant, we expand out along the $(d-1)$st column. There are 
   & & A_{d-1} & & e_{d-1} \\
   & & & \ddots & \vdots \\
   & e_{d-2}^T & \cdots & A_{d-1} & e_{d-1}
-  \end{array}\right].
+  \end{array}\right]\right).
 \]
 We expand out along the $(2d-3)$rd row, and by similar reasoning, we get
 \[
-\det B' = \det \left[
+\det (-B') = (-1)^{(2r-3)(d-1)}\det \left(-\left[
   \begin{array}{cccccc}
   A_{d-2} & & & & & \\
   & A_{d-2} & & & & \\
   & & A_{d-1} & & \\
   & & & \ddots &  \\
   & & & & A_{d-1}
-  \end{array}\right].
+  \end{array}\right]\right).
 \]
 The claim now follows by Prop.~\ref{prop:am-defn-det}.
 \end{proof}
