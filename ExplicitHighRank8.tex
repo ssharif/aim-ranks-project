@@ -2857,7 +2857,7 @@ D_P \cdot P' =
 \begin{proof}
   Let $B = B(d, \dots, d)$; this is the submatrix obtained by deleting the 1st row and column of the intersection form for the special fiber at $\infty$. Thus in Proposition~\ref{prop:dp-dot-p-cofactor}, $\phi = rd^{r-1}$. Observe that $\delta = 1$ as well in all cases.
 
-Suppose $i + j \equiv 0 \pmod{r}$. Let $B'$ be the matrix obtained by deleting the $(d-1)$st row and column from $B$. To compute $D_P \cdot P'$, we must compute $\det B'$. But $B'$ is the block matrix
+Suppose $i + j \equiv 0 \pmod{r}$. Let $B'$ be the matrix obtained by deleting the $(d-1)$st row and column from $B$. To compute $D_P \cdot P'$, we must compute $\det (-B')$. But $B'$ is the block matrix
 \[
 \left[\begin{array}{cc}
   A_{d-2} & 0 \\
@@ -2869,7 +2869,7 @@ Combining Propositions~\ref{prop:am-defn-det} and \ref{prop:block-Am-determinant
   \det (-B') &= (d-1) d^{r-1}\bigg(1 + \frac{1}{d} + \cdots + \frac{1}{d}\bigg) \\
   &= (d-1)d^{r-1}\frac{d + r - 1}{d}.
 \end{align*}
-Dividing by $\phi$, we obtain the desired result.
+Dividing by $\phi = r d^{r-1}$, we obtain the desired result.
 
 Now suppose $i+j \not\equiv 0 \pmod{r}$. Without loss of generality, $i + j \equiv 1$. Let $B'$ be the matrix obtained by deleting the $(d-1)$st row and $2(d-1)$st column from $B$. It suffices to show that $\det (-B') = (d-1)^2d^{r-2}$. We see that $B'$ is the matrix
 \[
@@ -2882,9 +2882,9 @@ Now suppose $i+j \not\equiv 0 \pmod{r}$. Without loss of generality, $i + j \equ
   & 1 & e_{d-2}^T & e_{d-1}^T & \cdots & -r
 \end{array}\right].
 \]
-To compute the determinant, we expand out along the $(d-1)$st column. There are two cofactors; the first one, corresponding the the last entry of $e_{d-1}$, has the matrix $R_{d-2}$ in the upper left corner. One sees that the corresponding determinant is zero. The other term comes from the 1 in the bottom, yielding
+To compute the determinant, we expand out along the $(d-1)$st column. There are two cofactors; the first one, corresponding the the last entry of $e_{d-2}$, has the matrix $R_{d-2}$ in the upper left corner. One sees that the corresponding determinant is zero. The other term comes from the 1 in the bottom, yielding
 \[
-\det \left[
+\det B' = (-1)^{(r-2)(d-1)}\det \left[
   \begin{array}{cccccc}
   A_{d-2} & & & & & \\
   & A_{d-2} & & & & \\
@@ -2896,7 +2896,7 @@ To compute the determinant, we expand out along the $(d-1)$st column. There are 
 \]
 We expand out along the $(2d-3)$rd row, and by similar reasoning, we get
 \[
-\det \left[
+\det B' = \det \left[
   \begin{array}{cccccc}
   A_{d-2} & & & & & \\
   & A_{d-2} & & & & \\
