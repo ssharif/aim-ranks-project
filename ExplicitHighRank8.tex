@@ -2497,7 +2497,7 @@ The following results will help us compute the various intersection numbers. Let
 \begin{proposition}\label{prop:dp-dot-p-cofactor}
   Suppose $Q$ intersects $C_0$, $P$ intersects $C_i$, and $P'$ intersects $C_j$, with $i,j \neq 0$. Let $A$ be the intersection matrix for the fiber, and let $B$ be the matrix obtained by deleting the first row and column from $A$. Let $B'$ be the submatrix obtained by deleting the $i$th row and $j$th column from $B$. Let $\delta$ be the multiplicity of $C_0$ in the special fiber. Finally, let $\phi$ be the order of the component group of the Jacobian of $C$. Then
   \[
-  D_P \cdot P' = - \frac{\det (-B')}{\delta^2 \phi}.
+  D_P \cdot P' = (-1)^{i+j} \frac{\det (-B')}{\delta^2 \phi}.
   \]
 \end{proposition}
 
@@ -2516,7 +2516,7 @@ The following results will help us compute the various intersection numbers. Let
   \]
   By symmetry of $A$, and hence of $B$, and the cofactor formula for the inverse of a matrix, we have
   \[
-  D_P \cdot P' = - \frac{\det(-B')}{\det(-B)}.
+  D_P \cdot P' = (-1)^{i+j} \frac{\det(-B')}{\det(-B)}.
   \]
   But according to Corollary~1.3 in~\cite{lorenzini},
   \[
@@ -2524,11 +2524,6 @@ The following results will help us compute the various intersection numbers. Let
   \]
   The claim now follows.
 \end{proof}
-Let $B'$ be the submatrix of $B$ obtained by deleting the $i$th row and $j$th column, so that $\beta_{ij} = \pm \det B'$. It will be convenient to use the formula
-\[
-D_P \cdot P' = - \frac{\det (-B')}{\delta^2 \phi}
-\]
-on occasion.
 
 \begin{proposition}\label{prop:am-defn-det}
   Let $A_m$ be the $m \times m$ matrix whose entries are given by
@@ -2539,11 +2534,11 @@ on occasion.
     0 & \text{otherwise}
   \end{cases}.
   \]
-  Then $\det A_m = (-1)^m (m+1)$.
+  Then $\det (-A_m) = (m+1)$.
 \end{proposition}
 
 \begin{proof}
-  Consider an elliptic curve over a discrete valuation ring with type $I_{m+1}$ reduction. Let $A$ be the intersection matrix for the special fiber, where the components are ordered in the usual manner. One observes that $A_m$ is the $m \times m$ submatrix obtained from $A$ by deleting the first row and column. By \cite[Corollary~1.3]{lorenzini}, $\det A_m = (-1)^m \phi$, where $\phi$ is the order of the component group of our elliptic curve. But as our curve has type $I_{m+1}$ reduction, the component group is $\Z/(m+1)\Z$.
+  Consider an elliptic curve over a discrete valuation ring with type $I_{m+1}$ reduction. Let $A$ be the intersection matrix for the special fiber, where the components are ordered in the usual manner. One observes that $A_m$ is the $m \times m$ submatrix obtained from $A$ by deleting the first row and column. By \cite[Corollary~1.3]{lorenzini}, $\det (-A_m) = \phi$, where $\phi$ is the order of the component group of our elliptic curve. But as our curve has type $I_{m+1}$ reduction, the component group is $\Z/(m+1)\Z$.
 \end{proof}
 
 \begin{proposition}\label{prop:block-Am-determinant}
