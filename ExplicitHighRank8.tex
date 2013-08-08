@@ -2452,7 +2452,7 @@ We now consider the base extension of our curve to the field $k(u_0)$ where $u_0
 In this section, we compute the height pairing on various sections of our curve. Specifically, we will compute $\langle P_{ij} - Q_\infty, P_{i' j'} - Q_\infty \rangle$. By bilinearity, it suffices to compute $\langle P_{ij} - Q_\infty, P_{00} - Q_\infty \rangle$ for all $i,j$. In all of the following, we base-extend to the field $K(u)$ where $u^d = t$. Our goal is to prove the following theorem:
 
 \begin{theorem}\label{thm:height-pairing}
-  The height pairing $\langle P_{ij}, P_{00}\rangle$ is given by
+  The height pairing $\langle P_{ij} - Q_\infty, P_{00} - Q_\infty\rangle$ is given by
   \[
   \langle P_{ij}, P_{00}\rangle = -\frac{d-1}{rd} \cdot
   \begin{cases}
@@ -2471,7 +2471,7 @@ In this section, we compute the height pairing on various sections of our curve.
 
 Let $P, P', Q$ be three distinct points on our curve; we will later set $P = P_{00}$, $P' = P_{ij}$, and $Q = Q_\infty$. Then
 \[
-\langle P - Q, P' - Q\rangle = -P \cdot P' + P \cdot Q + P' \cdot Q - Q^2 + D_P \cdot P',
+\langle P - Q, P' - Q\rangle = -P \cdot P' + P \cdot Q + P' \cdot Q - Q^2 - D_P \cdot P',
 \]
  where $D_P$ is a fibral divisor such that $D_P \cdot Q = 0$ and, for every fibral divisor $D$, $D_P \cdot D = (Q - P) \cdot D$. Since $D_P$ is fibral, the calculation of $D_P \cdot P'$ will be done at each fiber. On each fiber with only a single component (notably smooth fibers), we see that $D_P$ has empty support; thus we can restrict ourselves to the bad fibers of our arithmetic surface to calculate $D_P \cdot P'$. 
 
