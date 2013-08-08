@@ -2721,25 +2721,25 @@ e_{m-1}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
         e_{m-2}^T & e_{m}^T & e_{d-1}^T & \cdots & e_{d-1}^T & -r
       \end{array}\right].
     \]
-    Now we expand along the $m$th column, and similarly obtain $\det B_m = (-1)^{2m-1}\det B_{m-1} = - \det B_{m-1}$.
+    Now we expand along the $(m-1)$st column, and similarly obtain $\det B_m = (-1)^{2m-1}\det B_{m-1} = - \det B_{m-1}$.
   \end{proof}
   Note that the lemma is equivalent to $\det (-B_m) = - \det (-B_{m-1})$.
 
   We now complete the proof of the $j \neq 0$ case. Observe that the special fiber is symmetric under permuations of the horizontal chains, as in Figure~\ref{fig:u-equals-zero}. Thus it suffices to consider the case where $j = 1$. Let $B'$ be the matrix obtained by deleting the first column and $d$th row from $B$. We wish to compute $\det (-B')$. But we see that $B' = B_{d-1}$. By the lemma, 
   \begin{align*}
     \det (-B_{d-1}) &= (-1)^{d-2} \det (-B_1) \\
-    &= (-1)^{d-2} \det -\left[
+    &= (-1)^{d-2} \det \left(- \left[
       \begin{array}{cccccc}
         0 & & & & 1 \\
          & A_{d-1} & & & e_{d-1} \\
          & & \ddots & & \vdots \\
          & & & A_{d-1} & e_{d-1} \\
          1 & e_{d-1}^T & \cdots & e_{d-1}^T & -r
-      \end{array}\right].
+      \end{array}\right]\right).
   \end{align*}
-  By expanding out along the first row and then the first column, one checks that $\det (-B_1) = -d^{r-2}$. Therefore
+  By expanding out along the first row and then the first column, one checks that $\det (-B_1) = -\det (-B(0,d, \dots, d)) = -d^{r-2}$, where the latter matrix is as in Proposition~\ref{prop:block-Am-determinant}. Therefore
   \[
-  \det (-B_{d-1}) = (-1)^{d} d^{r-2}.
+  \det (-B_{d-1}) = (-1)^{d-1} d^{r-2}.
   \]
   Since $\phi = rd^{r-1}$, we see that 
   \[
