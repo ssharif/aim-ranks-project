@@ -122,6 +122,7 @@
 \DeclareMathSymbol{\sha}{\mathalpha}{cyrletters}{"58}
 
 \def\JJ{\mathcal{J}}
+\def\II{\mathcal{I}}
 \def\XX{\mathcal{X}}
 \newcommand{\sxi}{\mathcal{X}_\infty}
 \def\YY{\mathcal{Y}}
@@ -2487,6 +2488,20 @@ The self-intersections $P_{00}^2$ and $Q_\infty^2$ are computed as the degrees o
   P_{00}^2 = -d + \frac{d}{r} \quad \text{and} \quad Q_\infty^2 = -\frac{d}{r}.
   \]
 \end{proposition}
+
+\begin{proof}
+  We use the fact that $P^2 = - \deg \II/\II^2$, where $\II$ is the ideal sheaf of the section $P$ on the arithmetic surface $\XX$ and $\II/\II^2$ is the conormal sheaf to $P$ on the base $\PP$. 
+
+For $Q_\infty$, $w$ furnishes a nonzero global section of $\II$. One checks that $w$ is a regular, nonvanishing section of $\II/\II^2$ away from $u = \infty$, since $\XX_2$ is smooth in a neighborhood of $Q_\infty$, $u \neq \infty$. At $u = \infty$, we consider the chart
+  \[
+  z' = w'^{r-1}(w'+z'U^d)(w'+z')
+  \]
+  which glues to $\XX_2$ via $z = U^{d/r} z'$ and $w = U^{d/r} w'$. The point $Q_\infty$ has coordinates $(w', z') = (0,0)$. Notice that $w'$ gives a regular, nonvanishing section of the $\II/\II^2$ at $u = \infty$. Since $w = U^{d/r} w'$, we see that as a section of $\II/\II^2$, $\dvsr w = \frac{d}{r}(\infty)$. We conclude that $Q_\infty^2 = -\frac{d}{r}$.
+
+For $P_{00}$, $x-u$ furnishes a nonzero global section for the corresponding conormal sheaf. One checks that this section is regular and nonvanishing on the locus of good reduction. We now compute the zeros and poles of $x-u$ place by place.
+
+At $u=0$
+\end{proof}
 
 
 \subsection{Auxiliary results}
