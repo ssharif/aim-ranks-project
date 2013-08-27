@@ -2498,9 +2498,25 @@ For $Q_\infty$, $w$ furnishes a nonzero global section of $\II$. One checks that
   \]
   which glues to $\XX_2$ via $z = U^{d/r} z'$ and $w = U^{d/r} w'$. The point $Q_\infty$ has coordinates $(w', z') = (0,0)$. Notice that $w'$ gives a regular, nonvanishing section of the $\II/\II^2$ at $u = \infty$. Since $w = U^{d/r} w'$, we see that as a section of $\II/\II^2$, $\dvsr w = \frac{d}{r}(\infty)$. We conclude that $Q_\infty^2 = -\frac{d}{r}$.
 
-For $P_{00}$, $x-u$ furnishes a nonzero global section for the corresponding conormal sheaf. One checks that this section is regular and nonvanishing on the locus of good reduction. We now compute the zeros and poles of $x-u$ place by place.
+For $P_{00}$, $x-u$ furnishes a nonzero global section for the corresponding conormal sheaf. One checks that this section is regular and nonvanishing on the locus of good reduction. We now compute the zeros and poles of $x-u$, considered as a section of the conormal sheaf. Suppose that
+\[
+\dvsr (x-u) = a_0 (0) + a_\infty (\infty) + \sum b_k (\zeta^k)
+\]
+where $\zeta$ is a primitive $d$th root of unity. We wish to compute the $a_i$ and $b_j$.
 
-At $u=0$
+Recall that at $u=0$, a smooth model for $C$ in a neighborhood of $P_{00}$ is given by
+\[
+\bigg(\frac{x_0}{u + ux_0}\bigg) \cdot (y_0^r - x_0 - 1) = u^{d-1}
+\]
+and that locally, $P_{00}$ is given by
+\[
+s := \frac{x_0}{u+ux_0} - \frac{1}{1+u} = 0.
+\]
+Therefore $s$ gives a nonvanishing regular element of the conormal sheaf. One checks that
+\[
+x - u = u \cdot \frac{1}{(1+x_0)(1+u)} \cdot s.
+\]
+Therefore $a_0 = 1$.
 \end{proof}
 
 
