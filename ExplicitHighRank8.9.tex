@@ -2478,47 +2478,6 @@ Let $P, P', Q$ be three distinct points on our curve; we will later set $P = P_{
 
 We must also compute $P \cdot P'$, $P \cdot Q$, $P' \cdot Q$, and $Q^2$. The former three can be computed on each bad fiber separately, except for the case $P \cdot P'$ when $P = P'$. It will turn out that the former intersection numbers are 0 on every fiber except $u = -1$. 
 
-\subsection{$P_{00}^2$ and $Q_\infty^2$}
-\label{sec:p_002-q_infty2}
-
-The self-intersections $P_{00}^2$ and $Q_\infty^2$ are computed as the degrees of certain invertible sheaves.
-\begin{proposition}\label{prop:Q-infty-self-intersection}
-  The self-intersections of $P_{00}$ and $Q_\infty$ are
-  \[
-  P_{00}^2 = -d + \frac{d}{r} \quad \text{and} \quad Q_\infty^2 = -\frac{d}{r}.
-  \]
-\end{proposition}
-
-\begin{proof}
-  We use the fact that $P^2 = - \deg \II/\II^2$, where $\II$ is the ideal sheaf of the section $P$ on the arithmetic surface $\XX$ and $\II/\II^2$ is the conormal sheaf to $P$ on the base $\PP$. 
-
-For $Q_\infty$, $w$ furnishes a nonzero global section of $\II$. One checks that $w$ is a regular, nonvanishing section of $\II/\II^2$ away from $u = \infty$, since $\XX_2$ is smooth in a neighborhood of $Q_\infty$, $u \neq \infty$. At $u = \infty$, we consider the chart
-  \[
-  z' = w'^{r-1}(w'+z'U^d)(w'+z')
-  \]
-  which glues to $\XX_2$ via $z = U^{d/r} z'$ and $w = U^{d/r} w'$. The point $Q_\infty$ has coordinates $(w', z') = (0,0)$. Notice that $w'$ gives a regular, nonvanishing section of the $\II/\II^2$ at $u = \infty$. Since $w = U^{d/r} w'$, we see that as a section of $\II/\II^2$, $\dvsr w = \frac{d}{r}(\infty)$. We conclude that $Q_\infty^2 = -\frac{d}{r}$.
-
-For $P_{00}$, $x-u$ furnishes a nonzero global section for the corresponding conormal sheaf. One checks that this section is regular and nonvanishing on the locus of good reduction. We now compute the zeros and poles of $x-u$, considered as a section of the conormal sheaf. Suppose that
-\[
-\dvsr (x-u) = a_0 (0) + a_\infty (\infty) + \sum b_k (\zeta^k)
-\]
-where $\zeta$ is a primitive $d$th root of unity. We wish to compute the $a_i$ and $b_j$.
-
-Recall that at $u=0$, a smooth model for $C$ in a neighborhood of $P_{00}$ is given by
-\[
-\bigg(\frac{x_0}{u + ux_0}\bigg) \cdot (y_0^r - x_0 - 1) = u^{d-1}
-\]
-and that locally, $P_{00}$ is given by
-\[
-s := \frac{x_0}{u+ux_0} - \frac{1}{1+u} = 0.
-\]
-Therefore $s$ gives a nonvanishing regular element of the conormal sheaf. One checks that
-\[
-x - u = u \cdot \frac{1}{(1+x_0)(1+u)} \cdot s.
-\]
-Therefore $a_0 = 1$.
-\end{proof}
-
 
 \subsection{Auxiliary results}
 \label{sec:auxiliary-results}
@@ -3017,6 +2976,47 @@ The intersection form $A$ when $u = \zeta^k$ is given in either \S~\ref{sec:case
   \frac{R}{\bigg(x_0^{\frac{d}{r} - 1}, b_0, \mu - 1\bigg)}
   \]
   from which the claim follows.
+\end{proof}
+
+\subsection{$P_{00}^2$ and $Q_\infty^2$}
+\label{sec:p_002-q_infty2}
+
+The self-intersections $P_{00}^2$ and $Q_\infty^2$ are computed as the degrees of certain invertible sheaves.
+\begin{proposition}\label{prop:Q-infty-self-intersection}
+  The self-intersections of $P_{00}$ and $Q_\infty$ are
+  \[
+  P_{00}^2 = -d + \frac{d}{r} \quad \text{and} \quad Q_\infty^2 = -\frac{d}{r}.
+  \]
+\end{proposition}
+
+\begin{proof}
+  We use the fact that $P^2 = - \deg \II/\II^2$, where $\II$ is the ideal sheaf of the section $P$ on the arithmetic surface $\XX$ and $\II/\II^2$ is the conormal sheaf to $P$ on the base $\PP$. 
+
+For $Q_\infty$, $w$ furnishes a nonzero global section of $\II$. One checks that $w$ is a regular, nonvanishing section of $\II/\II^2$ away from $u = \infty$, since $\XX_2$ is smooth in a neighborhood of $Q_\infty$, $u \neq \infty$. At $u = \infty$, we consider the chart
+  \[
+  z' = w'^{r-1}(w'+z'U^d)(w'+z')
+  \]
+  which glues to $\XX_2$ via $z = U^{d/r} z'$ and $w = U^{d/r} w'$. The point $Q_\infty$ has coordinates $(w', z') = (0,0)$. Notice that $w'$ gives a regular, nonvanishing section of the $\II/\II^2$ at $u = \infty$. Since $w = U^{d/r} w'$, we see that as a section of $\II/\II^2$, $\dvsr w = \frac{d}{r}(\infty)$. We conclude that $Q_\infty^2 = -\frac{d}{r}$.
+
+For $P_{00}$, $x-u$ furnishes a nonzero global section for the corresponding conormal sheaf. One checks that this section is regular and nonvanishing on the locus of good reduction. We now compute the zeros and poles of $x-u$, considered as a section of the conormal sheaf. Suppose that
+\[
+\dvsr (x-u) = a_0 (0) + a_\infty (\infty) + \sum b_k (\zeta^k)
+\]
+where $\zeta$ is a primitive $d$th root of unity. We wish to compute the $a_i$ and $b_j$.
+
+Recall that at $u=0$, a smooth model for $C$ in a neighborhood of $P_{00}$ is given by
+\[
+\bigg(\frac{x_0}{u + ux_0}\bigg) \cdot (y_0^r - x_0 - 1) = u^{d-1}
+\]
+and that locally, $P_{00}$ is given by
+\[
+s := \frac{x_0}{u+ux_0} - \frac{1}{1+u} = 0.
+\]
+Therefore $s$ gives a nonvanishing regular element of the conormal sheaf. One checks that
+\[
+x - u = u \cdot \frac{1}{(1+x_0)(1+u)} \cdot s.
+\]
+Therefore $a_0 = 1$.
 \end{proof}
 
 \subsection{Proof of Theorem~\ref{thm:height-pairing}}
