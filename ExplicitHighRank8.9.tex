@@ -2981,22 +2981,21 @@ The intersection form $A$ when $u = \zeta^k$ is given in either \S~\ref{sec:case
 \subsection{$P_{00}^2$ and $Q_\infty^2$}
 \label{sec:p_002-q_infty2}
 
-The self-intersections $P_{00}^2$ and $Q_\infty^2$ are computed as the degrees of certain invertible sheaves.
+We now compute the self-intersections of $P_{00}$ and $Q_\infty$.
 \begin{proposition}\label{prop:Q-infty-self-intersection}
   The self-intersections of $P_{00}$ and $Q_\infty$ are
   \[
   P_{00}^2 = -d + \frac{d}{r} \quad \text{and} \quad Q_\infty^2 = -\frac{d}{r}.
   \]
 \end{proposition}
+The computations will proceed as follows. Let $P$ be the point in question. We may identify $P$ with the corresponding morphism $\PP \to \XX$. Let $\II$ be the ideal sheaf of $P$, considered as a divisor on $\XX$. Recall that the conormal sheaf to $P$ is the sheaf $\II/\II^2$ on $\PP$. By~\cite[V, 1.4.1]{hartshorne}, $P^2 = - \deg \II/\II^2$. Thus our method will be to compute the divisor of a global section of this sheaf. Since sections of $\II$ are rational functions on $\XX$, we will frequently refer to elements of $\II/\II^2$ by choosing a rational function contained in the corresponding mod $\II^2$ congruence class.
 
 \begin{proof}
-  We use the fact that $P^2 = - \deg \II/\II^2$, where $\II$ is the ideal sheaf of the section $P$ on the arithmetic surface $\XX$ and $\II/\II^2$ is the conormal sheaf to $P$ on the base $\PP$. 
-
-For $Q_\infty$, $w$ furnishes a nonzero global section of $\II$. One checks that $w$ is a regular, nonvanishing section of $\II/\II^2$ away from $u = \infty$, since $\XX_2$ is smooth in a neighborhood of $Q_\infty$, $u \neq \infty$. At $u = \infty$, we consider the chart
+  Let $\II$ be the ideal sheaf for $Q_\infty$. Then $w$ furnishes a nonzero global section of $\II$, where $w$ is the function given in the chart $\XX_2$. One checks that $w$ is a regular, nonvanishing section of $\II/\II^2$ away from $u = \infty$, since $\XX_2$ is smooth in a neighborhood of $Q_\infty$ when $u \neq \infty$. At $u = \infty$, we consider the chart
   \[
   z' = w'^{r-1}(w'+z'U^d)(w'+z')
   \]
-  which glues to $\XX_2$ via $z = U^{d/r} z'$ and $w = U^{d/r} w'$. The point $Q_\infty$ has coordinates $(w', z') = (0,0)$. Notice that $w'$ gives a regular, nonvanishing section of the $\II/\II^2$ at $u = \infty$. Since $w = U^{d/r} w'$, we see that as a section of $\II/\II^2$, $\dvsr w = \frac{d}{r}(\infty)$. We conclude that $Q_\infty^2 = -\frac{d}{r}$.
+  which glues to $\XX_2$ via $z = U^{d/r} z'$ and $w = U^{d/r} w'$. The point $Q_\infty$ has coordinates $(w', z') = (0,0)$. Notice that $w'$ gives a regular, nonvanishing section of $\II/\II^2$ at $u = \infty$. Since $w = U^{d/r} w'$, we see that as a section of $\II/\II^2$, $\dvsr w = \frac{d}{r}(\infty)$. We conclude that $Q_\infty^2 = -\frac{d}{r}$.
 
 For $P_{00}$, $x-u$ furnishes a nonzero global section for the corresponding conormal sheaf. One checks that this section is regular and nonvanishing on the locus of good reduction. We now compute the zeros and poles of $x-u$, considered as a section of the conormal sheaf. Suppose that
 \[
@@ -3044,9 +3043,9 @@ The ideal $\II$ is locally equal to $(x_0 - 1 - u, b_0 - (1+u)^{\frac{d}{r} - 1}
 \]
 From the equation for our model, we also see that
 \[
-(1 + u)^{d-2} \bar{x} + (r-2)u(1+u)^{d-3} \bar{x} + u(1+u)^{d - \frac{d}{r} -1} \bar{b} \equiv \alpha \frac{\bar{x}}{1+u}
+(1 + u)^{d-2} \bar{x} + (r-2)u(1+u)^{d-3} \bar{x} + u(1+u)^{d - \frac{d}{r} -1} \bar{b} \equiv \alpha \frac{\bar{x}}{1+u} \pmod{\II^2}.
 \]
-where the congruence is taken modulo $\II^2$. Simplifying, we obtain
+Simplifying, we obtain
 \[
 u(1 + u)^{d - \frac{d}{r} - 1} \bar{b} \equiv \gamma(1 + u)^{-1} \bar{x}
 \]
@@ -3054,7 +3053,7 @@ where $\gamma \in K(u)^\times$ is regular and nonvanishing at $u = -1$. From the
 
 Putting these calculations together, we obtain
 \[
-\deg \frac{\II}{\II^2} = 1 -1 + d - \frac{d}{r} = d - \frac{d}{r}.
+\deg \frac{\II}{\II^2} = a_0 + a_\infty + b_{d/2} = d - \frac{d}{r}.
 \]
 Therefore $P_{00}^2 = -d + \frac{d}{r}$.
 \end{proof}
@@ -3734,6 +3733,13 @@ Nils Bruin, Bjorn Poonen, and Michael Stoll.
 %Gunther Cornelissen.  
 %\newblock Two-torsion in the Jacobian of hyperelliptic curves over finite fields. 
 %\newblock {\em Arch.\ Math.\ (Basel)} {\bf 77} (2001), no.\ 3, 241Ð-246.
+
+
+
+\bibitem{hartshorne}
+Robin Hartshorne.
+\newblock {\em Algebraic geometry}.
+{Springer-Verlag}, New York, 1977.
 
 \bibitem{lorenzini}
 Dino Lorenzini.
